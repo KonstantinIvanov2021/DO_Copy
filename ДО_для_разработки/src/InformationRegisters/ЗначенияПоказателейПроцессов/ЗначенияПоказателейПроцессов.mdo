@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="add5b0de-bb65-4071-9ed9-946728a02314">
+  <producedTypes>
+    <selectionType typeId="b34830dd-6fa0-4d2b-a6db-9a8db8c56069" valueTypeId="130b37d8-1ce5-4891-87f3-77be4a689dfe"/>
+    <listType typeId="afb2efb5-59b0-4de2-b432-491dd0d1219f" valueTypeId="a783afd1-ddf8-4f53-b7be-e81ffa2eb06d"/>
+    <managerType typeId="a32a4226-f963-4a39-976d-9adae148b98a" valueTypeId="dd133da9-fce3-4353-814a-173f00b92e40"/>
+    <recordSetType typeId="fe9e6645-e7bc-4839-81a6-fc2a72a26fbf" valueTypeId="2a076898-0193-475a-b743-a2d32000aba6"/>
+    <recordKeyType typeId="45149d0f-b30c-4c3e-b315-bca3858d2ab8" valueTypeId="6af73658-b135-44da-987d-1337bc4725d3"/>
+    <recordType typeId="d6f021ac-e958-43b7-936b-bf27deb07485" valueTypeId="8f4fdb72-d0d5-4dad-91dd-f9985df4dde7"/>
+    <recordManagerType typeId="a89779e8-97f3-4990-a040-38d4ff1814a6" valueTypeId="501e6691-9438-49a8-915f-456c9f98048c"/>
+  </producedTypes>
+  <name>ЗначенияПоказателейПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Значения показателей процессов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="dec5c68e-8b30-4523-8729-4671529cf2b3">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>30</precision>
+        <scale>10</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="1d5a8deb-c5f5-4985-a719-72d86daa6153">
+    <name>ДинамикаПоказателя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Динамика показателя</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6aab972b-1116-4b47-8f96-56e29f5ee7b9">
+    <name>ИзменениеАбсолютное</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменение абсолютное</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>30</precision>
+        <scale>10</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1bf8fd22-4f33-442b-86fb-65dbbc593db6">
+    <name>ИзменениеПроцент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменение процент</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1c2d80d7-061c-4f85-80fc-335c95e228ef">
+    <name>ПредставлениеЗначения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Представление значения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <attributes uuid="13fe9ee4-8b4b-406a-ac30-fc9ed0dcc10d">
+    <name>ПредставлениеИзменения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Представление изменения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="9aba0475-3e0b-4ce8-b46f-1bbd1a223637">
+    <name>ПоказательПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатель процесса</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПоказателиПроцессов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

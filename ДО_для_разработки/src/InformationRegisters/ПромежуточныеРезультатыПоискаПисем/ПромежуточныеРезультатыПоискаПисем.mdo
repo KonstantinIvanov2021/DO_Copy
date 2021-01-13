@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="64c4266a-4f73-4664-a69b-de8979db01d8">
+  <producedTypes>
+    <selectionType typeId="eff36a39-e5bf-4c71-becb-302092a2a5a4" valueTypeId="32c1f21d-fa89-4ad8-bbfd-767f6cf4d876"/>
+    <listType typeId="08e7b2a0-e41a-4f54-8cab-838a3610b718" valueTypeId="a1c4ddd9-01fa-4d01-9f89-61d32d39cb97"/>
+    <managerType typeId="73e6c6ae-c216-402b-978b-0eda5bc49ee8" valueTypeId="e3c01fcc-7752-42ad-8713-448e5dea054b"/>
+    <recordSetType typeId="f5f8e5c2-f4b3-4282-b75e-fd0cb127f580" valueTypeId="64621605-d8da-4f0e-8ed5-06a4d8b6f94a"/>
+    <recordKeyType typeId="64b90cfb-3c03-47ba-a5a4-46dec2779edd" valueTypeId="a42b6c8d-a58a-4242-8251-5f37b3e01d5e"/>
+    <recordType typeId="8169857a-388f-47b3-8463-2bd2d6673769" valueTypeId="d47731c0-ef0c-413b-89b2-7acd13a2fc0b"/>
+    <recordManagerType typeId="9e949003-1038-42d1-a225-b62656fff8f6" valueTypeId="636c43fc-4b1a-4f08-9a74-ccffe031e48a"/>
+  </producedTypes>
+  <name>ПромежуточныеРезультатыПоискаПисем</name>
+  <synonym>
+    <key>ru</key>
+    <value>Промежуточные результаты поиска писем</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ПромежуточныеРезультатыПоискаПисем.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0de4d0e8-83ad-4de7-b184-d2bf05f3a923">
+    <name>ДатаПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата поиска</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="c1678a44-6972-4a9b-a9aa-7be9d78cc1ed">
+    <name>ИдентификаторПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор поиска</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="3cb7014a-c2bb-42f4-ad36-748696a32404">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ВходящееПисьмо</types>
+      <types>DocumentRef.ИсходящееПисьмо</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="227d1243-4c04-4f30-9ac5-7b3e9e5ff7cf">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

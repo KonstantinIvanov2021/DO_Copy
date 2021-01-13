@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9fd1aaf4-81e7-46eb-9331-e00784815f45">
+  <name>ДокументооборотПередЗаписьюПравообразующихРегистров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Документооборот перед записью правообразующих регистров</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.СведенияОПользователяхДокументооборот</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ДокументооборотПраваДоступа.ДокументооборотПередЗаписьюПравообразующихРегистров</handler>
+</mdclass:EventSubscription>

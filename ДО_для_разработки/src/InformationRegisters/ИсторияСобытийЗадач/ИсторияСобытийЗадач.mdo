@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="134cb98e-898c-429b-b69d-227d1e8b6d02">
+  <producedTypes>
+    <selectionType typeId="fa8f5e33-3900-49a0-a951-bce2b74b8f2d" valueTypeId="3e567672-c2b4-4820-84b0-d91616e0013b"/>
+    <listType typeId="f5ff555d-d2e7-4e98-bff4-958b5597062f" valueTypeId="9f94b515-0765-4fc4-ad34-c0f9f40f921c"/>
+    <managerType typeId="04967c74-76e7-46dd-894d-8c30fe824b85" valueTypeId="ac55f396-12a9-4c8d-a5a3-2fddc6ec53f5"/>
+    <recordSetType typeId="8b5e6cd0-5c5e-4f7c-8cf1-d84258cb6853" valueTypeId="8a12b61b-9cb0-4458-8e5c-6b897c256da5"/>
+    <recordKeyType typeId="e988610b-7b25-44e0-af75-88a71f94bc40" valueTypeId="cbb60173-17cf-4428-a128-2eb5243e1c90"/>
+    <recordType typeId="9c449ca8-4175-4c00-b5d8-d9031bb4694c" valueTypeId="cfa2acd1-285a-41b2-85b0-ab472c5b9e72"/>
+    <recordManagerType typeId="4bef2033-04f6-458a-aca9-30ad0fe19af5" valueTypeId="3e93447e-1124-48be-9f49-8fae73609af1"/>
+  </producedTypes>
+  <name>ИсторияСобытийЗадач</name>
+  <synonym>
+    <key>ru</key>
+    <value>История событий задач</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ИсторияСобытийЗадач.Form.ФормаЗаписи</defaultRecordForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Событие задачи</value>
+  </recordPresentation>
+  <attributes uuid="aacdca08-9d47-4178-87a0-956e1dd412f3">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="8a410134-e389-40cb-a17d-28243183a503">
+    <name>Задача</name>
+    <synonym>
+      <key>ru</key>
+      <value>Задача</value>
+    </synonym>
+    <type>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="cb82fcbf-c619-436d-a50d-d324fec1215f">
+    <name>ДатаСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата события</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a120c29d-9004-428d-a44a-6dd61a466675">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b602e5f2-8f17-43b0-ad8c-876175e4bfc3">
+    <name>Событие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Событие</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыСобытийЗадач</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="97d38522-5841-4017-953a-30d348fba1a0">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e4202e17-cb0f-44c7-a086-73fb01d7dcff">
+    <name>ФормаСпискаСобытийЗадачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка событий задачи</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2e8e4da9-52cd-48d6-b268-96ea46649ec8">
+    <name>ФормаСпискаСобытийВсехЗадач</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка событий всех задач</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="90ab9dba-36b6-4956-b486-3fb1681661a2">
+    <name>ОткрытьФормуСпискаСобытийЗадачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>История событий</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="1df75468-e0eb-4b06-8ce8-31dbdfeaaf9c">
+    <name>ОткрытьФормуСпискаСобытийВсехЗадач</name>
+    <synonym>
+      <key>ru</key>
+      <value>История событий задач</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>BusinessProcessRef.Исполнение</types>
+      <types>BusinessProcessRef.Приглашение</types>
+      <types>BusinessProcessRef.Поручение</types>
+      <types>BusinessProcessRef.Утверждение</types>
+      <types>BusinessProcessRef.Рассмотрение</types>
+      <types>BusinessProcessRef.Согласование</types>
+      <types>BusinessProcessRef.Ознакомление</types>
+      <types>BusinessProcessRef.Регистрация</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

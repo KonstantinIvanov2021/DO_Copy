@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FilterCriterion xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3238d70c-4b4e-4e54-bfb2-9b5ee30db2e3">
+  <producedTypes>
+    <listType typeId="905d3f91-ce66-4b1c-82a2-e068c6013107" valueTypeId="3423202d-4bf8-4cd1-ac9d-fff132ce10a1"/>
+    <managerType typeId="e8b0ae3b-13f6-43ba-89d6-a0dd98de572b" valueTypeId="163a1b38-8368-4625-a55f-953e00b5079f"/>
+  </producedTypes>
+  <name>МероприятияПоПроекту</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мероприятия по проекту</value>
+  </synonym>
+  <type>
+    <types>CatalogRef.Проекты</types>
+  </type>
+  <content>Catalog.Мероприятия.Attribute.Проект</content>
+  <defaultForm>FilterCriterion.МероприятияПоПроекту.Form.ФормаСписка</defaultForm>
+  <forms uuid="fbddf201-5b1c-4cda-95aa-43e0cd1fddd5">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мероприятия по проекту</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="4ec575bb-d794-4481-96a9-f415afa27c92">
+    <name>МероприятияПоПроекту</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мероприятия</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.Проекты</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:FilterCriterion>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="406358ca-476a-4a4a-baa2-afb174197c57">
+  <producedTypes>
+    <selectionType typeId="4df8c07a-d825-4a43-8121-b374db12905c" valueTypeId="8043eac5-6012-4a15-94d9-9f8768fffc33"/>
+    <listType typeId="ea581e7f-c159-4e31-887d-8aa4ea987836" valueTypeId="ca6ac826-fc29-46bc-9b95-954864526e2c"/>
+    <managerType typeId="0cdad75a-7a82-464d-9b50-084db79db5fd" valueTypeId="418cfd04-9cdb-463d-9679-3351f58d2e81"/>
+    <recordSetType typeId="f6ec2237-25e1-4023-adf4-fc7711a68877" valueTypeId="abfa9367-662e-4d7a-afb1-80afb712d9c7"/>
+    <recordKeyType typeId="45a7b433-18e0-4e56-8ae5-ed6bada7a4f4" valueTypeId="1c39f1b3-09c3-4d27-88db-19b26319da0e"/>
+    <recordType typeId="37b307c3-42de-4fa7-8f39-7834fc3eb7e4" valueTypeId="c2f568ad-09d4-4c12-81f9-54d12f4d8ae9"/>
+    <recordManagerType typeId="432eeeab-4685-4651-998f-c01a1ef8dadc" valueTypeId="1faa144c-92f0-4ff0-823b-8073059e84d4"/>
+  </producedTypes>
+  <name>СтатистикаОтправкаPushУведомлений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статистика отправка push-уведомлений</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="d0e8e48e-1379-48e9-9f71-009c95a63203">
+    <name>Окончание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Окончание</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="77eb7c20-f9f2-4f21-b11b-5943cc1d2d39">
+    <name>Удалено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалено</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="07399c5d-9d13-4b91-b91c-f7f3ee740c81">
+    <name>Отправлено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправлено</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="36672585-56d1-4a9c-b84f-1c818e3662ed">
+    <name>Ошибок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ошибок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+</mdclass:InformationRegister>

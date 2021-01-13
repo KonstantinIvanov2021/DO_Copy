@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7888b2e7-3a21-4b74-83ec-7863901fd7f6">
+  <producedTypes>
+    <objectType typeId="53800522-2306-4e58-8bb0-b143db328282" valueTypeId="d5d3fa71-f992-4ed8-bf19-5630fc6192ed"/>
+    <refType typeId="61e1a9c2-e769-4da6-807b-1343ac2d3f45" valueTypeId="4e5f1600-e490-4bd3-af05-30e3c2347994"/>
+    <selectionType typeId="9ddab481-6198-4db7-ac41-4ce24ff27df5" valueTypeId="d3b5dc88-6dbd-4818-9ec3-f7084b047f05"/>
+    <listType typeId="740c0cc6-091d-41ec-818d-cc04e002ebe1" valueTypeId="e41d84c9-0281-42c1-b18c-929f19d5e841"/>
+    <managerType typeId="cc81b507-af86-49a5-aaf8-d7674a5838cc" valueTypeId="a5ff20e0-0637-402f-8151-c32f8390f48c"/>
+  </producedTypes>
+  <name>СерверныеСообщенияСВД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сообщения</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.СерверныеСообщенияСВД.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Сообщение</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.СерверныеСообщенияСВД.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.СерверныеСообщенияСВД.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="9fc5751c-b69e-40f5-85dc-6c5af32c3479">
+    <name>ДатаОтправкиПолучателю</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата отправки получателю</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9fa487f1-44ab-4af1-b89e-f79228ebe86a">
+    <name>ДатаПолученияСервером</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата получения сервером</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0b0cbe32-7f85-4119-83f0-715f4278504d">
+    <name>Кому</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кому</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7d71796b-b7ca-4cd7-8d94-7d001ea89951">
+    <name>ОтКого</name>
+    <synonym>
+      <key>ru</key>
+      <value>От кого</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aac79360-fa1b-4317-80a2-ad237060bd4e">
+    <name>Отправлено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправлено</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="312015d4-9ed3-451b-b6dd-5bcc815ede12">
+    <name>ИдентификаторСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор сообщения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="81c9f917-ef97-478d-9b02-526404de2ef9">
+    <name>ФорматСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формат сообщения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФорматыСообщенийСВД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="57cdd4ff-38fd-4fa3-91d7-3887fc1f6990">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e1a6352c-ab59-4f0f-a941-2d8e35f8d6fe">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

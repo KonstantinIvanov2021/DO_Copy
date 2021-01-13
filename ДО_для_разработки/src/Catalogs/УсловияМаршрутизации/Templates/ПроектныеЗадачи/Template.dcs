@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияДанных</dataPath>
+			<field>ВерсияДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Владелец</dataPath>
+			<field>Владелец</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Родитель</dataPath>
+			<field>Родитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предопределенный</dataPath>
+			<field>Предопределенный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Важность</dataPath>
+			<field>Важность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Веха</dataPath>
+			<field>Веха</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГрафикРаботы</dataPath>
+			<field>ГрафикРаботы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьФакт</dataPath>
+			<field>ДлительностьФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаДлительностиФакт</dataPath>
+			<field>ЕдиницаДлительностиФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаТрудозатратФакт</dataPath>
+			<field>ЕдиницаТрудозатратФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдентификаторЗадачи</dataPath>
+			<field>ИдентификаторЗадачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодСДР</dataPath>
+			<field>КодСДР</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачалоФакт</dataPath>
+			<field>НачалоФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерЗадачиВУровне</dataPath>
+			<field>НомерЗадачиВУровне</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОкончаниеФакт</dataPath>
+			<field>ОкончаниеФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предмет</dataPath>
+			<field>Предмет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммарнаяЗадача</dataPath>
+			<field>СуммарнаяЗадача</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПланДлительность</dataPath>
+			<field>ТекущийПланДлительность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПланЕдиницаДлительности</dataPath>
+			<field>ТекущийПланЕдиницаДлительности</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПланЕдиницаТрудозатрат</dataPath>
+			<field>ТекущийПланЕдиницаТрудозатрат</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПланНачало</dataPath>
+			<field>ТекущийПланНачало</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПланОкончание</dataPath>
+			<field>ТекущийПланОкончание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПланТрудозатраты</dataPath>
+			<field>ТекущийПланТрудозатраты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КатегорияДанных</dataPath>
+			<field>КатегорияДанных</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПроектныеЗадачи.Ссылка,
+	ПроектныеЗадачи.ВерсияДанных,
+	ПроектныеЗадачи.ПометкаУдаления,
+	ПроектныеЗадачи.Предопределенный,
+	ПроектныеЗадачи.Владелец,
+	ПроектныеЗадачи.Родитель,
+	ПроектныеЗадачи.Код,
+	ПроектныеЗадачи.Наименование,
+	ПроектныеЗадачи.Важность,
+	ПроектныеЗадачи.Веха,
+	ПроектныеЗадачи.ГрафикРаботы,
+	ПроектныеЗадачи.ЕдиницаТрудозатратФакт,
+	ПроектныеЗадачи.ИдентификаторЗадачи,
+	ПроектныеЗадачи.КодСДР,
+	ПроектныеЗадачи.НомерЗадачиВУровне,
+	ПроектныеЗадачи.Описание,
+	ПроектныеЗадачи.Предмет,
+	ПроектныеЗадачи.СуммарнаяЗадача,
+	ПроектныеЗадачи.ТекущийПланЕдиницаТрудозатрат,
+	ПроектныеЗадачи.ТекущийПланТрудозатраты,
+	ПроектныеЗадачи.Представление,
+	СрокиПроектныхЗадач.ДлительностьФакт,
+	СрокиПроектныхЗадач.ЕдиницаДлительностиФакт,
+	СрокиПроектныхЗадач.НачалоФакт,
+	СрокиПроектныхЗадач.ОкончаниеФакт,
+	СрокиПроектныхЗадач.ТекущийПланДлительность,
+	СрокиПроектныхЗадач.ТекущийПланЕдиницаДлительности,
+	СрокиПроектныхЗадач.ТекущийПланНачало,
+	СрокиПроектныхЗадач.ТекущийПланОкончание,
+	КатегорииОбъектов.КатегорияДанных
+ИЗ
+	Справочник.ПроектныеЗадачи КАК ПроектныеЗадачи
+ЛЕВОЕ СОЕДИНЕНИЕ
+	РегистрСведений.СрокиПроектныхЗадач КАК СрокиПроектныхЗадач
+ПО
+	ПроектныеЗадачи.Ссылка = СрокиПроектныхЗадач.ПроектнаяЗадача
+ЛЕВОЕ СОЕДИНЕНИЕ
+	РегистрСведений.КатегорииОбъектов КАК КатегорииОбъектов
+ПО
+	ПроектныеЗадачи.Ссылка = КатегорииОбъектов.ОбъектДанных
+ГДЕ
+	ПроектныеЗадачи.Ссылка = &amp;Ссылка</query>
+	</dataSet>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ПроектныеЗадачи</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ссылка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5ee3dd10-74d1-45c6-a937-bf28dfa4e6b1">
+  <producedTypes>
+    <objectType typeId="45cf91eb-4cea-4eef-8d6c-adeeabad96a6" valueTypeId="a4064cf4-4054-4a26-8abd-eb7e68607ec4"/>
+    <managerType typeId="694f7a82-98eb-4bab-9380-d539aac42250" valueTypeId="f1504e85-460d-449e-b2c9-122a662f6f0f"/>
+  </producedTypes>
+  <name>ПоискПоРеквизитам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Поиск по реквизитам</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ПоискПоРеквизитам.Form.ПоискДокументовИФайлов</defaultForm>
+  <forms uuid="1b673b3f-94bd-4b86-81a8-b02e10cdf800">
+    <name>ПоискДокументовИФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поиск документов и файлов</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0b588aa5-3d92-422e-bf23-cfd691bf1016">
+    <name>ВводЗначенияРеквизита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ввод значения реквизита</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f71a8d7f-29bc-4e28-bb6d-fce616b64dc2">
+    <name>ВводСтроки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ввод строки</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f5b504fd-f9fc-4f76-9fed-6eab9e1f5ccd">
+    <name>ВводПериодаДат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ввод периода дат</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f3e12c22-3b25-43b0-b7f6-df3d75b1de54">
+    <name>ВводБулево</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ввод булево</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="119a5523-628d-4f36-8cfd-b6e6ce58968b">
+    <name>ВводДиапазонаЧисел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ввод диапазона чисел</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ddbec0dc-b0d3-4889-aba3-57f084dca772">
+    <name>СохранениеПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сохранение поиска</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="94401132-c61d-4e4d-9034-a0a55ac57646">
+    <name>ОбщийПоиск</name>
+    <synonym>
+      <key>ru</key>
+      <value>Общий поиск</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="41fd1117-cb0a-41c4-a066-f66924803e9f">
+    <name>ПоискВнутренниеДокументы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поиск внутренние документы</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="f405a98e-b566-4d09-a46a-1052011fd31c">
+    <name>ПоискВходящиеДокументы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поиск входящие документы</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="94b95cc7-7f71-4c29-88b2-c8a6abc7d825">
+    <name>ПоискИсходящиеДокументы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поиск исходящие документы</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="91a1f036-c3ee-4d65-a2be-8829e8b6d0fa">
+    <name>ПоискФайлы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поиск файлы</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="f9aca664-b58e-4651-9360-d4662e43f67f">
+    <name>ОбщийПоискКоличествоВнутренние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Общий поиск количество внутренние</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="6ef003fb-b548-4695-836d-5f042ac3c0a1">
+    <name>ОбщийПоискКоличествоВходящие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Общий поиск количество входящие</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="045b696e-67ae-4964-adcc-306f27165c79">
+    <name>ОбщийПоискКоличествоИсходящие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Общий поиск количество исходящие</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="454cad7e-ee01-4d50-8db1-6310e71b591d">
+    <name>ПоискДокументовИФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поиск документов и файлов</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut>Ctrl+Shift+S</shortcut>
+  </commands>
+</mdclass:DataProcessor>

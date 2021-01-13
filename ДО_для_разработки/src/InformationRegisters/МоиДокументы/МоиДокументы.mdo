@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9f30e5ff-ab76-4b93-a003-ecb61ed8dfec">
+  <producedTypes>
+    <selectionType typeId="c715f15c-9229-4c42-a1e8-f5037e41e09f" valueTypeId="cc3aadd3-8d7b-4ec7-ad07-fda6a2106dbb"/>
+    <listType typeId="f41d95ce-2d43-443b-b7f2-430b45990017" valueTypeId="969fcedf-1613-4ac6-80e4-dcc53f57b678"/>
+    <managerType typeId="0d72a6b7-a927-4805-a54b-7a3df3680f94" valueTypeId="e2952dd9-e79f-4c74-a5a4-1a6e8625fd46"/>
+    <recordSetType typeId="b7a8710a-19e4-4965-a69c-ca682d970951" valueTypeId="a07badde-31d0-461d-9fdf-2d1701a442d2"/>
+    <recordKeyType typeId="897ae5c9-278d-4365-801f-e87d42f8abbe" valueTypeId="e9fcf418-570e-4120-8594-fda6df81b5fc"/>
+    <recordType typeId="a6cfd39a-242f-4458-9c4b-49d5d31a0a63" valueTypeId="d189bdef-032a-4ede-bb88-6ae9218c1a9f"/>
+    <recordManagerType typeId="eaa1c793-9717-4652-a642-48ca045ed028" valueTypeId="907bf454-46e0-4ce3-856c-0a3063334dd5"/>
+  </producedTypes>
+  <name>МоиДокументы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мои документы</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="8654b45d-5289-44ba-a5c0-46d2f78648b1">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8acce6bc-0359-4834-bbcb-c8adfb46e33a">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВходящиеДокументы</types>
+      <types>CatalogRef.ВнутренниеДокументы</types>
+      <types>CatalogRef.ИсходящиеДокументы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f4c5b558-d482-48df-a660-ac7119ae69cf">
+    <name>Причина</name>
+    <synonym>
+      <key>ru</key>
+      <value>Причина</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПричиныДобавленияВМоиДокументы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="fbf22254-1f62-4bb1-be61-612dec8091f3">
+    <name>ФормаМоиДокументы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма мои документы</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="00fd85f0-44c9-4e6e-8271-ccb9b62d3b07">
+    <name>МоиДокументы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мои документы</value>
+    </synonym>
+    <group>NavigationPanelImportant</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

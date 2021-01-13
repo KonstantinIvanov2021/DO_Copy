@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c2fd99ba-2a55-491e-9aea-92ff11de7e8f">
+  <producedTypes>
+    <selectionType typeId="cc097a2e-9e37-415b-a991-b8fcd9cd0267" valueTypeId="c66fb140-9d01-4f01-9e52-116931a8c876"/>
+    <listType typeId="775525d5-1980-4b0d-b806-4db1cc3ed258" valueTypeId="bbd77798-a909-4a36-bf15-aa7e2e163186"/>
+    <managerType typeId="e5f541cf-ce57-474d-8ca2-b4f18e32ba91" valueTypeId="faec6f11-b2ad-465f-8b4e-b9ae64f89bd9"/>
+    <recordSetType typeId="a2893eeb-334a-443a-b326-264b4cae7c92" valueTypeId="011697d1-6a60-44fe-871a-85dd0979f49d"/>
+    <recordKeyType typeId="89e447e9-78f8-4c1a-a103-4da3e665eaa6" valueTypeId="51614386-675c-4491-9150-e4ab12b5159e"/>
+    <recordType typeId="2bce2739-1690-45aa-94de-4a3a7e51a09a" valueTypeId="2234f1f8-d016-4aae-abed-eca3cd889493"/>
+    <recordManagerType typeId="4b3595a1-27ff-4563-84f1-59110e26b027" valueTypeId="a1ff22b3-48cd-4258-8c54-1bfb340f09af"/>
+  </producedTypes>
+  <name>ИсполнителиРолейИДелегаты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Исполнители ролей и делегаты</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ИсполнителиРолейИДелегаты.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="671fc4de-467d-4c7b-961a-6cf53e10d865">
+    <name>ИсполнительДелегат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исполнитель/делегат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="33e4982a-3dbb-477d-92c9-da566f6c4ab6">
+    <name>РольПользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Роль исполнителя/Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПолныеРоли</types>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Роль исполнителя</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>44422b6d-5eb8-49c6-856b-dd9009611933.00000000-0000-0000-0000-000000000000</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="dadb086e-757f-4f64-a3ac-0d887d646224">
+    <name>НастройкаДелегирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка делегирования</value>
+    </synonym>
+    <comment>Настройку делегирования, по которой была сделана запись в регистре.</comment>
+    <type>
+      <types>CatalogRef.ДелегированиеПрав</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="5234cf9b-a6c3-4f3f-bd49-7868d2840942">
+    <name>УдалитьРольПользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Роль исполнителя/Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.РолиИсполнителей</types>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Роль исполнителя/Пользователь</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>44422b6d-5eb8-49c6-856b-dd9009611933.00000000-0000-0000-0000-000000000000</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f9c7c605-443f-49de-bab0-6725e328f694">
+    <name>ИмяОбластиДелегирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Область делегирования</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </dimensions>
+  <dimensions uuid="429ab0ce-5e92-45df-8858-a55352260d1f">
+    <name>УдалитьОсновнойОбъектАдресации</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Основной объект адресации</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ОбъектыАдресацииЗадач</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Основной объект адресации, используемый вместе с ролью</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>1d77bf72-cd0f-4f63-a0fd-fe083a1d6b57.00000000-0000-0000-0000-000000000000</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="337576ca-b22e-4245-a6a2-ff2f34599b0f">
+    <name>УдалитьДополнительныйОбъектАдресации</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Дополнительный объект адресации</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ОбъектыАдресацииЗадач</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дополнительный объект адресации, используемый вместе с ролью</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>01e1981b-f237-461c-8b09-90dd8f319985.00000000-0000-0000-0000-000000000000</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="e5db8815-0436-456c-81c6-245553045467">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

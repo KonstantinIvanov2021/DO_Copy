@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ebbdc2c4-e12d-41fc-816b-7b87305dd5bc">
+  <producedTypes>
+    <objectType typeId="06d6fd60-ecf0-4673-ae36-3f7701b10443" valueTypeId="390873ed-e7ed-422f-950e-049ba345a9e6"/>
+    <refType typeId="ef823e54-b1ff-41d9-a2a3-8b03e976fa36" valueTypeId="fb822f76-595b-4310-8136-5c622991cc6d"/>
+    <selectionType typeId="72998418-ce03-4140-8132-f507d471beab" valueTypeId="d8f7e08c-ef27-47cf-9e59-8abdfcc389e1"/>
+    <listType typeId="1d0d29c5-e323-4575-aaee-036c0312ce46" valueTypeId="02540e1d-b2f0-4ab6-85ea-8c70504f3060"/>
+    <managerType typeId="071ddba8-3c21-4045-8751-b6513b61f8d1" valueTypeId="e61a71d0-ba27-4a07-8b11-4aa191cb01d2"/>
+  </producedTypes>
+  <name>ПапкиВнутреннихДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Папки внутренних документов</value>
+  </synonym>
+  <inputByString>Catalog.ПапкиВнутреннихДокументов.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ПапкиВнутреннихДокументов.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Папка внутренних документов</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Папки</value>
+  </listPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>Папки внутренних документов</value>
+  </extendedListPresentation>
+  <hierarchical>true</hierarchical>
+  <hierarchyType>HierarchyOfItems</hierarchyType>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ПапкиВнутреннихДокументов.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultChoiceForm>Catalog.ПапкиВнутреннихДокументов.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="2790ff45-8079-42c4-953b-d6647528886d">
+    <name>Описание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7a4874f9-c789-4fa7-9d2d-2a9a97261540">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <quickChoice>DontUse</quickChoice>
+    <createOnInput>Use</createOnInput>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.Пользователи.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d022d792-9d3d-418b-98fd-22d370b08f41">
+    <name>ДатаСоздания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата создания</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="c9f2d192-6b88-45c6-a9b0-3854aa299bc2">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="30ec0d58-c9ee-4453-a474-cb5b7b8fb6c7">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Карточка папки внутренних документов</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

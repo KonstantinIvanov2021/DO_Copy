@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4ecfff1f-f38a-4e11-8528-bc1753e2e146">
+  <producedTypes>
+    <selectionType typeId="b83efa93-334d-45cd-8470-3c6cbc92be5a" valueTypeId="660106fe-814f-4f42-9ce3-6822ff54aff1"/>
+    <listType typeId="665be9ba-0751-4e24-b99c-2cea7ae27028" valueTypeId="1fe9e67e-82ea-4eb4-adca-9466471d15d1"/>
+    <managerType typeId="df171fed-4888-4d64-8a14-1a34452d4299" valueTypeId="28cd7824-06fb-4276-9e84-08865f634edc"/>
+    <recordSetType typeId="ad2f9217-e78b-457e-977c-5dd9029db203" valueTypeId="fd010459-5bab-4ace-b1bf-21ec6e9201d7"/>
+    <recordKeyType typeId="1847b41a-a2ca-491d-9bd5-41fa855474c4" valueTypeId="55b34440-a2a6-4ab6-b760-f0c1733e40f4"/>
+    <recordType typeId="5bbb6fd1-ffed-4121-8549-39a48d2e78f6" valueTypeId="0a8ceb3b-6d9a-48ca-9199-c4acd154ba13"/>
+    <recordManagerType typeId="1af2f8bd-63a3-4f6a-a933-e21f2fa36794" valueTypeId="f3d086fd-ee85-4249-aced-eb742b9286ee"/>
+  </producedTypes>
+  <name>УдалитьПодпискиНаУведомления</name>
+  <synonym>
+    <key>ru</key>
+    <value>Удалить подписки на уведомления</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="29ce9ca2-33a5-401e-a547-a23081ba738c">
+    <name>ПодпискаАктивна</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подписка активна</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Признак того что подписка активна</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="80052f5b-657f-4860-85a2-48e82751c71f">
+    <name>ВидСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид события</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыБизнесСобытий</types>
+      <types>EnumRef.СобытияУведомлений</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид события, к которому относится подписка</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="95ddac11-93a7-4953-8d09-318d5e4ca0a7">
+    <name>ОбъектПодписки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект подписки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТемыОбсуждений</types>
+      <types>CatalogRef.Контроль</types>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Проекты</types>
+      <types>CatalogRef.ПапкиФайлов</types>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+      <types>CatalogRef.КатегорииДанных</types>
+      <types>CatalogRef.ТерриторииИПомещения</types>
+      <types>CatalogRef.ВидыВнутреннихДокументов</types>
+      <types>CatalogRef.ЗаписиРабочегоКалендаря</types>
+      <types>CatalogRef.Файлы</types>
+      <types>CatalogRef.ВходящиеДокументы</types>
+      <types>DocumentRef.Бронь</types>
+      <types>DocumentRef.Отсутствие</types>
+      <types>CatalogRef.ПоказателиПроцессов</types>
+      <types>CatalogRef.ВнутренниеДокументы</types>
+      <types>CatalogRef.СообщенияОбсуждений</types>
+      <types>CatalogRef.Пользователи</types>
+      <types>CatalogRef.ВидыВходящихДокументов</types>
+      <types>CatalogRef.ИсходящиеДокументы</types>
+      <types>CatalogRef.Мероприятия</types>
+      <types>CatalogRef.ВидыИсходящихДокументов</types>
+      <types>CatalogRef.ПроектныеЗадачи</types>
+      <types>CatalogRef.ПапкиВнутреннихДокументов</types>
+      <types>BusinessProcessRef</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Объект, к которому относится подписка</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e2250ec5-1869-4da8-8d40-273485bc30d2">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, к которому относится подписка</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="41ec16fc-6aaf-494d-8f0d-991f888874a4">
+    <name>СпособУведомления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ уведомления</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыУведомления</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Способ уведомления подписки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

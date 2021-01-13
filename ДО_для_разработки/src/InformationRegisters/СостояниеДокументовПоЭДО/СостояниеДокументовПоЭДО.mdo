@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f14aa9f9-adbe-4537-91a2-fb224ca81f0f">
+  <producedTypes>
+    <selectionType typeId="b96f99cb-99a0-4071-8397-6e9533e8762d" valueTypeId="f833a325-7f6f-4ae5-9ede-09d3987a40d3"/>
+    <listType typeId="f6f761f3-4661-458f-94bd-853ddefe5f08" valueTypeId="848fabab-1dfd-4f1c-8dca-27df4f6925e3"/>
+    <managerType typeId="5a03db4d-4759-47e7-9a8c-730fa7d2415a" valueTypeId="64929e10-fc24-445c-95e8-f9120e306f22"/>
+    <recordSetType typeId="05949dfe-cd95-4b6e-a957-67605664ed9a" valueTypeId="36d96967-2397-4ed5-bf33-6535059d5ece"/>
+    <recordKeyType typeId="a9fb8844-7e3a-4a2f-8ff1-5acd2996f244" valueTypeId="a8cf4223-b7ed-46db-9eac-db6dead5a272"/>
+    <recordType typeId="66e17542-47b8-4501-84fe-6ac08298bc7a" valueTypeId="f7eeabc1-2805-4ce0-9b1c-8b39b11d7d07"/>
+    <recordManagerType typeId="68adf395-30fc-4bc0-9605-05f295dbd9b4" valueTypeId="19b5551f-7cc5-42f4-854e-0da9ffc74fb2"/>
+  </producedTypes>
+  <name>СостояниеДокументовПоЭДО</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние документов по ЭДО</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.СостояниеДокументовПоЭДО.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="9213a065-96a9-4fa8-b9b0-f45bcfa65fbc">
+    <name>СостояниеВерсииДокументаПоЭДО</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние версии документа по ЭДО </value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияВерсийЭДДО</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <attributes uuid="6eb313fb-0579-4f76-859b-23cae02d5bde">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <attributes uuid="fa0c5ca6-1f1f-4280-8035-24f79a235011">
+    <name>НаправлениеЭД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Направление ЭД</value>
+    </synonym>
+    <type>
+      <types>EnumRef.НаправленияЭД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="2bfc0f26-26f6-44c6-a497-17789201797b">
+    <name>ДокументДО</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ ДО</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВнутренниеДокументы</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Ссылка на документ документооборота, состояние версии электронного документа которого задается</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f50c67c9-e8fd-4fd8-9b3e-d85972e09f41">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="262c2a47-48a0-401e-976c-623ef8f2624a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

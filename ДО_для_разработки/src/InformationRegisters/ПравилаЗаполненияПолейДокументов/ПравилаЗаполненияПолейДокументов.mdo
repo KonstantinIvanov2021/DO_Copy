@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a73681b5-b3d2-4206-9b06-08fa6c4dbffc">
+  <producedTypes>
+    <selectionType typeId="32551432-06b2-413f-b2f2-d228e5d243b7" valueTypeId="9ea9d082-1375-4f00-a4da-18a4eab7c49f"/>
+    <listType typeId="5ab3bfb9-15d6-4fe9-96dd-261d49ee6020" valueTypeId="3ea1a886-529d-46ec-9e66-69ef880e7538"/>
+    <managerType typeId="50df5211-d44e-4dbd-9b6e-7462007f0663" valueTypeId="653c848a-843a-482a-981b-6fd5839a6c82"/>
+    <recordSetType typeId="58ed62a3-c2cf-4d4b-b32f-fc7d8fafd257" valueTypeId="45ed6447-1a81-47cc-818b-9bb40667f24e"/>
+    <recordKeyType typeId="c832e210-c1bb-4bd0-bc2e-e0a9c8947ae9" valueTypeId="cbd4ea51-5bf1-4e2a-a418-5fe21c246356"/>
+    <recordType typeId="53ea4c46-1e0d-4ad0-a706-862149f689ba" valueTypeId="92f967a0-f972-457c-8914-a1be031c3d02"/>
+    <recordManagerType typeId="d1e147b2-8fce-4845-9f5e-9d7042814761" valueTypeId="8fd9ed33-4022-4c21-b474-167c450abc70"/>
+  </producedTypes>
+  <name>ПравилаЗаполненияПолейДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Правила заполнения полей документов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ПравилаЗаполненияПолейДокументов.Form.ФормаЗаписи</defaultRecordForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Правило заполнения полей документов</value>
+  </recordPresentation>
+  <resources uuid="5ebfe073-8dd7-453d-aa94-9d59dd442e25">
+    <name>ЗначениеИзСправочника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение из справочника</value>
+    </synonym>
+    <type>
+      <types>AnyRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="9f5a89da-f9ac-4979-8b9d-831c23565885">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВходящиеДокументы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="cabfcfd7-5903-46d6-bced-01dd8424c80b">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e774f93c-a234-4fbd-87f2-f2967b85810d">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="93b5492a-f705-4a37-a716-bb8f558f4769">
+    <name>ИмяПоля</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя поля</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="dd5a7d4e-636d-4cb5-8d0f-1f692586124b">
+    <name>СтроковоеЗначение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Строковое значение</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="334bc3cb-a052-4abc-98bc-4b342b00da6b">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="b5039537-126a-4b53-a393-bb4be9acbd00">
+    <name>ПравилаЗаполненияПолейДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила заполнения полей документов</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

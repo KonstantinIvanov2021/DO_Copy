@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="059f32f3-2d39-4686-b33a-da6a9b68f8c2">
+  <producedTypes>
+    <selectionType typeId="64e50bbe-734b-4abc-ad82-822260b7cff3" valueTypeId="dfc634e1-f42a-46cb-b01e-3fa9192432c2"/>
+    <listType typeId="dcff6cce-4eac-4df0-b91d-7ad060cc249c" valueTypeId="18cfb54c-b17f-4288-a1b1-11b9e0642022"/>
+    <managerType typeId="7a2adeb3-343d-4d10-95aa-38b547196dfe" valueTypeId="970e353f-3eee-482f-9947-ddd041a0904c"/>
+    <recordSetType typeId="e8f1adbf-32db-4cc3-a327-cccb9accf7cc" valueTypeId="2d7fe919-4eb3-44f9-a958-8c8c6c58ed9e"/>
+    <recordKeyType typeId="1dfd4082-ad67-4a18-a011-9dd43b672b7f" valueTypeId="3c4a6ee1-b971-41e7-a1fd-419ea8c9ee90"/>
+    <recordType typeId="4b6a4f93-090e-4a3a-b1d4-e3fe37352310" valueTypeId="2028ef57-fd45-477b-828a-f97abbfe0ef7"/>
+    <recordManagerType typeId="48a7bd8a-4337-404f-aad7-dc97b4c1e1e0" valueTypeId="ad01b7a5-a46b-4c88-9b11-117375000dc0"/>
+  </producedTypes>
+  <name>ПользователиВКонтейнерах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пользователи в контейнерах</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ПользователиВКонтейнерах.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Пользователь в контейнере</value>
+  </recordPresentation>
+  <extendedRecordPresentation>
+    <key>ru</key>
+    <value>Пользователь в контейнере</value>
+  </extendedRecordPresentation>
+  <dimensions uuid="88710cf5-5b57-4235-a021-3e14ea398025">
+    <name>Контейнер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контейнер</value>
+    </synonym>
+    <type>
+      <types>DefinedType.КонтейнерПользователей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9d5a02d9-3d67-490b-a3b7-ad8b7b475c78">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="19575acf-a280-4380-bb99-da0dba2a6ed8">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

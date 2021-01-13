@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5d27fcf3-6132-46a5-8164-15aa2778cf60">
+  <producedTypes>
+    <selectionType typeId="2c18e59c-8c7b-48cc-b9e3-481a420e671c" valueTypeId="25842772-c616-4d4c-a0cb-b5de4c993a8b"/>
+    <listType typeId="41f479b6-ee6e-421e-b849-416c1b7329d6" valueTypeId="bc690041-84e2-40d8-9a10-015d75217d73"/>
+    <managerType typeId="3734a25f-0de2-4cc3-b2cc-e3db12246166" valueTypeId="2a903498-4ff8-4d0c-8cbf-ba4c5c1c0048"/>
+    <recordSetType typeId="3e90bd8e-5518-4b5b-b549-fa9a55a71cfa" valueTypeId="ccbd136f-738b-4281-8fef-7513f8e0753e"/>
+    <recordKeyType typeId="99552e6e-a9fb-4d76-9bae-957652e8f7b1" valueTypeId="d473ff5a-e9e4-48c4-bdc2-a03b952cf547"/>
+    <recordType typeId="11a6bbf9-6727-46c3-a401-329145f1bebf" valueTypeId="6bdedaec-51af-4ded-827d-8258018b237b"/>
+    <recordManagerType typeId="fdf49314-ccd4-47cf-8169-8f4ef48d8f0d" valueTypeId="26f8c8ff-805b-48cf-a77a-f1d5ada693b2"/>
+  </producedTypes>
+  <name>НастройкаШаблоновБизнесПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройка шаблонов процессов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.НастройкаШаблоновБизнесПроцессов.Form.ФормаЗаписи</defaultRecordForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Настройка шаблона процесса</value>
+  </recordPresentation>
+  <resources uuid="5ac9f5af-f05a-44b2-b442-739aef58c929">
+    <name>ЗапрещеноИзменение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Запрещено изменение процесса по шаблону</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="57c28a16-cbac-4ab9-b0eb-4e8437a53852">
+    <name>ИнтерактивныйЗапуск</name>
+    <synonym>
+      <key>ru</key>
+      <value>Интерактивный запуск</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="4785c7e3-95d6-4387-8df7-9217e65d76b5">
+    <name>ВидИнтерактивногоСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид интерактивного события</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыИнтерактивныхДействий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="81181bad-46e7-4291-8cdb-4fd4b0c01067">
+    <name>СобытияАвтоСтарта</name>
+    <synonym>
+      <key>ru</key>
+      <value>События авто старта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="5f58bc7d-3081-415e-8369-a47a83abd15a">
+    <name>ВидДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид документа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыВнутреннихДокументов</types>
+      <types>CatalogRef.ВидыВходящихДокументов</types>
+      <types>CatalogRef.ВидыИсходящихДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="34db6f1e-c476-4004-a097-df070f025c64">
+    <name>ШаблонБизнесПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон бизнес процесса</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШаблоныУтверждения</types>
+      <types>CatalogRef.ШаблоныОзнакомления</types>
+      <types>CatalogRef.ШаблоныСоставныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныРассмотрения</types>
+      <types>CatalogRef.ШаблоныСогласования</types>
+      <types>CatalogRef.ШаблоныПоручения</types>
+      <types>CatalogRef.ШаблоныКомплексныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныИсполнения</types>
+      <types>CatalogRef.ШаблоныРегистрации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e12c3e75-0448-4bb0-ae55-51337af5076e">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="25363b2e-cddb-454a-860b-914e309d6542">
+    <name>Условие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Условие</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.УсловияМаршрутизации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="47ff397c-92ac-4a8c-aa48-8e55a8d8b371">
+    <name>ФормаСпискаДляВидаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список назначенных шаблонов</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a3fef7e1-be6f-4f2b-9cbe-0baa9f3ff0a1">
+    <name>ФормаСпискаДляШаблона</name>
+    <synonym>
+      <key>ru</key>
+      <value>Виды документов по шаблону</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ac55f980-f2e3-4cbb-9b7f-7cc8d214e291">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка шаблона процессов</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="d4a5b76a-e5a6-4648-bbbb-4f5eb2454407">
+    <name>ОткрытьФормуДляВидаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны процессов</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ВидыВнутреннихДокументов</types>
+      <types>CatalogRef.ВидыВходящихДокументов</types>
+      <types>CatalogRef.ВидыИсходящихДокументов</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="8231c32a-686c-411b-b8f3-43c08f383189">
+    <name>ОткрытьФормуДляШаблона</name>
+    <synonym>
+      <key>ru</key>
+      <value>Назначен видам документов</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ШаблоныУтверждения</types>
+      <types>CatalogRef.ШаблоныОзнакомления</types>
+      <types>CatalogRef.ШаблоныСоставныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныРассмотрения</types>
+      <types>CatalogRef.ШаблоныСогласования</types>
+      <types>CatalogRef.ШаблоныПоручения</types>
+      <types>CatalogRef.ШаблоныКомплексныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныИсполнения</types>
+      <types>CatalogRef.ШаблоныРегистрации</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

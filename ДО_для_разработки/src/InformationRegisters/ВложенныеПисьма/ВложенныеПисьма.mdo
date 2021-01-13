@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cecd0656-c1cf-4498-b33f-a949ec365c79">
+  <producedTypes>
+    <selectionType typeId="082c3697-0971-452d-861f-d3845f0eed56" valueTypeId="4a3b1ee3-0276-40d1-b142-2875ca442279"/>
+    <listType typeId="3aa404c9-b399-46d3-b320-2b0f704b30af" valueTypeId="96428a44-714c-461d-9d29-acdc9abc588a"/>
+    <managerType typeId="2a764d6d-283e-4e1d-92ff-1099202f8b52" valueTypeId="c519862a-7630-47a9-969d-3441951c3872"/>
+    <recordSetType typeId="93841225-8f4f-4093-9b82-eb397808b4ac" valueTypeId="e66433dc-6a65-4a91-8b99-6836ab4ae7ef"/>
+    <recordKeyType typeId="a3fba00d-c791-4051-8df4-a8e346117154" valueTypeId="2e5cab3d-b483-42fa-a10d-748dd80a8375"/>
+    <recordType typeId="d0ba1602-cd92-44d9-bdd8-722665ed5166" valueTypeId="1ae8a708-dd41-4834-a737-8f80399fc18f"/>
+    <recordManagerType typeId="061d10da-55a8-4381-8862-d74da4abb573" valueTypeId="c9e20c98-4018-43a7-80fc-c468d9dc9a7b"/>
+  </producedTypes>
+  <name>ВложенныеПисьма</name>
+  <synonym>
+    <key>ru</key>
+    <value>Вложенные письма</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="e998521f-41c3-4149-952c-199dedb63848">
+    <name>Владелец</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ИсходящееПисьмо</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="01277f77-2ed6-4c39-ad25-20199c3fb63f">
+    <name>Вложение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вложение</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ВходящееПисьмо</types>
+      <types>DocumentRef.ИсходящееПисьмо</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

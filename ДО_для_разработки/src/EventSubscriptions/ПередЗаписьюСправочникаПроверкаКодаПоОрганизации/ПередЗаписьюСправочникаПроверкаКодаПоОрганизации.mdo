@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e826c3cc-1585-4899-b785-148d230a9c0b">
+  <name>ПередЗаписьюСправочникаПроверкаКодаПоОрганизации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перед записью справочника проверка кода по организации</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.НоменклатураДел</types>
+    <types>CatalogObject.ВходящиеДокументы</types>
+    <types>CatalogObject.ВнутренниеДокументы</types>
+    <types>CatalogObject.ИсходящиеДокументы</types>
+    <types>CatalogObject.РазделыНоменклатурыДел</types>
+    <types>CatalogObject.ДелаХраненияДокументов</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ПрефиксацияОбъектовСобытия.ПроверитьКодСправочникаПоОрганизации</handler>
+</mdclass:EventSubscription>

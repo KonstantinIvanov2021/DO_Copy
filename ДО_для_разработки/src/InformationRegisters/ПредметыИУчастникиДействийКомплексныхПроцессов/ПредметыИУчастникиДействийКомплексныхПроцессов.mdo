@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="87ef2bfd-33b2-463b-b31b-66386ead1c56">
+  <producedTypes>
+    <selectionType typeId="c60ecae4-8738-47c9-915d-773cbcbc1b19" valueTypeId="f928add4-4120-4a10-aa21-95df89a3e0e4"/>
+    <listType typeId="f27d52cf-31f5-4441-b179-89226d03a16f" valueTypeId="0097516a-b66d-4ac1-8b8a-5f159c9d4738"/>
+    <managerType typeId="c8a6fb32-1ccf-48b5-9239-e60c17da69e9" valueTypeId="08d5030e-6be6-47a6-9ce9-bcaf0554f8dd"/>
+    <recordSetType typeId="496ccc8a-24d3-40c1-8752-ed2e1e6ee038" valueTypeId="ac8dbdf1-302b-46b0-9bd6-599419db2df8"/>
+    <recordKeyType typeId="7d955d65-fd38-4afd-8b3e-4746d1930379" valueTypeId="34e9ff18-dfe7-4e33-8437-32da1e699ab5"/>
+    <recordType typeId="ad84a0c1-6a69-4a23-b561-9075e16f6002" valueTypeId="c5cd4328-4fe7-4286-af7a-7dd5abe9ede2"/>
+    <recordManagerType typeId="8a9b6650-9aac-41d1-8238-cdf46803ae52" valueTypeId="31d74c66-dae4-48a2-a191-a8f8c57ccb36"/>
+  </producedTypes>
+  <name>ПредметыИУчастникиДействийКомплексныхПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Предметы и участники действий комплексных процессов</value>
+  </synonym>
+  <comment>Используется для хранения участников действий комплексных процессов для проверки прав. После запуска действия записи с его участниками удаляются.</comment>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="daf2e823-dc29-48e1-b945-64c465a53de9">
+    <name>Изменение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменение</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="214063c0-7326-4a79-9595-c6cb139d6218">
+    <name>КомплексныйПроцесс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комплексный процесс</value>
+    </synonym>
+    <type>
+      <types>BusinessProcessRef.КомплексныйПроцесс</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="73dbbc80-8f16-418c-9257-363cf78f0af5">
+    <name>ИмяПредмета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя предмета</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИменаПредметов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8b9f473b-582f-4057-9e6a-bca4aab94d76">
+    <name>Участник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Участник</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>CatalogRef.ПолныеРоли</types>
+      <types>CatalogRef.Пользователи</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="60af6e02-63a1-4358-beaa-75cf85032654">
+    <name>ШаблонДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон действия</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШаблоныУтверждения</types>
+      <types>CatalogRef.ШаблоныОзнакомления</types>
+      <types>CatalogRef.ШаблоныСоставныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныРассмотрения</types>
+      <types>CatalogRef.ШаблоныСогласования</types>
+      <types>CatalogRef.ШаблоныПоручения</types>
+      <types>CatalogRef.ШаблоныКомплексныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныПриглашения</types>
+      <types>CatalogRef.ШаблоныИсполнения</types>
+      <types>CatalogRef.ШаблоныРегистрации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

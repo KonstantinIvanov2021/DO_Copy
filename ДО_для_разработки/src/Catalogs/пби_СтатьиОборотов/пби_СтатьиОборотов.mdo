@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="79740b43-acbd-41ac-a3a8-25f9ca299431">
+  <producedTypes>
+    <objectType typeId="d5363463-4202-45ce-bf2a-c5768e842fae" valueTypeId="512c7585-7d9c-456e-9369-2c16ca824c5d"/>
+    <refType typeId="74909fca-ba58-4161-b689-045a347c6b9b" valueTypeId="ffee3f86-9f06-4785-89fc-d0372dd689c5"/>
+    <selectionType typeId="5c70d3da-2213-41e7-b80d-1771d844295a" valueTypeId="2dd120c8-5a34-4d7f-9eff-4094e703a569"/>
+    <listType typeId="06aaca8b-7f80-4b20-bc47-b36c236d082f" valueTypeId="1c8e4439-6d82-4eb6-8f60-bc3f2e95a0d0"/>
+    <managerType typeId="a54b135c-dea1-4871-9966-00c82f258fe2" valueTypeId="de34a949-e0a1-4fb3-896d-ae5c2acd3356"/>
+  </producedTypes>
+  <name>пби_СтатьиОборотов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статьи оборотов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.пби_СтатьиОборотов.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.пби_СтатьиОборотов.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.пби_СтатьиОборотов.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultChoiceForm>Catalog.пби_СтатьиОборотов.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="9b919fcc-2b05-4d10-b0f0-214c94fb2302">
+    <name>Кодификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кодификатор</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <use>ForFolderAndItem</use>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="871776f5-b62f-4634-a106-8233def18a12">
+    <name>ТипСтатьи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип статьи</value>
+    </synonym>
+    <type>
+      <types>EnumRef.пби_ТипСтатьи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="993553dd-c633-41b6-a2b4-ebcc336dd77f">
+    <name>Направление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Направление</value>
+    </synonym>
+    <type>
+      <types>EnumRef.пби_НаправлениеСтатьи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="23f51052-141e-4994-a85e-574cbbb8c5ff">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2d61f832-81a4-41d0-ba8c-a036b380b9e7">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

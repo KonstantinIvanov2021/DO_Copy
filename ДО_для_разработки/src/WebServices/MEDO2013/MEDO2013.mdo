@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="45548cce-61e7-4c2a-8c53-a540d95567e2">
+  <name>MEDO2013</name>
+  <synonym>
+    <key>ru</key>
+    <value>MEDO2013</value>
+  </synonym>
+  <namespace>http://www.eos.ru/2010/sev</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>e36c4474-30ab-44d8-80ae-fc144465f27c</value>
+  </xdtoPackages>
+  <descriptorFileName>medo2013.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="3b8d6c4d-8d44-4f92-a2fe-7b14dadac1ec">
+    <name>Put</name>
+    <synonym>
+      <key>ru</key>
+      <value>Put</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>Response</name>
+      <nsUri>http://www.eos.ru/2010/sev</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>Put</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="112379c1-0f78-4b2b-8681-b77f23d48274">
+      <name>Message</name>
+      <synonym>
+        <key>ru</key>
+        <value>Message</value>
+      </synonym>
+      <xdtoValueType>
+        <name>DocumentInfo</name>
+        <nsUri>http://www.eos.ru/2010/sev</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="2a477808-5b85-455f-9253-350b097e5fd9">
+      <name>TableFiles</name>
+      <synonym>
+        <key>ru</key>
+        <value>Table files</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueTable</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="e3f51e5c-08ee-4905-ac03-07335792d9b3">
+    <name>Get</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>Response</name>
+      <nsUri>http://www.eos.ru/2010/sev</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>Get</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+  <operations uuid="eb9fb33c-9b33-4182-8e84-46cf06d69c95">
+    <name>TestConnection</name>
+    <synonym>
+      <key>ru</key>
+      <value>Test connection</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>boolean</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>TestConnection</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+</mdclass:WebService>

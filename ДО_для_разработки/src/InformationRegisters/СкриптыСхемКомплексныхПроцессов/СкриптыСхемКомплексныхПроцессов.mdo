@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e5203d5f-4c6b-4f4e-9bab-739958d8b049">
+  <producedTypes>
+    <selectionType typeId="ac2c2204-cf26-4b5a-aac8-6a5722188b6f" valueTypeId="88ff6a4f-697f-41b2-b52d-46634c3eff0f"/>
+    <listType typeId="7f9253d1-50a9-4795-bb9a-947ebebaaecb" valueTypeId="ea6b09aa-99c0-4ccd-8363-1b198991f549"/>
+    <managerType typeId="3bade878-d6dd-4006-899a-5d6731c6377a" valueTypeId="3f31a809-6a53-4729-9bf0-6362eef4382a"/>
+    <recordSetType typeId="0cbb0a37-b952-4b36-abd5-cfbfc00eb1b0" valueTypeId="39748c4b-c4e3-41e2-a0e4-c382edd3b507"/>
+    <recordKeyType typeId="b37ea387-fc06-48d5-9b56-0eec85295b24" valueTypeId="ebcdf036-4c4c-482a-ba18-3a9ed6d45d04"/>
+    <recordType typeId="3c7d3146-3add-4a0b-9f74-70e12737fbf3" valueTypeId="6a183d4a-2288-45f5-89c9-77a1e308c19e"/>
+    <recordManagerType typeId="5f136d86-3900-4fb8-bf50-765d14075c6d" valueTypeId="9bdbaae5-e463-4a7f-9962-288700645491"/>
+  </producedTypes>
+  <name>СкриптыСхемКомплексныхПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Скрипты схем комплексных процессов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="96e614a7-af6d-41b1-9343-45c8379d7908">
+    <name>Скрипт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Скрипт</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="2566cc21-4120-42fe-806a-30dda058cbd5">
+    <name>Схема</name>
+    <synonym>
+      <key>ru</key>
+      <value>Схема</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СхемыКомплексныхПроцессов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="00782d27-935c-4776-b74c-f9800a6d3f85">
+    <name>ИдентификаторСкрипта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор скрипта</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

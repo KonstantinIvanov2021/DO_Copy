@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cc02e918-e605-4ad9-818a-7423fbba4f85">
+  <producedTypes>
+    <selectionType typeId="0a2ea69c-c319-45e9-bca6-6b5d7ffffa50" valueTypeId="d3282f63-c1e9-4959-9691-2a1faa7600c0"/>
+    <listType typeId="35ae6f5f-9836-4d70-a8bc-47366e200164" valueTypeId="e4626e35-30bb-46a0-90d1-656490e3facd"/>
+    <managerType typeId="b5544aa7-c9ac-4d32-8dd1-869c2f400438" valueTypeId="bd2538ed-c149-46c8-9c21-4737704eee5c"/>
+    <recordSetType typeId="433808bf-095c-4957-84aa-3480f110609f" valueTypeId="cc03609e-1cb8-4891-8e49-a06e4eb54ac2"/>
+    <recordKeyType typeId="7c20ef7c-8d12-4d3e-92ba-f5ade87e0112" valueTypeId="42e438d3-7ade-4525-b4d0-b961524c62c6"/>
+    <recordType typeId="2ccf7c8f-2f2c-4900-9986-a2d1f0f51892" valueTypeId="51f732e9-3f82-49a2-b8ce-c7ea90cd4081"/>
+    <recordManagerType typeId="b91a2121-0004-44ff-ae0e-a028b67a354f" valueTypeId="7e52172d-018c-4e3d-b065-b92d329a8c28"/>
+  </producedTypes>
+  <name>ОбменСМобильнымиНастройкиПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен с мобильными настройки пользователей</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="edb1f457-f0bd-43c7-a3bf-4d9fc2d0e4d6">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+      <types>String</types>
+      <types>Date</types>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="6d37cd3f-91af-4aa7-872f-71b3d26a0f77">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9106a9dd-db14-489c-98f5-f8d82d005817">
+    <name>Настройка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ОбменСМобильнымиТипыНастроекПользователей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

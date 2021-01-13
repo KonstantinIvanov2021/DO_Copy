@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокИсполнения</dataPath>
+			<field>СрокИсполнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АвторСтрокой</dataPath>
+			<field>АвторСтрокой</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Автор</dataPath>
+			<field>Автор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсключенаИзПроцесса</dataPath>
+			<field>ИсключенаИзПроцесса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предметы.РольПредмета</dataPath>
+			<field>Предметы.РольПредмета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предметы.Предмет</dataPath>
+			<field>Предметы.Предмет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СостояниеБизнесПроцесса</dataPath>
+			<field>СостояниеБизнесПроцесса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>ДополнительныеРеквизиты</dataPath>
+			<field>ДополнительныеРеквизиты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отменена</dataPath>
+			<field>Отменена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.Свойство</dataPath>
+			<field>ДополнительныеРеквизиты.Свойство</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предметы.НомерСтроки</dataPath>
+			<field>Предметы.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предметы.ДоступноУдаление</dataPath>
+			<field>Предметы.ДоступноУдаление</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИсполнения</dataPath>
+			<field>ДатаИсполнения</field>
+		</field>
+		<field xsi:type="DataSetFieldNestedDataSet">
+			<dataPath>Предметы</dataPath>
+			<field>Предметы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.ТекстоваяСтрока</dataPath>
+			<field>ДополнительныеРеквизиты.ТекстоваяСтрока</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачала</dataPath>
+			<field>ДатаНачала</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предметы.Ссылка</dataPath>
+			<field>Предметы.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Важность</dataPath>
+			<field>Важность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БизнесПроцесс</dataPath>
+			<field>БизнесПроцесс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПринятаКИсполнению</dataPath>
+			<field>ПринятаКИсполнению</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.НомерСтроки</dataPath>
+			<field>ДополнительныеРеквизиты.НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.Ссылка</dataPath>
+			<field>ДополнительныеРеквизиты.Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийИсполнитель</dataPath>
+			<field>ТекущийИсполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектнаяЗадача</dataPath>
+			<field>ПроектнаяЗадача</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДополнительныеРеквизиты.Значение</dataPath>
+			<field>ДополнительныеРеквизиты.Значение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РезультатВыполнения</dataPath>
+			<field>РезультатВыполнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предметы.ОбязательноеЗаполнение</dataPath>
+			<field>Предметы.ОбязательноеЗаполнение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТочкаМаршрута</dataPath>
+			<field>ТочкаМаршрута</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предметы.ИмяПредмета</dataPath>
+			<field>Предметы.ИмяПредмета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПринятияКИсполнению</dataPath>
+			<field>ДатаПринятияКИсполнению</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выполнена</dataPath>
+			<field>Выполнена</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ЗадачаИсполнителя.Ссылка,
+	ЗадачаИсполнителя.ПометкаУдаления,
+	ЗадачаИсполнителя.Дата,
+	ЗадачаИсполнителя.БизнесПроцесс,
+	ЗадачаИсполнителя.ТочкаМаршрута,
+	ЗадачаИсполнителя.Наименование,
+	ЗадачаИсполнителя.Выполнена,
+	ЗадачаИсполнителя.Автор,
+	ЗадачаИсполнителя.Важность,
+	ЗадачаИсполнителя.ДатаИсполнения,
+	ЗадачаИсполнителя.ДатаНачала,
+	ЗадачаИсполнителя.Описание,
+	ЗадачаИсполнителя.ДатаПринятияКИсполнению,
+	ЗадачаИсполнителя.ИсключенаИзПроцесса,
+	ЗадачаИсполнителя.Отменена,
+	ЗадачаИсполнителя.ПринятаКИсполнению,
+	ЗадачаИсполнителя.Проект,
+	ЗадачаИсполнителя.ПроектнаяЗадача,
+	ЗадачаИсполнителя.РезультатВыполнения,
+	ЗадачаИсполнителя.СостояниеБизнесПроцесса,
+	ЗадачаИсполнителя.СрокИсполнения,
+	ЗадачаИсполнителя.ТекущийИсполнитель,
+	ЗадачаИсполнителя.АвторСтрокой,
+	ЗадачаИсполнителя.ДополнительныеРеквизиты.(
+		Ссылка,
+		НомерСтроки,
+		Свойство,
+		Значение,
+		ТекстоваяСтрока
+	),
+	ЗадачаИсполнителя.Предметы.(
+		Ссылка,
+		НомерСтроки,
+		РольПредмета,
+		ИмяПредмета,
+		Предмет,
+		ДоступноУдаление,
+		ОбязательноеЗаполнение
+	)
+ИЗ
+	Задача.ЗадачаИсполнителя КАК ЗадачаИсполнителя
+ГДЕ
+	ЗадачаИсполнителя.Ссылка = &amp;Ссылка</query>
+	</dataSet>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:TaskRef.ЗадачаИсполнителя</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Задача.ЗадачаИсполнителя.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ссылка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

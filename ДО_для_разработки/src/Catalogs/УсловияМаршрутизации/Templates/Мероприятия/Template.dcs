@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияДанных</dataPath>
+			<field>ВерсияДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоГруппа</dataPath>
+			<field>ЭтоГруппа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Родитель</dataPath>
+			<field>Родитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предопределенный</dataPath>
+			<field>Предопределенный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Важность</dataPath>
+			<field>Важность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидМероприятия</dataPath>
+			<field>ВидМероприятия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГрифДоступа</dataPath>
+			<field>ГрифДоступа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачала</dataPath>
+			<field>ДатаНачала</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачалаФакт</dataPath>
+			<field>ДатаНачалаФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончания</dataPath>
+			<field>ДатаОкончания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончанияФакт</dataPath>
+			<field>ДатаОкончанияФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗапретитьАвтоматическоеДобавлениеУчастниковРабочейГруппы</dataPath>
+			<field>ЗапретитьАвтоматическоеДобавлениеУчастниковРабочейГруппы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МатериалПрограмма</dataPath>
+			<field>МатериалПрограмма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МатериалПротокол</dataPath>
+			<field>МатериалПротокол</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МестоПроведения</dataPath>
+			<field>МестоПроведения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организатор</dataPath>
+			<field>Организатор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодСтрокой</dataPath>
+			<field>ПериодСтрокой</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предмет</dataPath>
+			<field>Предмет</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Председатель</dataPath>
+			<field>Председатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущееМероприятие</dataPath>
+			<field>ПредыдущееМероприятие</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Секретарь</dataPath>
+			<field>Секретарь</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КатегорияДанных</dataPath>
+			<field>КатегорияДанных</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Мероприятия.Ссылка,
+	Мероприятия.ВерсияДанных,
+	Мероприятия.ПометкаУдаления,
+	Мероприятия.Предопределенный,
+	Мероприятия.Родитель,
+	Мероприятия.ЭтоГруппа,
+	Мероприятия.Код,
+	Мероприятия.Наименование,
+	Мероприятия.Важность,
+	Мероприятия.ВидМероприятия,
+	Мероприятия.ГрифДоступа,
+	Мероприятия.ДатаНачала,
+	Мероприятия.ДатаНачалаФакт,
+	Мероприятия.ДатаОкончания,
+	Мероприятия.ДатаОкончанияФакт,
+	Мероприятия.Комментарий,
+	Мероприятия.МатериалПрограмма,
+	Мероприятия.МатериалПротокол,
+	Мероприятия.МестоПроведения,
+	Мероприятия.Описание,
+	Мероприятия.Организатор,
+	Мероприятия.Предмет,
+	Мероприятия.Председатель,
+	Мероприятия.ПредыдущееМероприятие,
+	Мероприятия.Секретарь,
+	Мероприятия.ЗапретитьАвтоматическоеДобавлениеУчастниковРабочейГруппы,
+	Мероприятия.Организация,
+	Мероприятия.ПериодСтрокой,
+	Мероприятия.Представление,
+	КатегорииОбъектов.КатегорияДанных
+ИЗ
+	Справочник.Мероприятия КАК Мероприятия
+ЛЕВОЕ СОЕДИНЕНИЕ
+	РегистрСведений.КатегорииОбъектов КАК КатегорииОбъектов
+ПО
+	Мероприятия.Ссылка = КатегорииОбъектов.ОбъектДанных
+ГДЕ
+	Мероприятия.Ссылка = &amp;Ссылка</query>
+	</dataSet>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Мероприятия</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ссылка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bc375f65-9b7b-4fdd-9afb-0bae6a39f362">
+  <producedTypes>
+    <objectType typeId="3d8d0eb9-f878-4e2b-890f-b7882e0474b4" valueTypeId="df3396c0-c249-4c9a-bb1f-da96b29e4484"/>
+    <refType typeId="c37696f8-70e1-4f84-ab31-bb6aac1a003e" valueTypeId="4b41a620-b340-4085-93cb-960f0f72538e"/>
+    <selectionType typeId="4c942814-f928-4ad7-9774-34415a397d5f" valueTypeId="d5859ade-5eb0-4d75-a426-243f8018bcd1"/>
+    <listType typeId="12745e9a-6d10-48f6-af7a-7e950133cdbb" valueTypeId="e09d0fc6-2cee-4ea6-8f68-64ff5e004983"/>
+    <managerType typeId="a88fadd6-482f-46b5-b7ce-ea9989621ad5" valueTypeId="05763a45-2865-400d-9997-719049cc3ed0"/>
+  </producedTypes>
+  <name>ГрифыДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Грифы доступа</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ГрифыДоступа.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Гриф доступа</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ГрифыДоступа.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ГрифыДоступа.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.ГрифыДоступа.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="a19fb364-a1e4-4632-894a-3f87b498f2d9">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ac5946b4-84e6-4058-b000-757c39c50051">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="18a33f95-a9c7-4227-a6ad-432543306446">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8443f30b-71d5-4d94-af7c-63697c24cac8">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="9c3afcf7-7c43-41e0-bcd0-df9f2dfc8e16">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

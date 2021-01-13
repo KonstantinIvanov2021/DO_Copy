@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="679dda42-85fc-4b16-94b1-86540984230f">
+  <producedTypes>
+    <selectionType typeId="5e88892f-0050-48f8-9bb2-65205c6c628f" valueTypeId="859f0255-6a2b-4720-bc62-28e3bb09434c"/>
+    <listType typeId="b15be2ef-eae7-453b-952a-150c8ca3712a" valueTypeId="7c594c38-21e4-441c-b9ea-3d91750e5cac"/>
+    <managerType typeId="03792f7c-cd66-459a-922c-72d257c4f304" valueTypeId="4fa298f1-273d-4f24-8abe-079f359283e5"/>
+    <recordSetType typeId="6dcd5808-99f7-46fd-8037-516c821fcaa2" valueTypeId="24c944da-a8dc-4a89-a0fe-8b4a74d769f6"/>
+    <recordKeyType typeId="752b954e-68d5-4276-ab03-9df41e557af1" valueTypeId="2704eceb-71fc-4cb7-990a-0b39795a3cba"/>
+    <recordType typeId="07980d71-28b4-489e-883d-dd336fa6391a" valueTypeId="e7d4a52d-df21-4fbb-a9fc-cd9d57e96e4a"/>
+    <recordManagerType typeId="d3d720f3-0bcd-418f-8d8d-66c42b83114f" valueTypeId="f6a0d4ba-735e-47b3-946c-15ccd98282c2"/>
+  </producedTypes>
+  <name>ИспользованиеШаблоновПроцессовВВидахДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использование шаблонов процессов в видах документов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="7a871e97-214a-493c-9524-469d84ee9827">
+    <name>ЧислоВидовДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Число видов документов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="973a368a-288b-4cd2-a426-6a560b5a10e5">
+    <name>ШаблонПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон процесса</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШаблоныУтверждения</types>
+      <types>CatalogRef.ШаблоныОзнакомления</types>
+      <types>CatalogRef.ШаблоныСоставныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныРассмотрения</types>
+      <types>CatalogRef.ШаблоныСогласования</types>
+      <types>CatalogRef.ШаблоныПоручения</types>
+      <types>CatalogRef.ШаблоныКомплексныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныПриглашения</types>
+      <types>CatalogRef.ШаблоныИсполнения</types>
+      <types>CatalogRef.ШаблоныРегистрации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

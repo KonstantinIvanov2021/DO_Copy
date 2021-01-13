@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="78fda5f8-3051-4aa3-9442-a2aa2c8f8bd4">
+  <name>КалендарьПередЗаписьюПредметаДокумента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Календарь перед записью предмета документа</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.Отсутствие</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.РаботаСРабочимКалендаремСервер.КалендарьПередЗаписьюПредметаДокументаПередЗаписью</handler>
+</mdclass:EventSubscription>

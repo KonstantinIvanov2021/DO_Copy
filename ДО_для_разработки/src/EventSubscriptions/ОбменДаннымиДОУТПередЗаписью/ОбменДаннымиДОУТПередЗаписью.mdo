@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4649a4e4-77a2-42d1-917a-39c2b2f45931">
+  <name>ОбменДаннымиДОУТПередЗаписью</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными ДО-УТ 11, перед записью</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.КлассификаторБанковРФ</types>
+    <types>CatalogObject.Пользователи</types>
+    <types>CatalogObject.РолиИсполнителей</types>
+    <types>ChartOfCharacteristicTypesObject.ОбъектыАдресацииЗадач</types>
+    <types>CatalogObject.Контрагенты</types>
+    <types>CatalogObject.ФизическиеЛица</types>
+    <types>CatalogObject.Организации</types>
+    <types>CatalogObject.БанковскиеСчета</types>
+    <types>CatalogObject.Валюты</types>
+    <types>CatalogObject.СтруктураПредприятия</types>
+    <types>CatalogObject.ВидыКонтактнойИнформации</types>
+    <types>CatalogObject.ВнешниеПользователи</types>
+    <types>CatalogObject.КонтактныеЛица</types>
+    <types>CatalogObject.ВидыДокументовФизическихЛиц</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменДаннымиСобытияДокументооборот.ОбменДаннымиДОУТПередЗаписью</handler>
+</mdclass:EventSubscription>

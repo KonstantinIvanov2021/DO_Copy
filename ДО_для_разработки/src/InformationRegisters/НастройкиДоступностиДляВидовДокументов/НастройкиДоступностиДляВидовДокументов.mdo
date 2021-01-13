@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="815b4a51-f685-4333-8724-54800b1cdd2d">
+  <producedTypes>
+    <selectionType typeId="3bd925d5-b179-4199-b825-ce7008f4df7a" valueTypeId="f5c774ae-0de1-4128-a507-f1f0b0ff5017"/>
+    <listType typeId="0eacdaab-936e-4003-84a0-88f87771483e" valueTypeId="07ebf3cb-c99c-4e12-bc9c-10cf5270a57e"/>
+    <managerType typeId="69ea7e2f-a2a9-497c-ae13-1e29b7589dc8" valueTypeId="92609e99-e5ae-4763-b1dd-22fdb75cb683"/>
+    <recordSetType typeId="3fe5a29b-aa34-4367-a7e0-173608ef8722" valueTypeId="a6c586bc-c2ac-40e5-a41f-a2eb72281b36"/>
+    <recordKeyType typeId="40fa74c9-50f3-4cde-83a2-153bc32bb5b0" valueTypeId="da912bf2-4521-4ed2-a2b6-53903511caad"/>
+    <recordType typeId="08979770-549c-4e36-91a1-ebe40351cea9" valueTypeId="c85ccd46-c0f5-47c2-841c-19bd4fb3b9e9"/>
+    <recordManagerType typeId="277fce78-46a2-4555-910c-163cab4fb827" valueTypeId="cf45d403-529d-4e57-a709-6da4fbc2c537"/>
+  </producedTypes>
+  <name>НастройкиДоступностиДляВидовДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки доступности для видов документов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.НастройкиДоступностиДляВидовДокументов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.НастройкиДоступностиДляВидовДокументов.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="b4a4bf6b-1237-4254-badc-e3c812b32e7e">
+    <name>ВидДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид документа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыВнутреннихДокументов</types>
+      <types>CatalogRef.ВидыВходящихДокументов</types>
+      <types>CatalogRef.ВидыИсходящихДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="39e29287-6457-4dd8-8ec6-3c62704bd075">
+    <name>НастройкаДоступностиПоСостоянию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка доступности по состоянию</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НастройкиДоступностиПоСостоянию</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="aca40864-230f-4b77-9161-7034589ae01d">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6f5e66d0-e424-4fe3-87da-641f328e9fda">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5562faec-6d47-4fca-8113-aab8b124332a">
+    <name>НастройкиПоВидуДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки по виду документа</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="94813879-1e99-4be8-b1ed-9c42ab76a883">
+    <name>НастройкиПоВидуДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки доступности</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ВидыВнутреннихДокументов</types>
+      <types>CatalogRef.ВидыВходящихДокументов</types>
+      <types>CatalogRef.ВидыИсходящихДокументов</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

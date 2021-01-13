@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c560f6b5-42c5-4e56-994e-757ca8a29fcc">
+  <producedTypes>
+    <selectionType typeId="7d2cc857-e0f1-4d45-bc4f-bb0515bed632" valueTypeId="7bc0936e-91d9-4ef1-8a52-4f0e0c21bfa1"/>
+    <listType typeId="96767d2c-9250-4321-b373-d486f6b0b810" valueTypeId="b2b4ecdb-6d86-4451-b180-24e868b90cd7"/>
+    <managerType typeId="7ece8ef8-4194-4154-93dd-9a93986b3594" valueTypeId="0270213c-2db7-4dfe-a281-dbc057bfc3a1"/>
+    <recordSetType typeId="c2488118-fc03-4df8-a0f3-fa381e98facd" valueTypeId="7d7d6d20-c408-4277-bf68-85f1525fc2cd"/>
+    <recordKeyType typeId="dd87584e-aa86-4271-a555-d6e23bd751b0" valueTypeId="cf1999ca-7d60-4f8d-8897-822b436e4f02"/>
+    <recordType typeId="0f2aa5be-eb99-4052-8988-24ff0a5f35f1" valueTypeId="196ff348-9b0e-4381-9271-739c9b1110e8"/>
+    <recordManagerType typeId="229d8c77-e875-4b81-8e97-4d20a383a644" valueTypeId="a9e95f6e-c6b4-4f64-b6d7-54398248ffb7"/>
+  </producedTypes>
+  <name>ПоискВАдреснойКниге</name>
+  <synonym>
+    <key>ru</key>
+    <value>Поиск в адресной книге</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="156d1ab5-35d6-405e-b914-ae447ead52c5">
+    <name>Слово</name>
+    <synonym>
+      <key>ru</key>
+      <value>Слово</value>
+    </synonym>
+    <comment>Строка, по которой ищется объект.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>400</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <attributes uuid="1476aaf8-edd2-4aaa-8e8b-0fe63c8f7b6f">
+    <name>ОбъектДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Проекты</types>
+      <types>CatalogRef.ЛичныеАдресаты</types>
+      <types>CatalogRef.СтруктураПредприятия</types>
+      <types>CatalogRef.РолиИсполнителей</types>
+      <types>CatalogRef.РабочиеГруппы</types>
+      <types>CatalogRef.Пользователи</types>
+      <types>CatalogRef.Организации</types>
+      <types>CatalogRef.ГруппыКонтактовПользователей</types>
+      <types>CatalogRef.ПапкиПроектов</types>
+      <types>CatalogRef.Мероприятия</types>
+      <types>CatalogRef.ПапкиМероприятий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f8ab79a7-1b11-4b33-89f7-57d9670c4335">
+    <name>ИспользоватьВПоиске</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать в поиске</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="e5d153dd-bc3e-45bc-b496-2aad3927fae4">
+    <name>ОбъектПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект поиска</value>
+    </synonym>
+    <comment>Объект, который можно найти по реквизиту Слово.</comment>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Проекты</types>
+      <types>CatalogRef.ЛичныеАдресаты</types>
+      <types>CatalogRef.СтруктураПредприятия</types>
+      <types>CatalogRef.РолиИсполнителей</types>
+      <types>CatalogRef.РабочиеГруппы</types>
+      <types>CatalogRef.Пользователи</types>
+      <types>CatalogRef.Организации</types>
+      <types>CatalogRef.Мероприятия</types>
+      <types>CatalogRef.КонтактныеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2202809e-ab27-4ca5-ac91-ec6910d1f9a1">
+    <name>КритерийПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Критерий поиска</value>
+    </synonym>
+    <comment>Критерий, по которому ищется объект поиска. Слово обычно содержит строковое представление критерия поиска. Но могут быть и исключения.</comment>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Проекты</types>
+      <types>CatalogRef.ЛичныеАдресаты</types>
+      <types>CatalogRef.СтруктураПредприятия</types>
+      <types>CatalogRef.РолиИсполнителей</types>
+      <types>CatalogRef.РабочиеГруппы</types>
+      <types>CatalogRef.Должности</types>
+      <types>CatalogRef.Пользователи</types>
+      <types>CatalogRef.Организации</types>
+      <types>CatalogRef.Мероприятия</types>
+      <types>CatalogRef.КонтактныеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

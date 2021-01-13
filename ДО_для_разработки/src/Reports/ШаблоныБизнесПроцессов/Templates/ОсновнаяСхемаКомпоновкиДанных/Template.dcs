@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Автор</dataPath>
+			<field>Автор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗавершения</dataPath>
+			<field>ДатаЗавершения</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачала</dataPath>
+			<field>ДатаНачала</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Шаблон</dataPath>
+			<field>Шаблон</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БизнесПроцесс</dataPath>
+			<field>БизнесПроцесс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипБизнесПроцесса</dataPath>
+			<field>ТипБизнесПроцесса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИспользованиеШаблона</dataPath>
+			<field>ИспользованиеШаблона</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Исполнение.Ссылка,
+	Исполнение.Шаблон,
+	Исполнение.Автор,
+	Исполнение.ДатаНачала,
+	Исполнение.ДатаЗавершения,
+	&amp;Исполнение КАК ТипБизнесПроцесса
+ПОМЕСТИТЬ БизнесПроцессы
+ИЗ
+	БизнесПроцесс.Исполнение КАК Исполнение
+{ГДЕ
+	(Исполнение.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(Исполнение.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ Исполнение.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(Исполнение.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Согласование.Ссылка,
+	Согласование.Шаблон,
+	Согласование.Автор,
+	Согласование.ДатаНачала,
+	Согласование.ДатаЗавершения,
+	&amp;Согласование
+ИЗ
+	БизнесПроцесс.Согласование КАК Согласование
+{ГДЕ
+	(Согласование.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(Согласование.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ Согласование.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(Согласование.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Утверждение.Ссылка,
+	Утверждение.Шаблон,
+	Утверждение.Автор,
+	Утверждение.ДатаНачала,
+	Утверждение.ДатаЗавершения,
+	&amp;Утверждение
+ИЗ
+	БизнесПроцесс.Утверждение КАК Утверждение
+{ГДЕ
+	(Утверждение.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(Утверждение.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ Утверждение.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(Утверждение.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Рассмотрение.Ссылка,
+	Рассмотрение.Шаблон,
+	Рассмотрение.Автор,
+	Рассмотрение.ДатаНачала,
+	Рассмотрение.ДатаЗавершения,
+	&amp;Рассмотрение
+ИЗ
+	БизнесПроцесс.Рассмотрение КАК Рассмотрение
+{ГДЕ
+	(Рассмотрение.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(Рассмотрение.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ Рассмотрение.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(Рассмотрение.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Регистрация.Ссылка,
+	Регистрация.Шаблон,
+	Регистрация.Автор,
+	Регистрация.ДатаНачала,
+	Регистрация.ДатаЗавершения,
+	&amp;Регистрация
+ИЗ
+	БизнесПроцесс.Регистрация КАК Регистрация
+{ГДЕ
+	(Регистрация.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(Регистрация.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ Регистрация.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(Регистрация.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Поручение.Ссылка,
+	Поручение.Шаблон,
+	Поручение.Автор,
+	Поручение.ДатаНачала,
+	Поручение.ДатаЗавершения,
+	&amp;Поручение
+ИЗ
+	БизнесПроцесс.Поручение КАК Поручение
+ГДЕ
+	(ТИПЗНАЧЕНИЯ(Поручение.Ссылка) &lt;&gt; ТИП(БизнесПроцесс.Поручение)
+			ИЛИ Поручение.Ссылка.ЗадачаИсточник = ЗНАЧЕНИЕ(Задача.ЗадачаИсполнителя.ПустаяСсылка))
+{ГДЕ
+	(Поручение.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(Поручение.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ Поручение.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(Поручение.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Ознакомление.Ссылка,
+	Ознакомление.Шаблон,
+	Ознакомление.Автор,
+	Ознакомление.ДатаНачала,
+	Ознакомление.ДатаЗавершения,
+	&amp;Ознакомление
+ИЗ
+	БизнесПроцесс.Ознакомление КАК Ознакомление
+{ГДЕ
+	(Ознакомление.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(Ознакомление.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ Ознакомление.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(Ознакомление.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	КомплексныйПроцесс.Ссылка,
+	КомплексныйПроцесс.Шаблон,
+	КомплексныйПроцесс.Автор,
+	КомплексныйПроцесс.ДатаНачала,
+	КомплексныйПроцесс.ДатаЗавершения,
+	&amp;КомплексныйПроцесс
+ИЗ
+	БизнесПроцесс.КомплексныйПроцесс КАК КомплексныйПроцесс
+{ГДЕ
+	(КомплексныйПроцесс.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(КомплексныйПроцесс.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ КомплексныйПроцесс.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(КомплексныйПроцесс.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Приглашение.Ссылка,
+	Приглашение.Шаблон,
+	Приглашение.Автор,
+	Приглашение.ДатаНачала,
+	Приглашение.ДатаЗавершения,
+	&amp;Приглашение
+ИЗ
+	БизнесПроцесс.Приглашение КАК Приглашение
+{ГДЕ
+	(Приглашение.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(Приглашение.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ Приглашение.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(Приглашение.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ОбработкаВнутреннегоДокумента.Ссылка,
+	ОбработкаВнутреннегоДокумента.Шаблон,
+	ОбработкаВнутреннегоДокумента.Автор,
+	ОбработкаВнутреннегоДокумента.ДатаНачала,
+	ОбработкаВнутреннегоДокумента.ДатаЗавершения,
+	&amp;ОбработкаВнутреннегоДокумента
+ИЗ
+	БизнесПроцесс.ОбработкаВнутреннегоДокумента КАК ОбработкаВнутреннегоДокумента
+{ГДЕ
+	(ОбработкаВнутреннегоДокумента.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(ОбработкаВнутреннегоДокумента.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ ОбработкаВнутреннегоДокумента.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(ОбработкаВнутреннегоДокумента.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ОбработкаВходящегоДокумента.Ссылка,
+	ОбработкаВходящегоДокумента.Шаблон,
+	ОбработкаВходящегоДокумента.Автор,
+	ОбработкаВходящегоДокумента.ДатаНачала,
+	ОбработкаВходящегоДокумента.ДатаЗавершения,
+	&amp;ОбработкаВходящегоДокумента
+ИЗ
+	БизнесПроцесс.ОбработкаВходящегоДокумента КАК ОбработкаВходящегоДокумента
+{ГДЕ
+	(ОбработкаВходящегоДокумента.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(ОбработкаВходящегоДокумента.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ ОбработкаВходящегоДокумента.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(ОбработкаВходящегоДокумента.Шаблон = &amp;Шаблон)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ОбработкаИсходящегоДокумента.Ссылка,
+	ОбработкаИсходящегоДокумента.Шаблон,
+	ОбработкаИсходящегоДокумента.Автор,
+	ОбработкаИсходящегоДокумента.ДатаНачала,
+	ОбработкаИсходящегоДокумента.ДатаЗавершения,
+	&amp;ОбработкаИсходящегоДокумента
+ИЗ
+	БизнесПроцесс.ОбработкаИсходящегоДокумента КАК ОбработкаИсходящегоДокумента
+{ГДЕ
+	(ОбработкаИсходящегоДокумента.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА),
+	(ОбработкаИсходящегоДокумента.ДатаНачала МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+			ИЛИ ОбработкаИсходящегоДокумента.ДатаЗавершения МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания),
+	(ОбработкаИсходящегоДокумента.Шаблон = &amp;Шаблон)}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ШаблоныИсполнения.Ссылка
+ПОМЕСТИТЬ Шаблоны
+ИЗ
+	Справочник.ШаблоныИсполнения КАК ШаблоныИсполнения
+{ГДЕ
+	(ШаблоныИсполнения.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ШаблоныОзнакомления.Ссылка
+ИЗ
+	Справочник.ШаблоныОзнакомления КАК ШаблоныОзнакомления
+{ГДЕ
+	(ШаблоныОзнакомления.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ШаблоныПоручения.Ссылка
+ИЗ
+	Справочник.ШаблоныПоручения КАК ШаблоныПоручения
+{ГДЕ
+	(ШаблоныПоручения.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ШаблоныРассмотрения.Ссылка
+ИЗ
+	Справочник.ШаблоныРассмотрения КАК ШаблоныРассмотрения
+{ГДЕ
+	(ШаблоныРассмотрения.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ШаблоныРегистрации.Ссылка
+ИЗ
+	Справочник.ШаблоныРегистрации КАК ШаблоныРегистрации
+{ГДЕ
+	(ШаблоныРегистрации.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ШаблоныСогласования.Ссылка
+ИЗ
+	Справочник.ШаблоныСогласования КАК ШаблоныСогласования
+{ГДЕ
+	(ШаблоныСогласования.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ШаблоныУтверждения.Ссылка
+ИЗ
+	Справочник.ШаблоныУтверждения КАК ШаблоныУтверждения
+{ГДЕ
+	(ШаблоныУтверждения.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ШаблоныКомплексных.Ссылка
+ИЗ
+	Справочник.ШаблоныКомплексныхБизнесПроцессов КАК ШаблоныКомплексных
+{ГДЕ
+	(ШаблоныКомплексных.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ШаблоныПриглашения.Ссылка
+ИЗ
+	Справочник.ШаблоныПриглашения КАК ШаблоныПриглашения
+{ГДЕ
+	(ШаблоныПриглашения.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ШаблоныСоставныхБизнесПроцессов.Ссылка
+ИЗ
+	Справочник.ШаблоныСоставныхБизнесПроцессов КАК ШаблоныСоставныхБизнесПроцессов
+{ГДЕ
+	(ШаблоныСоставныхБизнесПроцессов.ПометкаУдаления = ЛОЖЬ
+			ИЛИ &amp;УчитыватьПомеченныеНаУдаление = ИСТИНА)}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Шаблоны.Ссылка КАК Шаблон,
+	БизнесПроцессы.Ссылка КАК БизнесПроцесс,
+	БизнесПроцессы.Автор КАК Автор,
+	БизнесПроцессы.ДатаНачала КАК ДатаНачала,
+	БизнесПроцессы.ДатаЗавершения КАК ДатаЗавершения,
+	БизнесПроцессы.ТипБизнесПроцесса КАК ТипБизнесПроцесса,
+	1 КАК Количество,
+	ВЫБОР
+		КОГДА Шаблоны.Ссылка ЕСТЬ NULL 
+			ТОГДА &amp;БезИспользованияШаблона
+		ИНАЧЕ &amp;СИспользованиемШаблона
+	КОНЕЦ КАК ИспользованиеШаблона
+ИЗ
+	Шаблоны КАК Шаблоны
+		ПОЛНОЕ СОЕДИНЕНИЕ БизнесПроцессы КАК БизнесПроцессы
+		ПО Шаблоны.Ссылка = БизнесПроцессы.Шаблон</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Шаблон</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Шаблон бизнес-процесса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныУтверждения</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныОзнакомления</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныСоставныхБизнесПроцессов</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныРассмотрения</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныСогласования</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныПоручения</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныКомплексныхБизнесПроцессов</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныПриглашения</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныИсполнения</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныРегистрации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>УчитыватьПомеченныеНаУдаление</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Учитывать помеченные на удаление</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>БезИспользованияШаблона</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Без использования шаблона</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Без использования шаблона</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Исполнение</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Исполнение</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Исполнение</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КомплексныйПроцесс</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Комплексный процесс</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Комплексный процесс</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Ознакомление</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ознакомление</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Ознакомление</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Поручение</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Поручение</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Поручение</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Приглашение</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Приглашение</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Приглашение</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Рассмотрение</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Рассмотрение</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Рассмотрение</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Регистрация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Регистрация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Регистрация</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СИспользованиемШаблона</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>С использованием шаблона</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">С использованием шаблона</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Согласование</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Согласование</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Согласование</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Утверждение</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Утверждение</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Утверждение</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОбработкаВнутреннегоДокумента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Обработка внутреннего документа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Обработка внутреннего документа</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОбработкаВходящегоДокумента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Обработка входящего документа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Обработка входящего документа</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОбработкаИсходящегоДокумента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Обработка исходящего документа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string">Обработка исходящего документа</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>СписокБизнесПроцессовПоШаблонам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список процессов по шаблонам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>БизнесПроцесс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаНачала</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаЗавершения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Автор</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">БизнесПроцесс</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Шаблон</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>b284f8ad-7afc-483e-af47-38887c131735</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Шаблон</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>05943592-a8ef-44b7-83db-ca1076766095</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>УчитыватьПомеченныеНаУдаление</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>ff28bcad-30a9-460c-9200-6e0d1cb74892</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показывать помеченные на удаление</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>БезИспользованияШаблона</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Без использования шаблона</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Исполнение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Исполнение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КомплексныйПроцесс</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Комплексный процесс</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ознакомление</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Ознакомление</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Поручение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Поручение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Приглашение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Приглашение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Рассмотрение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Рассмотрение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Регистрация</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Регистрация</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СИспользованиемШаблона</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">С использованием шаблона</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Согласование</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Согласование</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Утверждение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Утверждение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаВнутреннегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка внутреннего документа</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаВходящегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка входящего документа</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаИсходящегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка исходящего документа</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список процессов по шаблонам</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Шаблон</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Шаблон.ПометкаУдаления</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>Шрифт</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Font" ref="style:УдаленныйОбъектШрифт" kind="StyleItem"/>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">БизнесПроцесс.ПометкаУдаления</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Шрифт</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="style:УдаленныйОбъектШрифт" kind="StyleItem"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+					</dcsset:conditionalAppearance>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>КоличествоБизнесПроцессовПоШаблонам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество процессов по шаблонам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">БизнесПроцесс</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Шаблон</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>86c6fd16-e030-49d5-8e48-a7d8e0215808</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>УчитыватьПомеченныеНаУдаление</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>292cb955-0bf9-4cb2-9adc-0e40ebfc3a3b</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>БезИспользованияШаблона</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Без использования шаблона</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Исполнение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Исполнение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КомплексныйПроцесс</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Комплексный процесс</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ознакомление</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Ознакомление</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Поручение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Поручение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Приглашение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Приглашение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Рассмотрение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Рассмотрение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Регистрация</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Регистрация</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СИспользованиемШаблона</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">С использованием шаблона</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Согласование</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Согласование</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Утверждение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Утверждение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаВнутреннегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка внутреннего документа</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаВходящегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка входящего документа</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаИсходящегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка исходящего документа</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Количество бизнес-процессов по шаблонам</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Шаблон</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Количество</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>КоличествоЗаписей</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:point>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartType">Bar</dcscor:value>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипДиаграммы.ВидПодписей</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:ChartLabelType">Value</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипДиаграммы.РасположениеЛегенды</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionChartLegendPlacement">None</dcscor:value>
+						</dcscor:item>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">Топ 10 шаблонов по популярности использования</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:userSettingID>1feb37f3-3d71-4650-8012-19ef923a3d75</dcsset:userSettingID>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Шаблон</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>Количество</dcsset:field>
+						<dcsset:orderType>Desc</dcsset:orderType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Количество.ПроцентВГруппе</dcsset:field>
+						<dcsset:title>%</dcsset:title>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Шаблон.ПометкаУдаления</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>Шрифт</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Font" ref="style:УдаленныйОбъектШрифт" kind="StyleItem"/>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">Полный список</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>СписокНеиспользуемыхШаблонов</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список неиспользуемых шаблонов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Шаблон</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">БизнесПроцесс</dcsset:left>
+					<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>058fd0d7-7358-4a8e-9d94-62305611e07f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>УчитыватьПомеченныеНаУдаление</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>500092c6-61c8-4258-97bd-177e4eeaaf57</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показывать помеченные на удаление</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>БезИспользованияШаблона</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Без использования шаблона</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Исполнение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Исполнение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КомплексныйПроцесс</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Комплексный процесс</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ознакомление</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Ознакомление</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Поручение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Поручение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Приглашение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Приглашение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Рассмотрение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Рассмотрение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Регистрация</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Регистрация</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СИспользованиемШаблона</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">С использованием шаблона</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Согласование</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Согласование</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Утверждение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Утверждение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаВнутреннегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка внутреннего документа</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаВходящегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка входящего документа</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаИсходящегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка исходящего документа</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Список неиспользуемых шаблонов</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Шаблон</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Шаблон.ПометкаУдаления</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>Шрифт</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Font" ref="style:УдаленныйОбъектШрифт" kind="StyleItem"/>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>СтатистикаИспользованияШаблонов</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статистика использования шаблонов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">БизнесПроцесс</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>18e9ea02-6dcd-4cf2-955c-f90efe677455</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>УчитыватьПомеченныеНаУдаление</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>24b2d1b4-7cbb-441f-af03-342d60aa1e0d</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>БезИспользованияШаблона</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Без использования шаблона</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Исполнение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Исполнение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КомплексныйПроцесс</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Комплексный процесс</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ознакомление</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Ознакомление</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Поручение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Поручение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Приглашение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Приглашение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Рассмотрение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Рассмотрение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Регистрация</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Регистрация</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СИспользованиемШаблона</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">С использованием шаблона</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Согласование</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Согласование</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Утверждение</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Утверждение</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаВнутреннегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка внутреннего документа</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаВходящегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка входящего документа</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ОбработкаИсходящегоДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Обработка исходящего документа</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Статистика использования шаблонов</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТипБизнесПроцесса</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:point>
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ИспользованиеШаблона</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartType">StackedBar</dcscor:value>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипДиаграммы.ПропускатьБазовоеЗначение</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипДиаграммы.ВидПодписей</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:ChartLabelType">Percent</dcscor:value>
+						</dcscor:item>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

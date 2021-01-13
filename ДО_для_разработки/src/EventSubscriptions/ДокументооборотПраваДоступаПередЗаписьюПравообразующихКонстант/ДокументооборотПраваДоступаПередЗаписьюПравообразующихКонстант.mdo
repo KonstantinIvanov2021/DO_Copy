@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3a3975ab-ed52-470e-b740-50775559fd71">
+  <name>ДокументооборотПраваДоступаПередЗаписьюПравообразующихКонстант</name>
+  <synonym>
+    <key>ru</key>
+    <value>Документооборот права доступа перед записью правообразующих констант</value>
+  </synonym>
+  <source>
+    <types>ConstantValueManager.ИспользоватьЛокальныхАдминистраторов</types>
+    <types>ConstantValueManager.ИспользованиеРазрезовДоступа</types>
+    <types>ConstantValueManager.ИспользоватьВидыИсходящихДокументов</types>
+    <types>ConstantValueManager.ИспользоватьГрифыДоступа</types>
+    <types>ConstantValueManager.ИспользоватьВидыВходящихДокументов</types>
+    <types>ConstantValueManager.СпецРазрешенияВПолитикахДоступа</types>
+    <types>ConstantValueManager.ИспользоватьУчетПоОрганизациям</types>
+    <types>ConstantValueManager.ИспользоватьВопросыДеятельности</types>
+    <types>ConstantValueManager.ДобавлятьРуководителямДоступПодчиненных</types>
+    <types>ConstantValueManager.ИспользоватьВидыВнутреннихДокументов</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ДокументооборотПраваДоступа.ДокументооборотПраваДоступаПередЗаписьюПравообразующихКонстант</handler>
+</mdclass:EventSubscription>

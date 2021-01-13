@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c80d3eb6-c2ad-4cad-ad29-0881d87d964a">
+  <producedTypes>
+    <objectType typeId="cf574420-c19a-4ff2-bcd4-e17a84121312" valueTypeId="4871bbd2-0e3b-47c9-b83c-9ea1e2d2cd72"/>
+    <managerType typeId="e03f5b12-9935-402a-b3a9-5bdeb9e16bf9" valueTypeId="997f36e2-492d-4507-852c-c4aa1dbc9844"/>
+  </producedTypes>
+  <name>УстановкаТиповойМетодикиДокументооборота</name>
+  <synonym>
+    <key>ru</key>
+    <value>Установка типовой методики документооборота</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.УстановкаТиповойМетодикиДокументооборота.Form.Форма</defaultForm>
+  <attributes uuid="90b8f827-bac8-4033-bd5a-d93bdeb848a3">
+    <name>ВестиУчетОбращенийГраждан</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вы работаете с обращениями граждан</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Загруженные настройки позволят регистрировать обращения граждан, создавать на их основе процессы, контролировать сроки их исполнения, выводить в отчеты и списывать в дела.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1fdea5c4-07b3-4202-90d1-fb9f8112735c">
+    <name>ИспользоватьУчетПоОрганизациям</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ваше предприятие состоит из нескольких юридических лиц</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>В этом случае программа загрузит настройки для учета по нескольким организациям. У каждой организации будут свои реквизиты, нумераторы, один и тот же сотрудник сможет подписывать документы от нескольких юридических лиц.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="558b7a13-e192-4162-b264-89dd842adaad">
+    <name>ВестиУчетПоПроектам</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вести учет по проектам</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Настройки позволят обмениваться проектными задачами и контролировать их исполнение, вести учет трудозатрат и рассчитывать план проекта, управлять доступом к проектной документации и получать отчеты.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="2f1d6344-38cd-4f5e-8d0d-813a67239984">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5ac0969b-1d1b-4463-9bfc-975cb65943b3">
+    <name>ФормаПредупрежденияПередУстановкой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма предупреждения перед установкой</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="09778985-330f-4a41-913a-1610f5deef07">
+    <name>ВидыВнутреннихДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Виды внутренних документов</value>
+    </synonym>
+  </templates>
+  <templates uuid="61e7c4a2-cb40-4474-9208-661481d0d694">
+    <name>ВидыВходящихДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Виды входящих документов</value>
+    </synonym>
+  </templates>
+  <templates uuid="86862f63-b33f-4621-ad43-67e91b924ab3">
+    <name>ВидыИсходящихДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Виды исходящих документов</value>
+    </synonym>
+  </templates>
+  <templates uuid="901a1a15-a03b-4b77-868f-a51628e6cdc6">
+    <name>ВидыМероприятий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Виды мероприятий</value>
+    </synonym>
+  </templates>
+  <templates uuid="be4265e7-4970-4ccd-bbc9-cd7c0b9b6993">
+    <name>ВидыРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Виды работ</value>
+    </synonym>
+  </templates>
+  <templates uuid="f84a6bdb-8986-4b10-82e7-296c990d158d">
+    <name>ВнутренниеДокументы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Внутренние документы</value>
+    </synonym>
+  </templates>
+  <templates uuid="9d9d663f-2d74-4171-a16b-1f12a11d35aa">
+    <name>ВопросыДеятельности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вопросы деятельности</value>
+    </synonym>
+  </templates>
+  <templates uuid="d4a74336-ecda-4685-a928-a77219112f80">
+    <name>ГрафикиРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Графики работ</value>
+    </synonym>
+  </templates>
+  <templates uuid="05c6c19c-5d49-4793-945b-8fab33e8ad55">
+    <name>Должности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должности</value>
+    </synonym>
+  </templates>
+  <templates uuid="89a17b19-3b61-49a0-bbe2-d403e7fe8616">
+    <name>ДополнительныеРеквизиты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные реквизиты</value>
+    </synonym>
+  </templates>
+  <templates uuid="91cc9855-9693-42f4-ab6f-ff93a0b95dd1">
+    <name>ЗагружаемыеДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загружаемые данные</value>
+    </synonym>
+  </templates>
+  <templates uuid="ebb85325-429f-4e91-a20a-cf7598068dbe">
+    <name>ЗадачиПоЗавершениюЗагрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Задачи по завершению загрузки</value>
+    </synonym>
+  </templates>
+  <templates uuid="01ba8d16-16e7-42d1-8ca4-271df22ab637">
+    <name>ИнструкцияПриказАдминистративноХозяйственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инструкция приказ административно хозяйственный</value>
+    </synonym>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+  <templates uuid="5a89042c-2dc4-4bb9-aaa4-9aaf60509d70">
+    <name>ИнструкцияПриказПоЛичномуСоставуОПредоставленииОтпусков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инструкция приказ по личному составу о предоставлении отпусков</value>
+    </synonym>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+  <templates uuid="0049c754-6c5d-411e-b807-3078bf7ed0f6">
+    <name>ИнструкцияПриказПоЛичномуСоставуОПриеме</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инструкция приказ по личному составу о приеме</value>
+    </synonym>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+  <templates uuid="635fbec1-6ea3-4f4f-8f6a-e068f523b387">
+    <name>ИнструкцияПриказПоОсновнойДеятельности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инструкция приказ по основной деятельности</value>
+    </synonym>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+  <templates uuid="bc5dbb18-2fb3-4676-8513-ff2f5104a91e">
+    <name>ИнструкцияПубликацияДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инструкция публикация документа</value>
+    </synonym>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+  <templates uuid="ef553f93-8dfc-4857-900b-542f2f6d2a15">
+    <name>НастройкиНумерации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки нумерации</value>
+    </synonym>
+  </templates>
+  <templates uuid="01359abb-dc4b-484d-9513-4e891c034fce">
+    <name>НастройкиСвязей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки связей</value>
+    </synonym>
+  </templates>
+  <templates uuid="b742c73b-22b8-4f57-b379-2e1103733977">
+    <name>НастройкиУведомлений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки уведомлений</value>
+    </synonym>
+  </templates>
+  <templates uuid="12bf2594-c79c-4a95-9f66-bbbea9e3c976">
+    <name>НоменклатураДел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура дел</value>
+    </synonym>
+  </templates>
+  <templates uuid="73c3dd60-340e-4e07-b464-92d14bfde5c4">
+    <name>Нумераторы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нумераторы</value>
+    </synonym>
+  </templates>
+  <templates uuid="4178231c-12a7-4b86-acdf-7dfcbbdcde12">
+    <name>ОбновлениеИнструкций</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обновление инструкций</value>
+    </synonym>
+  </templates>
+  <templates uuid="46e838b2-fe04-4a42-8fb9-4f58c0104546">
+    <name>ПапкиВнутреннихДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Папки внутренних документов</value>
+    </synonym>
+  </templates>
+  <templates uuid="47d8a090-8929-4bf9-8588-1c513b8806a9">
+    <name>ПапкиМероприятий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Папки мероприятий</value>
+    </synonym>
+  </templates>
+  <templates uuid="997e2fcc-6cec-4599-8733-bc1670a7d321">
+    <name>ПапкиФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Папки файлов</value>
+    </synonym>
+  </templates>
+  <templates uuid="76bff231-7f87-4bdc-8b2f-a36b85ff7c92">
+    <name>ПапкиФорума</name>
+    <synonym>
+      <key>ru</key>
+      <value>Папки форума</value>
+    </synonym>
+  </templates>
+  <templates uuid="d0b4bc71-bdb5-4137-ae2e-40fb8fc1edb6">
+    <name>ПереченьНовыхИнструкций</name>
+    <synonym>
+      <key>ru</key>
+      <value>Перечень новых инструкций</value>
+    </synonym>
+  </templates>
+  <templates uuid="55d7d75a-2ca1-4671-b38e-59c9fb0ec46c">
+    <name>ПравилаАвтозаполненияФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила автозаполнения файлов</value>
+    </synonym>
+  </templates>
+  <templates uuid="e06d2dae-9f5a-43c3-8518-e2862544bac5">
+    <name>ПроверяемыеДанныеПередЗагрузкой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверяемые данные перед загрузкой</value>
+    </synonym>
+  </templates>
+  <templates uuid="b0b4f57f-cc12-42bb-9899-0132ba18c3eb">
+    <name>РабочиеГруппы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочие группы</value>
+    </synonym>
+  </templates>
+  <templates uuid="4c78e37c-4604-48aa-8ba3-38e681cd6821">
+    <name>РазделыНоменклатурыДел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разделы номенклатуры дел</value>
+    </synonym>
+  </templates>
+  <templates uuid="0f731a87-c296-49b3-abe2-52ff070c0195">
+    <name>РолиИсполнителей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Роли исполнителей</value>
+    </synonym>
+  </templates>
+  <templates uuid="493f5bb9-46f0-42dd-8262-e838e29d468b">
+    <name>СвязиДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Связи документов</value>
+    </synonym>
+  </templates>
+  <templates uuid="4b5d0992-aa8f-4b08-9b6e-01e66894e88c">
+    <name>СписокФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список файлов</value>
+    </synonym>
+  </templates>
+  <templates uuid="018b9727-821a-47cb-975a-1f53d6dc6ac4">
+    <name>СтруктураПредприятия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Структура предприятия</value>
+    </synonym>
+  </templates>
+  <templates uuid="2a66328c-df09-4ca8-96bd-b93b152ab68f">
+    <name>ТемыОбсуждений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Темы обсуждений</value>
+    </synonym>
+  </templates>
+  <templates uuid="18505c0d-8fba-4e2d-ba03-8b08baa43d24">
+    <name>ТипыСвязей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Типы связей</value>
+    </synonym>
+  </templates>
+  <templates uuid="1b412866-933f-43d8-94f0-7c559a459b2b">
+    <name>УсловияМаршрутизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Условия маршрутизации</value>
+    </synonym>
+  </templates>
+  <templates uuid="fea1f994-4d6f-42b8-b213-60ae9c783879">
+    <name>ФайлODFPresentation</name>
+    <synonym>
+      <key>ru</key>
+      <value>ODF Presentation</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="eadc2fd8-8128-40a3-8ed3-4e16f895a699">
+    <name>ФайлODFSpreadsheet</name>
+    <synonym>
+      <key>ru</key>
+      <value>ODF Spreadsheet</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="dbfee544-e48e-45e9-9796-c9d04b676d46">
+    <name>ФайлODFTextDocument</name>
+    <synonym>
+      <key>ru</key>
+      <value>ODF Text Document</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="5296fd1d-a635-41e6-90a3-e0861cdac463">
+    <name>ФайлАктВыполненныхРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акт выполненных работ</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="4395d150-5116-4757-827e-3d8a675e90b7">
+    <name>ФайлАктПриемаПередачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Файл акт приема передачи</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="aecba188-c307-469b-91a4-42b4f8346f8a">
+    <name>ФайлБланкВидаВнутреннегоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бланк вида внутреннего документа</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="669fa727-6550-4a66-94b7-7095fb352251">
+    <name>ФайлБланкОбщийПродольный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бланк общий продольный</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="d7c48f07-9fa4-4a8f-86aa-96bf336d9a4b">
+    <name>ФайлБланкПисьмаДолжностногоЛица</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бланк письма должностного лица</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="f759a054-7e34-4652-8c97-b7d7de625143">
+    <name>ФайлБланкПисьмаПродольный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бланк письма продольный</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="45916dc8-f8be-4730-a127-cadf491182a5">
+    <name>ФайлБланкПисьмаСтруктурногоПодразделения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бланк письма структурного подразделения</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="95e187f4-3d70-4f47-886c-911cb0ee0605">
+    <name>ФайлБланкПисьмаУгловой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бланк письма угловой</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="54b404ab-14db-4b9d-8038-e85c1c8ebb33">
+    <name>ФайлДоговор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="11a4185b-6d65-4bee-8a8e-5fd9335b0147">
+    <name>ФайлДокументMicrosoftWord</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ Microsoft Word</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="70d0c8a5-3088-4ea5-9dc5-81423be743bb">
+    <name>ФайлДолжностнаяИнструкция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должностная инструкция</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="bba81813-8093-4028-80b8-5dd6e38cdfc8">
+    <name>ФайлДопСоглашение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительное соглашение</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="c51430d6-d4e3-4461-adf2-b9d4866b9f28">
+    <name>ФайлЗаявкаНаЗакупку</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявка на закупку</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="6c3b4c91-9aa9-4443-aec8-af9297ec3740">
+    <name>ФайлЗаявкаНаРазработкуТиповойФормыДоговора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявка на разработку типовой формы договора</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="623944db-7c09-4858-815b-08e2da2f9a6e">
+    <name>ФайлЗаявлениеНаОтпуск</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявление на отпуск</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="b14ed60f-2abd-4408-82db-41fa4ebeb603">
+    <name>ФайлИзображение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изображение</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="80b522a5-46e9-4edf-a64e-212b72cde634">
+    <name>ФайлИнструкция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инструкция</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="d5945de5-b482-4fff-a3e6-0ab1e2120e68">
+    <name>ФайлКакРаботатьСМетодическимиМатериалами</name>
+    <synonym>
+      <key>ru</key>
+      <value>Как работать с методическими материалами</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="f2f52774-eae9-4bbe-8f1a-3f18e525b207">
+    <name>ФайлКоммерческоеПисьмо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коммерческое письмо</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="1b18e826-ccd4-4227-aaf9-c11e14419462">
+    <name>ФайлЛистMicrosoftExcel</name>
+    <synonym>
+      <key>ru</key>
+      <value>Лист Microsoft Excel</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="9b0559d6-5e18-45b1-8f81-ff821d5a2032">
+    <name>ФайлМетодика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Методика</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="233b515e-1a37-4c52-ac2f-f8acd3a17e76">
+    <name>ФайлОбъяснительнаяЗаписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объяснительная записка</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="878041d1-dd02-40ad-9606-639f7f37446a">
+    <name>ФайлПолитика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Политика</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="67358e71-6ea9-43eb-98eb-4db23a1e2b49">
+    <name>ФайлПоложениеОбОбъектеДеятельности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Положение об объекте деятельности</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="3c7ff037-82a3-43cb-a5a5-039db2a363fd">
+    <name>ФайлПоложениеОДелопроизводстве</name>
+    <synonym>
+      <key>ru</key>
+      <value>Положение о делопроизводстве</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="9eda26a2-3e66-4014-a0f4-16f555cd0d88">
+    <name>ФайлПоложениеОДелопроизводствеОт1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Положение о делопроизводстве от 1С</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="2bab2ffb-0620-4c06-b36e-0b92e16cd429">
+    <name>ФайлПоложениеОПодразделении</name>
+    <synonym>
+      <key>ru</key>
+      <value>Положение о подразделении</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="5c970966-af4f-46c1-818f-af68857f03ed">
+    <name>ФайлПравила</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="67ff8b8a-2d13-40fe-876b-424e8f626415">
+    <name>ФайлПрезентацияMicrosoftPowerPoint</name>
+    <synonym>
+      <key>ru</key>
+      <value>Презентация Microsoft PowerPoint</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="cdb0d1ed-b78f-4b58-b953-3c709f23e7e9">
+    <name>ФайлПриказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приказ</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="3d6a2779-12fe-47dc-880b-53407263fa8d">
+    <name>ФайлПриказОбУтвержденииИВеденииВДействиеПоложенияОДелопроизводстве</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приказ об утверждении и ведении в действие Положения о делопроизводстве</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="4d261a38-2a9d-4652-84e7-8ad530ee45d4">
+    <name>ФайлПриказОВнедренииСЭД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приказ о внедрении СЭД</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="71fd33f4-948c-4203-9b0f-b4534c7c86cf">
+    <name>ФайлПриказОРаботеВСЭД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приказ о работе в СЭД</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="bbf45214-d75b-4146-841d-cf9a4d07368e">
+    <name>ФайлПротокол</name>
+    <synonym>
+      <key>ru</key>
+      <value>Протокол</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="de39534f-9b75-4910-9732-025a6d350eed">
+    <name>ФайлРаспоряжение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Распоряжение</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="ccb51d3a-1fb3-4001-802d-fecc0ae8cf94">
+    <name>ФайлРекомендацииПоПрохождениюПроверокОрганамиГПН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рекомендации по прохождению проверок органами ГПН</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="2202e151-e044-4a2b-8f5d-a9d599390f71">
+    <name>ФайлРекомендацииПоПрохождениюПроверокРострудом</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рекомендации по прохождению проверок Рострудом</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="8c2dd0d5-9efd-427c-807c-b1d535ca03ea">
+    <name>ФайлРекомендацииПоПрохождениюПроверокСЭС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рекомендации по прохождению проверок СЭС</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="6e187357-217a-4975-8058-e5633c21f984">
+    <name>ФайлРешение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Решение</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="038e4f79-e2ed-4d70-add6-bb14fda14067">
+    <name>ФайлСлужебнаяЗаписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Служебная записка</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="633150c9-9749-4563-8323-762cd267c6a2">
+    <name>ФайлСправкаВнешняя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Справка внешняя</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="160b738b-0623-4d68-940c-3fee134642ac">
+    <name>ФайлСправкаВнутренняя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Справка внутренняя</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="087f8046-3cc5-4a4c-b97e-59db33b6fe13">
+    <name>ФайлТекстовыйДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текстовый документ</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="c2f1ce69-d691-40f4-a519-450bda263883">
+    <name>ФайлТехнологическаяКарта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Технологическая карта</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="f93c7ad4-0b55-4e2a-879d-99959393089d">
+    <name>ФайлШпаргалка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шпаргалка</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="47b5116b-9c91-434e-8c1e-de60deb8fc1c">
+    <name>ШаблоныВнутреннихДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны внутренних документов</value>
+    </synonym>
+  </templates>
+  <templates uuid="1bf6a542-a306-4ca3-b0f2-e3e6b50282be">
+    <name>ШаблоныВходящихДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны входящих документов</value>
+    </synonym>
+  </templates>
+  <templates uuid="b4d749cf-cef1-4a29-88ea-c7c05b3395c2">
+    <name>ШаблоныИсходящихДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны исходящих документов</value>
+    </synonym>
+  </templates>
+  <templates uuid="4b6a21e4-1d56-44eb-b5fd-dba0c62a1ab7">
+    <name>ШаблоныКомплексныхПроцессов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны комплексных процессов</value>
+    </synonym>
+  </templates>
+  <templates uuid="d97b55dc-6e21-4bbe-ac4b-c1d62b2207fe">
+    <name>ШаблоныКомплексныхПроцессов_ПорядокВыполненияДействий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны комплексных процессов порядок выполнения действий</value>
+    </synonym>
+  </templates>
+  <templates uuid="46889661-e323-441b-acb3-e7c0b9981024">
+    <name>ШаблоныПроцессаИсполнение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны процесса Исполнение</value>
+    </synonym>
+  </templates>
+  <templates uuid="9b9f7d9f-cd7b-4b7e-8f72-cf70d99a6021">
+    <name>ШаблоныПроцессаОзнакомление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны процесса ознакомление</value>
+    </synonym>
+  </templates>
+  <templates uuid="06ccf009-c3e8-40d0-b5c7-a9f831c82c5d">
+    <name>ШаблоныПроцессаПоручение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны процесса поручение</value>
+    </synonym>
+  </templates>
+  <templates uuid="1b34c560-092f-48e0-94e3-87d095610065">
+    <name>ШаблоныПроцессаРассмотрение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны процесса рассмотрение</value>
+    </synonym>
+  </templates>
+  <templates uuid="d0b0ff8e-fb6f-4fa4-b41d-1152d1ff5fb9">
+    <name>ШаблоныПроцессаРегистрация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны процесса регистрация</value>
+    </synonym>
+  </templates>
+  <templates uuid="f7af61eb-1b2f-43da-84d7-c1fd6edb22eb">
+    <name>ШаблоныПроцессаСогласование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны процесса согласование</value>
+    </synonym>
+  </templates>
+  <templates uuid="6ab82556-d134-43d6-a014-ece9467d8359">
+    <name>ШаблоныПроцессаУтверждение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблоны процесса утверждение</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

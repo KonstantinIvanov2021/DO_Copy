@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 9.00.8112.16421"></meta></head><body>
+<p>
+<style>BODY {
+	MARGIN-LEFT: 3pt
+}
+A:link {
+	TEXT-DECORATION: none; COLOR: #006699
+}
+A:visited {
+	TEXT-DECORATION: none; COLOR: #006699
+}
+A:hover {
+	TEXT-DECORATION: underline; COLOR: #006699
+}
+H2 {
+	FONT-SIZE: 130%; FONT-FAMILY: Verdana; BORDER-BOTTOM: sienna 1px solid; FONT-WEIGHT: normal; COLOR: #a3611f; PADDING-BOTTOM: 2px
+}
+H3 {
+	FONT-SIZE: 120%; MARGIN-TOP: 5px
+}
+P.Usual {
+	MARGIN-TOP: 10px
+}
+UL {
+	MARGIN-LEFT: 10pt
+}
+OL {
+	MARGIN-LEFT: 10pt
+}
+</style></p>
+<p><a name="Top"></a></p>
+<p class="Usual"><img align="left" src="CommonPicture.СправкаПереходВниз" width="16" height="16"></img><a href="#all">Общие разрешения</a> </p>
+<p class="Usual"><img align="left" src="CommonPicture.СправкаПереходВниз" width="16" height="16"></img><a href="#specific">Специальные разрешения</a> </p>
+<p class="Usual"><img align="left" src="CommonPicture.СправкаПереходВниз" width="16" height="16"></img><a href="#local_adm">Локальные администраторы</a></p>
+<p class="Usual"> </p>
+<p class="Usual">Политики содержат сведения о том, кому и к данным по каким разрезам разрешен доступ. </p>
+<p class="Usual">Рекомендуется назначать права не отдельным пользователя, а подразделениям, рабочим группам, ролям исполнителей. Пользователю может быть выдано одно или несколько разрешений, которые в совокупности образуют его персональные настройки прав. </p>
+<p class="Usual">Уровня доступа всего три: <strong>Чтение, Редактирование, Регистрация</strong>. Регистрация - самый широкий уровернь, включает первые два. Если пользователю выдано два одинаковых разрешения с разными уровнями, то действует максимальное разрешение.</p>
+<p class="Usual">Разрешения одного разреза можно скопировать другому с помощью команды контекстного меню <strong>Скопировать другим</strong>.</p>
+<p><a name="all"></a></p>
+<h2><strong>Общие разрешения</strong></h2>
+<p class="Usual"><strong>Для быстрой настройки прав.</strong></p>
+<p class="Usual">Для каждого разреза укажите список пользователей, которым разрешен доступ к данным по этому разрезу. Например, разрешите подразделению <strong>Бухгалтерия</strong> доступ к видам внутренних документов <strong>Договор аренды</strong> и <strong>Договор подряда</strong> в организациях ООО "Меркурий" и ЗАО "Лютик".  </p>
+<p class="Usual">Разрешения сработают для всех предметов, которые содержат выбранный разрез. В данном примере, это внутренние документы видов <strong>Договор аренды</strong> и <strong>Договор подряда</strong> с заполненным реквизитом <strong>Организация</strong>: ООО "Меркурий" и ЗАО "Лютик". Если в карточке предмета не указан разрез доступа, то ограничение прав по этому разрезу не действует!</p>
+<p class="Usual"><img align="left" src="CommonPicture.СправкаВнимание" width="24" height="24"></img>Обратие внимание:<br>Пользователь получит доступ к предмету, только если у него есть разрешения на все разрезы доступа этого предмета: организации, грифу, вопросу деятельности и т.д.</p>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="middle">
+<p class="Usual"><a href="#Top"><img border="0" src="CommonPicture.СправкаВНачало"></img></a></p></td>
+<td valign="middle">
+<p class="Usual"><a href="#Top">В начало</a></p></td></tr></tbody></table><p><a name="specific"></a></p>
+<h2><strong>Специальные разрешения</strong></h2>
+<p class="Usual"><strong>Для гибкой настройки прав.</strong></p>
+<p class="Usual">Используются для настройки исколючений из общих разрешений. Здесь можно выбрать произвольные комбинации разрезов доступа.<br>Например, разрешить подразделению <strong>Бухгалтерия</strong> доступ к виду внутренних документов <strong>Договор аренды</strong> в организации ООО "Меркурий" и к виду <strong>Договор подряда</strong> в организации ЗАО "Лютик".   </p>
+<p class="Usual"><img align="left" src="CommonPicture.СправкаВнимание" width="24" height="24"></img>Если пользователю выданы специальные разрешения по предмету, то общие разрешения по этому предмету не действуют!<br>Например, подразделению <strong>Бухгалтерия</strong> выданы общие разрешения на чтение внутренних документов в организации ООО "Меркурий". А бухгалтеру <strong>Иванову</strong> выдано специальное разрешение на чтение договоров аренды в ЗАО "Лютик". В этом случае для <strong>Иванова</strong> не действуют общие разрешения и он не получит доступ к внутренним документам организации ООО "Меркурий". </p>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="middle">
+<p class="Usual"><a href="#Top"><img border="0" src="CommonPicture.СправкаВНачало"></img></a></p></td>
+<td valign="middle">
+<p class="Usual"><a href="#Top">В начало</a></p></td></tr></tbody></table><p><a name="local_adm"></a></p>
+<h2><strong>Локальные администраторы</strong></h2>
+<p class="Usual"><strong>Для назначения прав, которые не зависят от настроек рабочих групп.</strong></p>
+<p class="Usual">Права локальных администраторов действуют независимо от рабочих групп и других настроек прав.  Например, начальнику договорного отдела можно назначить неограниченный доступ на чтение всех договоров организации. Начальник получит доступ к объекту, даже если не входит в его рабочую группу. </p>
+<p class="Usual">Эти разрешения расширяют, а не отменяют общие и специальные разрешения. Можно выбрать произвольные комбинации разрезов доступа. Можно выдать несколько разрешений по одному предмету.</p>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="middle">
+<p class="Usual"><a href="#Top"><img border="0" src="CommonPicture.СправкаВНачало"></img></a></p></td>
+<td valign="middle">
+<p class="Usual"><a href="#Top">В начало </a></p></td></tr></tbody></table><p class="Usual"><strong></strong> </p></body></html>

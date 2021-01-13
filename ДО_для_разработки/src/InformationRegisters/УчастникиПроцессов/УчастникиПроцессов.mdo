@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="eadaaafe-887e-48e9-a2d7-2eb5176d6f58">
+  <producedTypes>
+    <selectionType typeId="13bb9255-99e5-4170-9666-1b670f8be3cf" valueTypeId="7122e00b-667a-426f-bf67-93e96b5663ab"/>
+    <listType typeId="f7098b34-aef0-42ea-8f29-c7b0fd54f263" valueTypeId="bf04cae9-e2d9-46ef-be63-24febf188147"/>
+    <managerType typeId="034b326f-94e8-416c-bbf4-273a11a7dd15" valueTypeId="8f68c91e-a9fe-44f7-a74c-1bf856744a7f"/>
+    <recordSetType typeId="07a422cb-2abe-4b0f-bc8a-e6cf066902be" valueTypeId="5386b194-e9c5-4d98-9058-3f939911fa2e"/>
+    <recordKeyType typeId="555f8f53-f0ec-41ae-a3db-7cd19370e7fd" valueTypeId="e50dfca9-e448-4725-8d0d-c37d9ca14695"/>
+    <recordType typeId="99446280-dd9d-44bf-bedf-ea38d783d0d7" valueTypeId="e204ee86-2639-431b-a643-20d4c6452f60"/>
+    <recordManagerType typeId="ab6c8db5-32f4-4bcc-b37a-c485b751be7e" valueTypeId="808225bc-3abc-4fb3-a278-53bdbdb0ad52"/>
+  </producedTypes>
+  <name>УчастникиПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Участники процессов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="fbf792b8-2fbf-4466-b665-159601e332c4">
+    <name>Участник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Участник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+      <types>CatalogRef.ПолныеРоли</types>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="cde02392-38a6-4bad-ba92-b47040d97df5">
+    <name>Процесс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процесс</value>
+    </synonym>
+    <type>
+      <types>BusinessProcessRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="7eb3d36b-a049-4d41-a0aa-156f0d52aa98">
+    <name>УдалитьУчастник</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Участник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+      <types>CatalogRef.РолиИсполнителей</types>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="21535222-6206-4eff-9624-9caad3362ed5">
+    <name>УдалитьОсновнойОбъектАдресации</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Основной объект адресации</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ОбъектыАдресацииЗадач</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="138b33f5-bd87-4754-98bd-49c7b3d4fdbf">
+    <name>УдалитьДополнительныйОбъектАдресации</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Дополнительный объект адресации</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ОбъектыАдресацииЗадач</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="c697bf1e-cded-44e3-8f82-33b5a9a76439">
+    <name>УчастникиПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Участники процесса</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

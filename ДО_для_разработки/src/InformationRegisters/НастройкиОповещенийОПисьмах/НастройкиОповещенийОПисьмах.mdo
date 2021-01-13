@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a1eee25a-e47f-45e4-82e8-643b166a0adb">
+  <producedTypes>
+    <selectionType typeId="ee5806a7-f050-410c-8cfe-f405d25ef0f9" valueTypeId="de7a3d95-e997-4b62-88cd-715866c7c206"/>
+    <listType typeId="e76a8ecb-fdf2-41de-a260-7a04e914a838" valueTypeId="7896196e-c5ee-4a86-b695-36cf49a483a8"/>
+    <managerType typeId="4195c6e0-91d5-4502-80a4-3f1354b97aa2" valueTypeId="6f5df51c-b469-4bfe-94eb-b44f25746746"/>
+    <recordSetType typeId="63caef28-5c3b-4d53-9fe6-a8e7a676ef11" valueTypeId="4b08dac6-fd39-4230-a1c1-4202ff11da19"/>
+    <recordKeyType typeId="242183be-7ce1-48c8-b781-3a589647207b" valueTypeId="0281f6b1-468b-48db-91bc-e796d892dd68"/>
+    <recordType typeId="bb34fbe9-9d38-4321-84f5-abe69d7732bb" valueTypeId="154bf211-0fa2-4f62-a11c-9aaf592cd67e"/>
+    <recordManagerType typeId="5d28de78-1bd2-44e3-887e-07a4b22fd743" valueTypeId="b1b0dcc4-a4d2-4f20-9921-03542262ece6"/>
+  </producedTypes>
+  <name>НастройкиОповещенийОПисьмах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки оповещений о письмах</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="6b098f3a-f415-4d7a-a030-373be197d834">
+    <name>ПоказыватьВсплывающиеОповещения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показывать всплывающие оповещения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e0fcaa78-1262-4535-a5c3-d621863d0f1b">
+    <name>ПоказыватьСписокОповещений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показывать список оповещений</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="a9b91288-acb7-47f7-bcd3-75cc03a26ab4">
+    <name>УчетнаяЗапись</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учетная запись</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.УчетныеЗаписиЭлектроннойПочты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="87dab7c0-0729-4190-8a28-7bc4095514c2">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

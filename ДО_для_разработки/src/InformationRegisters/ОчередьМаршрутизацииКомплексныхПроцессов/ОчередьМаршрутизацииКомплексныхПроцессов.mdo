@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1056bba9-015e-482f-91da-acc2a7e9c67d">
+  <producedTypes>
+    <selectionType typeId="e833d7b1-88fe-40a7-b3a0-8b97d85e39bc" valueTypeId="d106e023-c98b-4a76-8022-9af5dd6a6e9e"/>
+    <listType typeId="81a9640f-f524-462e-b04a-eab44f37df49" valueTypeId="9ac137c2-be0d-4b30-968a-051d186cb737"/>
+    <managerType typeId="ac3ef98f-5d6e-4434-9bd4-f8d3a09f239e" valueTypeId="4ed58faa-5853-4f73-b432-434c1896f9f0"/>
+    <recordSetType typeId="7b0762f0-0138-43d1-8899-ec926fed4a0a" valueTypeId="7b4d8672-5ed6-41c2-9bb4-a70ab2e3a44c"/>
+    <recordKeyType typeId="83aed2a5-8084-4b02-929d-c9e0c7225ee9" valueTypeId="8ae081e5-0ee8-4a0d-983a-47cf201469ae"/>
+    <recordType typeId="513bb050-74a4-4125-8a4f-0ef6d0256a58" valueTypeId="30e0f213-5e27-4cc1-b046-6e921209d962"/>
+    <recordManagerType typeId="721f6621-3b2d-4bd4-a384-f36b7f50c1e1" valueTypeId="2ffffa24-771c-4003-9b1f-97a8f8f0abae"/>
+  </producedTypes>
+  <name>ОчередьМаршрутизацииКомплексныхПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очередь маршрутизации комплексных процессов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ОчередьМаршрутизацииКомплексныхПроцессов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ОчередьМаршрутизацииКомплексныхПроцессов.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Ожидающий маршрутизации процесс</value>
+  </recordPresentation>
+  <attributes uuid="1b252bd2-e0f0-4ad8-bec6-898164d4e63f">
+    <name>КоличествоПопытокОбработки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество попыток обработки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="06a03695-87af-4a0a-8440-88f63ee83f7e">
+    <name>МоментВремени</name>
+    <synonym>
+      <key>ru</key>
+      <value>Момент времени</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d772528e-d9b3-45cd-b817-ebd12ed21645">
+    <name>ТекстОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <attributes uuid="6dd9d960-ce79-4ae7-a4ec-8f7f717eacdd">
+    <name>ЗадачаОжидания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Задача ожидания</value>
+    </synonym>
+    <type>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="bedbc963-33ad-41bf-a7e0-05bbd2ac9be4">
+    <name>КомплексныйПроцесс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комплексный процесс</value>
+    </synonym>
+    <type>
+      <types>BusinessProcessRef.КомплексныйПроцесс</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6b29d7b6-5600-4fce-8f63-5b8ecc346070">
+    <name>ЗавершившеесяДействие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завершившееся действие</value>
+    </synonym>
+    <type>
+      <types>BusinessProcessRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="efa553ef-ed2a-443e-b566-0c875239cd93">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Очередь маршрутизации комплексных процессов</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a7d79e08-0cbd-4c32-8f25-32c6d65b09ae">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="48337c14-c0a4-4d78-af02-379170e16204">
+    <name>ОжидающиеМаршрутизацииКомплексныеПроцессы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ожидающие маршрутизации комплексные процессы</value>
+    </synonym>
+    <group>NavigationPanelSeeAlso</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

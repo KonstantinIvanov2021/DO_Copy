@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2ec91923-80b5-4749-b3da-aaaa931be62f">
+  <producedTypes>
+    <selectionType typeId="169fba48-942c-4939-a7c2-eb6cea4b6a35" valueTypeId="2c2934b3-7929-4f93-844f-d9e045830c32"/>
+    <listType typeId="76b8af4a-11cf-4d33-bc0e-2235ed94649c" valueTypeId="a61b2571-3ab3-49ad-8652-857dfabf5da1"/>
+    <managerType typeId="8eb5bdcd-fe4a-427a-ba38-73e3562aed68" valueTypeId="1bf49285-08dd-4a0b-9d40-3d6cd63c4dc7"/>
+    <recordSetType typeId="b9717b76-bf44-4cda-86ea-0859f4e7b162" valueTypeId="c424f73a-8f37-4b06-8ebe-3ee2990d2be4"/>
+    <recordKeyType typeId="612f1238-caf2-4b1d-a22c-3ee2f4b8f183" valueTypeId="62a1b492-978a-4f7b-9650-ddbf2b8acb3c"/>
+    <recordType typeId="77f49fea-5728-43d7-a782-58e21d39077a" valueTypeId="0b643f86-eeee-46e6-bb28-bc7abbdd071a"/>
+    <recordManagerType typeId="2aeabfa3-d1c5-4d02-99ae-a7402a54d2a9" valueTypeId="45b4699c-811a-4855-95fc-2979c27bb44a"/>
+  </producedTypes>
+  <name>ДоступностьШаблоновПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Доступность шаблонов процессов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="4620f602-518b-45e6-802b-0a1f6237f493">
+    <name>АвтоматическийЗапуск</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автоматический запуск</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b7c54829-151b-4e89-b1b9-7b0a0e6bc66f">
+    <name>Картинка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Картинка</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ef0544ed-7be6-48a1-8d46-c0592dcd12be">
+    <name>РучнойЗапуск</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ручной запуск</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="f9fc11ad-45c5-4990-b98d-8651dc0c8069">
+    <name>Шаблон</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ШаблонПроцесса</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

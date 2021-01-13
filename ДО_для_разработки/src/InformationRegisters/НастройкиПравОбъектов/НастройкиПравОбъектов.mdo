@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="76370762-33af-44fe-b1c3-a0650e599b57">
+  <producedTypes>
+    <selectionType typeId="9930c1af-a899-499b-a767-f86dd2419eca" valueTypeId="23b22269-f760-4452-b817-82b82aba7a1d"/>
+    <listType typeId="b21d9786-fd42-4956-a822-1d805431473d" valueTypeId="21452972-568c-498d-842a-02c3925f4572"/>
+    <managerType typeId="4199e074-adb7-4948-a774-64ea9e5d2b39" valueTypeId="1f690ccd-2804-4e3f-ab04-b3ddc0b8328d"/>
+    <recordSetType typeId="4c5c4b0c-7d3b-47f9-9d00-291b0de7ca28" valueTypeId="e91aff46-d734-4916-a37f-80cc80fbccef"/>
+    <recordKeyType typeId="f41f22d9-995d-411c-83ee-e6584291d223" valueTypeId="6992bb1f-725d-48fe-9681-2d84ad88f22b"/>
+    <recordType typeId="529c5b4d-501d-48f1-96f1-42dc0efa5e44" valueTypeId="19f84063-7c16-4f34-b6a4-3b8f7bac5e3d"/>
+    <recordManagerType typeId="e74b4c84-4646-453e-9737-86f7ac64347a" valueTypeId="b58262b0-b28f-4288-a5fd-6a0c8604ae3b"/>
+  </producedTypes>
+  <name>НастройкиПравОбъектов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки прав объектов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.НастройкиПравОбъектов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.НастройкиПравОбъектов.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="c1bec024-eb89-4493-9d0c-ef500811953a">
+    <name>ПравоЗапрещено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Право запрещено</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Флажок, показывающий, что настроено запрещение права</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a2b06876-c598-4a70-9a80-c4b891b3851f">
+    <name>НаследованиеРазрешено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наследование разрешено</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Флажок, показывающий, что разрешено наследование настройки права</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="faa523c3-310f-4b38-8d5f-28bb24ea0445">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПапкиФайлов</types>
+      <types>CatalogRef.ПапкиПисем</types>
+      <types>CatalogRef.ПапкиФорума</types>
+      <types>CatalogRef.ПапкиПроектов</types>
+      <types>CatalogRef.ПапкиМероприятий</types>
+      <types>CatalogRef.ПапкиВнутреннихДокументов</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Объект - владелец настроек прав
+для себя и для подчиненных объектов (например, папка может хранить настройки прав для файлов)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ПапкиФайлов.EmptyRef</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="165cf04d-e334-43bb-9ffe-d1f9c473995a">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>DefinedType.КонтейнерПользователей</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, подразделение, роль или группа, для которых настраивается право на объекты</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>c54edff0-c3a1-44d7-9707-1fe05700b055.00000000-0000-0000-0000-000000000000</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b4c780c1-e1de-4c03-adbf-2fba33782f62">
+    <name>Право</name>
+    <synonym>
+      <key>ru</key>
+      <value>Право</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>60</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Имя права, которое настраивается</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="d6cd854a-4e02-4f45-8b73-96912f1fac67">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1cc029e2-1c8c-48d3-b646-1f646e33afed">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="65fecb3a-2da6-4596-882b-9161eb52e405">
+  <producedTypes>
+    <selectionType typeId="fb2b1d37-9029-4236-b94a-fd358bc8da4a" valueTypeId="97a0b1cb-396f-42de-85e0-0a7505f2e930"/>
+    <listType typeId="6e36553a-7c7b-46ed-ab0f-de2637bad8ff" valueTypeId="7e39c5a0-fa36-4bab-b84d-b458810a748f"/>
+    <managerType typeId="497c41c0-e686-4d36-a096-b7f3f60092bf" valueTypeId="a21b6edb-00d1-4c11-9eed-83c2bb3ad4e5"/>
+    <recordSetType typeId="61d2b158-c36c-4833-b912-d16e1a8db02a" valueTypeId="b30b2613-4201-4de1-9318-459edc98bb1c"/>
+    <recordKeyType typeId="1d22470f-a9b1-4efe-aec7-ffbe86e9a7e8" valueTypeId="2cad41ff-768a-4a2b-b40e-22acaf22fe52"/>
+    <recordType typeId="1bf7035f-f120-4de9-8eef-936d3b719857" valueTypeId="d674dcca-3ab9-4931-a846-7521b610083d"/>
+    <recordManagerType typeId="773d17fb-139f-4959-8994-51a9e9809834" valueTypeId="bb8a7030-e8bd-4b96-8b3d-29c7437d9174"/>
+  </producedTypes>
+  <name>ИдентификаторыИмпортированныхПисем</name>
+  <synonym>
+    <key>ru</key>
+    <value>Идентификаторы импортированных писем</value>
+  </synonym>
+  <comment>Идентификаторы импортированных из Outlook писем</comment>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="4686103c-1b5b-435c-a6b1-0b87ee92c2f4">
+    <name>ИдентификаторИсточника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор источника</value>
+    </synonym>
+    <comment>Идентификатор письма Outlook (EntryID)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="59f12b01-a361-4302-bfe2-94dcd6c32c49">
+    <name>ИдентификаторОснования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор основания</value>
+    </synonym>
+    <comment>Идентификатор основания (in-reply-to)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="461f1356-e03d-4597-9664-1598805136e1">
+    <name>Письмо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Письмо</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ВходящееПисьмо</types>
+      <types>DocumentRef.ИсходящееПисьмо</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

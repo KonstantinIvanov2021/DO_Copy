@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5d8547d7-b526-4365-9116-ba113798cea0">
+  <name>ПриУстановкеНовогоНомераДокументаПоИнформационнойБазе</name>
+  <synonym>
+    <key>ru</key>
+    <value>При установке нового номера документа по информационной базе</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЕжедневныйОтчет</types>
+    <types>DocumentObject.Отсутствие</types>
+    <types>DocumentObject.Бронь</types>
+  </source>
+  <event>OnSetNewNumber</event>
+  <handler>CommonModule.ПрефиксацияОбъектовСобытия.УстановитьПрефиксИнформационнойБазы</handler>
+</mdclass:EventSubscription>

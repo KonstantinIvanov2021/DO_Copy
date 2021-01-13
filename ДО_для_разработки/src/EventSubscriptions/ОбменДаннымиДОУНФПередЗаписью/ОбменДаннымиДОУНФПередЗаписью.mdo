@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5e70e29d-f601-4c42-8ef3-904b19c67d7b">
+  <name>ОбменДаннымиДОУНФПередЗаписью</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными ДО-УНФ, перед записью</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.СтраныМира</types>
+    <types>CatalogObject.КлассификаторБанковРФ</types>
+    <types>CatalogObject.Пользователи</types>
+    <types>CatalogObject.ВерсииФайлов</types>
+    <types>CatalogObject.ПапкиФайлов</types>
+    <types>CatalogObject.УчетныеЗаписиЭлектроннойПочты</types>
+    <types>CatalogObject.Контрагенты</types>
+    <types>CatalogObject.НазначенияСертификатовЭП</types>
+    <types>CatalogObject.ФизическиеЛица</types>
+    <types>CatalogObject.Организации</types>
+    <types>CatalogObject.БанковскиеСчета</types>
+    <types>CatalogObject.Валюты</types>
+    <types>CatalogObject.ДополнительныеОтчетыИОбработки</types>
+    <types>CatalogObject.ВидыКонтактнойИнформации</types>
+    <types>CatalogObject.ВнешниеПользователи</types>
+    <types>CatalogObject.КонтактныеЛица</types>
+    <types>CatalogObject.Файлы</types>
+    <types>CatalogObject.Должности</types>
+    <types>CatalogObject.ВидыДокументовФизическихЛиц</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменДаннымиСобытияДокументооборот.ОбменДаннымиДОУНФПередЗаписью</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="204b0726-a3a6-40ea-898b-c39ab74b3d94">
+  <producedTypes>
+    <selectionType typeId="70fd3dbe-d98c-4ed7-8f6f-5ad979852ab2" valueTypeId="f190bf1d-d8db-4f8f-a9a0-25e49668a753"/>
+    <listType typeId="b7de37fc-ceae-4e0f-bd4f-cf5ca4473493" valueTypeId="8c9d688c-005f-4d72-8f6c-85dff04a6b20"/>
+    <managerType typeId="6bef6d36-8c50-4d50-894e-a34bdc68ac5c" valueTypeId="635f6a46-f1f8-4985-90d9-f57712aa130c"/>
+    <recordSetType typeId="7cde4c34-e1fe-4cf7-9a8b-1760b0d15836" valueTypeId="13ef90fe-12d7-4d27-af1c-dcb29a5785b4"/>
+    <recordKeyType typeId="356c3a60-93bd-4b01-8de6-5ecf508d4dd9" valueTypeId="661e1a56-6c85-4839-b29c-e32ffc8d70a5"/>
+    <recordType typeId="108249ec-6d02-4ac1-b75f-702cb40fe967" valueTypeId="9c7c2298-ae83-42e8-a8fc-593ffec7bf37"/>
+    <recordManagerType typeId="54b5eca8-adce-4c9b-9d5d-1b8f5dba3ad5" valueTypeId="b9597f4e-c038-493d-a1bc-4b1820d7bc34"/>
+  </producedTypes>
+  <name>ПравилаПересылкиСообщений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Правила пересылки сообщений</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ПравилаПересылкиСообщений.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ПравилаПересылкиСообщений.Form.ФормаСписка</defaultListForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="1841267a-3fd0-4b18-b181-7b44de3e2704">
+    <name>ТранспортОтправки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Транспорт отправки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТранспортыОтправкиСообщенийСВД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="68781c43-3a50-459b-bd3c-d6b3d698e900">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="4eedffc6-97cd-48ef-9ce6-d5c66c857678">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="871c0390-99c2-4569-8d09-08e9b4bb5571">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

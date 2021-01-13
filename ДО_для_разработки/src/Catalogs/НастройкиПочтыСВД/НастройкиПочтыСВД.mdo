@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="365bd674-bb36-4660-aa1e-dd3f7ec9835a">
+  <producedTypes>
+    <objectType typeId="057c2d6b-eac7-476d-9bd2-20e44f7cbb78" valueTypeId="9dbdce46-d52e-4bf2-af02-e3b918eba880"/>
+    <refType typeId="79ed3fbe-4a04-4a27-9b74-431cb70ff676" valueTypeId="217e0446-f161-492a-9d8f-e159676bbd6c"/>
+    <selectionType typeId="cb1b7246-0023-4908-bf23-90cfcc1b2706" valueTypeId="0470e1dc-a0d5-4d37-897f-c4cdde242572"/>
+    <listType typeId="620a5460-c979-4058-acc1-e68a4da66ab7" valueTypeId="be132edc-c90f-4fb5-92c5-10026f70ca19"/>
+    <managerType typeId="42f1c524-d305-47a4-810a-ab6a9a0f33c1" valueTypeId="828325bb-9efe-4714-9e10-f813f1575011"/>
+  </producedTypes>
+  <name>НастройкиПочтыСВД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки почты</value>
+  </synonym>
+  <comment>Настройки подключения для получения и отправки сообщений СВД по почте</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.НастройкиПочтыСВД.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.НастройкиПочтыСВД.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Настройка почты СВД</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Настройка почты СВД</value>
+  </listPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.НастройкиПочтыСВД.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.НастройкиПочтыСВД.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="82f0651c-245f-4ee8-826b-6ace87480114">
+    <name>УчетнаяЗапись</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учетная запись</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.УчетныеЗаписиЭлектроннойПочты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="d2339761-29a9-4487-a868-11e30ff36a84">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5b7b2fb1-fb8e-447f-aafb-05e1988625c7">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

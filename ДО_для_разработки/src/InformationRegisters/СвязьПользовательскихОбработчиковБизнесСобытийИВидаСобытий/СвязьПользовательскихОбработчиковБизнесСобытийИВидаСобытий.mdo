@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0d2735f4-b99e-423e-95ea-fdc3cf3619df">
+  <producedTypes>
+    <selectionType typeId="18283db0-fa73-4593-946f-a0d96a3c11d0" valueTypeId="27c48a36-fe82-45d1-b868-f0f23b3ae490"/>
+    <listType typeId="cd961dac-efa5-4d36-97e2-dae7e6e84c28" valueTypeId="72dfff04-5afa-40ab-adb5-87dfa24cf1ce"/>
+    <managerType typeId="8ded1d24-83af-4e23-b15a-076cf52a19ae" valueTypeId="2014096b-d39e-41a1-9cac-d79322a45971"/>
+    <recordSetType typeId="d673fff6-b3e7-428e-9a25-39b89071ab89" valueTypeId="fe82cbc5-1509-4a62-87a2-06efc094f741"/>
+    <recordKeyType typeId="688dc888-714d-41d0-a413-ffed681fc681" valueTypeId="6266f3e5-ffb7-41d4-9583-deac7544c493"/>
+    <recordType typeId="56ac1dd6-e72f-4f6c-bfd0-cea8cfedfa10" valueTypeId="db55b36c-a132-48ab-94b4-adb943d4afcd"/>
+    <recordManagerType typeId="f7f2eb7f-29be-4a49-bb36-0ecc94a76c0a" valueTypeId="4287425d-04d9-4e12-96c8-537a9ae3d786"/>
+  </producedTypes>
+  <name>СвязьПользовательскихОбработчиковБизнесСобытийИВидаСобытий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Связь пользовательских обработчиков бизнес-событий и вида событий</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СвязьПользовательскихОбработчиковБизнесСобытийИВидаСобытий.Form.ФормаЗаписи</defaultRecordForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="584e0550-8fb8-4a73-aaf9-ffbef4f13f19">
+    <name>ВидСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид события</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыБизнесСобытий</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид события</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c4e1c144-089f-45d4-9888-8b119d71ab14">
+    <name>Обработчик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обработчик</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПользовательскиеОбработчикиБизнесСобытий</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Обработчик</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="6545220a-108e-4ffb-9ce3-525a25f61b41">
+    <name>ФормаСпискаДляОбработчика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка для обработчика</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f208bc14-7bd2-45cd-a4e2-e9bccc762b30">
+    <name>ФормаСпискаДляВидаСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка для вида события</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5ac611c9-567b-4b63-acda-ff7bacb60782">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="3127235e-50b4-471c-b9ec-4d56d25ff7de">
+    <name>ОткрытьФормуДляПользовательскогоОбработчикаСобытий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подписки</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ПользовательскиеОбработчикиБизнесСобытий</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="15c18359-30f7-4275-93ae-f2bd9b1d61d6">
+    <name>ОткрытьФормуДляДетектораСобытий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обработчики</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ДетекторыБизнесСобытий</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="896bcb64-8ccd-4dfc-9aca-12ab864f2dd5">
+    <name>ОткрытьФормуДляВидаСобытий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные обработчики</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ВидыБизнесСобытий</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

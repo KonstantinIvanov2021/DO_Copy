@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dc1c3c2f-b8ae-4f4a-ade5-40217ca1cfb4">
+  <producedTypes>
+    <objectType typeId="a468ca64-103e-4418-88d2-7fc77a70525c" valueTypeId="e9912b0a-4749-4bc5-b335-8d35723009f0"/>
+    <refType typeId="01a4f654-c43d-4c2a-a83e-0cf0fd7c26c1" valueTypeId="890d4d88-7f8f-4a98-acf1-7020d2eb4bf4"/>
+    <selectionType typeId="6e62fda4-68b4-4980-bb6e-8fbdff9c0f5a" valueTypeId="56bcca79-4fe8-4f18-9fe5-e6620d9d4b16"/>
+    <listType typeId="ce05c502-3104-4d45-85a7-d3ccf6822ab4" valueTypeId="493e31cb-0df2-4fa6-b0c1-64cd553fcc4f"/>
+    <managerType typeId="45eaef7a-fd18-46b8-b2d8-21c928654ba4" valueTypeId="85b1909c-6512-47de-80cc-4317107ebb06"/>
+  </producedTypes>
+  <name>СпособыДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Способы доставки</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.СпособыДоставки.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Способ доставки</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="19f1d6f5-4a16-4870-b050-8a9a1eabefd7">
+      <name>СВД</name>
+      <description>СВД</description>
+      <code xsi:type="core:StringValue">
+        <value></value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.СпособыДоставки.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.СпособыДоставки.Form.ФормаСписка</defaultListForm>
+  <forms uuid="f9b5f56d-ba28-4417-b992-6325c00dd33e">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4faa515b-bf40-4fc5-ac9b-fc04d0e671ce">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

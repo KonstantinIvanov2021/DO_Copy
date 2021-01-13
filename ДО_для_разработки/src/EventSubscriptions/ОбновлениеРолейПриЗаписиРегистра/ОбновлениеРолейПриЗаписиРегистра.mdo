@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a79c3051-bc41-4f6c-82bc-9377ad32b0cc">
+  <name>ОбновлениеРолейПриЗаписиРегистра</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновление ролей при записи регистра</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.ПолномочияПользователей</types>
+    <types>InformationRegisterRecordSet.ПользователиВКонтейнерах</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ДокументооборотПраваДоступа.ОбновлениеРолейПриЗаписиРегистра</handler>
+</mdclass:EventSubscription>

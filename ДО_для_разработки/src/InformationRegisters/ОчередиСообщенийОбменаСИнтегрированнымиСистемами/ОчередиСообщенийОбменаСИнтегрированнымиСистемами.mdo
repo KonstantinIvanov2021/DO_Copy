@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0f106ec7-c0a5-4348-a294-5fd4aced517e">
+  <producedTypes>
+    <selectionType typeId="a65700cb-4347-424e-b610-6261d79e8838" valueTypeId="88e7c725-3c76-48f0-a17b-e4c6fa609ef3"/>
+    <listType typeId="dbd326c3-010f-4951-84b2-253329ca9c72" valueTypeId="dbebb8d8-f8f6-4632-9a8d-5a6ba1a6782c"/>
+    <managerType typeId="ce9b0917-af56-491d-aa9a-62d5db68548f" valueTypeId="ea9753b3-9a36-48a6-9a26-5ad6edce1c87"/>
+    <recordSetType typeId="e9a74f42-6f29-4f78-bb9a-0d67c382d198" valueTypeId="e7bc2fd6-4917-4b1b-953c-6a1ebbb48397"/>
+    <recordKeyType typeId="24b51458-8a3c-4ce5-8dc1-f77d758b59c5" valueTypeId="e9903b34-ba18-4846-93c0-9a272b95bfa5"/>
+    <recordType typeId="d32c9ccf-16a9-4324-ae29-2311b118c11b" valueTypeId="7d9a2850-f2c1-4558-9a13-ba8f2925ad66"/>
+    <recordManagerType typeId="c9757381-1d72-40ec-a86d-6a0b3585f4a7" valueTypeId="9a780b5e-62d3-4ac7-a6a1-7803d7ac32b5"/>
+  </producedTypes>
+  <name>ОчередиСообщенийОбменаСИнтегрированнымиСистемами</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очереди сообщений обмена с интегрированными системами</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="f3fbd2c6-26af-4587-a963-bcef5c244e6c">
+    <name>Очередь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Очередь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОчередиСообщенийИнтегрированныхСистем</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ff13b04c-7044-4452-99d5-b2680ea82ee4">
+    <name>ИнтегрированнаяСистема</name>
+    <synonym>
+      <key>ru</key>
+      <value>Интегрированная система</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef.ИнтегрированныеСистемы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

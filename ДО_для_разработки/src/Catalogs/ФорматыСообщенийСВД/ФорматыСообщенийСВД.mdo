@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2553eb58-8a4c-4d14-9648-42ed5c3231bf">
+  <producedTypes>
+    <objectType typeId="1fdebad0-8428-4057-992c-6c12b38e1f04" valueTypeId="0c6d8e6d-38f6-48c6-9477-657391f40f38"/>
+    <refType typeId="a0cdf055-1cdd-418f-a81c-b87fc9a71ea4" valueTypeId="10a07808-c00d-4d9c-940e-b0fafe3f6342"/>
+    <selectionType typeId="50e02836-03c0-4c91-ad80-78cdcad67247" valueTypeId="87b26705-658f-425a-b59a-7ff89d112f0a"/>
+    <listType typeId="7cc6003b-c41a-4fd9-a206-7e86fba1ec3a" valueTypeId="6c177d45-b18c-4694-8391-709a35e75da2"/>
+    <managerType typeId="58a9f24c-fd5e-4e07-95d5-9ce36e4faa2f" valueTypeId="3b85232b-ccc6-457c-bb0b-f1b8b6b77225"/>
+  </producedTypes>
+  <name>ФорматыСообщенийСВД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Форматы сообщений СВД</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ФорматыСообщенийСВД.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ФорматыСообщенийСВД.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Формат сообщения</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Форматы сообщений</value>
+  </listPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="c86fa1f5-a09e-4bfb-b0c3-170d401f56e4">
+      <name>СообщениеПоГОСТ53898ВложенныеФайлы</name>
+      <description>ГОСТ Р 53898-2010</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+    <items id="ed48f628-6928-4eac-a44a-1f20f2a5e401">
+      <name>СообщениеПоГОСТ538982013ВложенныеФайлы</name>
+      <description>ГОСТ Р 53898-2013</description>
+      <code xsi:type="core:StringValue">
+        <value>000000004</value>
+      </code>
+    </items>
+    <items id="b138bb12-1356-4b85-8695-abc8d74bab62">
+      <name>Сообщение1СДокументооборот</name>
+      <description>Сообщение 1С:Документооборот</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+    </items>
+    <items id="0919bcc9-0585-4676-a2ac-f09c5eeb3b30">
+      <name>ОператорЭДО1СТакском</name>
+      <description>Через оператора ЭДО 1С-Такском</description>
+      <code xsi:type="core:StringValue">
+        <value>000000003</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ФорматыСообщенийСВД.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ФорматыСообщенийСВД.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.ФорматыСообщенийСВД.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="9eabd781-9c12-42ca-93f3-d3c2fc374a5d">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="8d737315-2e6f-4ebc-ab98-40c8421c989e">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="378743e7-a0da-4514-9f1f-9cd6e4439122">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cc6953a9-4352-4107-8cfb-48af1203545b">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

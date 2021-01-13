@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c952e38b-3c47-4979-9b54-651cbab5de10">
+  <producedTypes>
+    <selectionType typeId="902cc76d-7a44-40b9-8286-f57253292178" valueTypeId="4f523f4e-aa7e-4eb9-ba44-a4e9b70da94d"/>
+    <listType typeId="34c0309d-0ce1-4814-8570-4de94983e280" valueTypeId="037bcc00-333a-4145-b6b3-976dcf4f688b"/>
+    <managerType typeId="276c9613-916d-4f73-a049-79a76527bf88" valueTypeId="9c4a8338-2131-4c14-a7cf-b293b74cc98a"/>
+    <recordSetType typeId="b5886f8b-7375-4703-862e-6dc8774602cc" valueTypeId="dc978efc-8dd3-437c-b788-ae43678301fe"/>
+    <recordKeyType typeId="418fef9f-4f4a-4219-8794-9f78addfd2b9" valueTypeId="86fb2794-c57f-49ea-9ab1-75e18113f35f"/>
+    <recordType typeId="e5ac293e-ba8c-42cf-bc35-ef81051e8de6" valueTypeId="af8318f1-a674-4f0c-89aa-a258828ec17c"/>
+    <recordManagerType typeId="14adca99-871b-448a-bb0d-a7428b069dbe" valueTypeId="1364156e-414d-41e4-9a0a-abb0304643f5"/>
+  </producedTypes>
+  <name>РазрешенныеМобильныеПользователи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Разрешенные мобильные пользователи</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.РазрешенныеМобильныеПользователи.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.РазрешенныеМобильныеПользователи.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Пользователь с мобильным клиентом</value>
+  </recordPresentation>
+  <dimensions uuid="49687035-94f5-42ee-89b3-b0eb223ef7d7">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="e5b7f62e-3a17-4912-a5a8-a05297183c4a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2d549216-24fe-4ade-aecf-c5963bf1bb72">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="836e316c-19eb-4544-9673-88fb226d28cb">
+    <name>РазрешенныеМобильныеПользователи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разрешенные мобильные пользователи</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

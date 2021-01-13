@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b13485af-b2be-4964-92b3-339801bdb4a3">
+  <producedTypes>
+    <selectionType typeId="3d470494-4e93-456e-9f7a-351b5c139adb" valueTypeId="82872190-7a56-4b8c-8bb8-dcaff4b31d8b"/>
+    <listType typeId="2b457db9-6c08-4bbf-a2f3-29da51d9428d" valueTypeId="73b0a17f-f12e-4d88-8a61-25c810e14fac"/>
+    <managerType typeId="2e900236-21f2-4816-ab00-88048c5c4d7f" valueTypeId="1d561cbf-bcd6-4428-927f-18b81b501e0a"/>
+    <recordSetType typeId="e49b2c5a-ad9d-4ae5-bbab-fa74ae6d0816" valueTypeId="61153b50-1164-48e4-b65d-b6e7fcb5de71"/>
+    <recordKeyType typeId="f839ce18-1aab-4f9c-bccf-b381f709f91a" valueTypeId="9ad6db3b-e9f2-4731-bcef-0a3a25c049dc"/>
+    <recordType typeId="aa6e735b-8dd3-46fe-b861-4ae45db1c009" valueTypeId="bf681fb7-cbfb-48d1-be00-51a4c1e552e9"/>
+    <recordManagerType typeId="d6989dee-7bc1-4768-b01f-b3b0ee5ee213" valueTypeId="4916d3ef-5afd-4256-b918-1cbd18ed9812"/>
+  </producedTypes>
+  <name>ФайлыСозданныеПоШаблону</name>
+  <synonym>
+    <key>ru</key>
+    <value>Файлы созданные по шаблону</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e63756c0-9557-4258-a54e-f2f9f94f9f0c">
+    <name>СозданПоШаблону</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создан по шаблону</value>
+    </synonym>
+    <comment>Создан из файла, указанного в шаблоне документов</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="2cfa4390-fa0f-41c5-ab4f-0a5320c0d6f9">
+    <name>Файл</name>
+    <synonym>
+      <key>ru</key>
+      <value>Файл</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Файлы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

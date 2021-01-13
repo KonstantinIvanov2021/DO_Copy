@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0ca39472-130a-4183-b440-e85a47f596f6">
+  <producedTypes>
+    <selectionType typeId="69af4c02-913e-4a5f-bdfa-e68adb167c21" valueTypeId="983c1031-acbc-4b91-8630-964cef7a1d43"/>
+    <listType typeId="771020ec-6ea7-4b12-bd15-28787f0f3ed2" valueTypeId="5bf6675f-2ffb-4efb-8635-7501fe45a31a"/>
+    <managerType typeId="db50ffbb-17e0-47e5-b97e-e358fe082a03" valueTypeId="c0ea775d-df57-4f8e-818a-4801c7cb3add"/>
+    <recordSetType typeId="165858e6-a737-4217-acde-48a79cd7b65d" valueTypeId="9e35a9a2-eb56-49ef-a823-e3df3b08fa84"/>
+    <recordKeyType typeId="ad089191-9fb8-44f9-9b3a-c06255177933" valueTypeId="87c831ad-22c6-40ff-bfb6-3812a23e9667"/>
+    <recordType typeId="f1746438-54cc-4b3d-853e-e353c788f899" valueTypeId="cbd3c92a-75ef-4f41-80c6-b63d5f903dd9"/>
+    <recordManagerType typeId="dc0f6029-158a-419b-8afb-28a98d91d481" valueTypeId="046af2ea-ed18-42dd-8572-fe20fd3739f4"/>
+  </producedTypes>
+  <name>СведенияОТемахОбсуждений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения о темах обсуждений</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="87d71301-fd22-4737-9d10-2d21bc4d549e">
+    <name>АвторПоследнегоСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор последнего сообщения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Автор последнего сообщения в теме форума</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d3221b8a-b36b-47ce-b2e7-16fae0d25c53">
+    <name>ДатаПоследнегоСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата последнего сообщения</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата последнего сообщений в теме форума</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b9ff7377-5690-4bfc-9909-ded5c90ab389">
+    <name>КоличествоСообщений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество сообщений</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Количество сообщений в теме форума</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="3e4dff88-403b-480f-a628-161f5c584f92">
+    <name>Тема</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тема</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТемыОбсуждений</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Тема форума, к которой относятся сведения</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8a0f20ac-b1c5-48b8-998a-9d969e8c534a">
+  <name>ОбменСИнтегрированнымиСистемамиПередУдалением</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен с интегрированными системами перед удалением</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ШаблоныИсходящихДокументов</types>
+    <types>CatalogObject.ВходящиеДокументы</types>
+    <types>CatalogObject.Контрагенты</types>
+    <types>CatalogObject.ВнутренниеДокументы</types>
+    <types>CatalogObject.ИсходящиеДокументы</types>
+    <types>CatalogObject.ШаблоныВходящихДокументов</types>
+    <types>CatalogObject.ШаблоныВнутреннихДокументов</types>
+    <types>CatalogObject.Файлы</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.ОбработкаЗапросовXDTOОбмен.ОбменСИнтегрированнымиСистемамиПередУдалением</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6d91720a-0815-452f-ab17-0e97f586bb7d">
+  <producedTypes>
+    <refType typeId="c387a3f8-a29e-4b34-ab8d-9172f5ed689d" valueTypeId="b7f4d939-d5fe-4ffb-8cb3-2f785d1bd6da"/>
+    <listType typeId="19428a78-333e-45da-9c75-ec8794d6e583" valueTypeId="2f95b48c-fee7-47e8-a48b-0aec0e0205cb"/>
+    <managerType typeId="63edbc0e-10b3-46d0-9420-d417ffd918a8" valueTypeId="7cb42db3-9e31-4de0-a6ee-278829e8f714"/>
+  </producedTypes>
+  <name>СтатусыДоставкиSMS</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы доставки SMS</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="71275db1-9174-4353-a16a-6af3cc9644a7">
+    <name>Подготовлено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ожидает передачи провайдеру SMS</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="a27aa400-2619-4d34-ac20-b3eb085a9bfd">
+    <name>Передано</name>
+    <synonym>
+      <key>ru</key>
+      <value>Передано провайдеру SMS</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d6a963ae-4ee0-476d-b579-df84217b2886">
+    <name>НеОтправлялось</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение не отправлялось</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d3f139b3-0042-491d-8a48-ef87a9a6a8ec">
+    <name>Отправляется</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправка сообщения...</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="9cbb3b9c-a83b-4dd7-bb45-069f64f31907">
+    <name>Отправлено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправлено, ожидается подтверждение о доставке...</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="cfb09a15-2516-459e-8809-15fa9d6fbc45">
+    <name>НеОтправлено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение не отправлено</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="772a0a84-b3b3-42fc-831e-25c772154ca7">
+    <name>Доставлено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение доставлено</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="969b5812-67bb-44e1-8069-f17897bf1da8">
+    <name>НеДоставлено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не доставлено</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c63497c2-1ae9-4f92-b0ce-27534d8a507a">
+    <name>НетИдентификатора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение передано провайдеру SMS, но идентификатор не получен</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dbe979e7-aba4-45f8-ae23-a0c9ac602fa6">
+  <producedTypes>
+    <selectionType typeId="81285a8a-cc0d-42e4-a8a9-66b2f5397c5b" valueTypeId="49a9b82c-3f88-47d3-87ee-02f6c7c398e8"/>
+    <listType typeId="1f1949da-1d01-471e-a208-366a0f044719" valueTypeId="aeb8ddb6-42ce-4536-bcad-09ba98c13336"/>
+    <managerType typeId="edb2aa91-4904-48a9-b4eb-579b405af62e" valueTypeId="520cbad2-8b31-4a75-bce2-eefb43aa5ab5"/>
+    <recordSetType typeId="e2f44778-e33a-407b-930b-fee5fb57f099" valueTypeId="6b9fbdab-8170-4c1e-8ae1-d80436fd4101"/>
+    <recordKeyType typeId="d5af85eb-abe5-44a6-887a-44a9b7649829" valueTypeId="201aa5fe-2813-43f0-83f5-fae4ea1aff62"/>
+    <recordType typeId="28977cf0-f964-4169-979d-2c3ecd38c681" valueTypeId="0116f39b-c1f7-4e5a-8280-f0cfade210b4"/>
+    <recordManagerType typeId="050e2c5d-5c35-4faa-9b35-f8c6506e3ae6" valueTypeId="ae3a128e-4142-45d9-80d7-b042ec17c8af"/>
+  </producedTypes>
+  <name>ОбработанныеУведомления</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обработанные уведомления</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="189cbce7-de2e-4a7d-a4b5-0b620a9c28ca">
+    <name>ДатаОбработки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата обработки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата обработка уведомления</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7ba033e0-d9fb-4506-b8b7-0f644a16e707">
+    <name>УдалитьДатаОтправки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удалить дата отправки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата отправки уведомления</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="e224ce4a-f0d8-4e43-9dcd-b8c4a0b74c13">
+    <name>ВидСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид события</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыБизнесСобытий</types>
+      <types>EnumRef.СобытияУведомлений</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид события, уведомление по которому было обработано</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="93df08f5-5330-4c3b-bf0b-7aa11d348b0c">
+    <name>ОбъектУведомления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект уведомления</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ОбъектУведомления</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Объект, по которому было обработано уведомление</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0cd4832b-fd7e-416f-98f9-e137ef1b0d48">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, для которого было обработано уведомление</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

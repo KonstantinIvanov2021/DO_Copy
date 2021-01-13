@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="753cf8bd-a3d4-42f5-bd72-c006124eb376">
+  <producedTypes>
+    <selectionType typeId="c301cc1c-8008-4aa9-8d20-8bdd38713c9b" valueTypeId="495afada-cb92-4418-a02f-f9662d63b743"/>
+    <listType typeId="9a82f0f6-4461-428b-bc22-64723e933edc" valueTypeId="e90fc635-25dd-44c8-88d7-9652d5dd2e46"/>
+    <managerType typeId="297805af-533f-4093-8de3-1bac3c844a93" valueTypeId="fc5bc99e-7fa7-4a55-9663-8c78377077b5"/>
+    <recordSetType typeId="c8c4ac3d-94af-4b8d-adf7-33da174ea762" valueTypeId="44d3fd26-7b61-4e46-a156-543cb2d968e4"/>
+    <recordKeyType typeId="c84cd664-e14e-4430-bd5d-b54fe27d108d" valueTypeId="2ffe0a77-4d08-4746-9575-ee0b439ce94c"/>
+    <recordType typeId="b678af19-50a3-4984-bec3-83d9e46c02f5" valueTypeId="adeeae54-5117-42de-b080-7bb45d07e1b4"/>
+    <recordManagerType typeId="08926af5-4f1b-4c93-a660-06f4b12ee986" valueTypeId="cc3118e3-4a3d-4f01-bfa7-b96355ba15c4"/>
+  </producedTypes>
+  <name>РазрешенияДоступаОбщие</name>
+  <synonym>
+    <key>ru</key>
+    <value>Разрешения доступа общие</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2a62350d-5b18-4cb8-ae36-93765e1ad1a3">
+    <name>УровеньДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уровень доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.УровниДоступа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="0d068e93-544e-47ba-9df1-20da327f446d">
+    <name>ЗначениеДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение доступа</value>
+    </synonym>
+    <type>
+      <types>DefinedType.РазрезДоступа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2f62039d-b53c-4b54-a12a-9bb6a232c041">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>DefinedType.КонтейнерПользователей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="4c344f10-9aad-4e02-bc14-30e26b997e32">
+    <name>РазрешенияПоЗначениюДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разрешения по значению доступа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="002ec63c-d12c-4869-aa88-d1a01e82e643">
+    <name>ПолитикиДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Политики доступа</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>DefinedType.РазрезДоступа</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

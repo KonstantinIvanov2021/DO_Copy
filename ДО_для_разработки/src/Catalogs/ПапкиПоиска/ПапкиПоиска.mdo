@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2e891f17-bed5-4a29-9736-5329317d8010">
+  <producedTypes>
+    <objectType typeId="9cf7c916-3cc4-462d-93ce-2f5a96b031d5" valueTypeId="12ce8951-19fc-425f-9a29-807b246d8fe7"/>
+    <refType typeId="005b2615-cb7d-4345-8aa6-1a828ede16cd" valueTypeId="6393b225-4f0f-40a0-b288-6871e5d484f5"/>
+    <selectionType typeId="1ac417f7-5fb8-4093-a7db-43e4eb4d2459" valueTypeId="7a91ba6a-9fc8-4f25-8ee1-4d1a8511539c"/>
+    <listType typeId="4d372093-bceb-4cd5-bf17-96ba8f0ba4f7" valueTypeId="22709e26-25c2-4582-a24d-731603f99ca0"/>
+    <managerType typeId="ebdf63e2-38b1-4f1b-a2b3-423e18e8c12d" valueTypeId="6f3c0c4c-02fa-4d08-adef-ef3f4a9279fe"/>
+  </producedTypes>
+  <name>ПапкиПоиска</name>
+  <synonym>
+    <key>ru</key>
+    <value>Папки поиска</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ПапкиПоиска.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ПапкиПоиска.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Папка поиска</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ПапкиПоиска.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultChoiceForm>Catalog.ПапкиПоиска.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="719a632c-0aab-4ac2-85a9-900731e0607d">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ed6adb50-91b5-47ca-ade2-acf2134c38e9">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="28f5de84-6604-46ea-a306-53a64db27859">
+    <name>НастройкаОтбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка отбора</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0eac1127-467b-4120-ac4a-82cad15cb95f">
+    <name>КоличествоОбъектов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество объектов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="a77b5d04-aec6-4484-954a-b596bb4918ae">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="310eb801-767f-42ee-938d-17caa5d445a7">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

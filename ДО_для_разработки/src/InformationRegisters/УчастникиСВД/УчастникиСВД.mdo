@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5a173244-dcdc-45aa-b56b-1321e0ea3602">
+  <producedTypes>
+    <selectionType typeId="09fdf81e-a693-445c-b8b4-ffb51b93a825" valueTypeId="eb966d49-6fe3-4b74-a6c1-30f280b17f5d"/>
+    <listType typeId="f895f6ab-0145-4701-89ea-9d5aadcf5233" valueTypeId="fc4d369b-d3c0-4f0f-8784-13b930c5e9bc"/>
+    <managerType typeId="4f327550-65e5-491f-88d1-643ef2c4f1f9" valueTypeId="e2a0c02c-4acd-4a94-9ab8-7f2f14c963cf"/>
+    <recordSetType typeId="b3a6fe94-1141-454b-987d-6aed4174a873" valueTypeId="4fc0f4cb-f3e3-4c67-8e7f-641ed8e7c478"/>
+    <recordKeyType typeId="6c898380-7b00-4b57-9048-0487d4253e28" valueTypeId="cdd2b4a7-c403-435f-9831-cab799e0aaa7"/>
+    <recordType typeId="aa7bd8f8-b0e1-458c-98f0-5b73219310fb" valueTypeId="3c02f722-2e7c-4c9d-b072-f46715e9acd3"/>
+    <recordManagerType typeId="21bbcd1d-ff30-484b-9e54-1575f5e99ded" valueTypeId="772b7b7c-0772-4852-a234-b2116bac8e12"/>
+  </producedTypes>
+  <name>УчастникиСВД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Участники СВД</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.УчастникиСВД.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.УчастникиСВД.Form.ФормаСписка</defaultListForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Участник СВД</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Участники СВД</value>
+  </listPresentation>
+  <resources uuid="982b5855-d742-4966-89b1-c2b089b24259">
+    <name>ИмяАдресата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя адресата</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="91357091-a649-4a51-80a7-169b3430f0af">
+    <name>Адресат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адресат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b96aeb95-919a-4390-9be2-c6baed82c0a4">
+    <name>Транспорт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Транспорт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТранспортыСВД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="175b7953-5130-401e-903e-65b8ae89d8af">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="520700a0-5601-49de-a188-47922eb68518">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="1e3875d5-aed4-420b-a683-ea8f2a18415d">
+    <name>ПредставлениеВСВД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Представление в СВД</value>
+    </synonym>
+    <group>FormNavigationPanelSeeAlso</group>
+    <commandParameterType>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Организации</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c2c08f8d-834f-4913-b800-62803b4cc6d4">
+  <producedTypes>
+    <selectionType typeId="f6fa8017-f176-4aad-8709-c54fc2058ebd" valueTypeId="a9e3cf75-30ce-4445-9c0c-6b189f9da951"/>
+    <listType typeId="cdd24c6c-951a-4d09-b4ee-6a4196d07b43" valueTypeId="d068cb8b-6222-4564-94f8-80029d01d016"/>
+    <managerType typeId="5fb71244-e22d-4e27-80ea-89340ba11c77" valueTypeId="0bf42a3a-4af5-42b0-b98a-effbe1565aad"/>
+    <recordSetType typeId="7f969439-4f2a-4dda-bc32-decdcdf47d1e" valueTypeId="de7feb34-7fef-4d7c-ab62-2c675ff1a03a"/>
+    <recordKeyType typeId="232ffe3a-2e32-4402-af7a-c03909e5a44f" valueTypeId="e3be6003-97d7-49a9-affc-c570d1afaf46"/>
+    <recordType typeId="e353e73b-1c20-4dea-927e-91d719dcfc38" valueTypeId="a28fde67-4af7-402a-b3cd-185fcf1ee32d"/>
+    <recordManagerType typeId="b0564d60-e8f4-4b70-9a11-66eb2c17ec1d" valueTypeId="d8c92134-09c7-4b12-a213-97251cac9e02"/>
+  </producedTypes>
+  <name>ОценкиКонтрольныхТочек</name>
+  <synonym>
+    <key>ru</key>
+    <value>Оценки контрольных точек</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ОценкиКонтрольныхТочек.Form.ФормаЗаписи</defaultRecordForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Оценка контрольной точки</value>
+  </recordPresentation>
+  <resources uuid="0ec5c71d-cf84-451b-bab5-b2c33b8e82c6">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="391a4637-6545-4cd7-ae33-d339f58e8587">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="23f1cb70-0432-4f2a-b082-4a9631ac6a50">
+    <name>Оценка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оценка</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВероятностиКТ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="c4abbfa0-cae6-48aa-9fcd-974ebc1bca48">
+    <name>КонтрольнаяТочка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрольная точка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КонтрольныеТочки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="c18e4747-929c-44b9-ba42-5f7b305369b1">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

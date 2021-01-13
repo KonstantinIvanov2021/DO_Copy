@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="774ea2ce-7d7c-4cbf-a1ab-c5786b7b9fca">
+  <producedTypes>
+    <selectionType typeId="7f2e94f3-a277-4214-b9de-cf737875c7d0" valueTypeId="13adcbc4-6a4a-4d66-900c-6abcb9c352b6"/>
+    <listType typeId="edeb1295-e199-4faa-afa1-3a82c80ae8b0" valueTypeId="ad2dc01c-0d54-4451-acda-121d92dd6650"/>
+    <managerType typeId="1469e206-a028-4d72-bc7e-9d0f8b679fb2" valueTypeId="972c23f1-d6a5-494d-b411-66406730569f"/>
+    <recordSetType typeId="e72641a0-2551-41ba-95c8-78059332d377" valueTypeId="a4889703-a8f7-4199-9775-86a501266b37"/>
+    <recordKeyType typeId="482e7ddd-d2ef-4635-864b-36554d5afc58" valueTypeId="41428fb8-e138-49ab-b3e3-f145a33afac5"/>
+    <recordType typeId="b76168f0-f1f7-4afc-8830-3f67730a27b7" valueTypeId="a6d4a668-4b19-4f8a-880f-85adf93096dc"/>
+    <recordManagerType typeId="bcc96701-316a-4624-bf8a-5cc85ef9a2f5" valueTypeId="84c1e95c-3576-4ede-b44e-4cab9ab623a9"/>
+  </producedTypes>
+  <name>ПравилаАвтоматическогоЗапускаБизнесПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Правила автозапуска процессов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ПравилаАвтоматическогоЗапускаБизнесПроцессов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ПравилаАвтоматическогоЗапускаБизнесПроцессов.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Правило автозапуска процессов</value>
+  </recordPresentation>
+  <resources uuid="43e3591f-a89b-4267-bf43-b4fdb72b20af">
+    <name>Условие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Условие</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.УсловияМаршрутизации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Условие</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="c29b410f-a936-4cb1-bad5-fda0f727513f">
+    <name>ВидБизнесСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бизнес-событие</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыБизнесСобытий</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид бизнес-события</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="41b9c0b2-1665-4167-a6fc-1b5c1afa1978">
+    <name>КлассИсточникаБизнесСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Источник события</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПапкиФайлов</types>
+      <types>CatalogRef.КатегорииДанных</types>
+      <types>CatalogRef.ВидыВнутреннихДокументов</types>
+      <types>CatalogRef.ВидыВходящихДокументов</types>
+      <types>CatalogRef.ВидыИсходящихДокументов</types>
+      <types>CatalogRef.ПапкиВнутреннихДокументов</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Класс источника бизнес-события</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="915aea8c-faf2-4c9c-ad5f-caa263399afa">
+    <name>ОрганизацияИсточникаБизнесСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Организация источника бизнес-события</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4fe58d30-ec70-47fb-89d6-196cb944c6d2">
+    <name>ШаблонБизнесПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон бизнес процесса</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШаблоныУтверждения</types>
+      <types>CatalogRef.ШаблоныОзнакомления</types>
+      <types>CatalogRef.ШаблоныСоставныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныРассмотрения</types>
+      <types>CatalogRef.ШаблоныСогласования</types>
+      <types>CatalogRef.ШаблоныПоручения</types>
+      <types>CatalogRef.ШаблоныКомплексныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныПриглашения</types>
+      <types>CatalogRef.ШаблоныИсполнения</types>
+      <types>CatalogRef.ШаблоныРегистрации</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Шаблон бизнес процесса</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="a1e0e90a-0854-495e-ba77-15a6f62d500d">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="31d84604-42a4-44ab-b7e3-7f4ed6994a46">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="9bb94f47-9f31-49ec-a0f8-b6fde77c7bb6">
+    <name>ФормаСпискаДляВидаСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка для вида события</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7565c7e9-5946-43d2-8a99-212e99c3d4b4">
+    <name>ФормаСпискаДляКлассаИсточника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка для класса источника</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="78f99407-668a-462c-9c2d-6d1073eba51c">
+    <name>ФормаСпискаДляШаблона</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка для шаблона</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="de510096-fa14-408e-8485-e262f15822fc">
+    <name>ФормаСпискаУниверсальнаяДляВидаСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка универсальная для вида события</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="f495a921-5b33-40f3-9564-d6730918e10c">
+    <name>ОткрытьФормуГлобально</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила автозапуска процессов</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="17875690-7e04-4865-b722-7da89309b156">
+    <name>ОткрытьФормуДляВидаСобытий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила автоматического запуска процессов</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ВидыБизнесСобытий</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="97a0e563-4f88-4135-a271-069c980f6994">
+    <name>ОткрытьФормуДляКлассаИсточника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила автозапуска процессов</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ПапкиФайлов</types>
+      <types>CatalogRef.КатегорииДанных</types>
+      <types>CatalogRef.ПапкиВнутреннихДокументов</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="09bc107d-98aa-4aef-961d-82f77a8a078f">
+    <name>ОткрытьФормуДляШаблона</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила автозапуска процессов</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ШаблоныУтверждения</types>
+      <types>CatalogRef.ШаблоныОзнакомления</types>
+      <types>CatalogRef.ШаблоныСоставныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныРассмотрения</types>
+      <types>CatalogRef.ШаблоныСогласования</types>
+      <types>CatalogRef.ШаблоныПоручения</types>
+      <types>CatalogRef.ШаблоныКомплексныхБизнесПроцессов</types>
+      <types>CatalogRef.ШаблоныПриглашения</types>
+      <types>CatalogRef.ШаблоныИсполнения</types>
+      <types>CatalogRef.ШаблоныРегистрации</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3aa263e7-dd56-45c6-ad65-ced58ee10e77">
+  <name>ДокументооборотПриЗаписиПравообразующихРегистров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Документооборот при записи правообразующих регистров</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.УчастникиПроцессов</types>
+    <types>InformationRegisterRecordSet.СведенияОПользователяхДокументооборот</types>
+    <types>InformationRegisterRecordSet.НастройкиПравОбъектов</types>
+    <types>InformationRegisterRecordSet.РазрешенияДляЛокальныхАдминистраторов</types>
+    <types>InformationRegisterRecordSet.УчастникиМероприятия</types>
+    <types>InformationRegisterRecordSet.РазрешенияДоступаИсключительные</types>
+    <types>InformationRegisterRecordSet.ИсполнителиЗадач</types>
+    <types>InformationRegisterRecordSet.ДескрипторыДляОбъектов</types>
+    <types>InformationRegisterRecordSet.РазрешенияДоступаОбщие</types>
+    <types>InformationRegisterRecordSet.НаследованиеНастроекПравОбъектов</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ДокументооборотПраваДоступа.ДокументооборотПриЗаписиПравообразующихРегистров</handler>
+</mdclass:EventSubscription>

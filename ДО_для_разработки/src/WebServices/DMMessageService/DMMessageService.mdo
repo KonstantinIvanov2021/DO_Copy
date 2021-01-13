@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c3137e34-130f-4186-8ab3-a82b15efae23">
+  <name>DMMessageService</name>
+  <synonym>
+    <key>ru</key>
+    <value>DMMessage service</value>
+  </synonym>
+  <namespace>http://www.1c.ru/dmmessage</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.DM</value>
+  </xdtoPackages>
+  <descriptorFileName>dmmessage.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="16782ac6-0753-4a9c-9a39-04d99183190f">
+    <name>get</name>
+    <synonym>
+      <key>ru</key>
+      <value>get</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>DMMessage</name>
+      <nsUri>http://www.1c.ru/dm</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>Get</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="93e6ddab-d22b-4d5d-a59d-ad0736961ac6">
+      <name>queue</name>
+      <synonym>
+        <key>ru</key>
+        <value>queue</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="ef38add6-ba64-4262-995c-2ad691fbf218">
+    <name>put</name>
+    <synonym>
+      <key>ru</key>
+      <value>put</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>DMResponse</name>
+      <nsUri>http://www.1c.ru/dm</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>Put</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="26ae45c5-36cc-460b-87ee-9e10539c31d5">
+      <name>message</name>
+      <synonym>
+        <key>ru</key>
+        <value>message</value>
+      </synonym>
+      <xdtoValueType>
+        <name>DMMessage</name>
+        <nsUri>http://www.1c.ru/dm</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="94e9677a-bea9-4f3c-ba0d-1e6d525a100f">
+      <name>queue</name>
+      <synonym>
+        <key>ru</key>
+        <value>queue</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

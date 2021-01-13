@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеПодписан</dataPath>
+			<field>НеПодписан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кто не подписал</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Ссылка.Заголовок</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДокумента</dataPath>
+			<field>ВидДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРегистрации</dataPath>
+			<field>ДатаРегистрации</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РегистрационныйНомер</dataPath>
+			<field>РегистрационныйНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ВнутренниеДокументы.Ссылка КАК Ссылка,
+	ВЫБОР
+		КОГДА ВнутренниеДокументыСтороны.Сторона ССЫЛКА Справочник.Контрагенты
+				И (ВнутренниеДокументы.ВидДокумента.ВариантПодписания = &amp;ТолькоКонтрагентами
+					ИЛИ ВнутренниеДокументы.ВидДокумента.ВариантПодписания = &amp;КонтрагентыИМЫ)
+			ТОГДА 1
+		КОГДА ВнутренниеДокументыСтороны.Сторона ССЫЛКА Справочник.Организации
+				И (ВнутренниеДокументы.ВидДокумента.ВариантПодписания = &amp;ТолькоМЫ
+					ИЛИ ВнутренниеДокументы.ВидДокумента.ВариантПодписания = &amp;КонтрагентыИМЫ)
+			ТОГДА 2
+		ИНАЧЕ 0
+	КОНЕЦ КАК НеПодписан,
+	ВнутренниеДокументы.ВидДокумента.ВариантПодписания КАК ВариантПодписания,
+	ВнутренниеДокументы.ВидДокумента КАК ВидДокумента,
+	ВнутренниеДокументы.РегистрационныйНомер,
+	ВнутренниеДокументы.ДатаРегистрации,
+	ВнутренниеДокументы.Ответственный
+ПОМЕСТИТЬ Документы
+ИЗ
+	Справочник.ВнутренниеДокументы КАК ВнутренниеДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВнутренниеДокументы.Стороны КАК ВнутренниеДокументыСтороны
+		ПО (ВнутренниеДокументыСтороны.Ссылка = ВнутренниеДокументы.Ссылка)
+ГДЕ
+	ВнутренниеДокументы.ПометкаУдаления = ЛОЖЬ
+	И (ВнутренниеДокументы.ВидДокумента.ВестиУчетПоКонтрагентам = ИСТИНА
+		ИЛИ ВнутренниеДокументы.ВидДокумента.ВестиУчетСторон = ИСТИНА)
+	И ВнутренниеДокументыСтороны.Подписан = ЛОЖЬ
+	И ВнутренниеДокументы.ВидДокумента.ВариантПодписания В(&amp;ВариантыПодписания)	
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Документы.Ссылка КАК Ссылка,
+	СУММА(Документы.НеПодписан) КАК НеПодписан,
+	Документы.ВариантПодписания КАК ВариантПодписания,
+	Документы.ВидДокумента,
+	Документы.РегистрационныйНомер,
+	Документы.ДатаРегистрации,
+	Документы.Ответственный
+ПОМЕСТИТЬ ДокументыСуммой
+ИЗ
+	Документы КАК Документы
+
+СГРУППИРОВАТЬ ПО
+	Документы.Ссылка,
+	Документы.ВариантПодписания,
+	Документы.ВидДокумента,
+	Документы.РегистрационныйНомер,
+	Документы.ДатаРегистрации,
+	Документы.Ответственный
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДокументыСуммой.Ссылка,
+	ВЫБОР
+		КОГДА ДокументыСуммой.ВариантПодписания = &amp;ТолькоКонтрагентами
+				И ДокументыСуммой.НеПодписан = 1
+			ТОГДА "Контрагент(ы)"
+		КОГДА ДокументыСуммой.ВариантПодписания = &amp;ТолькоМЫ
+				И ДокументыСуммой.НеПодписан = 2
+			ТОГДА "Мы"
+		КОГДА ДокументыСуммой.ВариантПодписания = &amp;КонтрагентыИМы
+				И ДокументыСуммой.НеПодписан = 2
+			ТОГДА "Мы"
+		КОГДА ДокументыСуммой.ВариантПодписания = &amp;КонтрагентыИМы
+				И ДокументыСуммой.НеПодписан = 1
+			ТОГДА "Контрагент(ы)"
+		КОГДА ДокументыСуммой.ВариантПодписания = &amp;КонтрагентыИМы
+				И ДокументыСуммой.НеПодписан = 3
+			ТОГДА "Никто"
+	КОНЕЦ КАК НеПодписан,
+	ДокументыСуммой.ВидДокумента,
+	ДокументыСуммой.РегистрационныйНомер,
+	ДокументыСуммой.ДатаРегистрации,
+	ДокументыСуммой.Ответственный
+ИЗ
+	ДокументыСуммой КАК ДокументыСуммой</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>НомерИДата</dataPath>
+		<expression>РегистрационныйНомер + ВЫБОР КОГДА ДатаРегистрации = ДАТАВРЕМЯ(1,1,1) ТОГДА "" ИНАЧЕ " от " + Формат(ДатаРегистрации, "ДЛФ=D") КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Номер и дата</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>КонтрагентыИМЫ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контрагенты ИМЫ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВариантыПодписания</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВариантыПодписания.МыИКонтрагенты</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТолькоКонтрагентами</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Только контрагентами</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВариантыПодписания</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВариантыПодписания.ТолькоКонтрагенты</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ТолькоМЫ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Только МЫ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВариантыПодписания</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВариантыПодписания.ТолькоМы</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВариантыПодписания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Варианты подписания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВариантыПодписания</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВариантыПодписания.МыИКонтрагенты</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВариантыПодписания.ТолькоКонтрагенты</value>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВариантыПодписания.ТолькоМы</value>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>СписокНеподписанныхВнутреннихДокументов</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список неподписанных внутренних документов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядку</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерИДата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>РегистрационныйНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДатаРегистрации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ВидДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ответственный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НеПодписан</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Неподписанные внутренние документы</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

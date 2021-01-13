@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ee03eaec-4c69-45ba-946f-b0c100281b82">
+  <producedTypes>
+    <objectType typeId="623c1f9f-3fcc-48e2-910e-28ff3db8e38d" valueTypeId="aa1669da-815f-4f2e-bb85-c9641a3de7c7"/>
+    <managerType typeId="86027947-a7be-4e41-8ee0-57d42e8748a1" valueTypeId="c057c316-131f-4bf2-a311-343cfd131d58"/>
+  </producedTypes>
+  <name>МониторингПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг процессов</value>
+  </synonym>
+  <defaultForm>CommonForm.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.МониторингПроцессов.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <defaultSettingsForm>CommonForm.ФормаНастроекОтчета</defaultSettingsForm>
+  <defaultVariantForm>CommonForm.ФормаВариантаОтчета</defaultVariantForm>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <templates uuid="bf455ba6-8ab6-4b2a-afc5-20c5c04f47ab">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="e5024ac3-f306-4abd-acdd-6f01775aaddd">
+    <name>ОбразецОтчетаМониторингПроцессов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Образец отчета мониторинг процессов</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <commands uuid="397ad574-e995-4676-9680-e6cf9a7d0951">
+    <name>ПоказательПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>История показателя</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>CatalogRef.ПоказателиПроцессов</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Report</picture>
+    </picture>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:Report>

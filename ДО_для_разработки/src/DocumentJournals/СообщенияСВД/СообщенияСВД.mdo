@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c2502278-5add-4fb5-9236-7f973e155d0f">
+  <producedTypes>
+    <selectionType typeId="4585d260-8e16-4c9d-960f-c75c8c688b02" valueTypeId="e787fba6-6c3a-40e1-824b-f72937ae3c14"/>
+    <listType typeId="a388e02d-5ce4-488a-8011-19e1c1a92a51" valueTypeId="4fefe6b0-01f9-4cc9-b653-167eada2e2e7"/>
+    <managerType typeId="ede02947-b148-4813-b0fe-41c080896ed6" valueTypeId="552714f5-64d7-49cb-b2a9-e8b464eac454"/>
+  </producedTypes>
+  <name>СообщенияСВД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сообщения СВД</value>
+  </synonym>
+  <defaultForm>DocumentJournal.СообщенияСВД.Form.ФормаСписка</defaultForm>
+  <registeredDocuments>Document.ВходящееСообщениеСВД</registeredDocuments>
+  <registeredDocuments>Document.ИсходящееСообщениеСВД</registeredDocuments>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <listPresentation>
+    <key>ru</key>
+    <value>Сообщения</value>
+  </listPresentation>
+  <columns uuid="3e58532c-ec20-4597-b05a-5b39b2ca2053">
+    <name>Адресат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адресат</value>
+    </synonym>
+    <references>Document.ВходящееСообщениеСВД.Attribute.КонтрагентОтправитель</references>
+    <references>Document.ИсходящееСообщениеСВД.Attribute.Получатель</references>
+  </columns>
+  <columns uuid="442abdd2-d87d-4eb6-82d3-b69a68d537c1">
+    <name>ВидСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид сообщения</value>
+    </synonym>
+    <references>Document.ВходящееСообщениеСВД.Attribute.ВидСообщения</references>
+    <references>Document.ИсходящееСообщениеСВД.Attribute.ВидСообщения</references>
+  </columns>
+  <columns uuid="65f6acd2-bc15-4e80-ab92-d435598a9266">
+    <name>ВидТранспорта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид транспорта</value>
+    </synonym>
+    <references>Document.ВходящееСообщениеСВД.Attribute.ФорматСообщения</references>
+    <references>Document.ИсходящееСообщениеСВД.Attribute.ФорматСообщения</references>
+  </columns>
+  <columns uuid="cfacdbdb-3824-44e0-8d5b-d834a08ffa5c">
+    <name>Идентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор</value>
+    </synonym>
+    <references>Document.ВходящееСообщениеСВД.Attribute.ИдентификаторСообщения</references>
+    <references>Document.ИсходящееСообщениеСВД.Attribute.ИдентификаторСообщения</references>
+  </columns>
+  <columns uuid="f658a3a0-1456-49f4-9d03-b49310fccd56">
+    <name>ИдентификаторСессии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор сессии</value>
+    </synonym>
+    <indexing>Index</indexing>
+    <references>Document.ВходящееСообщениеСВД.Attribute.ИдентификаторСессии</references>
+    <references>Document.ИсходящееСообщениеСВД.Attribute.ИдентификаторСессии</references>
+  </columns>
+  <columns uuid="a15fed7d-ccbf-4c50-8cf1-402faae0eaab">
+    <name>ИдентификаторСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор сообщения</value>
+    </synonym>
+    <references>Document.ВходящееСообщениеСВД.Attribute.ИдентификаторСообщения</references>
+    <references>Document.ИсходящееСообщениеСВД.Attribute.ИдентификаторСообщения</references>
+  </columns>
+  <columns uuid="d9da5800-0e2a-4bc5-bf46-8c4c0e9edb26">
+    <name>Транспорт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Транспорт</value>
+    </synonym>
+    <references>Document.ВходящееСообщениеСВД.Attribute.ТранспортПолучения</references>
+    <references>Document.ИсходящееСообщениеСВД.Attribute.Транспорт</references>
+  </columns>
+  <columns uuid="3f32adc6-6a60-4b8d-8b9d-1fce79a807ce">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <references>Document.ВходящееСообщениеСВД.Attribute.Документ</references>
+    <references>Document.ИсходящееСообщениеСВД.Attribute.Документ</references>
+  </columns>
+  <columns uuid="4419bf2c-2cca-4cef-a978-3583dc335ff0">
+    <name>ТекстОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст ошибки</value>
+    </synonym>
+    <references>Document.ВходящееСообщениеСВД.Attribute.ТекстОшибки</references>
+    <references>Document.ИсходящееСообщениеСВД.Attribute.ТекстОшибки</references>
+  </columns>
+  <columns uuid="cc1762a2-25e1-4a87-9463-8bec60a510d4">
+    <name>ДатаОтправки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата отправки</value>
+    </synonym>
+    <references>Document.ИсходящееСообщениеСВД.Attribute.ДатаОтправки</references>
+  </columns>
+  <forms uuid="0af1e7d1-cc57-4c4d-ad32-d3a3c3cc9ede">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6664f3a7-5434-484b-a183-88522b423618">
+    <name>ФормаСпискаПоДокументу</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка по документу</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="a037b8d4-daba-45fe-9365-e252a606e083">
+    <name>СообщенияСВД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщения</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="fc9b307b-3a71-4e5b-a938-90b686f1fc9f">
+    <name>ОткрытьСписокПоДокументу</name>
+    <synonym>
+      <key>ru</key>
+      <value>История СВД</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ВходящиеДокументы</types>
+      <types>CatalogRef.ИсходящиеДокументы</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:DocumentJournal>

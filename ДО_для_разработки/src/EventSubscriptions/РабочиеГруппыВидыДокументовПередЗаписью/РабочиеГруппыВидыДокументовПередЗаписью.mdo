@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5a5ba445-be56-4298-9749-11c89f8ccfd2">
+  <name>РабочиеГруппыВидыДокументовПередЗаписью</name>
+  <synonym>
+    <key>ru</key>
+    <value>Рабочие группы виды документов перед записью</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ВидыИсходящихДокументов</types>
+    <types>CatalogObject.ВидыВнутреннихДокументов</types>
+    <types>CatalogObject.ВидыВходящихДокументов</types>
+    <types>CatalogObject.ВидыМероприятий</types>
+    <types>CatalogObject.ВидыПроектов</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.РаботаСРабочимиГруппами.РабочиеГруппыВидыДокументовПередЗаписьюПередЗаписью</handler>
+</mdclass:EventSubscription>

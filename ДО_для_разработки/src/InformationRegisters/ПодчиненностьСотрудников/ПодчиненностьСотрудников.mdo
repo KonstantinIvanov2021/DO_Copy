@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="601c3d38-7c12-4e2a-84c2-262e4170801f">
+  <producedTypes>
+    <selectionType typeId="457cbc4d-a5a7-406b-be2d-387ff8501aa6" valueTypeId="8766f7a6-c016-4271-b1ef-2c37fa520d58"/>
+    <listType typeId="6a423e63-7d91-4f1b-b97c-b2d51b98ce1e" valueTypeId="bc485695-532d-497c-8f28-4f3a39b9498c"/>
+    <managerType typeId="6514b6fa-b0e0-44f1-b223-9d73e18ee3a4" valueTypeId="918b5e47-e813-472d-8830-82cd14125a07"/>
+    <recordSetType typeId="59e4dfbf-2ad9-4ef9-bf01-b6030a24425d" valueTypeId="b7d78e01-2f29-460a-8b5e-8a68b17bd0e1"/>
+    <recordKeyType typeId="74e4e52a-6a9a-4192-bb7f-9084860d08cd" valueTypeId="913d2607-aec1-45ae-a67f-9009a62efd03"/>
+    <recordType typeId="db840baa-0228-4186-a882-a123de44ce67" valueTypeId="a1bda4a4-866b-458c-b585-c5f7894ddd04"/>
+    <recordManagerType typeId="1dad4211-6e2b-4fe6-b902-ab65702c794f" valueTypeId="ed3957c3-6690-4b83-bbf8-3e655109384d"/>
+  </producedTypes>
+  <name>ПодчиненностьСотрудников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подчиненность сотрудников</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ПодчиненностьСотрудников.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="d3e60e1b-00d9-4cdd-a3c9-08dd6ddd840b">
+    <name>Руководитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Руководитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bb47cbe7-8961-42e9-b875-bcc609148b93">
+    <name>Подчиненный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подчиненный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="65af7677-dcb5-4f2d-a557-e77f1f66181f">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктураПредприятия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="683ff2e3-393e-4b8e-bb0a-9f2f382eedd8">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

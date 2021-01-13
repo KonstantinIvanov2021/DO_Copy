@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9f4deeee-eb6d-4c7b-a41b-9e07df9009c9">
+  <producedTypes>
+    <selectionType typeId="757d4e4c-2131-4a90-ba2d-f36b6c515ea8" valueTypeId="b35027bb-5b6c-44d5-911a-40297d07cea1"/>
+    <listType typeId="b27bcdb0-7a3f-44dd-bc2a-6d1da1a13e93" valueTypeId="37d46b49-0f0b-4240-b513-f976201fbabe"/>
+    <managerType typeId="a85ac497-920c-4750-85f2-ae9c7ea579cb" valueTypeId="5c6d617c-bb9e-4b11-8ece-31f12bf5fefb"/>
+    <recordSetType typeId="531f3807-a4ed-490a-9062-fd5ac7057684" valueTypeId="c3b3beb9-818b-4526-8633-b2563945e240"/>
+    <recordKeyType typeId="d2f8282d-570f-4661-aa10-c4c2ad064861" valueTypeId="dac3fee3-a9b2-4794-8c1a-bee2918b8152"/>
+    <recordType typeId="1783197f-8a07-453b-bb3b-4b1a599794d8" valueTypeId="239ab98b-7c7d-44ff-8581-09840bd87204"/>
+    <recordManagerType typeId="41246ac6-6e1a-471f-9169-4bd87a537f0b" valueTypeId="ea8b2fd2-cdf0-4341-920f-1f864cad2115"/>
+  </producedTypes>
+  <name>СостоянияМероприятий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояния мероприятий</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СостоянияМероприятий.Form.ФормаЗаписи</defaultRecordForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Состояние Мероприятия</value>
+  </recordPresentation>
+  <attributes uuid="030b3595-00f1-492b-865e-50df79ad326f">
+    <name>Установил</name>
+    <synonym>
+      <key>ru</key>
+      <value>Установил</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+      <types>BusinessProcessRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="7e8510ca-739d-426d-b1c4-6eaf9a34db41">
+    <name>Мероприятие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мероприятие</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Мероприятия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d2412770-5c52-4c2e-bfdf-f56c932b14c7">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияМероприятий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="deddbdf0-4010-4c14-ace4-75371c8baaa6">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

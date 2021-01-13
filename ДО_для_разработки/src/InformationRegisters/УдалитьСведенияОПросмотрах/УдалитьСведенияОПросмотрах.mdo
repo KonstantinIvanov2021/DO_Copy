@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="492354ee-ddee-4f48-befb-a6c04dac800f">
+  <producedTypes>
+    <selectionType typeId="b1d1caa0-644e-4c7d-89a6-580452510d3a" valueTypeId="a550113b-7488-4740-98f4-b2ea7fd425bf"/>
+    <listType typeId="3987e17d-cff7-4d1f-bcfa-6c5e785c91ea" valueTypeId="95739a9b-2eb9-40a3-b442-e2f15f18856a"/>
+    <managerType typeId="c5ca54ae-194e-492a-b38a-b5e9b1891e9d" valueTypeId="8802f7ee-2b14-40d7-8d83-ec0a6fc3aa35"/>
+    <recordSetType typeId="faa05666-c4fe-4388-a970-d934ed40b7e7" valueTypeId="01fc19c2-2059-4c97-9618-e6f38f371a1e"/>
+    <recordKeyType typeId="21597028-96e3-4426-890d-f257476af9f9" valueTypeId="8e337e8a-b6de-4ee3-829a-d318fa6360b3"/>
+    <recordType typeId="a4ed747e-ba2e-49a1-ae1f-098f57f0deb5" valueTypeId="00ae08ae-93ed-469e-ac83-f9d0c76623de"/>
+    <recordManagerType typeId="09175006-8229-4a67-9df7-01bb7f53722b" valueTypeId="d931ae9b-5729-4d25-b4c8-84d747b59e6e"/>
+  </producedTypes>
+  <name>УдалитьСведенияОПросмотрах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Удалить сведения о просмотрах</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <explanation>
+    <key>ru</key>
+    <value>Учет просмотренных пользователями сообщений.</value>
+  </explanation>
+  <dimensions uuid="e80fe6bd-738a-47e1-823f-a458f82664aa">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, просмотревший сообщение</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="fe223b33-6c51-448d-8af7-e5b3476003f9">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СообщенияОбсуждений</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

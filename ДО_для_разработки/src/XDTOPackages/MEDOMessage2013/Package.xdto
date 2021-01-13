@@ -1,0 +1,414 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.eos.ru/2010/sev" elementFormQualified="true" attributeFormQualified="false">
+	<import namespace="http://www.eos.ru/2010/sev/Ext2015"/>
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<property xmlns:d2p1="http://www.eos.ru/2010/sev" name="DocInfo" type="d2p1:DocumentInfo" nillable="true"/>
+	<property xmlns:d2p1="http://www.eos.ru/2010/sev" name="Report" type="d2p1:Report" nillable="true"/>
+	<valueType name="AdditionalFieldType" base="xs:string" variety="Atomic">
+		<enumeration>Text</enumeration>
+		<enumeration>Date</enumeration>
+		<enumeration>Decimal</enumeration>
+		<enumeration>Flag</enumeration>
+	</valueType>
+	<valueType name="AdvanceInfoType" base="xs:string" variety="Atomic">
+		<enumeration>First</enumeration>
+		<enumeration>All</enumeration>
+	</valueType>
+	<valueType name="ApprovalKind" base="xs:string" variety="Atomic">
+		<enumeration>Sign</enumeration>
+		<enumeration>Visa</enumeration>
+	</valueType>
+	<valueType name="ControlState" base="xs:string" variety="Atomic">
+		<enumeration>NoControl</enumeration>
+		<enumeration>UnderControl</enumeration>
+		<enumeration>EndedControl</enumeration>
+	</valueType>
+	<valueType name="DocumentMessageType" base="xs:string" variety="Atomic">
+		<enumeration>MainDoc</enumeration>
+		<enumeration>AddToDoc</enumeration>
+		<enumeration>Reception</enumeration>
+		<enumeration>Failure</enumeration>
+		<enumeration>Report</enumeration>
+	</valueType>
+	<valueType name="DocumentType" base="xs:string" variety="Atomic">
+		<enumeration>Created</enumeration>
+		<enumeration>Incoming</enumeration>
+		<enumeration>Project</enumeration>
+	</valueType>
+	<valueType name="Sex" base="xs:string" variety="Atomic">
+		<enumeration>Female</enumeration>
+		<enumeration>Male</enumeration>
+		<enumeration>Undefined</enumeration>
+	</valueType>
+	<valueType name="Status" base="xs:string" variety="Atomic">
+		<enumeration>Created</enumeration>
+		<enumeration>AtSight</enumeration>
+		<enumeration>Initialed</enumeration>
+		<enumeration>AtSignature</enumeration>
+		<enumeration>Signed</enumeration>
+		<enumeration>NotSigned</enumeration>
+		<enumeration>AtRegistration1</enumeration>
+		<enumeration>AtRegistration2</enumeration>
+		<enumeration>Registered</enumeration>
+	</valueType>
+	<valueType name="String14Type" base="xs:string" variety="Atomic" minLength="0" maxLength="14"/>
+	<valueType name="TaskType" base="xs:string" variety="Atomic">
+		<enumeration>Resolution</enumeration>
+		<enumeration>Point</enumeration>
+	</valueType>
+	<valueType name="VisaSignType" base="xs:string" variety="Atomic">
+		<enumeration>Visa</enumeration>
+		<enumeration>Sign</enumeration>
+	</valueType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Access" base="d2p1:SimpleContentUidOptional"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="AdditionalField" base="d2p1:BaseSimpleContentStringComplexType">
+		<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Type" type="d2p1:AdditionalFieldType" lowerBound="1" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Address" base="d2p1:BaseComplexType">
+		<property name="ZipCode" type="xs:string" lowerBound="0"/>
+		<property name="Region" type="d2p1:Region" lowerBound="0"/>
+		<property name="Settlement" type="xs:string" lowerBound="0"/>
+		<property name="Text" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Addressee" base="d2p1:BaseComplexType">
+		<property name="Contact" type="d2p1:Contact" lowerBound="0"/>
+		<property name="PrivatePerson" type="d2p1:PrivatePerson" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Answer" base="d2p1:BaseComplexType">
+		<property name="DocumentID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Type" type="d2p1:DeliveryType"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Approval" base="d2p1:UidRequired">
+		<property name="Kind" type="d2p1:ApprovalKind" lowerBound="1" form="Attribute"/>
+		<property name="Contact" type="d2p1:Contact"/>
+		<property name="SignDate" type="xs:dateTime" lowerBound="0"/>
+		<property name="MainInfo" type="xs:string" lowerBound="0"/>
+		<property name="AddInfo" type="xs:string" lowerBound="0"/>
+		<property name="ParentContact" type="d2p1:Contact" lowerBound="0"/>
+		<property name="File" type="d2p1:DeloFile" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="BaseComplexType" abstract="true"/>
+	<objectType name="BaseSimpleContentStringComplexType" abstract="true">
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Category" base="d2p1:SimpleContentUidOptional"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Consideration" base="d2p1:BaseComplexType">
+		<property name="TaskID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="InitialTaskUID" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Contact" base="d2p1:BaseComplexType">
+		<property name="Organization" type="d2p1:Organization"/>
+		<property name="Department" type="d2p1:Department" lowerBound="0"/>
+		<property name="OfficialPerson" type="d2p1:OfficialPerson" lowerBound="0"/>
+		<property name="Address" type="d2p1:Address" lowerBound="0" upperBound="-1"/>
+		<property name="Econtact" type="d2p1:Econtact" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Control" base="d2p1:BaseComplexType">
+		<property name="State" type="d2p1:ControlState" lowerBound="1" form="Attribute"/>
+		<property name="Contact" type="d2p1:Contact" lowerBound="0"/>
+		<property name="Deadline" type="xs:date" lowerBound="0"/>
+		<property name="Summary" type="xs:string" lowerBound="0"/>
+		<property name="FactDate" type="xs:date" lowerBound="0"/>
+		<property name="Resume" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="DeliveryType" base="d2p1:SimpleContentUidOptional"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="DeloFile" base="d2p1:UidRequired">
+		<property name="ResourceID" type="xs:int" lowerBound="1" form="Attribute"/>
+		<property name="Size" type="xs:int" lowerBound="1" form="Attribute"/>
+		<property name="Description" type="xs:string" nillable="false"/>
+		<property name="Extension" type="xs:string"/>
+		<property name="EDS" type="d2p1:EDS" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.eos.ru/2010/sev/Ext2015" ref="d3p1:eTag" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Department" base="d2p1:UidOptional">
+		<property name="Name" type="xs:string" nillable="false"/>
+		<property name="Index" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="DirectionType" base="d2p1:BaseComplexType">
+		<property name="VisaSign" type="d2p1:VisaSignType" lowerBound="1" form="Attribute"/>
+		<property name="Contact" type="d2p1:Contact"/>
+		<property name="Date" type="xs:dateTime"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Document" base="d2p1:UidOptional">
+		<property name="DocumentID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Type" type="d2p1:DocumentType" lowerBound="1" form="Attribute"/>
+		<property name="MainDocument" type="xs:boolean" lowerBound="1" form="Attribute"/>
+		<property name="Status" type="d2p1:Status" lowerBound="0" form="Attribute"/>
+		<property name="Version" type="xs:int" lowerBound="0" form="Attribute"/>
+		<property name="VersionUID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="RegistrationInfo" type="d2p1:RegistrationInfo"/>
+		<property name="Control" type="d2p1:DocumentControl" lowerBound="0"/>
+		<property name="Group" type="d2p1:Group" lowerBound="0"/>
+		<property name="Access" type="d2p1:Access" lowerBound="0"/>
+		<property name="Consists" type="xs:string" lowerBound="0"/>
+		<property name="Annotation" type="xs:string" lowerBound="0"/>
+		<property name="Note" type="xs:string" lowerBound="0"/>
+		<property name="Collective" type="xs:boolean" lowerBound="0"/>
+		<property name="Rubric" type="d2p1:Rubric" lowerBound="0" upperBound="-1"/>
+		<property name="File" type="d2p1:DeloFile" lowerBound="0" upperBound="-1"/>
+		<property name="Author" type="d2p1:DocumentAuthor" lowerBound="0" upperBound="-1"/>
+		<property name="Visa" type="d2p1:Visa" lowerBound="0" upperBound="-1"/>
+		<property name="Approval" type="d2p1:Approval" lowerBound="0" upperBound="-1"/>
+		<property name="Addressee" type="d2p1:Addressee" lowerBound="0" upperBound="-1"/>
+		<property name="Writer" type="d2p1:Writer" lowerBound="0" upperBound="-1"/>
+		<property name="AdditionalField" type="d2p1:AdditionalField" lowerBound="0" upperBound="-1"/>
+		<property name="Link" type="d2p1:Link" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="DocumentAuthor" base="d2p1:BaseComplexType">
+		<property name="Contact" type="d2p1:Contact" lowerBound="0"/>
+		<property name="RegistrationInfo" type="d2p1:RegistrationInfo" lowerBound="0"/>
+		<property name="PrivatePerson" type="d2p1:PrivatePerson" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="DocumentControl" base="d2p1:BaseComplexType">
+		<property name="State" type="d2p1:ControlState" lowerBound="1" form="Attribute"/>
+		<property name="Deadline" type="xs:date" lowerBound="0"/>
+		<property name="FactDate" type="xs:date" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="DocumentInfo" base="d2p1:BaseComplexType">
+		<property name="Header" type="d2p1:MessageHeader"/>
+		<property name="DocumentList" type="d2p1:DocumentList"/>
+		<property name="TaskList" type="d2p1:TaskList" lowerBound="0"/>
+		<property name="Subscriptions" type="d2p1:Subscriptions" lowerBound="0"/>
+		<property name="Expansion" type="d2p1:Expansion" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="DocumentList" base="d2p1:BaseComplexType">
+		<property name="Document" type="d2p1:Document" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="EDMS" base="d2p1:SimpleContentUidRequired">
+		<property name="Version" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="EDS" base="d2p1:BaseSimpleContentStringComplexType">
+		<property name="ResourceID" type="xs:int" lowerBound="1" form="Attribute"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0" form="Attribute"/>
+		<property name="KindID" type="xs:int" lowerBound="0" form="Attribute"/>
+		<property name="Certificate" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Econtact" base="d2p1:BaseSimpleContentStringComplexType">
+		<property name="Type" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="ExecutionStatus" base="d2p1:SimpleContentUidOptional"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Executor" base="d2p1:UidOptional">
+		<property name="Responsible" type="xs:boolean" lowerBound="1" form="Attribute"/>
+		<property name="Contact" type="d2p1:Contact"/>
+		<property name="Text" type="xs:string" lowerBound="0"/>
+		<property name="Date" type="xs:dateTime" lowerBound="0"/>
+		<property name="Status" type="d2p1:ExecutionStatus" lowerBound="0"/>
+		<property name="File" type="d2p1:DeloFile" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Expansion" base="d2p1:BaseComplexType">
+		<property name="Version" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Failure" base="d2p1:BaseSimpleContentStringComplexType">
+		<property name="Code" type="xs:int" lowerBound="1" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Forwarding" base="d2p1:BaseComplexType">
+		<property name="Contact" type="d2p1:Contact"/>
+		<property name="Date" type="xs:dateTime"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Group" base="d2p1:SimpleContentUidOptional"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="InitialDoc" base="d2p1:UidRequired">
+		<property name="VersionUID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="Number" type="xs:string" nillable="false"/>
+		<property name="Date" type="xs:date"/>
+		<property name="Group" type="d2p1:Group" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Link" base="d2p1:BaseComplexType">
+		<property name="DocumentID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="Description" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="URLString" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="LinkType" type="d2p1:LinkType"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="LinkType" base="d2p1:SimpleContentUidOptional"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="MessageHeader" base="d2p1:BaseComplexType">
+		<property name="MessageID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Version" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="TimeZone" type="xs:int" lowerBound="0" form="Attribute"/>
+		<property name="Time" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+		<property name="MessageType" type="d2p1:DocumentMessageType" lowerBound="1" form="Attribute"/>
+		<property name="ReturnID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="ResourceID" type="xs:int" lowerBound="1" form="Attribute"/>
+		<property name="Sender" type="d2p1:Sender"/>
+		<property name="Recipient" type="d2p1:Recipient"/>
+		<property name="ResourceList" type="d2p1:ResourceList"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Notification" base="d2p1:BaseComplexType">
+		<property name="InitialDoc" type="d2p1:InitialDoc"/>
+		<property name="Reception" type="xs:dateTime" lowerBound="0"/>
+		<property name="Failure" type="d2p1:Failure" lowerBound="0"/>
+		<property name="Registration" type="d2p1:Registration" lowerBound="0"/>
+		<property name="Forwarding" type="d2p1:Forwarding" lowerBound="0" upperBound="-1"/>
+		<property name="Consideration" type="d2p1:Consideration" lowerBound="0" upperBound="-1"/>
+		<property name="Report" type="d2p1:TaskReport" lowerBound="0" upperBound="-1"/>
+		<property name="Redirection" type="d2p1:Redirection" lowerBound="0" upperBound="-1"/>
+		<property name="Answer" type="d2p1:Answer" lowerBound="0" upperBound="-1"/>
+		<property name="Direction" type="d2p1:DirectionType" lowerBound="0" upperBound="-1"/>
+		<property name="SignInformation" type="d2p1:SignInformationType" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="OfficialPerson" base="d2p1:UidOptional" ordered="false" sequenced="true">
+		<property name="FIO" type="xs:string" lowerBound="0" nillable="false"/>
+		<property name="Post" type="xs:string" lowerBound="0"/>
+		<property name="Index" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Organization" base="d2p1:UidOptional">
+		<property name="ShortName" type="xs:string"/>
+		<property name="FullName" type="xs:string" lowerBound="0" nillable="false"/>
+		<property name="INN" type="xs:string" lowerBound="0"/>
+		<property name="OKPO" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Parent" base="d2p1:BaseComplexType">
+		<property name="DocumentID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="TaskID" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Passport" base="d2p1:BaseComplexType">
+		<property name="Series" type="xs:string" nillable="false"/>
+		<property name="Number" type="xs:string" nillable="false"/>
+		<property name="GivenBy" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="PrivatePerson" base="d2p1:UidOptional">
+		<property name="FIO" type="xs:string" nillable="false"/>
+		<property name="Sex" type="d2p1:Sex" lowerBound="0"/>
+		<property name="INN" type="xs:string" lowerBound="0"/>
+		<property name="Passport" type="d2p1:Passport" lowerBound="0"/>
+		<property name="Address" type="d2p1:Address" lowerBound="0" upperBound="-1"/>
+		<property name="Econtact" type="d2p1:Econtact" lowerBound="0" upperBound="-1"/>
+		<property name="SNILS" type="d2p1:String14Type" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="ProjectPriority" base="d2p1:SimpleContentUidOptional"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="ProjectStatus" base="d2p1:SimpleContentUidOptional"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Recipient" base="d2p1:BaseComplexType">
+		<property name="Contact" type="d2p1:Contact" upperBound="-1"/>
+		<property name="EDMS" type="d2p1:EDMS" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Redirection" base="d2p1:BaseComplexType" ordered="false" sequenced="true">
+		<property name="Contact" type="d2p1:Contact" lowerBound="0"/>
+		<property name="PrivatePerson" type="d2p1:PrivatePerson" lowerBound="0"/>
+		<property name="Date" type="xs:dateTime"/>
+		<property name="Type" type="d2p1:DeliveryType"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Region" base="d2p1:SimpleContentUidOptional"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Registration" base="d2p1:BaseComplexType">
+		<property name="DocumentID" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="SystemDate" type="xs:dateTime" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="RegistrationInfo" base="d2p1:BaseComplexType">
+		<property name="Number" type="xs:string" nillable="false"/>
+		<property name="Date" type="xs:date"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Report" base="d2p1:BaseComplexType">
+		<property name="Header" type="d2p1:MessageHeader"/>
+		<property name="Notification" type="d2p1:Notification"/>
+		<property name="DocumentList" type="d2p1:DocumentList" lowerBound="0"/>
+		<property name="TaskList" type="d2p1:TaskList" lowerBound="0"/>
+		<property name="Expansion" type="d2p1:Expansion" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="ResolutionAuthor" base="d2p1:BaseComplexType">
+		<property name="Contact" type="d2p1:Contact"/>
+		<property name="SignDate" type="xs:date"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="ResourceInfo" base="d2p1:UidRequired">
+		<property name="UniqueName" type="xs:string" lowerBound="1" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="ResourceList" base="d2p1:BaseComplexType">
+		<property name="Resource" type="d2p1:ResourceInfo" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Rubric" base="d2p1:SimpleContentUidOptional"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Sender" base="d2p1:BaseComplexType">
+		<property name="Contact" type="d2p1:Contact"/>
+		<property name="EDMS" type="d2p1:EDMS"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="SignInformationType" base="d2p1:BaseComplexType">
+		<property name="DocumentID" type="xs:string" lowerBound="1" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="SimpleContentUidOptional" base="d2p1:BaseSimpleContentStringComplexType" abstract="true">
+		<property name="UID" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="SimpleContentUidRequired" base="d2p1:BaseSimpleContentStringComplexType" abstract="true">
+		<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="SubscriptionEvent" base="d2p1:BaseComplexType">
+		<property name="Include" type="xs:boolean" lowerBound="1" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="SubscriptionEventAdvanceInfo" base="d2p1:SubscriptionEvent">
+		<property name="AdvanceInfo" type="d2p1:AdvanceInfoType" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Subscriptions" base="d2p1:BaseComplexType">
+		<property name="StopDayCount" type="xs:int" lowerBound="1" form="Attribute"/>
+		<property name="Reception" type="d2p1:SubscriptionEvent"/>
+		<property name="Registration" type="d2p1:SubscriptionEvent"/>
+		<property name="Forwarding" type="d2p1:SubscriptionEventAdvanceInfo"/>
+		<property name="Consideration" type="d2p1:SubscriptionEventAdvanceInfo"/>
+		<property name="TaskDecoration" type="d2p1:TaskDecoration" lowerBound="0"/>
+		<property name="Report" type="d2p1:SubscriptionEvent"/>
+		<property name="Redirection" type="d2p1:SubscriptionEvent"/>
+		<property name="Answer" type="d2p1:SubscriptionEvent"/>
+		<property name="VisaDirection" type="d2p1:SubscriptionEvent" lowerBound="0"/>
+		<property name="SignDirection" type="d2p1:SubscriptionEvent" lowerBound="0"/>
+		<property name="VisaInformation" type="d2p1:SubscriptionEvent" lowerBound="0"/>
+		<property name="SignInformation" type="d2p1:SubscriptionEvent" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Task" base="d2p1:UidRequired">
+		<property name="TaskID" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Type" type="d2p1:TaskType" lowerBound="1" form="Attribute"/>
+		<property name="Privacy" type="xs:boolean" lowerBound="1" form="Attribute"/>
+		<property name="Number" type="xs:string" lowerBound="0"/>
+		<property name="Author" type="d2p1:ResolutionAuthor" lowerBound="0"/>
+		<property name="Text" type="xs:string" lowerBound="0"/>
+		<property name="File" type="d2p1:DeloFile" lowerBound="0" upperBound="-1"/>
+		<property name="Executor" type="d2p1:Executor" lowerBound="0" upperBound="-1"/>
+		<property name="Control" type="d2p1:Control" lowerBound="0"/>
+		<property name="Note" type="xs:string" lowerBound="0"/>
+		<property name="Category" type="d2p1:Category" lowerBound="0"/>
+		<property name="Parent" type="d2p1:Parent" lowerBound="0"/>
+		<property name="IsProject" type="xs:boolean"/>
+		<property name="ProjectPriority" type="d2p1:ProjectPriority" lowerBound="0"/>
+		<property name="ProjectStatus" type="d2p1:ProjectStatus" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="TaskDecoration" base="d2p1:BaseComplexType">
+		<property name="Text" type="d2p1:SubscriptionEvent"/>
+		<property name="Category" type="d2p1:SubscriptionEvent"/>
+		<property name="Note" type="d2p1:SubscriptionEvent"/>
+		<property name="ControlState" type="d2p1:SubscriptionEvent"/>
+		<property name="PlanDate" type="d2p1:SubscriptionEvent"/>
+		<property name="Controller" type="d2p1:SubscriptionEvent"/>
+		<property name="Summary" type="d2p1:SubscriptionEvent"/>
+		<property name="FactDate" type="d2p1:SubscriptionEvent"/>
+		<property name="Status" type="d2p1:SubscriptionEvent"/>
+		<property name="Resume" type="d2p1:SubscriptionEvent"/>
+		<property name="Executor" type="d2p1:SubscriptionEventAdvanceInfo"/>
+		<property name="ExecutorReport" type="d2p1:SubscriptionEvent"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="TaskList" base="d2p1:BaseComplexType">
+		<property name="Task" type="d2p1:Task" upperBound="-1"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="TaskReport" base="d2p1:BaseComplexType">
+		<property name="TaskID" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="UidOptional" base="d2p1:BaseComplexType" abstract="true">
+		<property name="UID" type="xs:string" lowerBound="0" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="UidRequired" base="d2p1:BaseComplexType" abstract="true">
+		<property name="UID" type="xs:string" lowerBound="1" form="Attribute"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Visa" base="d2p1:BaseComplexType">
+		<property name="Contact" type="d2p1:Contact"/>
+		<property name="SignDate" type="xs:date" lowerBound="0"/>
+		<property name="VisaInfo" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="Writer" base="d2p1:BaseComplexType">
+		<property name="Contact" type="d2p1:Contact"/>
+		<property name="AddInfo" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="DocInfo" base="d2p1:DocumentInfo"/>
+	<objectType name="Response"/>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="PutResponse" base="d2p1:Response">
+		<property name="errorQuantity" type="xs:byte"/>
+		<property name="Report" type="d2p1:Report" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.eos.ru/2010/sev" name="GetResponse" base="d2p1:Response" ordered="false">
+		<property name="messagesQuantity" type="xs:byte"/>
+		<property name="DocInfo" type="d2p1:DocumentInfo" lowerBound="0"/>
+		<property name="Report" type="d2p1:Report" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="TableFiles" type="d3p1:ValueTable" lowerBound="0"/>
+	</objectType>
+</package>

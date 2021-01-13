@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f42d75bb-99d8-449a-93fe-a0559fc3268f">
+  <name>ОбменСМобильнымПриЗаписиПапкиПисем</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен с мобильным при записи папки писем</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ПапкиПисем</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ОбменСМобильнымиПочтаСервер.ОбменСМобильнымКлиентомПриЗаписиПапкиПисемПриЗаписи</handler>
+</mdclass:EventSubscription>

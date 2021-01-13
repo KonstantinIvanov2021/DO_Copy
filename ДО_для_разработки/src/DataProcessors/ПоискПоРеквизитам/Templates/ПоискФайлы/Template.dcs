@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСоздания</dataPath>
+			<field>ДатаСоздания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодписанЭП</dataPath>
+			<field>ПодписанЭП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Автор</dataPath>
+			<field>Автор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВладелецФайла</dataPath>
+			<field>ВладелецФайла</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Владелец</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Зашифрован</dataPath>
+			<field>Зашифрован</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Редактирует</dataPath>
+			<field>Редактирует</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекстХранилище</dataPath>
+			<field>ТекстХранилище</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата_редактирования</dataPath>
+			<field>Дата_редактирования</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер_версии</dataPath>
+			<field>Номер_версии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Последний_редактировавший_пользователь</dataPath>
+			<field>Последний_редактировавший_пользователь</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Расширение</dataPath>
+			<field>Расширение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка__</dataPath>
+			<field>Ссылка__</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущаяВерсия__</dataPath>
+			<field>ТекущаяВерсия__</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолвоФайлы__</dataPath>
+			<field>КолвоФайлы__</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Размер_в_Кб</dataPath>
+			<field>Размер_в_Кб</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выданы_задачи</dataPath>
+			<field>Выданы_задачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	1 КАК КолвоФайлы__,
+	Файлы.Ссылка КАК Ссылка__,
+	Файлы.Автор,
+	Файлы.ВладелецФайла,
+	Файлы.ДатаСоздания,
+	Файлы.Зашифрован,
+	ВЫРАЗИТЬ(Файлы.Описание КАК СТРОКА(1000)) КАК Описание,
+	Файлы.ПодписанЭП,
+	Файлы.ПолноеНаименование КАК Наименование,
+	Файлы.Редактирует,
+	Файлы.ТекстХранилище,
+	Файлы.ТекущаяВерсия КАК ТекущаяВерсия__,
+	Файлы.ТекущаяВерсияАвтор КАК Последний_редактировавший_пользователь,
+	Файлы.ТекущаяВерсияДатаСоздания КАК Дата_редактирования,
+	Файлы.ТекущаяВерсияНомерВерсии КАК Номер_версии,
+	Файлы.ТекущаяВерсияРазмер / 1024 КАК Размер_в_Кб,
+	Файлы.ТекущаяВерсияРасширение КАК Расширение,
+	ВЫБОР
+		КОГДА ИСТИНА В
+				(ВЫБРАТЬ ПЕРВЫЕ 1
+					ИСТИНА
+				ИЗ
+					Задача.ЗадачаИсполнителя
+				ГДЕ
+					Задача.ЗадачаИсполнителя.Предметы.Предмет = Файлы.Ссылка
+					И (НЕ Задача.ЗадачаИсполнителя.Выполнена))
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Выданы_задачи,
+	Файлы.Проект
+ИЗ
+	Справочник.Файлы КАК Файлы</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КолвоФайлы__</dataPath>
+		<expression>Сумма(КолвоФайлы__)</expression>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КолвоФайлы__</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

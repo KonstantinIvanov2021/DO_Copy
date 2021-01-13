@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dd4082df-4424-46f6-90e9-3a7c235d33dc">
+  <producedTypes>
+    <selectionType typeId="762cdc41-d0ea-467b-8b1d-7ffd148b4061" valueTypeId="3cecb6a7-2c90-44df-8e8d-d54ea0ac0e35"/>
+    <listType typeId="d605e12b-9363-48d6-8341-4d682b1a6e90" valueTypeId="4dd73087-699c-4dd8-abb1-5f8735f2effa"/>
+    <managerType typeId="f2919fdf-15df-473f-b672-2e9ca077a311" valueTypeId="1fdbc46a-ca64-439b-acb3-84156aa67f0e"/>
+    <recordSetType typeId="88759a58-7ac5-447a-a0c0-9d6cf3ef5b54" valueTypeId="ac58dc83-0c75-4165-b3f9-f2b0299f8b1d"/>
+    <recordKeyType typeId="09556939-e4ac-4808-9d21-89c3829bcbb1" valueTypeId="cb493331-a010-4710-9663-8d0182645f25"/>
+    <recordType typeId="9a621424-b99d-4fcf-ab12-d8115a314677" valueTypeId="f28a6f4f-a702-483a-b916-969d3ff99090"/>
+    <recordManagerType typeId="04abbe4d-1691-474d-a6f9-d332658495ad" valueTypeId="1f14f15b-5fe4-4269-961c-0828dd9c5872"/>
+  </producedTypes>
+  <name>РезультатыВыполненияПроцессовИЗадач</name>
+  <synonym>
+    <key>ru</key>
+    <value>Результаты выполнения процессов и задач</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="eedd1e42-5ccb-4e08-99e5-19dadbca3e1e">
+    <name>Результат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВариантыВыполненияПроцессовИЗадач</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="2f900601-3575-4204-8482-44ec21ab7208">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+      <types>BusinessProcessRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

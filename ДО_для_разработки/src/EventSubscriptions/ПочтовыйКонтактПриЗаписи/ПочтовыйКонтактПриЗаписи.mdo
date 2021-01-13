@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f9be51ae-12a3-4747-83f3-10de965dc75b">
+  <name>ПочтовыйКонтактПриЗаписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Почтовый контакт при записи</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.Пользователи</types>
+    <types>CatalogObject.РолиИсполнителей</types>
+    <types>CatalogObject.Контрагенты</types>
+    <types>CatalogObject.ЛичныеАдресаты</types>
+    <types>CatalogObject.ФизическиеЛица</types>
+    <types>CatalogObject.КонтактныеЛица</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ВстроеннаяПочтаСервер.ПочтовыйКонтактПриЗаписиПриЗаписи</handler>
+</mdclass:EventSubscription>

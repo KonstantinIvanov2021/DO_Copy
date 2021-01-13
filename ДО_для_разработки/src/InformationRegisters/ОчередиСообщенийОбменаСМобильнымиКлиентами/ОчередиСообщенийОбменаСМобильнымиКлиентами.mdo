@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8dd7a854-21b0-4a27-9003-c4f2d2c1bddc">
+  <producedTypes>
+    <selectionType typeId="8e338172-27bd-464b-b595-92c05e3e63db" valueTypeId="8812323b-983b-425e-bd26-3bbcb2ef547b"/>
+    <listType typeId="0fe49911-6dce-4105-b90f-3ca622cbd5dd" valueTypeId="9ed27abb-d62c-407a-ace3-52b40c88a899"/>
+    <managerType typeId="85fd5dc8-2fbd-4229-9117-b16077fb4fe2" valueTypeId="8934c506-b6f2-43c3-a713-3820fdcb429f"/>
+    <recordSetType typeId="ec4d2726-b420-4405-8b36-d1c053aad1b8" valueTypeId="09a2f9db-acd6-4c89-846e-5261005bf714"/>
+    <recordKeyType typeId="12bbc7cb-6b55-4e32-a70e-628bda8edceb" valueTypeId="87a10909-660c-4db6-a840-e2ba7c457425"/>
+    <recordType typeId="f5e9333f-d0eb-40fd-bbb1-6e3773513548" valueTypeId="353d2029-02bf-45e2-8a55-fba4b0e6252e"/>
+    <recordManagerType typeId="77376583-a1ba-4665-80c6-b6e8af2aca7a" valueTypeId="740cfd16-6177-4b1e-8f42-fd4c98d53c75"/>
+  </producedTypes>
+  <name>ОчередиСообщенийОбменаСМобильнымиКлиентами</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очереди сообщений обмена с мобильными клиентами</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="640404b7-728b-4396-83d7-394b16ad0bc4">
+    <name>Очередь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Очередь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОчередиСообщенийИнтегрированныхСистем</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="1367550b-7d89-47e3-bf08-1ac3b6304871">
+    <name>МобильныйКлиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мобильный клиент</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef.Мобильный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

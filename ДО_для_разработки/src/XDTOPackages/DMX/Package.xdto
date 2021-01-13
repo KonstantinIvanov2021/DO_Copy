@@ -1,0 +1,14 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/DMX">
+	<objectType name="XRequest">
+		<property name="ClientCode" type="xs:string" default="00000000-0000-0000-0000-000000000000"/>
+		<property name="ExchangeData" type="xs:base64Binary" nillable="true" default=""/>
+		<property name="LastResponseID" type="xs:string" nillable="true" default="00000000-0000-0000-0000-000000000000"/>
+		<property name="LastResponsePartIndex" type="xs:integer" nillable="true" default="0"/>
+	</objectType>
+	<objectType name="XResponse">
+		<property name="ResponseID" type="xs:string" nillable="true" default="00000000-0000-0000-0000-000000000000"/>
+		<property name="ExchangeData" type="xs:base64Binary" nillable="true" default=" "/>
+		<property name="PartIndex" type="xs:integer" nillable="true" default="0"/>
+		<property name="PartCount" type="xs:integer" nillable="true" default="0"/>
+	</objectType>
+</package>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9f312216-2be7-48be-8c37-df214b70675b">
+  <name>MEDO</name>
+  <synonym>
+    <key>ru</key>
+    <value>MEDO</value>
+  </synonym>
+  <namespace>http://www.1c.ru/medo</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.MEDOMessage</value>
+  </xdtoPackages>
+  <descriptorFileName>medo.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="157158c5-3003-442c-99ec-8c2731f8a349">
+    <name>Put</name>
+    <synonym>
+      <key>ru</key>
+      <value>Put</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>Response</name>
+      <nsUri>http://www.1c.ru/medo</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>Put</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="4300e789-f0b2-4bc0-87f8-120ceda2a8eb">
+      <name>Message</name>
+      <synonym>
+        <key>ru</key>
+        <value>Message</value>
+      </synonym>
+      <xdtoValueType>
+        <name>Header</name>
+        <nsUri>http://www.1c.ru/medo</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="6597289a-2ceb-45b1-b345-aa78885db8b1">
+    <name>Get</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>Response</name>
+      <nsUri>http://www.1c.ru/medo</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>Get</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+  <operations uuid="af21094b-a581-48a1-8c74-ba4812af4535">
+    <name>TestConnection</name>
+    <synonym>
+      <key>ru</key>
+      <value>Test connection</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>boolean</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>TestConnection</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+</mdclass:WebService>

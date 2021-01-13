@@ -1,0 +1,351 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/medo">
+	<valueType name="AcknowledgementEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>1</enumeration>
+		<enumeration>2</enumeration>
+	</valueType>
+	<valueType name="CollectionEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+	</valueType>
+	<valueType name="ConfidentEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+	</valueType>
+	<valueType name="DocumentEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+		<enumeration>2</enumeration>
+	</valueType>
+	<valueType name="EcontactEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+		<enumeration>2</enumeration>
+		<enumeration>3</enumeration>
+		<enumeration>4</enumeration>
+		<enumeration>5</enumeration>
+		<enumeration>6</enumeration>
+	</valueType>
+	<valueType name="ExecutorEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+	</valueType>
+	<valueType name="FolderAddEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+		<enumeration>2</enumeration>
+	</valueType>
+	<valueType name="HeaderAsknowEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+		<enumeration>2</enumeration>
+	</valueType>
+	<valueType name="HeaderMessageEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+		<enumeration>2</enumeration>
+		<enumeration>3</enumeration>
+		<enumeration>4</enumeration>
+	</valueType>
+	<valueType name="ReferredEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>1</enumeration>
+		<enumeration>2</enumeration>
+	</valueType>
+	<valueType name="TaskCopyEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+	</valueType>
+	<valueType name="TaskRegistrationEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+	</valueType>
+	<valueType name="TransferEnumType" base="xs:byte" variety="Atomic">
+		<enumeration>0</enumeration>
+		<enumeration>1</enumeration>
+	</valueType>
+	<objectType name="AckResult">
+		<property name="errorcode" type="xs:unsignedLong" lowerBound="1" form="Attribute"/>
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="AcknowledgementType">
+		<property name="msg_id" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="ack_type" type="d3p1:AcknowledgementEnumType" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="RegNumber" type="d3p1:RegNumber" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="AckResult" type="d3p1:AckResult" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="DocTransfer" type="d3p1:DocTransfer" lowerBound="0"/>
+	</objectType>
+	<objectType name="AddDocumentsType">
+		<property name="Folder" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="add_type" type="d5p1:FolderAddEnumType" lowerBound="1" form="Attribute"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="DocTransfer" type="d5p1:DocTransfer" lowerBound="0" upperBound="-1"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="Note" type="d5p1:Note" lowerBound="0" upperBound="-1"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="Referred" type="d5p1:Referred" lowerBound="0" upperBound="-1"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="Address">
+		<property name="street" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="house" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="building" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="flat" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="settlement" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="district" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="region" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="country" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="postcode" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="postbox" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="nontypical" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="Addressee" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Organization" type="d3p1:Organization" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Referred" type="d3p1:Referred" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="PrivatePerson" type="d3p1:PrivatePerson" lowerBound="0"/>
+	</objectType>
+	<objectType name="Author" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="OrganizationWithSign" type="d3p1:OrganizationWithSign" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="OutNumber" type="d3p1:OutNumber" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="PrivatePersonWithSign" type="d3p1:PrivatePersonWithSign" lowerBound="0"/>
+	</objectType>
+	<objectType name="AuthorOrganization">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="OrganizationWithSign" type="d3p1:OrganizationWithSign"/>
+	</objectType>
+	<objectType name="Confident">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="flag" type="d3p1:ConfidentEnumType" lowerBound="1" form="Attribute"/>
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="DocNumber">
+		<property name="kind" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="OrganizationOnly" type="d3p1:OrganizationOnly"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="RegNumber" type="d3p1:RegNumber"/>
+	</objectType>
+	<objectType name="DocTransfer">
+		<property name="os" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="type" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="type_ver" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="char_set" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="description" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="transfertype" type="d3p1:TransferEnumType" lowerBound="1" form="Attribute"/>
+		<property name="__content" type="xs:base64Binary" form="Text"/>
+	</objectType>
+	<objectType name="DocumentType">
+		<property name="idnumber" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="type" type="d3p1:DocumentEnumType" lowerBound="1" form="Attribute"/>
+		<property name="kind" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="pages" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property name="title" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="annotation" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="collection" type="d3p1:CollectionEnumType" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="RegNumber" type="d3p1:RegNumber"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Confident" type="d3p1:Confident"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Referred" type="d3p1:Referred" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="DocNumber" type="d3p1:DocNumber" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Addressee" type="d3p1:Addressee" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="DocTransfer" type="d3p1:DocTransfer" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="RegHistory" type="d3p1:RegHistory" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Author" type="d3p1:Author" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Validator" type="d3p1:Validator" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Writer" type="d3p1:Writer" lowerBound="0"/>
+	</objectType>
+	<objectType name="Econtact">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="type" type="d3p1:EcontactEnumType" lowerBound="0" form="Attribute"/>
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="Executor">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="responsible" type="d3p1:ExecutorEnumType" lowerBound="0" form="Attribute"/>
+		<property name="task_specified" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="deadline" type="xs:date" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Organization" type="d3p1:Organization"/>
+	</objectType>
+	<objectType name="ExpansionType">
+		<property name="organization" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="exp_ver" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Econtact" type="d3p1:Econtact" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="AnyData" type="d3p1:CustomFields" lowerBound="0"/>
+	</objectType>
+	<objectType name="Header">
+		<property name="standart" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="version" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="time" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="msg_type" type="d3p1:HeaderMessageEnumType" lowerBound="1" form="Attribute"/>
+		<property name="msg_id" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="msg_acknow" type="d3p1:HeaderAsknowEnumType" lowerBound="0" fixed="false" default="0" form="Attribute"/>
+		<property name="from_org_id" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="from_organization" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="from_department" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="from_sys_id" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="from_system" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="from_system_details" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="to_org_id" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="to_organization" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="to_department" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="to_sys_id" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="to_system" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="to_system_details" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Document" type="d3p1:DocumentType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="TaskList" type="d3p1:TaskListType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="AddDocuments" type="d3p1:AddDocumentsType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Expansion" type="d3p1:ExpansionType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Acknowledgement" type="d3p1:AcknowledgementType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Name">
+		<property name="secname" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="firstname" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="fathersname" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="Note">
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="Official">
+		<property name="department" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="post" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="separator" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="OfficialPerson">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Name" type="d3p1:Name"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Official" type="d3p1:Official" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Rank" type="d3p1:Rank" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Address" type="d3p1:Address" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Econtact" type="d3p1:Econtact" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="OfficialPersonWithSign">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Name" type="d3p1:Name"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Official" type="d3p1:Official" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Rank" type="d3p1:Rank" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Address" type="d3p1:Address" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Econtact" type="d3p1:Econtact" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="SignDate" type="d3p1:SignDate" lowerBound="0"/>
+	</objectType>
+	<objectType name="Organization">
+		<property name="organization_string" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="fullname" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="shortname" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="ownership" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="ogrn" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property name="inn" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property name="kpp" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Address" type="d3p1:Address" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Econtact" type="d3p1:Econtact" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="OfficialPerson" type="d3p1:OfficialPerson" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="OrganizationOnly">
+		<property name="organization_string" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="fullname" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="shortname" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="ownership" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="ogrn" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property name="inn" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property name="kpp" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Address" type="d3p1:Address" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Econtact" type="d3p1:Econtact" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="OrganizationWithSign">
+		<property name="organization_string" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="fullname" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="shortname" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="ownership" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="ogrn" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property name="inn" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property name="kpp" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Address" type="d3p1:Address" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Econtact" type="d3p1:Econtact" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="OfficialPersonWithSign" type="d3p1:OfficialPersonWithSign" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="OutNumber">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="RegNumber" type="d3p1:RegNumber"/>
+	</objectType>
+	<objectType name="PrivatePerson">
+		<property name="inn" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property name="doc_kind" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="doc_num" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="doc_org" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="doc_date" type="xs:date" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Name" type="d3p1:Name"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Rank" type="d3p1:Rank" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Address" type="d3p1:Address" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Econtact" type="d3p1:Econtact" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="PrivatePersonWithSign">
+		<property name="inn" type="xs:unsignedLong" lowerBound="0" form="Attribute"/>
+		<property name="doc_kind" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="doc_num" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="doc_org" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="doc_date" type="xs:date" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Name" type="d3p1:Name"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Rank" type="d3p1:Rank" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Address" type="d3p1:Address" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Econtact" type="d3p1:Econtact" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="SignDate" type="d3p1:SignDate" lowerBound="0"/>
+	</objectType>
+	<objectType name="Rank">
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="Referred" ordered="false" sequenced="true">
+		<property name="idnumber" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="retype" type="d3p1:ReferredEnumType" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="RegNumber" type="d3p1:RegNumber" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="TaskNumber" type="d3p1:TaskNumber" lowerBound="0"/>
+	</objectType>
+	<objectType name="RegHistory">
+		<property name="idnumber" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="RegNumber" type="d3p1:RegNumber"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="OrganizationOnly" type="d3p1:OrganizationOnly"/>
+	</objectType>
+	<objectType name="RegNumber">
+		<property name="regdate" type="xs:date" lowerBound="1" form="Attribute"/>
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="SignDate">
+		<property name="__content" type="xs:date" form="Text"/>
+	</objectType>
+	<objectType name="TaskListType">
+		<property name="Task" upperBound="-1">
+			<typeDef xsi:type="ObjectType">
+				<property name="idnumber" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="task_reg" type="d5p1:TaskRegistrationEnumType" lowerBound="1" form="Attribute"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="task_copy" type="d5p1:TaskCopyEnumType" lowerBound="1" form="Attribute"/>
+				<property name="kind" type="xs:string" lowerBound="0" form="Attribute"/>
+				<property name="task_text" type="xs:string" lowerBound="1" form="Attribute"/>
+				<property name="deadline" type="xs:date" lowerBound="1" form="Attribute"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="TaskNumber" type="d5p1:TaskNumber"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="Confident" type="d5p1:Confident"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="Referred" type="d5p1:Referred" upperBound="-1"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="AuthorOrganization" type="d5p1:AuthorOrganization" upperBound="-1"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="DocTransfer" type="d5p1:DocTransfer" lowerBound="0" upperBound="-1"/>
+				<property xmlns:d5p1="http://www.1c.ru/medo" name="Executor" type="d5p1:Executor" lowerBound="0" upperBound="-1"/>
+			</typeDef>
+		</property>
+	</objectType>
+	<objectType name="TaskNumber">
+		<property name="taskDate" type="xs:date" lowerBound="1" form="Attribute"/>
+		<property name="__content" type="xs:string" form="Text"/>
+	</objectType>
+	<objectType name="Validator" ordered="false" sequenced="true">
+		<property name="attestation" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="OrganizationWithSign" type="d3p1:OrganizationWithSign" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="PrivatePersonWithSign" type="d3p1:PrivatePersonWithSign" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="DocNumber" type="d3p1:DocNumber" lowerBound="0"/>
+	</objectType>
+	<objectType name="Writer" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="Organization" type="d3p1:Organization" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="PrivatePerson" type="d3p1:PrivatePerson" lowerBound="0"/>
+	</objectType>
+	<objectType name="Response"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/medo" name="PutResponse" base="d2p1:Response">
+		<property name="errorQuantity" type="xs:byte"/>
+		<property name="message" type="d2p1:Header" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/medo" name="GetResponse" base="d2p1:Response">
+		<property name="messagesQuantity" type="xs:byte"/>
+		<property name="message" type="d2p1:Header" lowerBound="0"/>
+	</objectType>
+	<objectType name="CustomField">
+		<property name="name" type="xs:string" form="Attribute"/>
+		<property name="value" type="xs:string" form="Attribute"/>
+	</objectType>
+	<objectType name="CustomFields">
+		<property xmlns:d3p1="http://www.1c.ru/medo" name="fields" type="d3p1:CustomField" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

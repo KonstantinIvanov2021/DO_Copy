@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d742d7be-b438-47c1-82e9-5d999f576d97">
+  <producedTypes>
+    <selectionType typeId="992973cb-04ec-4314-b693-72f6ce142684" valueTypeId="bcaffdb9-5d45-4770-bf83-788191a89522"/>
+    <listType typeId="66c0acc5-1237-4d45-b5ec-e1dfab97bfe3" valueTypeId="1921f019-8c9d-4899-bfa9-a67f199364e1"/>
+    <managerType typeId="903f70a5-5c27-420b-a9f0-62033dc8263e" valueTypeId="33c75d6c-5d6b-4520-9960-21eacf8e1eec"/>
+    <recordSetType typeId="0b7279f6-db4c-4b90-9b3a-36134db8e37c" valueTypeId="bdfbaa9a-3508-475a-9e9c-d886bc4f71d8"/>
+    <recordKeyType typeId="8b1c606c-06cb-4507-a9cc-44fefdd799bb" valueTypeId="d333596f-3010-4c4c-bdc5-cf39db6bc74a"/>
+    <recordType typeId="bdf7514c-8c83-4f6a-961e-c1a39de8e21e" valueTypeId="84a48a7e-c033-4020-be91-0aab872ab1a5"/>
+    <recordManagerType typeId="5caccb8c-d8d7-4806-bca5-9f3a88875320" valueTypeId="df542394-1ccb-4ed3-a6a7-ee2cdae83a1d"/>
+  </producedTypes>
+  <name>УдалитьНастройкиУведомленийПоУмолчанию</name>
+  <synonym>
+    <key>ru</key>
+    <value>Удалить настройки уведомлений по умолчанию</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8854b3a6-e268-4bc1-b864-c6944b94cc6b">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+      <types>String</types>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Значение настройки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="0dfb4426-7030-459c-aded-bfc72d2c8bd9">
+    <name>Настройка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка</value>
+    </synonym>
+    <type>
+      <types>EnumRef.НастройкиУведомлений</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид настройки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="81b73418-5c29-40bc-9259-5ba559b8e504">
+    <name>ВидСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид события</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыБизнесСобытий</types>
+      <types>EnumRef.СобытияУведомлений</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид события настройки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

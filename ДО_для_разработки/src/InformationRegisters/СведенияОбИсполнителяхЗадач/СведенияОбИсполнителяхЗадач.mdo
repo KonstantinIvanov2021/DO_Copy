@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="564774b0-115f-4471-bfe7-a667f5a1e2ac">
+  <producedTypes>
+    <selectionType typeId="d5eb27f2-7d69-4d68-b130-0192e21a4304" valueTypeId="693ac48e-36bf-4a9e-b99e-5e36cc2cf2f9"/>
+    <listType typeId="a3528d5a-62c8-4c6d-9f8d-9e635169bce5" valueTypeId="0ef36b53-283c-45e5-a83a-70848afd4c48"/>
+    <managerType typeId="25dae51f-6584-422f-a87d-ecdb11d2cf74" valueTypeId="584cac5f-8d8f-48d8-813f-a9d1af7bf932"/>
+    <recordSetType typeId="98797d1e-bf8d-4310-95e8-03967533c094" valueTypeId="c6698eb6-006e-4ef1-847e-4125ab14f80c"/>
+    <recordKeyType typeId="71fcde51-73bd-4152-bde4-831690c4a59d" valueTypeId="39fd28df-532c-4140-aab0-c4a4f004dddb"/>
+    <recordType typeId="4cbe069e-4b58-4385-8b04-7bfdebb3c387" valueTypeId="f160889f-5178-41b0-894d-0011f09d9a8f"/>
+    <recordManagerType typeId="4217be50-a7af-4ad7-9dcc-0381604035a1" valueTypeId="380f76e0-e179-4f35-9f2d-359986c9e1f6"/>
+  </producedTypes>
+  <name>СведенияОбИсполнителяхЗадач</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения об исполнителях задач</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="67b9d8ca-9669-409c-a5da-2e1acb3b0856">
+    <name>Задача</name>
+    <synonym>
+      <key>ru</key>
+      <value>Задача</value>
+    </synonym>
+    <type>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ba5c9cb4-8e7d-46cd-a951-b953a3bf4e8b">
+    <name>Участник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Участник</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>CatalogRef.ПолныеРоли</types>
+      <types>CatalogRef.Пользователи</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="89f87570-bfb7-4f7d-90c7-c07988a6d5f6">
+    <name>УдалитьУчастник</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Участник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.РолиИсполнителей</types>
+      <types>String</types>
+      <types>CatalogRef.Пользователи</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2ce06986-366b-4900-ada6-f7230967fc3f">
+    <name>УдалитьОсновнойОбъектАдресации</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Основной объект адресации</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ОбъектыАдресацииЗадач</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8a78491b-6cf7-443a-a132-7f4cafd87086">
+    <name>УдалитьДополнительныйобъектАдресации</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Дополнительныйобъект адресации</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ОбъектыАдресацииЗадач</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

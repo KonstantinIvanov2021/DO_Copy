@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a2ee95d3-e8d3-473c-b863-15496baf65a9">
+  <name>БизнесСобытияПередЗаписьюОбъекта</name>
+  <synonym>
+    <key>ru</key>
+    <value>Бизнес-события перед записью объекта</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.Проекты</types>
+    <types>CatalogObject.ВходящиеДокументы</types>
+    <types>CatalogObject.Контрагенты</types>
+    <types>CatalogObject.Мероприятия</types>
+    <types>CatalogObject.ВнутренниеДокументы</types>
+    <types>CatalogObject.СообщенияОбсуждений</types>
+    <types>CatalogObject.ИсходящиеДокументы</types>
+    <types>CatalogObject.ПроектныеЗадачи</types>
+    <types>CatalogObject.Файлы</types>
+    <types>BusinessProcessObject</types>
+    <types>TaskObject</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.БизнесСобытияВызовСервера.БизнесСобытияПередЗаписьюОбъектаПередЗаписью</handler>
+</mdclass:EventSubscription>

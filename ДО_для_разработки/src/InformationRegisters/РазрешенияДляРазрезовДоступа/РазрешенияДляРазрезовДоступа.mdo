@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1fdc4a26-0d5f-4329-946e-4901183bf1f8">
+  <producedTypes>
+    <selectionType typeId="48be44f0-9b2c-46c3-9888-08311f99f24d" valueTypeId="e94f1ce8-cae0-4694-877b-bff12d3d8721"/>
+    <listType typeId="9ecc8739-07c9-46f2-99e5-28b3ae3aff6c" valueTypeId="288803fa-7d12-4555-bf30-c953e4fb4653"/>
+    <managerType typeId="dc9c01ee-2647-4ec8-891c-62af26b8d192" valueTypeId="a7eec318-b433-4434-87d2-8ee0ec842273"/>
+    <recordSetType typeId="80e2147b-93c8-4f43-b13e-c3cc252702f4" valueTypeId="66fe272e-97b4-45f4-9dc7-83a04052c1d6"/>
+    <recordKeyType typeId="e7c9950e-9b23-471a-ab32-1bcc619aaadb" valueTypeId="4169e36a-f0cb-415a-85e0-d9006f082fed"/>
+    <recordType typeId="dece3b20-f267-4afd-a110-25d54687e87c" valueTypeId="ef2a3f76-cb8c-46df-b0b7-8d7c52006cd0"/>
+    <recordManagerType typeId="0f9ed238-bd26-4b08-86a4-ba09be5e9485" valueTypeId="fea25a73-050a-4cfc-aa58-44476ebca5be"/>
+  </producedTypes>
+  <name>РазрешенияДляРазрезовДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Разрешения для разрезов доступа</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.РазрешенияДляРазрезовДоступа.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="96c89e13-2b20-4040-a390-91e3a364cf12">
+    <name>РазрезДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разрез доступа</value>
+    </synonym>
+    <type>
+      <types>DefinedType.РазрезДоступа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="418b5764-a2fd-4659-aae9-e00198feb19d">
+    <name>Разрешение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разрешение</value>
+    </synonym>
+    <comment>Ссылка, разрешение для которой дает право на разрез доступа</comment>
+    <type>
+      <types>DefinedType.РазрезДоступа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="4b2728aa-8e60-47f7-9d71-f08a52fa0a0e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

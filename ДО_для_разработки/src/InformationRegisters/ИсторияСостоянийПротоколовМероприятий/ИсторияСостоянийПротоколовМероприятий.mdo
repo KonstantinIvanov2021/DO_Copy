@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4c7e2f8a-035d-4a32-83ee-ae598d02ca7b">
+  <producedTypes>
+    <selectionType typeId="491916b0-7d83-42b9-92c6-4160eaf4751a" valueTypeId="2eb86657-df14-4c88-b002-a77acf7e40fd"/>
+    <listType typeId="4ced6344-8e64-41df-b147-0defcad391fe" valueTypeId="98c223f9-4839-4d88-b543-7c100591c838"/>
+    <managerType typeId="bda33ec5-57d3-4c5b-91f5-5bd21b73ac4d" valueTypeId="2575e849-e4fd-44ff-b4db-d82271cf45a1"/>
+    <recordSetType typeId="48e0ac35-a8bc-4662-81f4-5988d2b90c80" valueTypeId="02ab9559-976f-44c1-876b-6b5602ca18bf"/>
+    <recordKeyType typeId="2ef6cfaf-bccb-4b7b-8314-ca87cf1c4eb3" valueTypeId="cabaed37-e3d2-4bee-b602-7282a7494f15"/>
+    <recordType typeId="a0f0b978-67ad-4558-be93-b443dad22080" valueTypeId="dc148748-3acf-4ecd-9f3b-6b23eb30a87e"/>
+    <recordManagerType typeId="9828ada2-1a8b-440e-a2d7-336292315a46" valueTypeId="2916c85c-9a7f-423e-930d-f67125492f12"/>
+  </producedTypes>
+  <name>ИсторияСостоянийПротоколовМероприятий</name>
+  <synonym>
+    <key>ru</key>
+    <value>История состояний протоколов мероприятий</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Состояние пункта протокола мероприятия</value>
+  </recordPresentation>
+  <resources uuid="5f607ba2-5fa1-4966-9fbf-a4ca687431ae">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияПротоколовМероприятий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="7aa51157-71e7-4d80-b535-829e7267a5fe">
+    <name>Мероприятие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мероприятие</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Мероприятия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b2a0c596-9d35-4013-ae3c-6948eda78cb4">
+    <name>Установил</name>
+    <synonym>
+      <key>ru</key>
+      <value>Установил</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+      <types>BusinessProcessRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="9708a92f-0a49-409b-ba71-6f7d08fb437a">
+    <name>ПунктПротокола</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пункт протокола</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПротоколыМероприятий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="edd4dd4b-7f78-424b-8741-782508a6672c">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="27b0211f-44c4-4209-bf5d-aba45d8be58c">
+    <name>ФормаИсторииСостояний</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма истории состояний</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

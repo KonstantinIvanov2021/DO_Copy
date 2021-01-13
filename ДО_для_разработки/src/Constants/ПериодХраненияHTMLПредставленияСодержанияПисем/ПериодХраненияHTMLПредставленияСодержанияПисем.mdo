@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="46f0a8bb-f438-452e-8b61-6516e50a8b41">
+  <producedTypes>
+    <managerType typeId="e6829e11-7e25-468d-ba16-ac6c427a0247" valueTypeId="8f33e46a-b016-43ba-844a-80187e7c0409"/>
+    <valueManagerType typeId="733c0134-7c86-4d8d-9e36-d6915c79099f" valueTypeId="48db2f66-0b22-4e16-a843-897f2f8e8f22"/>
+    <valueKeyType typeId="3e56815c-1604-53d8-96f3-cabfb3c372ed" valueTypeId="29e20e5e-ee1c-5fc9-aea3-ded05d08167f"/>
+  </producedTypes>
+  <name>ПериодХраненияHTMLПредставленияСодержанияПисем</name>
+  <synonym>
+    <key>ru</key>
+    <value>Период хранения HTMLПредставления содержания писем</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>5</precision>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <explanation>
+    <key>ru</key>
+    <value>Значение > 0 - срок в днях, на который будет закешировано HTML представление содержания писем.
+Значение = 0 - значение еще не задано, используется значение по умолчанию.
+Значение = -1 - не очищать устаревшие HTML представления.</value>
+  </explanation>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

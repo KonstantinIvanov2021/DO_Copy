@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоДескрипторов</dataPath>
+			<field>КоличествоДескрипторов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипОбъекта</dataPath>
+			<field>ТипОбъекта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерТаблицыДескриптора</dataPath>
+			<field>НомерТаблицыДескриптора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНеиспользуемых</dataPath>
+			<field>КоличествоНеиспользуемых</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из них неиспользуемых</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПомеченныхНаУдаление</dataPath>
+			<field>КоличествоПомеченныхНаУдаление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помеченных на удаление</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Индивидуальные</dataPath>
+			<field>Индивидуальные</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индивидуальные</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">БЛ='Не индивидуальные'; БИ=Индивидуальные</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДляЛокальныхАдминистраторов</dataPath>
+			<field>ДляЛокальныхАдминистраторов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для локальных администраторов</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">БЛ='Не для локальных администраторов'; БИ='Для локальных администраторов'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ДескрипторыДоступаОбъектов.ИдентификаторОбъектаМетаданных КАК ИдентификаторОбъектаМетаданных,
+	ДескрипторыДоступаОбъектов.Ссылка КАК Дескриптор,
+	ДескрипторыДоступаОбъектов.КонтейнерПользователей &lt;&gt; НЕОПРЕДЕЛЕНО КАК Индивидуальные,
+	ДескрипторыДоступаОбъектов.ДляЛокальныхАдминистраторов КАК ДляЛокальныхАдминистраторов,
+	1 КАК НомерТаблицыДескриптора,
+	ВЫБОР
+		КОГДА ДескрипторыДляОбъектов.Объект ЕСТЬ NULL 
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Неиспользуемый,
+	ВЫБОР
+		КОГДА ДескрипторыДоступаОбъектов.ПометкаУдаления
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ПомеченныйНаУдаление
+ПОМЕСТИТЬ ВТ_Идентификаторы
+ИЗ
+	Справочник.ДескрипторыДоступаОбъектов КАК ДескрипторыДоступаОбъектов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДескрипторыДляОбъектов КАК ДескрипторыДляОбъектов
+		ПО (ДескрипторыДляОбъектов.Дескриптор = ДескрипторыДоступаОбъектов.Ссылка)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	NULL,
+	ДескрипторыДоступаРегистров.Ссылка,
+	ЛОЖЬ,
+	ЛОЖЬ,
+	2,
+	NULL,
+	ВЫБОР
+		КОГДА ДескрипторыДоступаРегистров.ПометкаУдаления
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ
+ИЗ
+	Справочник.ДескрипторыДоступаРегистров КАК ДескрипторыДоступаРегистров
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫБОР ВТ_Идентификаторы.НомерТаблицыДескриптора
+		КОГДА 1
+			ТОГДА ИдентификаторыОбъектовМетаданных.Наименование
+		КОГДА 2
+			ТОГДА "Регистры"
+	КОНЕЦ КАК ТипОбъекта,
+	ВТ_Идентификаторы.Индивидуальные КАК Индивидуальные,
+	ВТ_Идентификаторы.ДляЛокальныхАдминистраторов КАК ДляЛокальныхАдминистраторов,
+	КОЛИЧЕСТВО(ВТ_Идентификаторы.Дескриптор) КАК КоличествоДескрипторов,
+	ВТ_Идентификаторы.НомерТаблицыДескриптора КАК НомерТаблицыДескриптора,
+	СУММА(ВТ_Идентификаторы.Неиспользуемый) КАК КоличествоНеиспользуемых,
+	СУММА(ВТ_Идентификаторы.ПомеченныйНаУдаление) КАК КоличествоПомеченныхНаУдаление
+ИЗ
+	ВТ_Идентификаторы КАК ВТ_Идентификаторы
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыОбъектовМетаданных КАК ИдентификаторыОбъектовМетаданных
+		ПО ВТ_Идентификаторы.ИдентификаторОбъектаМетаданных = ИдентификаторыОбъектовМетаданных.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Идентификаторы.НомерТаблицыДескриптора,
+	ВЫБОР ВТ_Идентификаторы.НомерТаблицыДескриптора
+		КОГДА 1
+			ТОГДА ИдентификаторыОбъектовМетаданных.Наименование
+		КОГДА 2
+			ТОГДА "Регистры"
+	КОНЕЦ,
+	ВТ_Идентификаторы.Индивидуальные,
+	ВТ_Идентификаторы.ДляЛокальныхАдминистраторов</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоДескрипторов</dataPath>
+		<expression>Сумма(КоличествоДескрипторов)</expression>
+		<group>ДляЛокальныхАдминистраторов</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНеиспользуемых</dataPath>
+		<expression>Сумма(КоличествоНеиспользуемых)</expression>
+		<group>ДляЛокальныхАдминистраторов</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПомеченныхНаУдаление</dataPath>
+		<expression>Сумма(КоличествоПомеченныхНаУдаление)</expression>
+		<group>ДляЛокальныхАдминистраторов</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипОбъекта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДескрипторов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоНеиспользуемых</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПомеченныхНаУдаление</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Индивидуальные</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДляЛокальныхАдминистраторов</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>КоличествоДескрипторов</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НомерТаблицыДескриптора</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#F0F0F0</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Индивидуальные</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДляЛокальныхАдминистраторов</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

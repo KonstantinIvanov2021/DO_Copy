@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ЭскалацияЗадач</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПравилоЭскалации</dataPath>
+			<field>ПравилоЭскалации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Задача</dataPath>
+			<field>Задача</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата эскалации</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='dd.MM.yyyy HH:mm'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнитель</dataPath>
+			<field>Исполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НовыйИсполнитель</dataPath>
+			<field>НовыйИсполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Действие</dataPath>
+			<field>Действие</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЭскалаций</dataPath>
+			<field>КоличествоЭскалаций</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество эскалаций</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СведенияОПользователяхДокументооборот.Пользователь КАК Исполнитель,
+	СведенияОПользователяхДокументооборот.Подразделение
+ПОМЕСТИТЬ СведенияОПользователяхДокументооборот
+ИЗ
+	РегистрСведений.СведенияОПользователяхДокументооборот КАК СведенияОПользователяхДокументооборот
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ИсполнителиЗадач.РольИсполнителя,
+	СведенияОПользователяхДокументооборот.Подразделение
+ИЗ
+	РегистрСведений.СведенияОПользователяхДокументооборот КАК СведенияОПользователяхДокументооборот
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ИсполнителиЗадач КАК ИсполнителиЗадач
+		ПО СведенияОПользователяхДокументооборот.Пользователь = ИсполнителиЗадач.Исполнитель
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Пользователи КАК Пользователи
+		ПО СведенияОПользователяхДокументооборот.Пользователь = Пользователи.Ссылка
+ГДЕ
+	Пользователи.Недействителен = ЛОЖЬ
+
+СГРУППИРОВАТЬ ПО
+	ИсполнителиЗадач.РольИсполнителя,
+	СведенияОПользователяхДокументооборот.Подразделение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЭскалированныеЗадачи.Период,
+	ЭскалированныеЗадачи.Задача,
+	ЭскалированныеЗадачи.ПравилоЭскалации,
+	ЭскалированныеЗадачи.Действие,
+	ЭскалированныеЗадачи.Исполнитель,
+	ЭскалированныеЗадачи.Комментарий,
+	ЭскалированныеЗадачи.НовыйИсполнитель,
+	1 КАК КоличествоЭскалаций
+ИЗ
+	РегистрСведений.ЭскалированныеЗадачи КАК ЭскалированныеЗадачи
+		ЛЕВОЕ СОЕДИНЕНИЕ СведенияОПользователяхДокументооборот КАК СведенияОПользователяхДокументооборот
+		ПО ЭскалированныеЗадачи.Исполнитель = СведенияОПользователяхДокументооборот.Исполнитель
+{ГДЕ
+	(ЭскалированныеЗадачи.Период МЕЖДУ &amp;ДатаОтчетаНачало И &amp;ДатаОтчетаОкончание),
+	(ЭскалированныеЗадачи.Действие В (&amp;Действие)),
+	(СведенияОПользователяхДокументооборот.Подразделение В ИЕРАРХИИ (&amp;Подразделение))}</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ВоронкаЭскалации</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВоронкаИсполнитель</dataPath>
+			<field>Исполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВоронкаПравилоЭскалации</dataPath>
+			<field>ПравилоЭскалации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правило эскалации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВоронкаКоличество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВоронкаПериод</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата эскалации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВоронкаУровеньЭскалации</dataPath>
+			<field>УровеньЭскалации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уровень эскалации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВоронкаЗадача</dataPath>
+			<field>Задача</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задача</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СведенияОПользователяхДокументооборот.Пользователь КАК Исполнитель,
+	СведенияОПользователяхДокументооборот.Подразделение
+ПОМЕСТИТЬ СведенияОПользователяхДокументооборот
+ИЗ
+	РегистрСведений.СведенияОПользователяхДокументооборот КАК СведенияОПользователяхДокументооборот
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ИсполнителиЗадач.РольИсполнителя,
+	СведенияОПользователяхДокументооборот.Подразделение
+ИЗ
+	РегистрСведений.СведенияОПользователяхДокументооборот КАК СведенияОПользователяхДокументооборот
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ИсполнителиЗадач КАК ИсполнителиЗадач
+		ПО СведенияОПользователяхДокументооборот.Пользователь = ИсполнителиЗадач.Исполнитель
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Пользователи КАК Пользователи
+		ПО СведенияОПользователяхДокументооборот.Пользователь = Пользователи.Ссылка
+ГДЕ
+	Пользователи.Недействителен = ЛОЖЬ
+
+СГРУППИРОВАТЬ ПО
+	ИсполнителиЗадач.РольИсполнителя,
+	СведенияОПользователяхДокументооборот.Подразделение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СтруктураПредприятия.Руководитель
+ПОМЕСТИТЬ РуководителиПодразделений
+ИЗ
+	Справочник.СтруктураПредприятия КАК СтруктураПредприятия
+ГДЕ
+	СтруктураПредприятия.ПометкаУдаления = ЛОЖЬ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОтветственныеЛицаОрганизацийСрезПоследних.Пользователь КАК Руководитель
+ПОМЕСТИТЬ РуководителиОрганизаций
+ИЗ
+	РегистрСведений.ОтветственныеЛицаОрганизаций.СрезПоследних({(&amp;ДатаОтчетаНачало)}, ОтветственноеЛицо = ЗНАЧЕНИЕ(Перечисление.ОтветственныеЛицаОрганизаций.РуководительОрганизации)) КАК ОтветственныеЛицаОрганизацийСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ЗадачаИсполнителя.Ссылка КАК Задача,
+	НЕОПРЕДЕЛЕНО КАК ПравилоЭскалации,
+	ЗадачаИсполнителя.ТекущийИсполнитель КАК Исполнитель,
+	НЕОПРЕДЕЛЕНО КАК Период,
+	ЗНАЧЕНИЕ(Перечисление.УровниЭскалацииЗадач.Задача) КАК УровеньЭскалации,
+	1 КАК Количество
+ПОМЕСТИТЬ ДанныеЗадач
+ИЗ
+	Задача.ЗадачаИсполнителя КАК ЗадачаИсполнителя
+ГДЕ
+	ЗадачаИсполнителя.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(ЗадачаИсполнителя.Дата &lt;= &amp;ДатаОтчетаОкончание
+			И (ЗадачаИсполнителя.ДатаИсполнения = ДАТАВРЕМЯ(1, 1, 1)
+				ИЛИ ЗадачаИсполнителя.ДатаИсполнения &gt;= &amp;ДатаОтчетаНачало))}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДанныеЗадач.Задача КАК Задача,
+	ЭскалированныеЗадачи.ПравилоЭскалации КАК ПравилоЭскалации,
+	ЭскалированныеЗадачи.Исполнитель КАК Исполнитель,
+	ЭскалированныеЗадачи.Период КАК Период,
+	ЗНАЧЕНИЕ(Перечисление.УровниЭскалацииЗадач.Эскалация) КАК УровеньЭскалации,
+	1 КАК Количество,
+	ЭскалированныеЗадачи.НовыйИсполнитель КАК НовыйИсполнитель
+ПОМЕСТИТЬ ДанныеЭскалацииЗадач
+ИЗ
+	ДанныеЗадач КАК ДанныеЗадач
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЭскалированныеЗадачи КАК ЭскалированныеЗадачи
+			ЛЕВОЕ СОЕДИНЕНИЕ СведенияОПользователяхДокументооборот КАК СведенияОПользователяхДокументооборот
+			ПО ЭскалированныеЗадачи.Исполнитель = СведенияОПользователяхДокументооборот.Исполнитель
+		ПО ДанныеЗадач.Задача = ЭскалированныеЗадачи.Задача
+ГДЕ
+	НЕ ЭскалированныеЗадачи.ПравилоЭскалации ЕСТЬ NULL 
+{ГДЕ
+	(ЭскалированныеЗадачи.Период МЕЖДУ &amp;ДатаОтчетаНачало И &amp;ДатаОтчетаОкончание),
+	(ЭскалированныеЗадачи.Действие В (&amp;Действие)),
+	(СведенияОПользователяхДокументооборот.Подразделение В ИЕРАРХИИ (&amp;Подразделение))}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДанныеЭскалацииЗадач.Задача КАК Задача,
+	ДанныеЭскалацииЗадач.ПравилоЭскалации КАК ПравилоЭскалации,
+	ДанныеЭскалацииЗадач.Исполнитель КАК Исполнитель,
+	ДанныеЭскалацииЗадач.Период КАК Период,
+	ЗНАЧЕНИЕ(Перечисление.УровниЭскалацииЗадач.ЭскалацияДоРуководителяПодразделения) КАК УровеньЭскалации,
+	1 КАК Количество
+ПОМЕСТИТЬ ДанныеЭскалацииЗадачДоРуководителяПодразделения
+ИЗ
+	ДанныеЭскалацииЗадач КАК ДанныеЭскалацииЗадач
+		ЛЕВОЕ СОЕДИНЕНИЕ РуководителиПодразделений КАК РуководителиПодразделений
+		ПО ДанныеЭскалацииЗадач.НовыйИсполнитель = РуководителиПодразделений.Руководитель
+ГДЕ
+	НЕ РуководителиПодразделений.Руководитель ЕСТЬ NULL 
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДанныеЭскалацииЗадач.Задача КАК Задача,
+	ДанныеЭскалацииЗадач.ПравилоЭскалации КАК ПравилоЭскалации,
+	ДанныеЭскалацииЗадач.Исполнитель КАК Исполнитель,
+	ДанныеЭскалацииЗадач.Период КАК Период,
+	ЗНАЧЕНИЕ(Перечисление.УровниЭскалацииЗадач.ЭскалацияДоРуководителяОрганизации) КАК УровеньЭскалации,
+	1 КАК Количество
+ПОМЕСТИТЬ ДанныеЭскалацииЗадачиДоРуководителяОрганизации
+ИЗ
+	ДанныеЭскалацииЗадач КАК ДанныеЭскалацииЗадач
+		ЛЕВОЕ СОЕДИНЕНИЕ РуководителиОрганизаций КАК РуководителиОрганизаций
+		ПО ДанныеЭскалацииЗадач.НовыйИсполнитель = РуководителиОрганизаций.Руководитель
+ГДЕ
+	НЕ РуководителиОрганизаций.Руководитель ЕСТЬ NULL 
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДанныеЗадач.Задача,
+	ДанныеЗадач.ПравилоЭскалации,
+	ДанныеЗадач.Исполнитель,
+	ДанныеЗадач.Период,
+	ДанныеЗадач.УровеньЭскалации,
+	ДанныеЗадач.Количество
+ИЗ
+	ДанныеЗадач КАК ДанныеЗадач
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДанныеЭскалацииЗадач.Задача,
+	ДанныеЭскалацииЗадач.ПравилоЭскалации,
+	ДанныеЭскалацииЗадач.Исполнитель,
+	ДанныеЭскалацииЗадач.Период,
+	ДанныеЭскалацииЗадач.УровеньЭскалации,
+	ДанныеЭскалацииЗадач.Количество
+ИЗ
+	ДанныеЭскалацииЗадач КАК ДанныеЭскалацииЗадач
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДанныеЭскалацииЗадачДоРуководителяПодразделения.Задача,
+	ДанныеЭскалацииЗадачДоРуководителяПодразделения.ПравилоЭскалации,
+	ДанныеЭскалацииЗадачДоРуководителяПодразделения.Исполнитель,
+	ДанныеЭскалацииЗадачДоРуководителяПодразделения.Период,
+	ДанныеЭскалацииЗадачДоРуководителяПодразделения.УровеньЭскалации,
+	ДанныеЭскалацииЗадачДоРуководителяПодразделения.Количество
+ИЗ
+	ДанныеЭскалацииЗадачДоРуководителяПодразделения КАК ДанныеЭскалацииЗадачДоРуководителяПодразделения
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ДанныеЭскалацииЗадачиДоРуководителяОрганизации.Задача,
+	ДанныеЭскалацииЗадачиДоРуководителяОрганизации.ПравилоЭскалации,
+	ДанныеЭскалацииЗадачиДоРуководителяОрганизации.Исполнитель,
+	ДанныеЭскалацииЗадачиДоРуководителяОрганизации.Период,
+	ДанныеЭскалацииЗадачиДоРуководителяОрганизации.УровеньЭскалации,
+	ДанныеЭскалацииЗадачиДоРуководителяОрганизации.Количество
+ИЗ
+	ДанныеЭскалацииЗадачиДоРуководителяОрганизации КАК ДанныеЭскалацииЗадачиДоРуководителяОрганизации</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоЭскалаций</dataPath>
+		<expression>Сумма(КоличествоЭскалаций)</expression>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВоронкаКоличество</dataPath>
+		<expression>Сумма(ВоронкаКоличество)</expression>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<parameter>
+		<name>ДатаОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаОтчетаНачало</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период начало</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ДатаОтчета.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОтчетаОкончание</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период окончание</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ДатаОтчета.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Действие</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Действие</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ДействияПравилЭскалацииЗадач</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>Подразделение</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Подразделение</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтруктураПредприятия</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтруктураПредприятия.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ВоронкаЭскалации</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Воронка эскалации</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВоронкаЗадача</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВоронкаИсполнитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВоронкаПериод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВоронкаПравилоЭскалации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВоронкаКоличество</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>a7349b35-d146-47d8-a256-84cdc7340b4a</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Действие</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>e8c23c98-ad21-4e2b-ac61-b904985d485d</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Подразделение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.СтруктураПредприятия.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>d10d2135-84a9-47d3-b305-8a215cef48d1</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ВоронкаУровеньЭскалации</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">NormalizedFunnel</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВоронкаУровеньЭскалации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВоронкаКоличество</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВоронкаУровеньЭскалации</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>СводкаЭскалацииПоСотрудникам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сводка эскалации задач по сотрудникам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПравилоЭскалации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Задача</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЭскалаций</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>319bf373-3995-440a-be79-b0fdbe4ff63e</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Действие</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>e1c38e3b-a319-422f-bef1-13a8dd3a053b</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Подразделение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.СтруктураПредприятия.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>3d84c66f-f891-40be-965a-9fb0623148d9</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ИсполнительПолный</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Исполнитель</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>СводкаЭскалацииПоПравилам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сводка эскалации задач по правилам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Исполнитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Задача</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЭскалаций</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>e18b1fbb-d43e-489f-a205-92255d81a535</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Действие</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>326e417a-c954-4fab-a479-1084af3f5d7f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Подразделение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.СтруктураПредприятия.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>fa281ba3-6a00-4039-aad3-9dc78e5c72c7</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПравилоЭскалации</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПравилоЭскалации</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

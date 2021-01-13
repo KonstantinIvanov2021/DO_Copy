@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="19ea7b8a-c89f-4bf8-a45b-05ebc41de743">
+  <name>ПереносСроковИсполненияПередЗаписьюПроцесса</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перенос сроков исполнения перед записью процесса</value>
+  </synonym>
+  <source>
+    <types>BusinessProcessObject.Утверждение</types>
+    <types>BusinessProcessObject.ОбработкаВходящегоДокумента</types>
+    <types>BusinessProcessObject.Поручение</types>
+    <types>BusinessProcessObject.ОбработкаВнутреннегоДокумента</types>
+    <types>BusinessProcessObject.ОбработкаИсходящегоДокумента</types>
+    <types>BusinessProcessObject.Исполнение</types>
+    <types>BusinessProcessObject.Согласование</types>
+    <types>BusinessProcessObject.Ознакомление</types>
+    <types>BusinessProcessObject.Рассмотрение</types>
+    <types>BusinessProcessObject.КомплексныйПроцесс</types>
+    <types>BusinessProcessObject.Приглашение</types>
+    <types>BusinessProcessObject.Регистрация</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ПереносСроковВыполненияЗадач.ПереносСроковИсполненияПередЗаписьюПроцесса</handler>
+</mdclass:EventSubscription>

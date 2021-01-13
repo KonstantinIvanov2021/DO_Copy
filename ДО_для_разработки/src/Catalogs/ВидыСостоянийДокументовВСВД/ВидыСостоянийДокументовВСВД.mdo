@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="68379d99-12e3-4cb0-866a-1ad8ce3cb3ad">
+  <producedTypes>
+    <objectType typeId="cf96b90a-19d2-423a-9490-f62e26a165ff" valueTypeId="04f8d0e6-ced1-4615-8448-4262cf6e9f4c"/>
+    <refType typeId="8cf4a3e4-9a93-4576-93d4-7baaf95aad48" valueTypeId="26a5379a-46c2-4597-bf2e-3069327cccad"/>
+    <selectionType typeId="3f6f6fea-ec69-4da6-8a30-51897c6f4e3e" valueTypeId="bfc85c8d-8616-419b-9ba6-14228caf9e0f"/>
+    <listType typeId="64bf443e-e5fd-499c-872c-94cdb335626b" valueTypeId="3816fc77-e69b-4e04-8536-98c1407fff11"/>
+    <managerType typeId="fcab1fe9-1d33-4c9a-a3e3-b6e595117e71" valueTypeId="d4cdeaae-4071-4f38-857b-d78f3ce0acd8"/>
+  </producedTypes>
+  <name>ВидыСостоянийДокументовВСВД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды состояний документов в СВД</value>
+  </synonym>
+  <inputByString>Catalog.ВидыСостоянийДокументовВСВД.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидыСостоянийДокументовВСВД.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Виды состояний документов</value>
+  </listPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="fe2306cd-634d-425b-a38a-e5f9113afa9e">
+      <name>ВОчередиНаОтправку</name>
+      <description>В очереди</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+    </items>
+    <items id="9016662e-501f-4eb0-9c34-e66943ebe8af">
+      <name>ДоставленКонтрагенту</name>
+      <description>Доставлен</description>
+      <code xsi:type="core:StringValue">
+        <value>000000004</value>
+      </code>
+    </items>
+    <items id="ffe9185e-f0c8-4aab-8e6f-233567deb90a">
+      <name>ЗарегистрированПолучателем</name>
+      <description>Зарегистрирован</description>
+      <code xsi:type="core:StringValue">
+        <value>000000005</value>
+      </code>
+    </items>
+    <items id="0b5bd7c1-c374-4913-a99f-9227255e6c3b">
+      <name>Отправлен</name>
+      <description>Отправлен</description>
+      <code xsi:type="core:StringValue">
+        <value>000000003</value>
+      </code>
+    </items>
+    <items id="056fd176-5fab-44bd-a3aa-b08c0dfc59b0">
+      <name>Ошибка</name>
+      <description>Ошибка</description>
+      <code xsi:type="core:StringValue">
+        <value>000000007</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ВидыСостоянийДокументовВСВД.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ВидыСостоянийДокументовВСВД.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.ВидыСостоянийДокументовВСВД.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="64803181-c0e3-4b44-b1c9-44277a29f505">
+    <name>НомерКартинкиВКоллекции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер картинки в коллекции</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="206f8132-2c12-4433-b8bc-fa3d560bf6be">
+    <name>Позиция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Позиция</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="abdb23fb-6383-47f7-b084-f13cb86d3be0">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d42eabfb-462f-4a60-9a78-0ea30dca0199">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6989d5ef-2600-4bb8-9cba-bc23574d6098">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="1e9f02eb-5fc8-4232-9ee8-44299b1ff487">
+    <name>ВидыСостоянийДокументовВСВД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Виды состояний документов в СВД</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:Catalog>

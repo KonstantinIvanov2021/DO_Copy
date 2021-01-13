@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b9a4a0f3-0a07-47d9-ad3d-73ad6aa45913">
+  <name>ОбменДаннымиДО20ДО21ПередЗаписьюРегистра</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными ДО21-ДО21, перед записью регистра</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменДаннымиСобытияДокументооборот.ОбменДаннымиДО20ДО21ПередЗаписьюРегистра</handler>
+</mdclass:EventSubscription>

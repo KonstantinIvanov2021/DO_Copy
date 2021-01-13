@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="25565cf4-ff36-4ae2-b2e2-dacd071bb685">
+  <producedTypes>
+    <selectionType typeId="816560fb-bf8e-4b2a-b685-955a92a59cf5" valueTypeId="f2fbd3d1-d39d-47c9-bb68-1ad739e51c28"/>
+    <listType typeId="6b931bea-afdc-40c2-a443-0efa9bd047e1" valueTypeId="8504cdfb-9d51-4b04-b16e-d8fd43cc995d"/>
+    <managerType typeId="536571cb-c6c3-4db1-8a33-fccadb9514b6" valueTypeId="aed4fc58-f9d0-43b7-a1f0-92201b8ac53a"/>
+    <recordSetType typeId="c7b01a98-b112-494e-8c97-2c6a37f9678e" valueTypeId="48a17fc7-f6bb-4e8b-b3dd-bc0f997b2c42"/>
+    <recordKeyType typeId="30a4f188-4bbd-4f47-9bbf-66dc1b7e5256" valueTypeId="989b27d5-fc40-4574-a2f1-25ad3a2ccde4"/>
+    <recordType typeId="28330859-cfae-43de-9299-6b955f421417" valueTypeId="85e74e67-593a-4d31-9cb4-a3675f8acc31"/>
+  </producedTypes>
+  <name>РеализацииПоПроектам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обороты по проектам</value>
+  </synonym>
+  <comment>(ПБИ)</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="04b15fdf-8c77-497c-9362-4d2dabb798ce">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="c0091569-5dbd-4dc0-a5b7-c922f9dc91b2">
+    <name>Сценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.пби_Сценарий</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="fc6b5555-8965-48df-8b9c-efd8110a0fee">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтруктураПредприятия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="4e64b529-0ba6-4d51-921f-c3248ae4ce28">
+    <name>Статья</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.пби_СтатьиОборотов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="45a911e1-569c-401d-8568-f6b93004d849">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="7edafcb9-89d2-4f3c-a754-29dc669c4e43">
+    <name>ПроектнаяЗадача</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проектная задача</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПроектныеЗадачи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>AccumulationRegister.РеализацииПоПроектам.Dimension.Проект</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

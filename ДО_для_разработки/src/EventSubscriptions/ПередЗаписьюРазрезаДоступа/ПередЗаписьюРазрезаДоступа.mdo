@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="29fe2f55-8433-47cf-b861-b40b28b01e23">
+  <name>ПередЗаписьюРазрезаДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перед записью разреза доступа</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ВидыИсходящихДокументов</types>
+    <types>CatalogObject.ВидыВнутреннихДокументов</types>
+    <types>CatalogObject.ВидыВходящихДокументов</types>
+    <types>CatalogObject.ГрифыДоступа</types>
+    <types>CatalogObject.Организации</types>
+    <types>CatalogObject.ГруппыДоступаКонтрагентов</types>
+    <types>CatalogObject.ВидыМероприятий</types>
+    <types>CatalogObject.СтруктураПредприятия</types>
+    <types>CatalogObject.ГруппыДоступаФизическихЛиц</types>
+    <types>CatalogObject.ВопросыДеятельности</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ДокументооборотПраваДоступа.ПередЗаписьюРазрезаДоступа</handler>
+</mdclass:EventSubscription>

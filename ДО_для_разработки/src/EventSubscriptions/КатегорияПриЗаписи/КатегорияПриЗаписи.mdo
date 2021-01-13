@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b66d9eba-7e54-4c6c-b415-7e3d9346ac5d">
+  <name>КатегорияПриЗаписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Категория при записи</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.КатегорииОбъектов</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.РаботаСКатегориямиДанныхСобытия.КатегорияПриЗаписиПриЗаписи</handler>
+</mdclass:EventSubscription>

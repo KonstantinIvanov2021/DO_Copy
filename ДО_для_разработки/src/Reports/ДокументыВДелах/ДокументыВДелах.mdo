@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="18d80b54-24ef-4d2a-883a-03d91d29d54b">
+  <producedTypes>
+    <objectType typeId="9753c1bc-0d93-47ae-88b3-d8fbf29545d1" valueTypeId="daa36360-38fb-41cc-85f5-f7c49411d7bd"/>
+    <managerType typeId="ab03a835-d940-4426-a29a-104e6d4b29f7" valueTypeId="c96276ee-4d02-4ac1-b8c7-08aba51a6f3a"/>
+  </producedTypes>
+  <name>ДокументыВДелах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Документы в делах (томах)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ДокументыВДелах.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ДокументыВДелах.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <forms uuid="d3477c7a-97dc-4a04-9b81-75a1c95b5b82">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="a71cd186-1a6e-400b-bcec-b91608cf35e2">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="fb7567e2-5ca8-4e30-8772-92e401559c72">
+    <name>ОбразецОтчетаСписокДокументовВДелах</name>
+    <synonym>
+      <key>ru</key>
+      <value>Образец отчета список документов в делах</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+</mdclass:Report>

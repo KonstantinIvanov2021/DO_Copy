@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d0ec1f3b-3103-4202-94e1-8967339492f4">
+  <producedTypes>
+    <selectionType typeId="b9703c2b-5fd8-4ad4-8ff4-4444f0ed4665" valueTypeId="acad4777-76f5-4d7a-94fc-1386539a07f9"/>
+    <listType typeId="56bafc20-2b5e-45c1-9743-56b241c0b95c" valueTypeId="586a0241-b9ad-4fdd-a76a-8f3f08d04892"/>
+    <managerType typeId="ec839236-06d9-4841-af91-f68e46a3fe56" valueTypeId="68c1afa6-d4bc-4f86-93af-f0448194c319"/>
+    <recordSetType typeId="e327e49c-c246-4965-b8c1-0dad01cac75c" valueTypeId="a1a2205f-bd62-4628-8f63-dff3a6758f79"/>
+    <recordKeyType typeId="b616fab5-d205-472a-a786-e4f49cdad7e3" valueTypeId="9e18fc18-0566-408b-b69d-42226daa4727"/>
+    <recordType typeId="c225919f-944e-405f-818c-5165c5abae51" valueTypeId="074bed34-c2c2-4f57-b072-42d9a7b692e2"/>
+    <recordManagerType typeId="6cbe57a3-3f71-45ea-a32c-aa200186ce2e" valueTypeId="7bfaa634-71b3-4a21-a7a4-a19874491b26"/>
+  </producedTypes>
+  <name>ПорядокПроектныхЗадач</name>
+  <synonym>
+    <key>ru</key>
+    <value>Порядок проектных задач</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="7b1eb856-8a07-4b74-973b-9b1b3228e458">
+    <name>Порядок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порядок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="06c9922d-5cfa-4128-a868-a918e5cb0c97">
+    <name>ПроектнаяЗадача</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проектная задача</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПроектныеЗадачи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

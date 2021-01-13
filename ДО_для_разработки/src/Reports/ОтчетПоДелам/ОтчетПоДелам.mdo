@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b07c3dc7-4e5b-4c3c-90c5-1e2909436074">
+  <producedTypes>
+    <objectType typeId="497e2553-ea09-422c-aaaf-09f19cc34382" valueTypeId="1e8744df-2491-4f24-bcc9-bf9c6577cf4a"/>
+    <managerType typeId="e585b331-ea63-4401-8130-0f22429a66e0" valueTypeId="4a70b93b-141e-48fe-a459-dfc715c4c64e"/>
+  </producedTypes>
+  <name>ОтчетПоДелам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дела (тома)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ОтчетПоДелам.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ОтчетПоДелам.Template.Макет</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <forms uuid="6301739a-f90e-46fe-aaf8-86afde1dfa0f">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="8f2b1588-7764-4925-becb-73a6995351fd">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="16212729-cf65-4ef7-8336-9a67ce4aa744">
+    <name>ОбразецОтчетаСписокДел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Образец отчета список дел</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+</mdclass:Report>

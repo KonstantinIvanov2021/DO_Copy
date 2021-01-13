@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a5df460d-4d62-499d-b957-0b8a9096e1c4">
+  <name>ПриУдаленииПапкиФайлов</name>
+  <synonym>
+    <key>ru</key>
+    <value>При удалении папки файлов</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ПапкиФайлов</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.ОбработкаЗапросовXDTOФайлы.ПриУдаленииПапкиФайловПередУдалением</handler>
+</mdclass:EventSubscription>

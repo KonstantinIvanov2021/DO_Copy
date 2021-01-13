@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2be17587-afab-47f6-85a2-7cf2c79cc450">
+  <producedTypes>
+    <selectionType typeId="a8fcd946-fb49-4ceb-b7c4-7a26eda9b72e" valueTypeId="2bebdc48-922c-4f03-9a5f-dd685be08770"/>
+    <listType typeId="a03854ea-9283-4e3a-bd8f-2e6e1966f4a8" valueTypeId="4dcc20de-2f8f-4fd7-935e-99a81fcbb90a"/>
+    <managerType typeId="a05c2e08-7ce1-40e8-b8fd-34a14d0c3647" valueTypeId="19d0ce46-338f-4850-9a29-8e0a50014388"/>
+    <recordSetType typeId="97d3982a-bc81-4cbc-9f4c-f44ed98ab5dd" valueTypeId="1483409d-72d8-4a04-ac6b-d29551175d99"/>
+    <recordKeyType typeId="af41393d-9f1f-452f-9dd5-2806d41d326f" valueTypeId="a9f6fad5-d8cc-4c78-af6f-d896687d885d"/>
+    <recordType typeId="2d6535f2-f6b6-4d0d-8dba-3f694160c12e" valueTypeId="fefd7ce2-15c8-44e8-a588-668937952122"/>
+    <recordManagerType typeId="6e27f023-16f3-4a00-b199-94c328d236b6" valueTypeId="382b75c2-efb8-4cfb-826c-34c1bbdf4d19"/>
+  </producedTypes>
+  <name>ПолномочияПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Полномочия пользователей</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="eb67a2b9-ef94-41a1-9c90-15e22627f00b">
+    <name>Владелец</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец</value>
+    </synonym>
+    <type>
+      <types>DefinedType.КонтейнерПользователей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="658ce9ff-3d9b-4e87-b592-38d41f5b6d0c">
+    <name>Полномочия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Полномочия</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПрофилиГруппДоступа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="6d4efeb8-9d7c-4d4d-984c-0b7348539f81">
+    <name>КомуВыданыПолномочия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кому выданы полномочия</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="17db38f7-72a8-43f8-a645-be532f23018e">
+    <name>КомуВыданыПолномочия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кому выданы</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ПрофилиГруппДоступа</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

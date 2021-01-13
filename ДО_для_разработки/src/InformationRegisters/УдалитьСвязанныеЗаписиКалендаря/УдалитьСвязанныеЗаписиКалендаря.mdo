@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ce4aedbf-d9a8-44b5-b758-4e27967f6417">
+  <producedTypes>
+    <selectionType typeId="9ba66375-537a-48ac-ba72-ef2a556b014d" valueTypeId="c03e517d-793c-4bb0-9cf4-9c9d3b244a0a"/>
+    <listType typeId="fc23282f-a96c-4596-ba65-10e168978b84" valueTypeId="7b7b77e4-977d-4402-9f5e-b5e618386c5f"/>
+    <managerType typeId="98d9509a-889e-439b-bf2e-b949a07a36b7" valueTypeId="411408a6-eaf3-4557-81a6-f64887e0e537"/>
+    <recordSetType typeId="0ecbb2a4-1377-4d2e-99a0-fad16fde9ef5" valueTypeId="7da30675-8403-4da9-ab39-59f2cc768941"/>
+    <recordKeyType typeId="de74e59c-08f5-437d-86a9-4ae3c5888c47" valueTypeId="edd07bce-9082-4a37-a031-00e13bffc35f"/>
+    <recordType typeId="4b74aeaf-60aa-4504-a2bd-2071e6eaaae0" valueTypeId="3d19792e-0abd-47e6-9f42-1152ea2af841"/>
+    <recordManagerType typeId="be73d67b-7246-4e1e-870d-07417e94d1ec" valueTypeId="4c7b5404-092f-4b04-b2f4-065cab7eb261"/>
+  </producedTypes>
+  <name>УдалитьСвязанныеЗаписиКалендаря</name>
+  <synonym>
+    <key>ru</key>
+    <value>Удалить связанные записи календаря</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="91ec9f5d-6bf0-41c9-a559-236093a8dd7b">
+    <name>ЗаписьКалендаря</name>
+    <synonym>
+      <key>ru</key>
+      <value>Запись календаря</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЗаписиРабочегоКалендаря</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="19cd99ca-c012-428e-aa1f-06b7c11e60a6">
+    <name>Предмет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предмет</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Мероприятия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d664f92f-aff0-4104-bc95-714968671a1c">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

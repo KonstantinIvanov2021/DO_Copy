@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДокумента</dataPath>
+			<field>ВидДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВопросДеятельности</dataPath>
+			<field>ВопросДеятельности</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГрифДоступа</dataPath>
+			<field>ГрифДоступа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРегистрации</dataPath>
+			<field>ДатаРегистрации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСоздания</dataPath>
+			<field>ДатаСоздания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Зарегистрировал</dataPath>
+			<field>Зарегистрировал</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подписал</dataPath>
+			<field>Подписал</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Содержание</dataPath>
+			<field>Содержание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокИсполнения</dataPath>
+			<field>СрокИсполнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодписанЭП</dataPath>
+			<field>ПодписанЭП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подготовил</dataPath>
+			<field>Подготовил</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка__</dataPath>
+			<field>Ссылка__</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВнутреннийНомер</dataPath>
+			<field>ВнутреннийНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дело</dataPath>
+			<field>Дело</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураДел</dataPath>
+			<field>НоменклатураДел</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧисловойНомер</dataPath>
+			<field>ЧисловойНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолвоВнутренние__</dataPath>
+			<field>КолвоВнутренние__</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолвоВходящие__</dataPath>
+			<field>КолвоВходящие__</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолвоИсходящие__</dataPath>
+			<field>КолвоИсходящие__</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолвоФайлы__</dataPath>
+			<field>КолвоФайлы__</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистрационный_номер</dataPath>
+			<field>Регистрационный_номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выданы_задачи</dataPath>
+			<field>Выданы_задачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Состояние</dataPath>
+			<field>Состояние</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Получатели__строкой</dataPath>
+			<field>Получатели__строкой</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СодержитОригинал</dataPath>
+			<field>СодержитОригинал</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	0 КАК КолвоВнутренние__,
+	0 КАК КолвоВходящие__,
+	ИсходящиеДокументы.Ссылка КАК КолвоИсходящие__,
+	0 КАК КолвоФайлы__,
+	ОбщиеРеквизитыДокументов.ПредставлениеСостояния КАК Состояние,
+	ОбщиеРеквизитыДокументов.СодержитОригинал,
+	ИсходящиеДокументы.Валюта,
+	ИсходящиеДокументы.ВидДокумента,
+	ИсходящиеДокументы.ВопросДеятельности,
+	ИсходящиеДокументы.ГрифДоступа,
+	ИсходящиеДокументы.ДатаРегистрации,
+	ИсходящиеДокументы.ДатаСоздания,
+	ИсходящиеДокументы.Заголовок КАК Наименование,
+	ИсходящиеДокументы.Зарегистрировал,
+	ВЫРАЗИТЬ(ИсходящиеДокументы.Комментарий КАК СТРОКА(1000)) КАК Комментарий,
+	ИсходящиеДокументы.Организация,
+	ИсходящиеДокументы.Ответственный,
+	ИсходящиеДокументы.Подготовил,
+	ИсходящиеДокументы.Подписал,
+	ИсходящиеДокументы.ПодписанЭП,
+	ИсходящиеДокументы.Подразделение,
+	ИсходящиеДокументы.РегистрационныйНомер КАК Регистрационный_номер,
+	ВЫРАЗИТЬ(ИсходящиеДокументы.Содержание КАК СТРОКА(1000)) КАК Содержание,
+	ИсходящиеДокументы.СрокИсполнения,
+	ИсходящиеДокументы.Сумма,
+	ИсходящиеДокументы.Ссылка КАК Ссылка__,
+	ИсходящиеДокументы.Код КАК ВнутреннийНомер,
+	ИсходящиеДокументы.Дело,
+	ИсходящиеДокументы.ЧисловойНомер,
+	ИсходящиеДокументы.НоменклатураДел,
+	ВЫБОР
+		КОГДА ИСТИНА В
+				(ВЫБРАТЬ ПЕРВЫЕ 1
+					ИСТИНА
+				ИЗ
+					Задача.ЗадачаИсполнителя
+				ГДЕ
+					Задача.ЗадачаИсполнителя.Предметы.Предмет = ИсходящиеДокументы.Ссылка
+					И НЕ Задача.ЗадачаИсполнителя.Выполнена)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Выданы_задачи,
+	ИсходящиеДокументы.Проект,
+	ОбщиеРеквизитыДокументов.КонтрагентыДляСписков КАК Получатели__строкой
+ИЗ
+	Справочник.ИсходящиеДокументы КАК ИсходящиеДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбщиеРеквизитыДокументов КАК ОбщиеРеквизитыДокументов
+		ПО ИсходящиеДокументы.Ссылка = ОбщиеРеквизитыДокументов.Документ
+{ГДЕ
+	(НЕ ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка) В (&amp;Получатель_9контрагент_0_Поиск)
+				И ИСТИНА В
+					(ВЫБРАТЬ
+						ИСТИНА
+					ИЗ
+						Справочник.ИсходящиеДокументы.Получатели КАК Получатели
+					ГДЕ
+						Получатели.Ссылка = ИсходящиеДокументы.Ссылка
+						И Получатели.Получатель В ИЕРАРХИИ (&amp;Получатель_9контрагент_0_Поиск))
+			ИЛИ ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка) В (&amp;Получатель_9контрагент_0_Поиск)
+				И ИСТИНА В
+					(ВЫБРАТЬ
+						ИСТИНА
+					ИЗ
+						Справочник.ИсходящиеДокументы КАК Документы1
+							ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ИсходящиеДокументы.Получатели КАК получатели1
+							ПО
+								Документы1.Ссылка = получатели1.Ссылка
+					ГДЕ
+						Документы1.Ссылка = ИсходящиеДокументы.Ссылка
+						И получатели1.Ссылка ЕСТЬ NULL )),
+	(НЕ ЗНАЧЕНИЕ(Справочник.КонтактныеЛица.ПустаяСсылка) В (&amp;Адресат_9контактное_лицо_0_Поиск)
+				И ИСТИНА В
+					(ВЫБРАТЬ
+						ИСТИНА
+					ИЗ
+						Справочник.ИсходящиеДокументы.Получатели КАК Получатели
+					ГДЕ
+						Получатели.Ссылка = ИсходящиеДокументы.Ссылка
+						И Получатели.Адресат В ИЕРАРХИИ (&amp;Адресат_9контактное_лицо_0_Поиск))
+			ИЛИ ЗНАЧЕНИЕ(Справочник.КонтактныеЛица.ПустаяСсылка) В (&amp;Адресат_9контактное_лицо_0_Поиск)
+				И ИСТИНА В
+					(ВЫБРАТЬ
+						ИСТИНА
+					ИЗ
+						Справочник.ИсходящиеДокументы КАК Документы1
+							ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ИсходящиеДокументы.Получатели КАК получатели1
+							ПО
+								Документы1.Ссылка = получатели1.Ссылка
+					ГДЕ
+						Документы1.Ссылка = ИсходящиеДокументы.Ссылка
+						И (получатели1.Адресат ЕСТЬ NULL 
+							ИЛИ получатели1.Адресат = ЗНАЧЕНИЕ(Справочник.КонтактныеЛица.ПустаяСсылка))))}</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КолвоВнутренние__</dataPath>
+		<expression>Сумма(КолвоВнутренние__)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолвоВходящие__</dataPath>
+		<expression>Сумма(КолвоВходящие__)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолвоИсходящие__</dataPath>
+		<expression>Количество(КолвоИсходящие__)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолвоФайлы__</dataPath>
+		<expression>Сумма(КолвоФайлы__)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Адресат_9контактное_лицо_0_Поиск</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Адресат 9контактное лицо 0 поиск</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.КонтактныеЛица</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.КонтактныеЛица.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Получатель_9контрагент_0_Поиск</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Получатель 9контрагент 0 поиск</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КолвоИсходящие__</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

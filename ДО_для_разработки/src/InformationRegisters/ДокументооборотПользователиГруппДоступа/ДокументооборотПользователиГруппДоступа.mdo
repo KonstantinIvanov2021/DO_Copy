@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f9d0fed8-9fce-4e16-9205-dfa1810cd335">
+  <producedTypes>
+    <selectionType typeId="5fba9175-0ff3-40bf-b980-8435860c46d5" valueTypeId="22fff746-45d9-40b2-8b0c-c304dd81a595"/>
+    <listType typeId="fe7c7ca8-4e1c-4c91-9150-da4d4a5cbd83" valueTypeId="e4490daa-32c1-4fad-b539-9f18c4ee4f08"/>
+    <managerType typeId="dcd82c8e-98db-4f6a-9893-83e0e1871620" valueTypeId="ed52406a-ec37-4058-8e72-b83b54487f5d"/>
+    <recordSetType typeId="e002cf58-0fca-48ed-bb8a-6dade1b15b9c" valueTypeId="f896c632-4dc2-4657-9550-e0d23d4bfc5a"/>
+    <recordKeyType typeId="c6b0bbac-6be5-4bff-bb59-3e0be1452c03" valueTypeId="5ec8c7b0-e0f5-4d2e-ba0d-6181e390db0e"/>
+    <recordType typeId="8ad3c05a-082e-48cb-9014-c9b8af04dc1f" valueTypeId="95908c97-702c-4025-a421-5e8a4206470d"/>
+    <recordManagerType typeId="1e354e92-8c3a-45cd-8f34-62dc13ba0541" valueTypeId="8a6e4710-6b1f-4f24-b2b7-5bcc58d10724"/>
+  </producedTypes>
+  <name>ДокументооборотПользователиГруппДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пользователи групп доступа</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="8d62aeac-31a2-4c3f-85ef-f1e0651d4e91">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e993d878-dfd9-411c-9426-c2291dfe9f49">
+    <name>ГруппаДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыДоступа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

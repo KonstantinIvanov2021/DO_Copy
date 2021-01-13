@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c3b2b3b8-1dcb-4717-bc2f-eba7734c3b81">
+  <name>ЗадачаКомплексногоПроцессаПриВыполнении</name>
+  <synonym>
+    <key>ru</key>
+    <value>Задача комплексного процесса при выполнении</value>
+  </synonym>
+  <source>
+    <types>TaskObject.ЗадачаИсполнителя</types>
+  </source>
+  <event>OnExecute</event>
+  <handler>CommonModule.РаботаСКомплекснымиБизнесПроцессамиСервер.ЗадачаКомплексногоПроцессаПриВыполнении</handler>
+</mdclass:EventSubscription>

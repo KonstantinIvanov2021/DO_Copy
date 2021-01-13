@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="00274400-733c-4553-90ac-240854fd34ad">
+  <name>СрокИсполненияПроцессовПередЗаписью</name>
+  <synonym>
+    <key>ru</key>
+    <value>Срок исполнения процессов перед записью</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ШаблоныУтверждения</types>
+    <types>BusinessProcessObject.Утверждение</types>
+    <types>CatalogObject.ШаблоныСогласования</types>
+    <types>CatalogObject.ШаблоныРассмотрения</types>
+    <types>CatalogObject.ШаблоныОзнакомления</types>
+    <types>BusinessProcessObject.ОбработкаВходящегоДокумента</types>
+    <types>CatalogObject.ШаблоныПоручения</types>
+    <types>CatalogObject.ШаблоныИсполнения</types>
+    <types>BusinessProcessObject.Поручение</types>
+    <types>CatalogObject.ШаблоныРегистрации</types>
+    <types>BusinessProcessObject.ОбработкаВнутреннегоДокумента</types>
+    <types>CatalogObject.ШаблоныПриглашения</types>
+    <types>CatalogObject.ШаблоныСоставныхБизнесПроцессов</types>
+    <types>BusinessProcessObject.ОбработкаИсходящегоДокумента</types>
+    <types>BusinessProcessObject.Исполнение</types>
+    <types>BusinessProcessObject.Согласование</types>
+    <types>BusinessProcessObject.Ознакомление</types>
+    <types>BusinessProcessObject.Рассмотрение</types>
+    <types>BusinessProcessObject.КомплексныйПроцесс</types>
+    <types>CatalogObject.ШаблоныКомплексныхБизнесПроцессов</types>
+    <types>BusinessProcessObject.Приглашение</types>
+    <types>BusinessProcessObject.Регистрация</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.СрокиИсполненияПроцессов.СрокИсполненияПроцессовПередЗаписью</handler>
+</mdclass:EventSubscription>

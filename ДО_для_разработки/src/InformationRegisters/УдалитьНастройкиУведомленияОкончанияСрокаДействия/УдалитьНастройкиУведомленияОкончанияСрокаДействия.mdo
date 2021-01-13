@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="753b3ab6-a7a1-41a9-a1a1-9ded8b2486e5">
+  <producedTypes>
+    <selectionType typeId="37e9bc99-5e1b-4c05-9b56-6403d9d4337f" valueTypeId="1ec251d2-73e6-4a5a-89fb-a3097e7e0eb3"/>
+    <listType typeId="78d7b2e5-d3ed-4cae-b4f9-7ef796b5be45" valueTypeId="63165295-e8a6-4814-adc5-2ca218d4548d"/>
+    <managerType typeId="90598b30-3c2c-45e6-ab5d-f955bc519b78" valueTypeId="2890ed6f-c5fd-435b-98f2-1f7ea54d5c5d"/>
+    <recordSetType typeId="e5a6f756-5ac5-41b9-88e0-09236312ac56" valueTypeId="57e27682-1d38-42b4-b292-3efdb10b5754"/>
+    <recordKeyType typeId="66d9ee68-b121-4a9e-af50-86676f8c5a91" valueTypeId="b3e97df7-d9ae-4f21-a744-ffec59f54ef8"/>
+    <recordType typeId="80e8bff1-6ff3-4f44-be1c-a1affdeaeac5" valueTypeId="b8171e9b-7a9e-437d-88a4-ae9ea5032d24"/>
+    <recordManagerType typeId="a33cf81f-335e-4b22-bd7a-6ff3707add7e" valueTypeId="e3a949e8-f76e-4098-b60c-cf920187cf7b"/>
+  </producedTypes>
+  <name>УдалитьНастройкиУведомленияОкончанияСрокаДействия</name>
+  <synonym>
+    <key>ru</key>
+    <value>Удалить настройки уведомления окончания срока действия</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="fc73bdeb-be4d-477a-9721-6defd6f6771d">
+    <name>СрокУведомления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок уведомления</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Срок за который следует высылать уведомление (в днях)</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="630f4c64-9409-41d4-83e5-e9d1d481d01e">
+    <name>ЧастотаУведомления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Частота уведомления</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Частота рассылки уведомлений</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="405d1351-d7b8-40d3-acb7-ec9008302ef5">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, к которому относятся настройки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

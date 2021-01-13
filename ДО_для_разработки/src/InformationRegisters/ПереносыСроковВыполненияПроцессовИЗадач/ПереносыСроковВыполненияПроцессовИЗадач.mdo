@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0cdb1ab7-76eb-4729-9af4-418d0dc14920">
+  <producedTypes>
+    <selectionType typeId="60674eb1-30fd-4579-9f5c-fca3027b51bd" valueTypeId="de876cca-2244-497d-b775-b0351034e97c"/>
+    <listType typeId="44fc7a5b-bda3-4873-86fa-f05a8baa5065" valueTypeId="eb8618de-479e-444d-afa0-8e96deb11f79"/>
+    <managerType typeId="bd4adc16-6b29-46ce-a22f-e1e6bf10242d" valueTypeId="7c714562-e829-4b82-b40e-1c5cdbb2106f"/>
+    <recordSetType typeId="1a63f1e7-68d0-44d7-9911-e2473a86213f" valueTypeId="16c3749d-1066-4eaa-8af5-ae0d05c27bbe"/>
+    <recordKeyType typeId="e06f28c8-b16c-47ea-8239-565e47de3fea" valueTypeId="f3a1c95d-b7c1-49e6-b406-bdd5e0e0aa74"/>
+    <recordType typeId="ba22d57c-8179-41dd-a852-1b85e9bfb0f3" valueTypeId="bcd89ba4-9ed9-45ea-ad46-35cd0f906cb5"/>
+    <recordManagerType typeId="6d3248ca-6b63-4646-b893-4e23b2d1675f" valueTypeId="169b2624-66d6-4188-87f7-2ee83b31b330"/>
+  </producedTypes>
+  <name>ПереносыСроковВыполненияПроцессовИЗадач</name>
+  <synonym>
+    <key>ru</key>
+    <value>Переносы сроков выполнения процессов и задач</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ПереносыСроковВыполненияПроцессовИЗадач.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ПереносыСроковВыполненияПроцессовИЗадач.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Запись о переносе срока исполнения</value>
+  </recordPresentation>
+  <resources uuid="b4587654-c610-478c-aea1-54e3e1386c4b">
+    <name>БизнесПроцессПереноса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бизнес процесс переноса</value>
+    </synonym>
+    <comment>Заявка, в рамках которой произведен перенос срока</comment>
+    <type>
+      <types>BusinessProcessRef.РешениеВопросовВыполненияЗадач</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="90605e0d-3ac3-4341-af4a-e6f346989a4b">
+    <name>Итерация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Итерация</value>
+    </synonym>
+    <comment>Номер итерации согласования заявки на перенос срока, в рамках которой произведен перенос</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="245aedbb-05d8-4e94-9347-6f1a371ae66c">
+    <name>КомментарийАвтора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий автора</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="a344e401-7cdb-4333-9f92-8c7e8a680e58">
+    <name>НовыйСрок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Новый срок</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+  </resources>
+  <resources uuid="723fc238-8a84-46b1-a026-85bf58ac0edc">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="aca94e6d-d9bc-4c45-8b70-3e67afb56bdf">
+    <name>СтарыйСрок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Старый срок</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="72f4f136-2139-4783-8659-d7dda048b89c">
+    <name>ДатаПереносаСрока</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата переноса срока</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b3b159f1-e53b-490e-9b91-3541c7a46013">
+    <name>Предмет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предмет</value>
+    </synonym>
+    <type>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+      <types>BusinessProcessRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="e7cad7b0-8894-46ab-a1ce-f1802732022a">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3a0538f2-6fb0-4ebb-ad62-1bb08801f3cc">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Переносы сроков исполнения</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="64bbc213-acc7-4a89-b46c-697f31491711">
+    <name>ПереносыСрокаЗадачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>История переносов срока</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="332fd2f5-7dbd-4d6e-a403-4d3f011526ff">
+    <name>ПереносыСрокаПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>История переносов срока</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>BusinessProcessRef.Исполнение</types>
+      <types>BusinessProcessRef.Приглашение</types>
+      <types>BusinessProcessRef.ОбработкаИсходящегоДокумента</types>
+      <types>BusinessProcessRef.ОбработкаВнутреннегоДокумента</types>
+      <types>BusinessProcessRef.Поручение</types>
+      <types>BusinessProcessRef.Утверждение</types>
+      <types>BusinessProcessRef.КомплексныйПроцесс</types>
+      <types>BusinessProcessRef.ОбработкаВходящегоДокумента</types>
+      <types>BusinessProcessRef.Рассмотрение</types>
+      <types>BusinessProcessRef.Согласование</types>
+      <types>BusinessProcessRef.Ознакомление</types>
+      <types>BusinessProcessRef.Регистрация</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="75e8166d-0b74-45f4-84a7-0b7ae37be0e1">
+    <name>ПереносыСроковЗадач</name>
+    <synonym>
+      <key>ru</key>
+      <value>Переносы сроков задач</value>
+    </synonym>
+    <group>NavigationPanelSeeAlso</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

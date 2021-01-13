@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cb89098a-a8d2-4a68-ad09-bc73bf219145">
+  <name>DMX</name>
+  <synonym>
+    <key>ru</key>
+    <value>DMX</value>
+  </synonym>
+  <namespace>http://www.1c.ru/DMX</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.DMX</value>
+  </xdtoPackages>
+  <descriptorFileName>DMX.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="35ff66a8-5436-4dda-a51a-61440bf71a9e">
+    <name>Put</name>
+    <synonym>
+      <key>ru</key>
+      <value>Put</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>XResponse</name>
+      <nsUri>http://www.1c.ru/DMX</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>Put</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="5044c541-9ee1-4e88-a6f2-66c5826ce620">
+      <name>XRequest</name>
+      <synonym>
+        <key>ru</key>
+        <value>XRequest</value>
+      </synonym>
+      <xdtoValueType>
+        <name>XRequest</name>
+        <nsUri>http://www.1c.ru/DMX</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="0a950432-dba2-4631-b938-68e16d9eee52">
+    <name>Get</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>XResponse</name>
+      <nsUri>http://www.1c.ru/DMX</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>Get</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="b1aebf5a-b92b-4dce-9f96-4dbcc3691d89">
+      <name>XRequest</name>
+      <synonym>
+        <key>ru</key>
+        <value>XRequest</value>
+      </synonym>
+      <xdtoValueType>
+        <name>XRequest</name>
+        <nsUri>http://www.1c.ru/DMX</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

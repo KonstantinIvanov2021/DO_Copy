@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fe4d046b-d1bd-44df-8a71-1b2b4e2d0aa9">
+  <producedTypes>
+    <selectionType typeId="4a101ef8-747f-4f45-ba73-f4852b5e08f3" valueTypeId="88675ee5-523a-4586-b77f-52f8607073a3"/>
+    <listType typeId="41004cf5-8aa1-438b-a550-4db11571408c" valueTypeId="ecef9e20-6cf3-4218-87b3-61b139d23bf4"/>
+    <managerType typeId="0474c275-9fc6-47c2-8a5c-d2b77e34588b" valueTypeId="9f62dd6b-4585-4e1a-a009-d7523fb06f6b"/>
+    <recordSetType typeId="9c1b6b09-2d2f-4b7d-882f-3791e58fa920" valueTypeId="eab4bd98-bbcf-40c9-b8d8-5321df16987b"/>
+    <recordKeyType typeId="5190d859-925b-4312-aea1-57b441b65c46" valueTypeId="d85e8b6c-3b38-4de7-a302-a2d748e09dab"/>
+    <recordType typeId="0f7d4a71-77d1-4d55-a08e-16d4ab774c77" valueTypeId="3d8bf4bd-3017-450f-a3d4-796145b40bd0"/>
+    <recordManagerType typeId="ee2e09f4-0f10-4ed9-ad85-e78a710d1593" valueTypeId="4f75358f-f08d-4bd9-b53b-71a902116569"/>
+  </producedTypes>
+  <name>ОбрабатываемыеРегламентнымиЗаданиямиУчетныеЗаписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Потоки доставки почты</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ОбрабатываемыеРегламентнымиЗаданиямиУчетныеЗаписи.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ОбрабатываемыеРегламентнымиЗаданиямиУчетныеЗаписи.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Поток доставки почты для учетной записи</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Потоки доставки почты</value>
+  </listPresentation>
+  <resources uuid="a2cca6bf-0ef8-42c1-bcc6-803240102a26">
+    <name>НомерЗадания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер потока</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="d35e202a-14c7-40fa-a402-53a95ec21a6b">
+    <name>УчетнаяЗапись</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учетная запись</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.УчетныеЗаписиЭлектроннойПочты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="11cdd1d4-b95a-4ed5-ab09-f3e0a90f068c">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b44f83ba-a446-4add-8fb3-62da20f6e209">
+    <name>ФормаВводаЧислаЗаданий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ввода числа заданий</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="56855a87-d4cb-4c1f-8d3a-296e62aeb2ff">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="70f23baf-083c-47b7-9822-9b0898140211">
+    <name>ФормаВводаНомераПотока</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ввода номера потока</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДокумента</dataPath>
+			<field>ВидДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВопросДеятельности</dataPath>
+			<field>ВопросДеятельности</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРегистрации</dataPath>
+			<field>ДатаРегистрации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Содержание</dataPath>
+			<field>Содержание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСоздания</dataPath>
+			<field>ДатаСоздания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка__</dataPath>
+			<field>Ссылка__</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГрифДоступа</dataPath>
+			<field>ГрифДоступа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дело</dataPath>
+			<field>Дело</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Зарегистрировал</dataPath>
+			<field>Зарегистрировал</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЛистов</dataPath>
+			<field>КоличествоЛистов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПриложений</dataPath>
+			<field>КоличествоПриложений</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЭкземпляров</dataPath>
+			<field>КоличествоЭкземпляров</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЛистовВПриложениях</dataPath>
+			<field>ЛистовВПриложениях</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НоменклатураДел</dataPath>
+			<field>НоменклатураДел</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодписанЭП</dataPath>
+			<field>ПодписанЭП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолвоВнутренние__</dataPath>
+			<field>КолвоВнутренние__</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолвоВходящие__</dataPath>
+			<field>КолвоВходящие__</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолвоИсходящие__</dataPath>
+			<field>КолвоИсходящие__</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолвоФайлы__</dataPath>
+			<field>КолвоФайлы__</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистрационный_номер</dataPath>
+			<field>Регистрационный_номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выданы_задачи</dataPath>
+			<field>Выданы_задачи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Состояние</dataPath>
+			<field>Состояние</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СодержитОригинал</dataPath>
+			<field>СодержитОригинал</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	1 КАК КолвоВнутренние__,
+	0 КАК КолвоВходящие__,
+	0 КАК КолвоИсходящие__,
+	0 КАК КолвоФайлы__,
+	ОбщиеРеквизитыДокументов.ПредставлениеСостояния КАК Состояние,
+	ОбщиеРеквизитыДокументов.СодержитОригинал,
+	ВнутренниеДокументы.Ссылка КАК Ссылка__,
+	ВнутренниеДокументы.ВидДокумента КАК ВидДокумента,
+	ВнутренниеДокументы.Наименование КАК Наименование,
+	ВнутренниеДокументы.ВопросДеятельности КАК ВопросДеятельности,
+	ВнутренниеДокументы.ДатаРегистрации КАК ДатаРегистрации,
+	ВнутренниеДокументы.Организация КАК Организация,
+	ВнутренниеДокументы.Подразделение КАК Подразделение,
+	ВнутренниеДокументы.РегистрационныйНомер КАК Регистрационный_номер,
+	ВнутренниеДокументы.Содержание КАК Содержание,
+	ВнутренниеДокументы.ДатаСоздания КАК ДатаСоздания,
+	ВнутренниеДокументы.Дело,
+	ВнутренниеДокументы.НоменклатураДел,
+	ВнутренниеДокументы.Валюта,
+	ВнутренниеДокументы.Сумма,
+	ВнутренниеДокументы.ПодписанЭП,
+	ВнутренниеДокументы.Ответственный,
+	ВнутренниеДокументы.ГрифДоступа КАК ГрифДоступа,
+	ВнутренниеДокументы.Зарегистрировал,
+	ВнутренниеДокументы.КоличествоЛистов,
+	ВнутренниеДокументы.КоличествоПриложений,
+	ВнутренниеДокументы.КоличествоЭкземпляров,
+	ВнутренниеДокументы.ЛистовВПриложениях,
+	ВЫБОР
+		КОГДА ИСТИНА В
+				(ВЫБРАТЬ ПЕРВЫЕ 1
+					ИСТИНА
+				ИЗ
+					Задача.ЗадачаИсполнителя
+				ГДЕ
+					Задача.ЗадачаИсполнителя.Предметы.Предмет = ВнутренниеДокументы.Ссылка
+					И НЕ Задача.ЗадачаИсполнителя.Выполнена)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Выданы_задачи,
+	ВнутренниеДокументы.Проект
+ИЗ
+	Справочник.ВнутренниеДокументы КАК ВнутренниеДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбщиеРеквизитыДокументов КАК ОбщиеРеквизитыДокументов
+		ПО ВнутренниеДокументы.Ссылка = ОбщиеРеквизитыДокументов.Документ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	0,
+	1,
+	0,
+	0,
+	ОбщиеРеквизитыДокументов.ПредставлениеСостояния,
+	ОбщиеРеквизитыДокументов.СодержитОригинал,
+	ВходящиеДокументы.Ссылка,
+	ВходящиеДокументы.ВидДокумента,
+	ВходящиеДокументы.Наименование,
+	ВходящиеДокументы.ВопросДеятельности,
+	ВходящиеДокументы.ДатаРегистрации,
+	ВходящиеДокументы.Организация,
+	ВходящиеДокументы.Подразделение,
+	ВходящиеДокументы.РегистрационныйНомер,
+	ВходящиеДокументы.Содержание,
+	ВходящиеДокументы.ДатаСоздания,
+	ВходящиеДокументы.Дело,
+	ВходящиеДокументы.НоменклатураДел,
+	ВходящиеДокументы.Валюта,
+	ВходящиеДокументы.Сумма,
+	ВходящиеДокументы.ПодписанЭП,
+	ВходящиеДокументы.Ответственный,
+	ВходящиеДокументы.ГрифДоступа,
+	ВходящиеДокументы.Зарегистрировал,
+	ВходящиеДокументы.КоличествоЛистов,
+	ВходящиеДокументы.КоличествоПриложений,
+	ВходящиеДокументы.КоличествоЭкземпляров,
+	ВходящиеДокументы.ЛистовВПриложениях,
+	ВЫБОР
+		КОГДА ИСТИНА В
+				(ВЫБРАТЬ ПЕРВЫЕ 1
+					ИСТИНА
+				ИЗ
+					Задача.ЗадачаИсполнителя
+				ГДЕ
+					Задача.ЗадачаИсполнителя.Предметы.Предмет = ВходящиеДокументы.Ссылка
+					И НЕ Задача.ЗадачаИсполнителя.Выполнена)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ,
+	ВходящиеДокументы.Проект
+ИЗ
+	Справочник.ВходящиеДокументы КАК ВходящиеДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбщиеРеквизитыДокументов КАК ОбщиеРеквизитыДокументов
+		ПО ВходящиеДокументы.Ссылка = ОбщиеРеквизитыДокументов.Документ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	0,
+	0,
+	1,
+	0,
+	ОбщиеРеквизитыДокументов.ПредставлениеСостояния,
+	ОбщиеРеквизитыДокументов.СодержитОригинал,
+	ИсходящиеДокументы.Ссылка,
+	ИсходящиеДокументы.ВидДокумента,
+	ИсходящиеДокументы.Наименование,
+	ИсходящиеДокументы.ВопросДеятельности,
+	ИсходящиеДокументы.ДатаРегистрации,
+	ИсходящиеДокументы.Организация,
+	ИсходящиеДокументы.Подразделение,
+	ИсходящиеДокументы.РегистрационныйНомер,
+	ИсходящиеДокументы.Содержание,
+	ИсходящиеДокументы.ДатаСоздания,
+	ИсходящиеДокументы.Дело,
+	ИсходящиеДокументы.НоменклатураДел,
+	ИсходящиеДокументы.Валюта,
+	ИсходящиеДокументы.Сумма,
+	ИсходящиеДокументы.ПодписанЭП,
+	ИсходящиеДокументы.Ответственный,
+	ИсходящиеДокументы.ГрифДоступа,
+	ИсходящиеДокументы.Зарегистрировал,
+	ИсходящиеДокументы.КоличествоЛистов,
+	ИсходящиеДокументы.КоличествоПриложений,
+	ИсходящиеДокументы.КоличествоЭкземпляров,
+	ИсходящиеДокументы.ЛистовВПриложениях,
+	ВЫБОР
+		КОГДА ИСТИНА В
+				(ВЫБРАТЬ ПЕРВЫЕ 1
+					ИСТИНА
+				ИЗ
+					Задача.ЗадачаИсполнителя
+				ГДЕ
+					Задача.ЗадачаИсполнителя.Предметы.Предмет = ИсходящиеДокументы.Ссылка
+					И НЕ Задача.ЗадачаИсполнителя.Выполнена)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ,
+	ИсходящиеДокументы.Проект
+ИЗ
+	Справочник.ИсходящиеДокументы КАК ИсходящиеДокументы
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбщиеРеквизитыДокументов КАК ОбщиеРеквизитыДокументов
+		ПО ИсходящиеДокументы.Ссылка = ОбщиеРеквизитыДокументов.Документ</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КолвоВнутренние__</dataPath>
+		<expression>Сумма(КолвоВнутренние__)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолвоВходящие__</dataPath>
+		<expression>Сумма(КолвоВходящие__)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолвоИсходящие__</dataPath>
+		<expression>Сумма(КолвоИсходящие__)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолвоФайлы__</dataPath>
+		<expression>Сумма(КолвоФайлы__)</expression>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КолвоВнутренние__</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КолвоВходящие__</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КолвоИсходящие__</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КолвоФайлы__</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

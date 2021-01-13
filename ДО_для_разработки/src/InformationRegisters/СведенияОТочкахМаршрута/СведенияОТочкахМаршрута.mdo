@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="528c3378-66d1-43e8-8878-9f6ef849639e">
+  <producedTypes>
+    <selectionType typeId="b762bdce-11fd-43de-b0b4-6ee2d57f857a" valueTypeId="a5344ace-8ec5-4f11-8b7c-a1885151ccde"/>
+    <listType typeId="2ffc1a7e-d26a-4ea5-aeea-f31c1e188b0a" valueTypeId="51a98bf5-8f73-4668-96ed-129cb5740ec2"/>
+    <managerType typeId="8301f9dc-730e-4c93-87fd-085c50e8981a" valueTypeId="28c3f96c-c538-4ab3-913b-608c3f53c569"/>
+    <recordSetType typeId="8ffbafb5-d5df-4b78-a721-7ff32fed01c9" valueTypeId="e8200c73-a657-44fe-91da-8e8a1fdc8ff0"/>
+    <recordKeyType typeId="3c22c17f-cfc8-45e4-a9c6-bb2787ca91e7" valueTypeId="9e350aa1-6f9b-42a2-90ed-3b2172bb0d58"/>
+    <recordType typeId="c12b4c14-7242-4c2e-a4a9-81eb945c808d" valueTypeId="60d710a5-dbd7-43f6-8321-92c3f4e2ec2e"/>
+    <recordManagerType typeId="ba946d07-1def-4ccd-8467-46bcee5ef955" valueTypeId="fd7c9158-a65b-433e-b076-b274431a1d88"/>
+  </producedTypes>
+  <name>СведенияОТочкахМаршрута</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения о точках маршрута</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СведенияОТочкахМаршрута.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.СведенияОТочкахМаршрута.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b26271db-a354-4437-a291-0d387d02108e">
+    <name>ИмяБизнесПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя бизнес процесса</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Имя бизнес процесса</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="ca651ae1-ee76-467f-94af-0462e81a193e">
+    <name>ТочкаМаршрута</name>
+    <synonym>
+      <key>ru</key>
+      <value>Точка маршрута</value>
+    </synonym>
+    <type>
+      <types>BusinessProcessRoutePointRef</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Точка маршрута</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="5fa85d43-50bd-4009-b8ff-cd5607b911be">
+    <name>ВидРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид работы</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыРабот</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вид работы</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="1dc25623-0d25-4579-8d2e-b4cf23c18dd6">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c7420014-9146-43d7-a83d-ede0270ac41d">
+    <name>ФормаВыбораТочкиМаршрута</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора точки маршрута</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="13533fb4-f4b9-491f-b918-170094171c38">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c5f71fc8-d443-4821-8c19-0a82e81f8180">
+    <name>ФормаСпискаСведений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка сведений</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="633508d4-136d-4c71-a86f-d07a9c1028d9">
+    <name>СведенияОТочкахМаршрута</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сведения о точках маршрута</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

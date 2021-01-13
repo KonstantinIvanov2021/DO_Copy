@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b1bbe746-344d-4f83-a915-4ec7ef2e829f">
+  <producedTypes>
+    <selectionType typeId="af6c7d99-5066-4dca-8297-fbba6162c3a7" valueTypeId="e703db41-e00c-4cf7-9b87-b6ef512b10da"/>
+    <listType typeId="c5426a3d-c736-4b95-a386-355b376720da" valueTypeId="c8fd0824-066d-4cab-a1f2-7daecdf10983"/>
+    <managerType typeId="9c0aee90-0b90-4dd5-9778-0ecb0d7d3f58" valueTypeId="e85a86ea-8f4f-4fb4-bd7b-a8237833773a"/>
+    <recordSetType typeId="c1b8c72d-3b3a-4bf0-80d8-a189f28efb9e" valueTypeId="e9b78427-bfc1-4fe3-a7a4-5507cf016cbc"/>
+    <recordKeyType typeId="c6c81778-d19c-4356-be07-d2881d9e87a0" valueTypeId="a7211b74-5bf6-4e7e-aa64-1f6323478b4e"/>
+    <recordType typeId="5487c4a6-466c-45bd-bfe8-9fe742fc68e2" valueTypeId="c6f0c988-e01f-4168-8667-ba8b249f90e7"/>
+    <recordManagerType typeId="f7d20f71-bd50-4dde-bf52-9ab7177a98fb" valueTypeId="7c64df90-57a5-4d2a-989d-1537b1733f5c"/>
+  </producedTypes>
+  <name>ДескрипторыДляОбъектов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дескрипторы для объектов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="263f6d5f-91a0-4b29-982d-23e47fb5c992">
+    <name>Отключен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отключен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="37748129-7c72-465e-8bd8-e6579266faa1">
+    <name>ПолученОт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получен от</value>
+    </synonym>
+    <type>
+      <types>AnyRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="ab4d8ced-f171-4802-80b4-b04dbd6862ce">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШаблоныПисем</types>
+      <types>CatalogRef.ТемыОбсуждений</types>
+      <types>CatalogRef.ФизическиеЛица</types>
+      <types>CatalogRef.ШаблоныУтверждения</types>
+      <types>CatalogRef.Контроль</types>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Проекты</types>
+      <types>CatalogRef.ЛичныеАдресаты</types>
+      <types>CatalogRef.ПравилаОбработкиПисем</types>
+      <types>CatalogRef.НоменклатураДел</types>
+      <types>CatalogRef.Инструкции</types>
+      <types>DocumentRef.ВходящееСообщениеСВД</types>
+      <types>CatalogRef.ГруппыКонтрольныхТочек</types>
+      <types>CatalogRef.ПапкиФайлов</types>
+      <types>DocumentRef.ИсходящееСообщениеСВД</types>
+      <types>CatalogRef.ШаблоныКонтрольныхТочек</types>
+      <types>CatalogRef.ШаблоныИсходящихДокументов</types>
+      <types>CatalogRef.СпискиРассылкиПоКонтрагентам</types>
+      <types>CatalogRef.ШаблоныОзнакомления</types>
+      <types>CatalogRef.ШаблоныСоставныхБизнесПроцессов</types>
+      <types>CatalogRef.МестаХраненияДел</types>
+      <types>DocumentRef.ВходящееПисьмо</types>
+      <types>CatalogRef.ГруппыДоступаФизическихЛиц</types>
+      <types>CatalogRef.БанковскиеСчета</types>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+      <types>CatalogRef.КатегорииДанных</types>
+      <types>CatalogRef.ВидыМероприятий</types>
+      <types>DocumentRef.ИсходящееПисьмо</types>
+      <types>CatalogRef.ВидыВнутреннихДокументов</types>
+      <types>CatalogRef.СерверныеСообщенияСВД</types>
+      <types>CatalogRef.ШаблоныТекстов</types>
+      <types>CatalogRef.ЗаписиРабочегоКалендаря</types>
+      <types>CatalogRef.РазделыНоменклатурыДел</types>
+      <types>CatalogRef.ВходящиеДокументы</types>
+      <types>CatalogRef.ШаблоныРассмотрения</types>
+      <types>CatalogRef.ШаблоныСогласования</types>
+      <types>CatalogRef.Должности</types>
+      <types>CatalogRef.ПапкиПисем</types>
+      <types>CatalogRef.ШаблоныВнутреннихДокументов</types>
+      <types>CatalogRef.ВнутренниеДокументы</types>
+      <types>CatalogRef.ШаблоныВходящихДокументов</types>
+      <types>CatalogRef.СообщенияОбсуждений</types>
+      <types>CatalogRef.Резолюции</types>
+      <types>CatalogRef.ШаблоныПоручения</types>
+      <types>CatalogRef.ШаблоныКомплексныхБизнесПроцессов</types>
+      <types>DocumentRef.ЕжедневныйОтчет</types>
+      <types>CatalogRef.ШаблоныГруппКонтрольныхТочек</types>
+      <types>CatalogRef.ПапкиФорума</types>
+      <types>CatalogRef.ГрифыДоступа</types>
+      <types>CatalogRef.ВизыСогласования</types>
+      <types>CatalogRef.Организации</types>
+      <types>CatalogRef.ВидыВходящихДокументов</types>
+      <types>CatalogRef.ДелаХраненияДокументов</types>
+      <types>CatalogRef.ГруппыКонтактовПользователей</types>
+      <types>CatalogRef.КонтрольныеТочки</types>
+      <types>CatalogRef.ШаблоныПриглашения</types>
+      <types>CatalogRef.ИсходящиеДокументы</types>
+      <types>CatalogRef.ПапкиПроектов</types>
+      <types>CatalogRef.ШаблоныИсполнения</types>
+      <types>CatalogRef.УчетныеЗаписиЭлектроннойПочты</types>
+      <types>CatalogRef.ВопросыДеятельности</types>
+      <types>CatalogRef.ШаблоныРегистрации</types>
+      <types>DocumentRef.ПередачаДелВАрхив</types>
+      <types>CatalogRef.ЭДПрисоединенныеФайлы</types>
+      <types>CatalogRef.Мероприятия</types>
+      <types>CatalogRef.ВидыИсходящихДокументов</types>
+      <types>CatalogRef.КонтактныеЛица</types>
+      <types>CatalogRef.ПроектныеЗадачи</types>
+      <types>CatalogRef.ПапкиМероприятий</types>
+      <types>CatalogRef.ПапкиВнутреннихДокументов</types>
+      <types>CatalogRef.ГруппыДоступаКонтрагентов</types>
+      <types>DocumentRef.УничтожениеДел</types>
+      <types>BusinessProcessRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="de1e0a9f-b244-468a-ad6d-9a008747884b">
+    <name>Дескриптор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дескриптор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДескрипторыДоступаОбъектов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="31463a6b-1928-4b5f-85e7-28d30e3fdf29">
+    <name>ОбъектМетаданных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект метаданных</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИдентификаторыОбъектовМетаданных</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ccdb1c16-e6a2-467c-b46c-98320783f1bb">
+    <name>ТипДескриптора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип дескриптора</value>
+    </synonym>
+    <comment>0 - основной; 1 - по рабочей группе; 2 - индивидуальный; 3 - от владельца; 4 - для локальных администраторов</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

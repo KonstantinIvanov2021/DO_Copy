@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c67570a4-bb1c-4f04-8f96-8fa5b5872a61">
+  <producedTypes>
+    <selectionType typeId="30dc8729-5abc-4f02-8689-4059fc402617" valueTypeId="6e6cc184-7204-4de9-b471-d20463908caf"/>
+    <listType typeId="a986f4a5-95e5-4ee5-9d8a-c4a462b384ee" valueTypeId="dee64554-5eb5-483f-98a5-c2704055ad6b"/>
+    <managerType typeId="df5f05e0-1890-415c-91c2-4fcc41e65beb" valueTypeId="c5769fb4-4f94-42e2-9a24-b86a0ee4f48a"/>
+    <recordSetType typeId="13b39caa-3c79-4edf-931e-ccfa926efa99" valueTypeId="1cec0af5-cdd5-4448-ba55-535c383df361"/>
+    <recordKeyType typeId="4680ef46-a818-4b8a-9d83-a4e850d8c071" valueTypeId="6cd04486-a4b5-453e-8c9f-ff7c91c3915f"/>
+    <recordType typeId="3a29045f-4bc8-47db-aebb-9829659f885e" valueTypeId="98d9b1b7-ed5f-433b-a76e-ebf65c84678d"/>
+    <recordManagerType typeId="8e60ed57-d1a0-4374-bf49-a3db4a0d7d33" valueTypeId="874d88a5-768a-464e-a3cc-3c4cf6a7abf5"/>
+  </producedTypes>
+  <name>ДатыЗакрытияКарточекПисем</name>
+  <synonym>
+    <key>ru</key>
+    <value>Даты закрытия карточек писем</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="1aeb0cf8-a84d-4248-a5bf-8c5036ec3b32">
+    <name>ДатаЗакрытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата закрытия</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="855f23ce-9d2f-4393-b616-8ad4bca197be">
+    <name>Письмо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Письмо</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ИсходящееПисьмо</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Проекты</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектнаяЗадача</dataPath>
+			<field>ПроектнаяЗадача</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статья</dataPath>
+			<field>Статья</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<inHierarchyDataSetParameter/>
+			<valueType/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<valueType/>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерГруппировки</dataPath>
+			<field>НомерГруппировки</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сценарий</dataPath>
+			<field>Сценарий</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РабочееВремяПользователейОбороты.Пользователь КАК Пользователь,
+	СУММА(РабочееВремяПользователейОбороты.Длительность / 3600) КАК ТрудозатратыФакт,
+	РабочееВремяПользователейОбороты.Проект КАК Проект,
+	"Часы по факту" КАК Статья,
+	5 КАК Поле1
+ПОМЕСТИТЬ ВремяФакт
+ИЗ
+	РегистрСведений.ФактическиеТрудозатраты КАК РабочееВремяПользователейОбороты
+ГДЕ
+	НЕ РабочееВремяПользователейОбороты.Удалена
+	И РабочееВремяПользователейОбороты.ДатаДобавления МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+{ГДЕ
+	РабочееВремяПользователейОбороты.Проект.*,
+	РабочееВремяПользователейОбороты.ПроектнаяЗадача.*}
+СГРУППИРОВАТЬ ПО
+	РабочееВремяПользователейОбороты.Проект,
+	РабочееВремяПользователейОбороты.Пользователь,
+	РабочееВремяПользователейОбороты.Подразделение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СУММА(ПроектныеЗадачи.ТекущийПланТрудозатраты) КАК ТрудозатратыПлан,
+	ПроектныеЗадачи.Владелец КАК Проект,
+	"Часы по плану" КАК Статья,
+	2 КАК Поле1
+ПОМЕСТИТЬ ВремяПлан
+ИЗ
+	Справочник.ПроектныеЗадачи КАК ПроектныеЗадачи
+ГДЕ
+	НЕ ПроектныеЗадачи.ПометкаУдаления
+{ГДЕ
+	ПроектныеЗадачи.Ссылка.* КАК ПроектнаяЗадача,
+	ПроектныеЗадачи.Владелец.* КАК Проект}
+СГРУППИРОВАТЬ ПО
+	ПроектныеЗадачи.Владелец
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	пби_ГрейдыСрезПоследних.Сотрудник КАК Сотрудник,
+	МАКСИМУМ(пби_ГрейдыСрезПоследних.Ставка) КАК Ставка,
+	пби_ГрейдыСрезПоследних.Показатель КАК Показатель
+ПОМЕСТИТЬ Ставки
+ИЗ
+	РегистрСведений.пби_Грейды.СрезПоследних(&amp;НачалоПериода,) КАК пби_ГрейдыСрезПоследних
+СГРУППИРОВАТЬ ПО
+	пби_ГрейдыСрезПоследних.Сотрудник,
+	пби_ГрейдыСрезПоследних.Показатель
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(ВЫБОР
+		КОГДА пби_ПоказателиДляРасчетовСрезПоследних.Показатель = &amp;ПоказательПроцентЕСН
+			ТОГДА пби_ПоказателиДляРасчетовСрезПоследних.Значение
+		ИНАЧЕ 0
+	КОНЕЦ) КАК ПроцентЕСН,
+	МАКСИМУМ(ВЫБОР
+		КОГДА пби_ПоказателиДляРасчетовСрезПоследних.Показатель = &amp;ПоказательПроцентОтпускных
+			ТОГДА пби_ПоказателиДляРасчетовСрезПоследних.Значение
+		ИНАЧЕ 0
+	КОНЕЦ) КАК ПроцентОтпускных,
+	МАКСИМУМ(ВЫБОР
+		КОГДА пби_ПоказателиДляРасчетовСрезПоследних.Показатель = &amp;ПоказательСтоимостьСотрудникаОфисная
+			ТОГДА пби_ПоказателиДляРасчетовСрезПоследних.Значение
+		ИНАЧЕ 0
+	КОНЕЦ) КАК СтоимостьСотрудника
+ПОМЕСТИТЬ Показатели
+ИЗ
+	РегистрСведений.пби_ПоказателиДляРасчетов.СрезПоследних(&amp;НачалоПериода,) КАК пби_ПоказателиДляРасчетовСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СУММА(РеализацииПоПроектамОбороты.СуммаОборот) КАК СуммаВыручка,
+	РеализацииПоПроектамОбороты.Проект КАК Проект,
+	"Сумма по договору" КАК Статья,
+	3 КАК Поле1,
+	ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка) КАК Пользователь
+ПОМЕСТИТЬ Выручка
+ИЗ
+	РегистрНакопления.РеализацииПоПроектам.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Период, Статья В ИЕРАРХИИ
+		(&amp;СтатьяВыручкаГруппа)
+	И Сценарий = &amp;СценарийФакт) КАК РеализацииПоПроектамОбороты
+{ГДЕ
+	РеализацииПоПроектамОбороты.Проект.*,
+	РеализацииПоПроектамОбороты.ПроектнаяЗадача.*}
+СГРУППИРОВАТЬ ПО
+	РеализацииПоПроектамОбороты.Проект,
+	ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫРАЗИТЬ(СУММА(ВЫБОР
+		КОГДА Ставки.Показатель = &amp;ПоказательОклад
+			ТОГДА Ставки.Ставка / 168 * (1 + Показатели.ПроцентЕСН / 100) * (1 + Показатели.ПроцентОтпускных / 100) +
+				Показатели.СтоимостьСотрудника / 168
+		КОГДА Ставки.Показатель = &amp;ПоказательСтавка
+			ТОГДА Ставки.Ставка * (1 + Показатели.ПроцентЕСН / 100) * (1 + Показатели.ПроцентОтпускных / 100) +
+				Показатели.СтоимостьСотрудника / 168
+		ИНАЧЕ 0
+	КОНЕЦ) КАК ЧИСЛО(15, 0)) КАК СуммаГрейда,
+	Ставки.Сотрудник КАК Сотрудник,
+	"Грейд" КАК Статья,
+	0 КАК НомерГруппировки
+ПОМЕСТИТЬ Грейды
+ИЗ
+	Ставки КАК Ставки
+		ЛЕВОЕ СОЕДИНЕНИЕ Показатели КАК Показатели
+		ПО ИСТИНА
+СГРУППИРОВАТЬ ПО
+	Ставки.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РеализацииПоПроектамОбороты.Проект КАК Проект,
+	СУММА(РеализацииПоПроектамОбороты.СуммаОборот) КАК Сумма,
+	"Затраты ПЛАН" КАК Статья,
+	1 КАК Поле1,
+	ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка) КАК Пользователь
+ПОМЕСТИТЬ ЗатратыПлан
+ИЗ
+	РегистрНакопления.РеализацииПоПроектам.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Период, Сценарий = &amp;СценарийПлан
+	И Статья В ИЕРАРХИИ (&amp;СтатьиЗатратГруппа)) КАК РеализацииПоПроектамОбороты
+{ГДЕ
+	РеализацииПоПроектамОбороты.Проект.*,
+	РеализацииПоПроектамОбороты.ПроектнаяЗадача.*}
+СГРУППИРОВАТЬ ПО
+	РеализацииПоПроектамОбороты.Проект,
+	ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВремяФакт.Проект КАК Проект,
+	"Затраты ФАКТ" КАК Статья,
+	СУММА(ЕСТЬNULL(ВремяФакт.ТрудозатратыФакт * Грейды.СуммаГрейда, 0)) КАК Сумма,
+	6 КАК Поле1,
+	ВремяФакт.Пользователь
+ПОМЕСТИТЬ ЗатратыФакт
+ИЗ
+	ВремяФакт КАК ВремяФакт
+		ЛЕВОЕ СОЕДИНЕНИЕ Грейды КАК Грейды
+		ПО ВремяФакт.Пользователь = Грейды.Сотрудник
+СГРУППИРОВАТЬ ПО
+	ВремяФакт.Проект,
+	ВремяФакт.Пользователь
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗатратыФакт.Проект,
+	СУММА(ЗатратыФакт.Сумма) КАК Сумма
+ПОМЕСТИТЬ ЗатратыФактГруппировка
+ИЗ
+	ЗатратыФакт КАК ЗатратыФакт
+СГРУППИРОВАТЬ ПО
+	ЗатратыФакт.Проект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	"Прибыль по плану" КАК Статья,
+	СУММА(ЕСТЬNULL(Выручка.СуммаВыручка, 0) - ЕСТЬNULL(ЗатратыПлан.Сумма, 0)) КАК Сумма,
+	ЕСТЬNULL(ЗатратыПлан.Проект, Выручка.Проект) КАК Проект,
+	4 КАК Поле1
+ПОМЕСТИТЬ ПрибыльПоПлану
+ИЗ
+	Выручка КАК Выручка
+		ПОЛНОЕ СОЕДИНЕНИЕ ЗатратыПлан КАК ЗатратыПлан
+		ПО Выручка.Проект = ЗатратыПлан.Проект
+СГРУППИРОВАТЬ ПО
+	ЕСТЬNULL(ЗатратыПлан.Проект, Выручка.Проект)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(ЕСТЬNULL(Выручка.СуммаВыручка, 0) - ЕСТЬNULL(ЗатратыФактГруппировка.Сумма, 0)) КАК Сумма,
+	"Прибыль по факту" КАК Статья,
+	ЕСТЬNULL(Выручка.Проект, ЗатратыФактГруппировка.Проект) КАК Проект,
+	7 КАК Поле1
+ПОМЕСТИТЬ ПрибыльПоФакту
+ИЗ
+	Выручка КАК Выручка
+		ПОЛНОЕ СОЕДИНЕНИЕ ЗатратыФактГруппировка КАК ЗатратыФактГруппировка
+		ПО ЗатратыФактГруппировка.Проект = Выручка.Проект
+СГРУППИРОВАТЬ ПО
+	ЕСТЬNULL(Выручка.Проект, ЗатратыФактГруппировка.Проект)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЕСТЬNULL(ВЫБОР
+		КОГДА Выручка.СуммаВыручка = 0
+			ТОГДА 0
+		ИНАЧЕ ПрибыльПоПлану.Сумма / Выручка.СуммаВыручка * 100
+	КОНЕЦ, 0) КАК Сумма,
+	ЕСТЬNULL(Выручка.Проект, ПрибыльПоПлану.Проект) КАК Проект,
+	"Рентабельность продаж по плану" КАК Статья,
+	8 КАК Поле1
+ПОМЕСТИТЬ РентабельностьПоПлану
+ИЗ
+	Выручка КАК Выручка
+		ПОЛНОЕ СОЕДИНЕНИЕ ПрибыльПоПлану КАК ПрибыльПоПлану
+		ПО Выручка.Проект = ПрибыльПоПлану.Проект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	"Рентабельность продаж по факту" КАК Статья,
+	ЕСТЬNULL(ПрибыльПоФакту.Проект, Выручка.Проект) КАК Проект,
+	ЕСТЬNULL(ВЫБОР
+		КОГДА Выручка.СуммаВыручка = 0
+			ТОГДА 0
+		ИНАЧЕ ПрибыльПоФакту.Сумма / Выручка.СуммаВыручка * 100
+	КОНЕЦ, 0) КАК Сумма,
+	9 КАК Поле1
+ПОМЕСТИТЬ РентабельностьПоФакту
+ИЗ
+	Выручка КАК Выручка
+		ПОЛНОЕ СОЕДИНЕНИЕ ПрибыльПоФакту КАК ПрибыльПоФакту
+		ПО ПрибыльПоФакту.Проект = Выручка.Проект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РентабельностьПоФакту.Статья,
+	РентабельностьПоФакту.Проект,
+	РентабельностьПоФакту.Сумма,
+	РентабельностьПоФакту.Поле1 КАК НомерГруппировки,
+	NULL КАК Сотрудник
+ПОМЕСТИТЬ СводнаяТаблица
+ИЗ
+	РентабельностьПоФакту КАК РентабельностьПоФакту
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗатратыПлан.Статья,
+	ЗатратыПлан.Проект,
+	ЗатратыПлан.Сумма,
+	ЗатратыПлан.Поле1,
+	ЗатратыПлан.Пользователь
+ИЗ
+	ЗатратыПлан КАК ЗатратыПлан
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РентабельностьПоПлану.Статья,
+	РентабельностьПоПлану.Проект,
+	РентабельностьПоПлану.Сумма,
+	РентабельностьПоПлану.Поле1,
+	NULL
+ИЗ
+	РентабельностьПоПлану КАК РентабельностьПоПлану
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Грейды.Статья,
+	NULL,
+	Грейды.СуммаГрейда,
+	Грейды.НомерГруппировки,
+	Грейды.Сотрудник
+ИЗ
+	Грейды КАК Грейды
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПрибыльПоФакту.Статья,
+	ПрибыльПоФакту.Проект,
+	ПрибыльПоФакту.Сумма,
+	ПрибыльПоФакту.Поле1,
+	NULL
+ИЗ
+	ПрибыльПоФакту КАК ПрибыльПоФакту
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВремяПлан.Статья,
+	ВремяПлан.Проект,
+	ВремяПлан.ТрудозатратыПлан,
+	ВремяПлан.Поле1,
+	NULL
+ИЗ
+	ВремяПлан КАК ВремяПлан
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗатратыФакт.Статья,
+	ЗатратыФакт.Проект,
+	ЗатратыФакт.Сумма,
+	ЗатратыФакт.Поле1,
+	ЗатратыФакт.Пользователь
+ИЗ
+	ЗатратыФакт КАК ЗатратыФакт
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПрибыльПоПлану.Статья,
+	ПрибыльПоПлану.Проект,
+	ПрибыльПоПлану.Сумма,
+	ПрибыльПоПлану.Поле1,
+	NULL
+ИЗ
+	ПрибыльПоПлану КАК ПрибыльПоПлану
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВремяФакт.Статья,
+	ВремяФакт.Проект,
+	ВремяФакт.ТрудозатратыФакт,
+	ВремяФакт.Поле1,
+	ВремяФакт.Пользователь
+ИЗ
+	ВремяФакт КАК ВремяФакт
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Выручка.Статья,
+	Выручка.Проект,
+	Выручка.СуммаВыручка,
+	Выручка.Поле1,
+	Выручка.Пользователь
+ИЗ
+	Выручка КАК Выручка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СводнаяТаблица.Статья КАК Статья,
+	СводнаяТаблица.Проект КАК Проект,
+	СводнаяТаблица.Сумма КАК Сумма,
+	СводнаяТаблица.НомерГруппировки КАК НомерГруппировки,
+	СводнаяТаблица.Сотрудник КАК Сотрудник
+ИЗ
+	СводнаяТаблица КАК СводнаяТаблица
+УПОРЯДОЧИТЬ ПО
+	НомерГруппировки</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">2020-05-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">2020-05-31T23:59:59</value>
+		<useRestriction>false</useRestriction>
+		<expression>КонецПериода(&amp;КонецПериода, "День")</expression>
+	</parameter>
+	<parameter>
+		<name>СценарийПлан</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сценарий план</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.пби_Сценарий</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Справочник.пби_Сценарий.План</value>
+		</availableValue>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СценарийФакт</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сценарий факт</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.пби_Сценарий</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Справочник.пби_Сценарий.Факт</value>
+		</availableValue>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПоказательОклад</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Показатель оклад</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.пби_Показатели</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПоказательСтавка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Показатель ставка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.пби_Показатели</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПоказательПроцентОтпускных</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Показатель процент отпускных</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.пби_Показатели</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПоказательПроцентЕСН</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Показатель процент ЕСН</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.пби_Показатели</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПоказательСтоимостьСотрудникаОфисная</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Показатель стоимость сотрудника офисная</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.пби_Показатели</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СтатьяВыручкаГруппа</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статья выручка группа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.пби_СтатьиОборотов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СтатьиЗатратГруппа</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статьи затрат группа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.пби_СтатьиОборотов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Проект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Статья</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерГруппировки</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Проект</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>b2b8d7c1-47de-4674-9fbe-e62879df7d0b</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ПроектнаяЗадача</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:nil="true"/>
+					<dcsset:userSettingID>cb788b9f-221d-4bf7-96b3-643f12ed415b</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>a47b0557-0260-465f-9731-68c354fc1522</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>e782cdfa-d9f7-4079-b810-c574a9b9728d</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Арктика</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Статья</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">НомерГруппировки</dcsset:left>
+							<dcsset:comparisonType>InList</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Сотрудник</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:row>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Статья</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НомерГруппировки</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

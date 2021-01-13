@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0c4c1a28-d79a-43bd-9afd-a51048358e12">
+  <name>КонтрольПередЗаписьюЗадачи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контроль перед записью задачи</value>
+  </synonym>
+  <source>
+    <types>TaskObject.ЗадачаИсполнителя</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.КонтрольСобытия.КонтрольПередЗаписьюЗадачиПередЗаписью</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6fcc6195-76a1-4090-9717-2ff1a1110c56">
+  <producedTypes>
+    <selectionType typeId="9bd5a610-7bc7-4bed-8ab3-aa2ed803f622" valueTypeId="507e9297-4f0e-4e5d-bfae-b29c4c284c3d"/>
+    <listType typeId="2289fb25-c4b9-4d94-ba91-373c050d92f7" valueTypeId="fe4d13e8-7b33-4c3b-88cd-90afc5fedf0d"/>
+    <managerType typeId="111f7e61-1b0e-456e-9f9c-16555ab3334c" valueTypeId="8ef616ef-bbfa-4b4c-b735-c9c9c1c9a9ed"/>
+    <recordSetType typeId="5dae46eb-b108-4747-864a-a500061d0d93" valueTypeId="c9ac4d5b-3f86-4427-a148-ded3467910fa"/>
+    <recordKeyType typeId="f165ebe2-a567-48be-94fe-50cd2b91d56a" valueTypeId="8e13f0d3-1a46-40aa-9a91-e4950e16573d"/>
+    <recordType typeId="3978b2ba-1f85-470b-91ce-de34864fe3d8" valueTypeId="2f655032-3cf5-40c8-94dc-9a3dc887d016"/>
+    <recordManagerType typeId="07570d4e-1e5a-4784-9842-099304b6b1b6" valueTypeId="76125880-2586-499c-a57e-68588cef031a"/>
+  </producedTypes>
+  <name>ОбъектыДляАвтоподбораАдресатов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Объекты для автоподбора адресатов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="af93157f-f9d7-48fa-ad3f-cd3cd78b1174">
+    <name>Владелец</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c90e688c-89e9-40a7-bea2-bf9b14f55052">
+    <name>ОбъектДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект данных</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.ГруппыЛичныхАдресатов</types>
+      <types>CatalogRef.ЛичныеАдресаты</types>
+      <types>CatalogRef.СтруктураПредприятия</types>
+      <types>CatalogRef.Пользователи</types>
+      <types>CatalogRef.КонтактныеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

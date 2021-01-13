@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="877c2d77-fbc2-48e0-ad04-40d999113cdb">
+  <name>ОбменДаннымиДОУХПередУдалением</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными ДО-УХ, перед удалением</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.КлассификаторБанковРФ</types>
+    <types>CatalogObject.Проекты</types>
+    <types>CatalogObject.Контрагенты</types>
+    <types>CatalogObject.СтатьиДвиженияДенежныхСредств</types>
+    <types>CatalogObject.ВнутренниеДокументы</types>
+    <types>CatalogObject.Организации</types>
+    <types>CatalogObject.БанковскиеСчета</types>
+    <types>CatalogObject.Валюты</types>
+    <types>CatalogObject.ПроектныеЗадачи</types>
+    <types>CatalogObject.КонтактныеЛица</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.ОбменДаннымиСобытияДокументооборот.ОбменДаннымиДОУХПередУдалением</handler>
+</mdclass:EventSubscription>

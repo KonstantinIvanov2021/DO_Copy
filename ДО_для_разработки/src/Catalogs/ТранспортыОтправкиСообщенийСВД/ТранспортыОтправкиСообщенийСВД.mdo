@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="111bded3-c456-4eeb-8fe0-0176f832e34b">
+  <producedTypes>
+    <objectType typeId="f0d404f9-edeb-4718-b82f-bdc33745eef6" valueTypeId="d210b69c-c333-4805-a236-358e424d87ba"/>
+    <refType typeId="4160a9aa-575e-497a-8ae3-8c6e8c1f0dce" valueTypeId="c09f005a-c150-4c64-bfad-cead5b02e129"/>
+    <selectionType typeId="61723087-8f81-4f4d-b325-1f3966e0cce5" valueTypeId="4d2dc5c3-5b3f-48f0-ac47-b42c23f88560"/>
+    <listType typeId="21081cc9-0b37-4c74-858b-f292ae028e6a" valueTypeId="37094c22-b390-4757-a7df-3317f20c2eb2"/>
+    <managerType typeId="5d65858f-e80d-4cd7-aae2-843cd0cce86a" valueTypeId="2f37a945-5489-4c3b-9232-5ae024d41d6e"/>
+  </producedTypes>
+  <name>ТранспортыОтправкиСообщенийСВД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Транспорты отправки сообщений</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ТранспортыОтправкиСообщенийСВД.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ТранспортыОтправкиСообщенийСВД.StandardAttribute.Code</inputByString>
+  <searchStringModeOnInputByString>AnyPart</searchStringModeOnInputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Транспорт отправки СВД</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ТранспортыОтправкиСообщенийСВД.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ТранспортыОтправкиСообщенийСВД.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="743d69eb-425c-4321-94e2-0e9c4f03f4b0">
+    <name>Настройка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НастройкиПочтыСВД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8a02ebbb-6c4a-4fc8-b662-75237eec5c4d">
+    <name>ФорматСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формат сообщения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФорматыСообщенийСВД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="00dbec9f-2ff5-4745-a382-80d376bdbc79">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cbb0bdef-bdf6-445e-93de-7bcffaf4f340">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

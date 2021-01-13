@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c5d801d6-ff39-47cd-b82f-51c7ceb4e2ec">
+  <producedTypes>
+    <selectionType typeId="4609a0a2-0c3a-4051-99b8-0c4c061ed8f3" valueTypeId="3a15dc73-5716-485d-bf7c-01f0e63795fd"/>
+    <listType typeId="672e94fa-92c4-4ad9-936c-d0cf1bc10058" valueTypeId="98d7d631-5b0d-422a-b7c7-fb204382df79"/>
+    <managerType typeId="a806c0a0-5f01-49f8-83c9-9e33b6f2377b" valueTypeId="172adcba-f186-4ac3-8c47-9fa4a363e46e"/>
+    <recordSetType typeId="9e160445-325b-42b4-bfee-905319804e54" valueTypeId="be0c7313-4675-4249-a37a-e7d3a479150e"/>
+    <recordKeyType typeId="f9525f6f-d15d-437b-8bf4-7b9235562319" valueTypeId="6ca7edb7-311e-4f25-8387-611e3905169e"/>
+    <recordType typeId="2c20fba5-189e-4a9e-83bb-1d4fa22b8933" valueTypeId="b0a6627c-63b2-451b-b184-0a54624fe823"/>
+    <recordManagerType typeId="9fe4f755-b071-4a3b-9f60-ad76cdc4ba90" valueTypeId="02cb1bd1-d675-49c1-b329-c3e0730ffc55"/>
+  </producedTypes>
+  <name>ИспользованиеАдресатовПользователями</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использование адресатов пользователями</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ИспользованиеАдресатовПользователями.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="245f54ae-5a8b-4c90-a359-6fc02e7dc852">
+    <name>ДатаПоследнегоИспользования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата последнего использования</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="3cf7886e-67c5-4222-a5c0-2ad279e7df28">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b9c65744-ee68-439f-b850-90c273cf659b">
+    <name>Адресат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адресат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.АдресатыПочтовыхСообщений</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="ba7b57e8-b68c-47bb-ab87-64727d7dce2e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

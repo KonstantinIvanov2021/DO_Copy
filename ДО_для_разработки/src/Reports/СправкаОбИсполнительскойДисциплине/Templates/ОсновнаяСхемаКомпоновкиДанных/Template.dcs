@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Задачи</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выполнено</dataPath>
+			<field>Выполнено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнено</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВСрок</dataPath>
+			<field>ВСрок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В срок</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеВСрок</dataPath>
+			<field>НеВСрок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не в срок</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеВыполнено</dataPath>
+			<field>НеВыполнено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не выполнено</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выполняются</dataPath>
+			<field>Выполняются</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняются</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Просроченные</dataPath>
+			<field>Просроченные</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просроченные</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Автор</dataPath>
+			<field>Автор</field>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнительЗадачи</dataPath>
+			<field>ИсполнительЗадачи</field>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Задача</dataPath>
+			<field>Задача</field>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПереносовСрока</dataPath>
+			<field>КоличествоПереносовСрока</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество запросов на перенос срока</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Задачи.Ссылка КАК Задача,
+	Задачи.БизнесПроцесс КАК БизнесПроцесс,
+	Задачи.Дата КАК Дата,
+	Задачи.ТочкаМаршрута КАК ТочкаМаршрута,
+	Задачи.ТекущийИсполнитель КАК Исполнитель,
+	ВЫБОР
+		КОГДА ПереносыСроковВыполненияПроцессовИЗадач.Предмет ЕСТЬ NULL 
+			ТОГДА 0
+		ИНАЧЕ 1
+	КОНЕЦ КАК ПереносСрока
+ПОМЕСТИТЬ Задачи
+ИЗ
+	Задача.ЗадачаИсполнителя КАК Задачи
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПереносыСроковВыполненияПроцессовИЗадач КАК ПереносыСроковВыполненияПроцессовИЗадач
+		ПО (ПереносыСроковВыполненияПроцессовИЗадач.Предмет = Задачи.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗадачиДляВыполнения КАК ЗадачиДляВыполнения
+		ПО Задачи.Ссылка = ЗадачиДляВыполнения.Задача
+ГДЕ
+	Задачи.ТекущийИсполнитель &lt;&gt; ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+	И Задачи.ТекущийИсполнитель &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПолныеРоли.ПустаяСсылка)
+	И Задачи.ТочкаМаршрута &lt;&gt; ЗНАЧЕНИЕ(БизнесПроцесс.Исполнение.ТочкаМаршрута.Исполнить)
+	И Задачи.ТочкаМаршрута &lt;&gt; ЗНАЧЕНИЕ(БизнесПроцесс.Исполнение.ТочкаМаршрута.ОтветственноеИсполнение)
+	И Задачи.ИсключенаИзПроцесса = ЛОЖЬ
+	И ЕСТЬNULL(ЗадачиДляВыполнения.СостояниеВыполнения, НЕОПРЕДЕЛЕНО) &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СостоянияЗадачДляВыполнения.ГотоваКВыполнению)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Задачи.БизнесПроцесс,
+	Задачи.ТочкаМаршрута,
+	Задачи.Исполнитель,
+	МАКСИМУМ(Задачи.Дата) КАК Дата,
+	СУММА(Задачи.ПереносСрока) КАК КоличествоПереносовСрока
+ПОМЕСТИТЬ ДатыПоследнихЗадач
+ИЗ
+	Задачи КАК Задачи
+
+СГРУППИРОВАТЬ ПО
+	Задачи.БизнесПроцесс,
+	Задачи.ТочкаМаршрута,
+	Задачи.Исполнитель
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РезультатыИсполнения.ЗадачаИсполнителя,
+	Задачи.БизнесПроцесс,
+	РезультатыИсполнения.ИдентификаторИсполнителя,
+	РезультатыИсполнения.НомерСтроки,
+	ВЫБОР
+		КОГДА ПереносыСроковВыполненияПроцессовИЗадач.Предмет ЕСТЬ NULL 
+			ТОГДА 0
+		ИНАЧЕ 1
+	КОНЕЦ КАК ПереносСрока
+ПОМЕСТИТЬ ЗадачиПроцессовИсполнения
+ИЗ
+	БизнесПроцесс.Исполнение.РезультатыИсполнения КАК РезультатыИсполнения
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Задача.ЗадачаИсполнителя КАК Задачи
+		ПО РезультатыИсполнения.ЗадачаИсполнителя = Задачи.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПереносыСроковВыполненияПроцессовИЗадач КАК ПереносыСроковВыполненияПроцессовИЗадач
+		ПО РезультатыИсполнения.ЗадачаИсполнителя = ПереносыСроковВыполненияПроцессовИЗадач.Предмет
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗадачиДляВыполнения КАК ЗадачиДляВыполнения
+		ПО РезультатыИсполнения.ЗадачаИсполнителя = ЗадачиДляВыполнения.Задача
+ГДЕ
+	Задачи.ТекущийИсполнитель &lt;&gt; ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+	И Задачи.ТекущийИсполнитель &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПолныеРоли.ПустаяСсылка)
+	И Задачи.ИсключенаИзПроцесса = ЛОЖЬ
+	И ЕСТЬNULL(ЗадачиДляВыполнения.СостояниеВыполнения, НЕОПРЕДЕЛЕНО) &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СостоянияЗадачДляВыполнения.ГотоваКВыполнению)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗадачиПроцессовИсполнения.ИдентификаторИсполнителя,
+	ЗадачиПроцессовИсполнения.БизнесПроцесс,
+	МАКСИМУМ(ЗадачиПроцессовИсполнения.НомерСтроки) КАК НомерСтроки,
+	СУММА(ЗадачиПроцессовИсполнения.ПереносСрока) КАК КоличествоПереносовСрока
+ПОМЕСТИТЬ ПоследниеСтрокиЗадачПроцессовИсполнения
+ИЗ
+	ЗадачиПроцессовИсполнения КАК ЗадачиПроцессовИсполнения
+
+СГРУППИРОВАТЬ ПО
+	ЗадачиПроцессовИсполнения.ИдентификаторИсполнителя,
+	ЗадачиПроцессовИсполнения.БизнесПроцесс
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЗадачиПроцессовИсполнения.ЗадачаИсполнителя КАК Задача,
+	ПоследниеСтрокиЗадачПроцессовИсполнения.КоличествоПереносовСрока
+ПОМЕСТИТЬ ЗадачиПоследнихЦикловПроцессов
+ИЗ
+	ПоследниеСтрокиЗадачПроцессовИсполнения КАК ПоследниеСтрокиЗадачПроцессовИсполнения
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЗадачиПроцессовИсполнения КАК ЗадачиПроцессовИсполнения
+		ПО ПоследниеСтрокиЗадачПроцессовИсполнения.ИдентификаторИсполнителя = ЗадачиПроцессовИсполнения.ИдентификаторИсполнителя
+			И ПоследниеСтрокиЗадачПроцессовИсполнения.БизнесПроцесс = ЗадачиПроцессовИсполнения.БизнесПроцесс
+			И ПоследниеСтрокиЗадачПроцессовИсполнения.НомерСтроки = ЗадачиПроцессовИсполнения.НомерСтроки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	Задачи.Задача,
+	ДатыПоследнихЗадач.КоличествоПереносовСрока
+ИЗ
+	ДатыПоследнихЗадач КАК ДатыПоследнихЗадач
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Задачи КАК Задачи
+		ПО ДатыПоследнихЗадач.ТочкаМаршрута = Задачи.ТочкаМаршрута
+			И ДатыПоследнихЗадач.Исполнитель = Задачи.Исполнитель
+			И ДатыПоследнихЗадач.Дата = Задачи.Дата
+			И ДатыПоследнихЗадач.БизнесПроцесс = Задачи.БизнесПроцесс
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СведенияОПользователяхДокументооборот.Пользователь КАК Исполнитель,
+	СведенияОПользователяхДокументооборот.Подразделение
+ПОМЕСТИТЬ СведенияОПользователяхДокументооборот
+ИЗ
+	РегистрСведений.СведенияОПользователяхДокументооборот КАК СведенияОПользователяхДокументооборот
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ИсполнителиЗадач.РольИсполнителя,
+	СведенияОПользователяхДокументооборот.Подразделение
+ИЗ
+	РегистрСведений.СведенияОПользователяхДокументооборот КАК СведенияОПользователяхДокументооборот
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ИсполнителиЗадач КАК ИсполнителиЗадач
+		ПО СведенияОПользователяхДокументооборот.Пользователь = ИсполнителиЗадач.Исполнитель
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Пользователи КАК Пользователи
+		ПО СведенияОПользователяхДокументооборот.Пользователь = Пользователи.Ссылка
+ГДЕ
+	Пользователи.Недействителен = ЛОЖЬ
+
+СГРУППИРОВАТЬ ПО
+	ИсполнителиЗадач.РольИсполнителя,
+	СведенияОПользователяхДокументооборот.Подразделение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Задачи.Ссылка КАК Задача,
+	Задачи.Выполнена,
+	Задачи.СрокИсполнения,
+	Задачи.ДатаИсполнения,
+	Задачи.Автор КАК Автор,
+	Задачи.Исполнитель,
+	Задачи.РольИсполнителя,
+	СведенияОПользователяхДокументооборот.Подразделение КАК Подразделение,
+	Задачи.Проект КАК Проект
+ПОМЕСТИТЬ ЗадачиПоПодразделениям
+ИЗ
+	Задача.ЗадачаИсполнителя КАК Задачи
+		ЛЕВОЕ СОЕДИНЕНИЕ СведенияОПользователяхДокументооборот КАК СведенияОПользователяхДокументооборот
+		ПО Задачи.ТекущийИсполнитель = СведенияОПользователяхДокументооборот.Исполнитель
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗадачиДляВыполнения КАК ЗадачиДляВыполнения
+		ПО Задачи.Ссылка = ЗадачиДляВыполнения.Задача
+ГДЕ
+	НЕ(Задачи.Исполнитель = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				И Задачи.РольИсполнителя = ЗНАЧЕНИЕ(Справочник.ПолныеРоли.ПустаяСсылка))
+	И Задачи.ИсключенаИзПроцесса = ЛОЖЬ
+	И Задачи.ПометкаУдаления = ЛОЖЬ
+	И ЕСТЬNULL(ЗадачиДляВыполнения.СостояниеВыполнения, НЕОПРЕДЕЛЕНО) &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СостоянияЗадачДляВыполнения.ГотоваКВыполнению)
+{ГДЕ
+	(НЕ Задачи.Выполнена
+			ИЛИ Задачи.ДатаИсполнения &gt;= &amp;ДатаНачала),
+	(Задачи.Дата &lt;= &amp;ДатаОкончания),
+	(СведенияОПользователяхДокументооборот.Подразделение В ИЕРАРХИИ (&amp;Подразделение)),
+	(ВЫБОР
+			КОГДА ТИПЗНАЧЕНИЯ(&amp;Исполнитель) = ТИП(Справочник.Пользователи)
+					И ИСТИНА В
+						(ВЫБРАТЬ ПЕРВЫЕ 1
+							ИСТИНА
+						ИЗ
+							РегистрСведений.ИсполнителиРолейИДелегаты КАК ИсполнителиРолейИДелегаты
+						ГДЕ
+							ИсполнителиРолейИДелегаты.РольПользователь = Задачи.ТекущийИсполнитель
+							И ИсполнителиРолейИДелегаты.ИсполнительДелегат = &amp;Исполнитель
+							И ИсполнителиРолейИДелегаты.ИмяОбластиДелегирования В ("", "ПроцессыИЗадачи"))
+				ТОГДА ИСТИНА
+			КОГДА ТИПЗНАЧЕНИЯ(&amp;Исполнитель) = ТИП(Справочник.РабочиеГруппы)
+					И Задачи.Исполнитель &lt;&gt; ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+					И Задачи.Исполнитель В
+						(ВЫБРАТЬ
+							СоставГрупп.Пользователь
+						ИЗ
+							РегистрСведений.СоставыГруппПользователей КАК СоставГрупп
+						ГДЕ
+							СоставГрупп.ГруппаПользователей = &amp;Исполнитель)
+				ТОГДА ИСТИНА
+			КОГДА ТИПЗНАЧЕНИЯ(&amp;Исполнитель) = ТИП(Справочник.РабочиеГруппы)
+					И Задачи.Исполнитель = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+					И Задачи.РольИсполнителя В
+						(ВЫБРАТЬ
+							ИсполнителиЗадач.РольИсполнителя
+						ИЗ
+							РегистрСведений.ИсполнителиЗадач КАК ИсполнителиЗадач
+								ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СоставыГруппПользователей КАК СоставГрупп
+								ПО
+									ИсполнителиЗадач.Исполнитель = СоставГрупп.Пользователь
+						ГДЕ
+							СоставГрупп.ГруппаПользователей = &amp;Исполнитель)
+				ТОГДА ИСТИНА
+			КОГДА ТИПЗНАЧЕНИЯ(&amp;Исполнитель) = ТИП(Справочник.ПолныеРоли)
+					И Задачи.Исполнитель = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+					И Задачи.РольИсполнителя = &amp;Исполнитель
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ),
+	(Задачи.СостояниеБизнесПроцесса = &amp;СостояниеБизнесПроцесса)}
+
+СГРУППИРОВАТЬ ПО
+	Задачи.Ссылка,
+	Задачи.Выполнена,
+	Задачи.СрокИсполнения,
+	Задачи.ДатаИсполнения,
+	Задачи.Автор,
+	Задачи.Исполнитель,
+	Задачи.РольИсполнителя,
+	СведенияОПользователяхДокументооборот.Подразделение,
+	Задачи.Проект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	1 КАК Количество,
+	ВЫБОР
+		КОГДА ЗадачиПоПодразделениям.Выполнена
+				И (ЗадачиПоПодразделениям.СрокИсполнения &gt;= ЗадачиПоПодразделениям.ДатаИсполнения
+					ИЛИ ЗадачиПоПодразделениям.СрокИсполнения = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0))
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ВСрок,
+	ВЫБОР
+		КОГДА ЗадачиПоПодразделениям.Выполнена
+				И ЗадачиПоПодразделениям.СрокИсполнения &lt; ЗадачиПоПодразделениям.ДатаИсполнения
+				И ЗадачиПоПодразделениям.СрокИсполнения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК НеВСрок,
+	ВЫБОР
+		КОГДА ЗадачиПоПодразделениям.Выполнена
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Выполнено,
+	ВЫБОР
+		КОГДА НЕ ЗадачиПоПодразделениям.Выполнена
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК НеВыполнено,
+	ВЫБОР
+		КОГДА НЕ ЗадачиПоПодразделениям.Выполнена
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Выполняются,
+	ВЫБОР
+		КОГДА НЕ ЗадачиПоПодразделениям.Выполнена
+				И ЗадачиПоПодразделениям.СрокИсполнения &lt; &amp;КрайнийСрок
+				И ЗадачиПоПодразделениям.СрокИсполнения &lt;&gt; ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Просроченные,
+	ЗадачиПоПодразделениям.Задача КАК Задача,
+	ЗадачиПоПодразделениям.Автор КАК Автор,
+	ЗадачиПоПодразделениям.Проект КАК Проект,
+	ВЫБОР
+		КОГДА ЗадачиПоПодразделениям.Исполнитель &lt;&gt; ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА ЗадачиПоПодразделениям.Исполнитель
+		ИНАЧЕ ЗадачиПоПодразделениям.РольИсполнителя
+	КОНЕЦ КАК ИсполнительЗадачи,
+	ЗадачиПоПодразделениям.Подразделение КАК Подразделение,
+	ЗадачиПоследнихЦикловПроцессов.КоличествоПереносовСрока КАК КоличествоПереносовСрока
+ПОМЕСТИТЬ РезультатБезГруппировки
+ИЗ
+	ЗадачиПоПодразделениям КАК ЗадачиПоПодразделениям
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ЗадачиПоследнихЦикловПроцессов КАК ЗадачиПоследнихЦикловПроцессов
+		ПО ЗадачиПоПодразделениям.Задача = ЗадачиПоследнихЦикловПроцессов.Задача
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(РезультатБезГруппировки.Количество) КАК Количество,
+	СУММА(РезультатБезГруппировки.ВСрок) КАК ВСрок,
+	СУММА(РезультатБезГруппировки.НеВСрок) КАК НеВСрок,
+	СУММА(РезультатБезГруппировки.Выполнено) КАК Выполнено,
+	СУММА(РезультатБезГруппировки.НеВыполнено) КАК НеВыполнено,
+	СУММА(РезультатБезГруппировки.Выполняются) КАК Выполняются,
+	СУММА(РезультатБезГруппировки.Просроченные) КАК Просроченные,
+	РезультатБезГруппировки.КоличествоПереносовСрока,
+	РезультатБезГруппировки.Задача,
+	РезультатБезГруппировки.Автор,
+	РезультатБезГруппировки.Проект,
+	РезультатБезГруппировки.ИсполнительЗадачи,
+	РезультатБезГруппировки.Подразделение
+ИЗ
+	РезультатБезГруппировки КАК РезультатБезГруппировки
+
+СГРУППИРОВАТЬ ПО
+	РезультатБезГруппировки.КоличествоПереносовСрока,
+	РезультатБезГруппировки.Задача,
+	РезультатБезГруппировки.Автор,
+	РезультатБезГруппировки.Проект,
+	РезультатБезГруппировки.ИсполнительЗадачи,
+	РезультатБезГруппировки.Подразделение</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ВСрок</dataPath>
+		<expression>Сумма(ВСрок)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Выполнено</dataPath>
+		<expression>Сумма(Выполнено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеВСрок</dataPath>
+		<expression>Сумма(НеВСрок)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеВыполнено</dataPath>
+		<expression>Сумма(НеВыполнено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Выполняются</dataPath>
+		<expression>Сумма(Выполняются)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Просроченные</dataPath>
+		<expression>Сумма(Просроченные)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПереносовСрока</dataPath>
+		<expression>Сумма(КоличествоПереносовСрока)</expression>
+	</totalField>
+	<parameter>
+		<name>КрайнийСрок</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Крайний срок</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>Делопроизводство.ПолучитьТекущуюДату()</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Подразделение</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Подразделение</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтруктураПредприятия</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.СтруктураПредприятия.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СостояниеБизнесПроцесса</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Состояние бизнес процесса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СостоянияБизнесПроцессов</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияБизнесПроцессов.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Исполнитель</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Исполнитель</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.РолиИсполнителей</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ПоИсполнителям</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Справка об исполнительской дисциплине</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИсполнительЗадачи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:title>Выполнено</dcsset:title>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Выполнено</dcsset:field>
+						<dcsset:title>Всего</dcsset:title>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВСрок</dcsset:field>
+						<dcsset:title>В срок</dcsset:title>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НеВСрок</dcsset:field>
+						<dcsset:title>Не в срок</dcsset:title>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:title>Не выполнено</dcsset:title>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НеВыполнено</dcsset:field>
+						<dcsset:title>Всего</dcsset:title>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Выполняются</dcsset:field>
+						<dcsset:title>Из них в срок</dcsset:title>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Просроченные</dcsset:field>
+						<dcsset:title>Просрочено</dcsset:title>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПереносовСрока</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Проект</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Проекты.ПустаяСсылка</dcsset:right>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>0410d29b-7b9c-4505-aade-ea6bcbfb0568</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>8232bbf8-4f3f-4d3a-8b46-5819419fe7c7</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КрайнийСрок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+					</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>2ab6e409-c260-4d18-bae2-98ffdae28011</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Подразделение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.СтруктураПредприятия.ПустаяСсылка</dcscor:value>
+					<dcsset:userSettingID>877f9e0f-4e61-43ef-b847-1e9f6c2ebd21</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СостояниеБизнесПроцесса</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияБизнесПроцессов.Активен</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>36a9adeb-3b2f-4ce2-bb14-8957790cfce6</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Исполнитель</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>fb6865d2-b31c-4731-b26e-02215ce564dc</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>НеВыполнено</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ИсполнительЗадачи</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ИсполнительЗадачи.Недействителен</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ТекстЗапрещеннойЯчейкиЦвет</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">BeginAndEnd</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Справка об исполнительской дисциплине</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Подразделение</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ИсполнительЗадачи</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>SystemFields.SerialNumber</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ИсполнительЗадачи</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Количество</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>КоличествоЗаписей</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:point>
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Задача.Выполнена</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Задача.Выполнена</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter/>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Формат</dcscor:parameter>
+									<dcscor:value xsi:type="v8:LocalStringType">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ='Не выполнено'; БИ=Выполнено</v8:content>
+										</v8:item>
+									</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+					</dcsset:conditionalAppearance>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Количество</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Задача.Выполнена</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветВДиаграмме</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Задача.Выполнена</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветВДиаграмме</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">web:RoyalBlue</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartType">StackedBar</dcscor:value>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипДиаграммы.ПропускатьБазовоеЗначение</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ТипДиаграммы.ВидПодписей</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:ChartLabelType">Value</dcscor:value>
+						</dcscor:item>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Топ 10 исполнителей</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:userSettingID>0cd1bfd6-81f0-45b8-8e13-9ea4126d2151</dcsset:userSettingID>
+				<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Диаграмма</v8:content>
+					</v8:item>
+				</dcsset:userSettingPresentation>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

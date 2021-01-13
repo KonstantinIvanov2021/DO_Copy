@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7fccaace-0b7e-4550-a3ed-5dca465ba373">
+  <producedTypes>
+    <objectType typeId="ef6a9560-a233-4c36-9e7e-6feac636ef05" valueTypeId="41be6e89-cefe-4c77-b0be-771ad8e2f70d"/>
+    <refType typeId="867e9461-328a-4d46-8757-28c6ae704cc4" valueTypeId="60a57180-c9c4-4791-8b2f-c3e88fa3d249"/>
+    <selectionType typeId="78191143-6a2d-4944-9592-edef93085228" valueTypeId="587db91d-167d-4f5a-ad6a-d9794b0491fc"/>
+    <listType typeId="ec32646d-ac40-4b16-a4ec-7b9ed448187b" valueTypeId="95c867ad-018d-4a35-969a-916db0d4fd8d"/>
+    <managerType typeId="f41344de-5e32-4a9a-b656-685a79117907" valueTypeId="456805f9-56f0-4373-b03b-3b5067753bfe"/>
+  </producedTypes>
+  <name>СВДНастройкаПриемаОтправкиПочты1СДокументооборота</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройка приема отправки почты 1С:Документооборота</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.СВДНастройкаПриемаОтправкиПочты1СДокументооборота.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.СВДНастройкаПриемаОтправкиПочты1СДокументооборота.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Email в формате 1С:Документооборота</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Способы доставки сообщений СВД по Email в формате 1С:Документооборота</value>
+  </listPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.СВДНастройкаПриемаОтправкиПочты1СДокументооборота.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="f3113b81-3d53-473f-bfda-1a077a10c849">
+    <name>АдресОтправки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес отправки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0264f2cb-5603-4a5a-8abb-d57ce7e5c214">
+    <name>УчетнаяЗаписьПочты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учетная запись почты</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.УчетныеЗаписиЭлектроннойПочты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="fe71a4ec-ed72-4554-8fa7-df69c7647d42">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="63cc1080-bc80-4e1f-ba03-ce2abf77c786">
+  <name>ОбменДаннымиДОУНФПередУдалением</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными с ДО-УНФ, перед удалением</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.СтраныМира</types>
+    <types>CatalogObject.КлассификаторБанковРФ</types>
+    <types>CatalogObject.Пользователи</types>
+    <types>CatalogObject.ВерсииФайлов</types>
+    <types>CatalogObject.ПапкиФайлов</types>
+    <types>CatalogObject.УчетныеЗаписиЭлектроннойПочты</types>
+    <types>CatalogObject.Контрагенты</types>
+    <types>CatalogObject.НазначенияСертификатовЭП</types>
+    <types>CatalogObject.ФизическиеЛица</types>
+    <types>CatalogObject.Организации</types>
+    <types>CatalogObject.БанковскиеСчета</types>
+    <types>CatalogObject.Валюты</types>
+    <types>CatalogObject.ВидыКонтактнойИнформации</types>
+    <types>CatalogObject.ВнешниеПользователи</types>
+    <types>CatalogObject.КонтактныеЛица</types>
+    <types>CatalogObject.Файлы</types>
+    <types>CatalogObject.Должности</types>
+    <types>CatalogObject.ВидыДокументовФизическихЛиц</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.ОбменДаннымиСобытияДокументооборот.ОбменДаннымиДОУНФПередУдалением</handler>
+</mdclass:EventSubscription>

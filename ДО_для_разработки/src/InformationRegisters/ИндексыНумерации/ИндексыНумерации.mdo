@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="80508163-e4ca-41f6-950c-430ce3297686">
+  <producedTypes>
+    <selectionType typeId="50188992-1aac-4783-8425-97fe57bcc2f8" valueTypeId="31d39dcc-3d2c-49cf-8852-a0602b327bb7"/>
+    <listType typeId="cb800d67-e2ee-44f9-bb82-6c5d1f81fb41" valueTypeId="5f385bc0-1417-4185-90c2-9304ed0a75d5"/>
+    <managerType typeId="61cc52c8-f610-4c52-9910-4deef1342126" valueTypeId="afe08fd9-d6f3-43a4-aff0-2890f61ba1ac"/>
+    <recordSetType typeId="0189edf4-b90e-4509-a657-1923ea9a6cf5" valueTypeId="c9c82e57-b1c5-4e53-b23e-74c7786330b6"/>
+    <recordKeyType typeId="61a401b9-7598-46a1-93a9-fb552f89034f" valueTypeId="002a777f-bf28-4ba5-950b-e3683d52968d"/>
+    <recordType typeId="04541674-e046-49f4-ac25-38da7bf8e959" valueTypeId="74cd2092-3f1f-4667-b40f-08cd3b851b11"/>
+    <recordManagerType typeId="466585fa-440c-4125-aa24-09e77552697e" valueTypeId="f9d4ac52-e9bd-46a8-902f-5100596930fd"/>
+  </producedTypes>
+  <name>ИндексыНумерации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Индексы объектов при нумерации</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.ИндексыНумерации.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ИндексыНумерации.Form.ФормаСписка</defaultListForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Индекс нумерации</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Индексы нумерации</value>
+  </listPresentation>
+  <resources uuid="15e41b33-dd6e-4421-beba-4b9405f5cb17">
+    <name>Индекс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Индекс</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <attributes uuid="3a7ab0a4-7af7-48c5-a7e0-af2a79cc9652">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="b77060f1-f70c-4ba5-be25-f82a873844cb">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.Проекты</types>
+      <types>CatalogRef.СтруктураПредприятия</types>
+      <types>CatalogRef.ВидыВнутреннихДокументов</types>
+      <types>CatalogRef.Пользователи</types>
+      <types>CatalogRef.Организации</types>
+      <types>CatalogRef.ВидыВходящихДокументов</types>
+      <types>CatalogRef.ВопросыДеятельности</types>
+      <types>CatalogRef.ВидыИсходящихДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="a72efe25-c94d-4428-a955-48f601b65ef0">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ceab00e1-37d2-4fb8-8606-9261b122f5f4">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="e266e1d9-26d3-4c62-aa61-f54d07dc81c5">
+    <name>ИндексыНумерации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Индексы нумерации</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

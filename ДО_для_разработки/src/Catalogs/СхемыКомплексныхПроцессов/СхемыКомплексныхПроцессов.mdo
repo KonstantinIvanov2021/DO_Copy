@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6f5a4d1d-be36-4c74-802c-71a6cb937ffd">
+  <producedTypes>
+    <objectType typeId="701d0295-3a2f-4ce5-8aeb-2a216cacf1a0" valueTypeId="630ec290-1ecc-47d4-8ea9-d7f35590fead"/>
+    <refType typeId="13c9e15e-81ce-435f-9757-da5c9b8e200c" valueTypeId="65c86f8c-08c1-4ba8-9e9d-fb2deb9b3d1f"/>
+    <selectionType typeId="140518c6-4887-481b-8b89-d94ce524c4aa" valueTypeId="8ca243a1-dbe7-43f3-be50-c41cfbbabbb7"/>
+    <listType typeId="95639236-1993-483e-856f-2f5a09527191" valueTypeId="7b59c60a-7925-472a-95b4-1da9193506be"/>
+    <managerType typeId="95a7c0ba-6b0a-4d5b-8759-c0a047ba8187" valueTypeId="72473493-8106-4715-8e32-5d1125244264"/>
+  </producedTypes>
+  <name>СхемыКомплексныхПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Схемы комплексных процессов</value>
+  </synonym>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>PredefinedDataName</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Predefined</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>IsFolder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Owner</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Parent</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Description</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Code</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Схема комплексного процесса</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>50</codeLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.СхемыКомплексныхПроцессов.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="9e3106d1-8ce8-4431-aae2-f727c242d5ae">
+    <name>ВладелецСхемы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец схемы</value>
+    </synonym>
+    <type>
+      <types>BusinessProcessRef.КомплексныйПроцесс</types>
+      <types>CatalogRef.ШаблоныКомплексныхБизнесПроцессов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d48878a9-aaee-4ec9-84f6-12f5788ec0ff">
+    <name>КомплексныйПроцесс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комплексный процесс</value>
+    </synonym>
+    <type>
+      <types>BusinessProcessRef.КомплексныйПроцесс</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="35fe681c-5201-4a82-b8b4-bceb83541bf3">
+    <name>Схема</name>
+    <synonym>
+      <key>ru</key>
+      <value>Схема</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="8cc1f7dc-76be-4268-984d-247dd9e70d6e">
+    <producedTypes>
+      <objectType typeId="fe86a98d-eeb2-4b7a-a409-03a11a35edb3" valueTypeId="23f1b578-1fdc-45d4-a1cb-137b2012576c"/>
+      <rowType typeId="6f4fd021-c62c-47ab-9b21-4e931456272c" valueTypeId="595a1b0c-8577-412e-92ee-d7861ce2b042"/>
+    </producedTypes>
+    <name>ПараметрыДействий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры действий</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="7a6fc4ce-b23f-41f6-baa2-31c9528f41b1">
+      <name>Идентификатор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор</value>
+      </synonym>
+      <type>
+        <types>UUID</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="9476c7a7-9e99-4e8b-9911-5211fd6edd8c">
+      <name>Имя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя</value>
+      </synonym>
+      <comment>Имя элемента действия в графической схеме</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+    </attributes>
+    <attributes uuid="0bbe10e3-cfb8-4c17-b3a6-5855c5178720">
+      <name>Наименование</name>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование</value>
+      </synonym>
+      <comment>Наименование действия в графической схеме без процесса и шаблона процесса</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6d456d3c-3307-4929-a963-2a50a85b7925">
+      <name>ПорядокСортировки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Порядок сортировки</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>3</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+    </attributes>
+    <attributes uuid="51d2157e-8e8d-4b50-8a35-517af3508958">
+      <name>Процесс</name>
+      <synonym>
+        <key>ru</key>
+        <value>Процесс</value>
+      </synonym>
+      <type>
+        <types>DefinedType.ДействиеКомплексногоПроцесса</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="7bee2f74-daa2-4fa4-bd6e-0c0ebc4cbf55">
+      <name>ШаблонПроцесса</name>
+      <synonym>
+        <key>ru</key>
+        <value>Шаблон процесса</value>
+      </synonym>
+      <type>
+        <types>DefinedType.ШаблонДействияКомплексногоПроцесса</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="59351a3f-9ad1-4a97-9c5a-febcb3bc64ba">
+    <producedTypes>
+      <objectType typeId="3201eeae-d8b4-4550-bb0d-3a54071b0d46" valueTypeId="9a63e5af-aca0-414f-99b0-07ef38d9732d"/>
+      <rowType typeId="6b0fc96c-3279-4f33-b60d-9251295cab0d" valueTypeId="eac7690e-4d06-4a9c-add9-fcd25cff142d"/>
+    </producedTypes>
+    <name>ПараметрыОбработок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры обработок</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="6d858aca-79ed-4d89-83dd-0a4533722185">
+      <name>Задача</name>
+      <synonym>
+        <key>ru</key>
+        <value>Задача</value>
+      </synonym>
+      <type>
+        <types>TaskRef.ЗадачаИсполнителя</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="76bde8fa-8c58-45ba-887a-e538e0a60274">
+      <name>ИдентификаторСкрипта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор скрипта</value>
+      </synonym>
+      <type>
+        <types>UUID</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="c73a106d-c357-4055-990c-09dbbe12506e">
+      <name>Имя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя</value>
+      </synonym>
+      <comment>Имя элемента в графической схеме</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="3b1fddef-691b-41d6-9bfe-2d8cd1db0ea2">
+    <producedTypes>
+      <objectType typeId="d41274fd-1893-43b2-a0e7-2a7d290affd7" valueTypeId="9e94c145-4d0b-4a12-b111-c2e10abd1e10"/>
+      <rowType typeId="e69f05a3-90ea-4c59-927e-3a2bcd332c71" valueTypeId="7c7a4d9c-69b5-404d-8a14-efe7edc50778"/>
+    </producedTypes>
+    <name>ПараметрыУсловий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры условий</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="e54ac196-011f-4e41-8c8f-be9484be9ead">
+      <name>Имя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя</value>
+      </synonym>
+      <comment>Имя элемента условия в графической схеме</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="f3a50d19-edf4-4bc2-be66-15a75d0b9b30">
+      <name>НастройкиУсловия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Настройки условия</value>
+      </synonym>
+      <type>
+        <types>ValueStorage</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="8e537d00-189f-4e9d-a82f-65dc4f2b2ff3">
+      <name>ТипУсловия</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип условия</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ТипыУсловийКомплексныхПроцессов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="fed171ba-3648-4f95-a150-a90c583160ff">
+    <producedTypes>
+      <objectType typeId="f72bd989-a8d3-4d9b-8883-4f5054f6eff6" valueTypeId="a0fe7ced-ea4b-48fd-a441-4e6bc2d60c8d"/>
+      <rowType typeId="cbd77bc5-fbaa-4ec9-b1cb-96fcf3c429b0" valueTypeId="0bff4cd1-596e-4c45-9097-38e7ff65d46e"/>
+    </producedTypes>
+    <name>ПредшественникиЭлементовСхемы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предшественники элементов схемы</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="fb1229a0-5284-410b-81d0-5bcab8fc0526">
+      <name>Имя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя</value>
+      </synonym>
+      <comment>Имя элемента в графической схеме</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="94185a3b-e5da-48ab-9dea-ae97c2a00f86">
+      <name>ИмяПредшественника</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя предшественника</value>
+      </synonym>
+      <comment>Имя предшествующего элемента в графической схеме</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="167b1d41-ac29-49e6-9a88-e6ba6b78eb30">
+      <name>ИмяСоединительнойЛинии</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя соединительной линии</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="57177783-b8af-482e-9336-bb5759afb670">
+      <name>РезультатУсловияПредшественника</name>
+      <synonym>
+        <key>ru</key>
+        <value>Результат условия предшественника</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="1386be2d-1f7f-4c84-9ba3-ecb4eea42270">
+    <producedTypes>
+      <objectType typeId="93a02ff5-2214-4830-b130-95f53f241474" valueTypeId="26abd947-7ae1-4872-b5ae-413008f93ff3"/>
+      <rowType typeId="e8b1bf77-1524-42d2-ad67-5e0f7f2cbf6c" valueTypeId="23294d7b-903c-4864-95cf-db0597032b13"/>
+    </producedTypes>
+    <name>ЭлементыСхемы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Элементы схемы</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="c990748b-4326-4b03-bb49-04ed9ae5b3b8">
+      <name>Имя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя</value>
+      </synonym>
+      <comment>Имя элемента в графической схеме</comment>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+    </attributes>
+    <attributes uuid="738d733a-fa40-4ff6-bd59-ab0472145bce">
+      <name>Пройден</name>
+      <synonym>
+        <key>ru</key>
+        <value>Пройден</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+    </attributes>
+    <attributes uuid="8dcaf51f-6e79-4b9f-82e4-3ca19ecbde3e">
+      <name>Текущий</name>
+      <synonym>
+        <key>ru</key>
+        <value>Текущий</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+    </attributes>
+    <attributes uuid="c181d444-1687-4ac1-901a-532d355a4570">
+      <name>Тип</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип</value>
+      </synonym>
+      <comment>Тип элемента схемы комплексного процесса</comment>
+      <type>
+        <types>EnumRef.ТипыЭлементовСхемыКомплексногоПроцесса</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+    </attributes>
+  </tabularSections>
+  <forms uuid="066f45df-2082-4fb0-be3c-16ce172698fb">
+    <name>ВыборРезультаВыполненияДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор результа выполнения действия</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a0e9cb4a-bf6c-46c5-b56b-d2de54fbe3c7">
+    <name>ВыборУсловияМаршрутизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор условия маршрутизации</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7e30f84e-97ce-4625-b371-e04277010d33">
+    <name>ЗапросПричиныПрерыванияПроцессовСхемы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Запрос причины прерывания процессов схемы</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6954787a-7470-44ad-90ae-c1abd50ecd0a">
+    <name>НастройкаУсловия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка условия</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d8979691-69ac-44f2-9c75-4def15b8ac00">
+    <name>ПредупреждениеОПрерыванииДействияСхемы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предупреждение о прерывании действия схемы</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b65d3105-9a31-46d6-806f-8c8fbedaf335">
+    <name>РедактированиеСкриптаСхемы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Редактирование скрипта схемы</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="aea8ff50-3ac3-49a1-bcdf-0ab8322c1cef">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="0e01bfe9-c1e9-448b-a885-830eaae0471d">
+    <name>СхемаПоУмолчанию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Схема по умолчанию</value>
+    </synonym>
+    <templateType>GraphicalSchema</templateType>
+  </templates>
+  <templates uuid="447a5fb2-ca63-4c8b-b114-7e68c56998d4">
+    <name>Условие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Условие</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Catalog>

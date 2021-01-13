@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3e740abb-812a-4ed6-baca-ffcbc490a2a5">
+  <name>ОценкиКонтрольныхТочекПриЗаписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Оценки контрольных точек при записи</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.ОценкиКонтрольныхТочек</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.КонтрольныеТочкиСобытия.ОценкиКонтрольныхТочекПриЗаписиПриЗаписи</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8e8e6c00-d07a-4f03-9ae8-01701b0bbfc2">
+  <producedTypes>
+    <selectionType typeId="9065404f-b9d7-413e-9faa-cb5d0d7934e7" valueTypeId="58035e54-1f7d-4173-a1b2-99fd7f8e425b"/>
+    <listType typeId="eafb1942-1ddf-4768-95b8-a4bb0d535592" valueTypeId="69959022-1fe6-49c6-a9e8-69800cb66875"/>
+    <managerType typeId="0e7abdc2-52f5-470c-8218-f043e8efe4b8" valueTypeId="1e582448-15aa-4540-91a9-14daf29f72c2"/>
+    <recordSetType typeId="9dd31652-a96f-4218-aa76-cc631feeaa5b" valueTypeId="933e26df-1ab2-4518-8554-322536cb7433"/>
+    <recordKeyType typeId="31e9ad3b-e84e-4067-955c-32f24dfe7a5a" valueTypeId="e8373e06-b2af-4bb4-a82d-f7fb42e3ded6"/>
+    <recordType typeId="b835d26c-981c-4a78-abbf-e3bf428a93c0" valueTypeId="4614a6e0-9548-47ca-9342-2143ccd9f034"/>
+    <recordManagerType typeId="e5e74a26-e0bb-4704-ba06-dafd87346c9b" valueTypeId="ba32c133-1e44-451f-b98e-8baa686a640b"/>
+  </producedTypes>
+  <name>СпособыУведомленияПользователей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Способы уведомления пользователей</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="20ad2591-0da4-4776-babc-59c17ba25a2e">
+    <name>Использовать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="fa73bc8b-0848-4ad8-99e2-0182acbd8def">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.РабочиеГруппы</types>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пользователь, к которому относится способ уведомления</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="cf60a089-b4d9-45bb-9ed5-bf6fbf9291d5">
+    <name>СпособУведомления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ уведомления</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыУведомления</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Способ уведомления пользователя</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4a6103fa-fe57-4fbe-abca-2730d9a59cc3">
+    <name>ДанныеСпособа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные способа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Данные способа уведомления пользователя</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f6a4db65-cb0a-4d78-ab22-068705fa19d7">
+    <name>ВидКонтактнойИнформации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид контактной информации</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыКонтактнойИнформации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="d96d3c09-6b01-4ffb-aefd-1927c10ef1ba">
+    <name>СпособыУведомленияВсехПользователей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способы уведомления всех пользователей</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

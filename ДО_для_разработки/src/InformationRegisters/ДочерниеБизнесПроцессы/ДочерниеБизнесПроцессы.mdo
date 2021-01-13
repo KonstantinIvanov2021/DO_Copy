@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ee2f2f8b-eb66-442d-a4b2-1d569186ec3d">
+  <producedTypes>
+    <selectionType typeId="ff2de10c-c87c-4a59-90c1-cf09c8950600" valueTypeId="37a7328b-cd05-4bc7-ab26-efa87fe0580a"/>
+    <listType typeId="5921f0dc-031e-4f83-b2c0-e1a32be289bc" valueTypeId="ff019c69-aa73-4d71-ad7d-e559bbf77f7a"/>
+    <managerType typeId="89bb31b6-c6bc-4da1-a247-1bcdea71f8c9" valueTypeId="bef484ae-d407-47f9-af61-45fdc666de74"/>
+    <recordSetType typeId="13e767d0-8349-4055-8930-4a028c45f6cc" valueTypeId="d3fff6bd-d232-488d-9da6-66c02bfb646e"/>
+    <recordKeyType typeId="a1a5676e-4553-4865-919c-c1d2acb38d48" valueTypeId="5457e316-052a-41fc-8199-125f232c9434"/>
+    <recordType typeId="34b3ee72-72fd-4599-8300-a4a12dffe556" valueTypeId="1199d27c-d324-46c9-a802-b2d8ee0a9c73"/>
+    <recordManagerType typeId="3823a62e-0d3d-4922-b4c3-d95c7457d525" valueTypeId="ab734c7f-f955-44fb-9f38-2f18dd215494"/>
+  </producedTypes>
+  <name>ДочерниеБизнесПроцессы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дочерние бизнес-процессы</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="ee9e6adc-3662-4321-ba87-8071ef025e06">
+    <name>РодительскийПроцесс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Родительский процесс</value>
+    </synonym>
+    <type>
+      <types>BusinessProcessRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8a3d2370-53ab-480d-b775-d153110b6cc5">
+    <name>СвязующаяЗадача</name>
+    <synonym>
+      <key>ru</key>
+      <value>Связующая задача</value>
+    </synonym>
+    <type>
+      <types>TaskRef.ЗадачаИсполнителя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="06e7548b-7ccb-4022-bb54-5db40c538042">
+    <name>ДочернийПроцесс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дочерний процесс</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>BusinessProcessRef</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

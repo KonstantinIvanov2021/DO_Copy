@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="424f2c61-54c4-4b30-819d-9973f5046c0a">
+  <producedTypes>
+    <objectType typeId="0e171959-6525-4fd3-abf2-0fc7539304d5" valueTypeId="60a8fa04-d394-4c66-a533-f7535ea6fe1c"/>
+    <managerType typeId="7029e286-000c-4779-995b-883a12fa5f3c" valueTypeId="35ff06d9-6b10-43dd-a322-64b0e5eb417f"/>
+  </producedTypes>
+  <name>ОценкаПроизводительности</name>
+  <synonym>
+    <key>ru</key>
+    <value>Оценка производительности</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ОценкаПроизводительности.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="e20593fd-b3e3-41d2-8c8d-97b5d6148fa4">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата начала формирования</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4b9771a7-b924-4e61-8468-4633e3c54706">
+    <name>ДатаОкончания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата окончания формирования</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a852433c-d85d-4e22-9535-fd7ae532985a">
+    <name>Диаграмма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Диаграмма</value>
+    </synonym>
+    <type>
+      <types>Chart</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Диаграмма для вывода результата</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9b6ade93-9a90-40da-bbeb-63b34a3e8068">
+    <name>Шаг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаг</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>6</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Интервал времени между точками диаграммы</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e9a2320b-71a1-4974-8b5a-1990062ec7df">
+    <name>ОбщаяПроизводительностьСистемы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Общая производительность системы</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючевыеОперации</types>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Общая производительность всей системы</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2e459a7c-c448-4db4-ae21-e59646527030">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Значение комментария для отбора замеров</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>256</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Комментарий, по которому будут отбираться замеры производительности при расчете APDEX</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="891194d9-9f02-4b22-89cd-941181c83ecb">
+    <name>ВариантФильтраКомментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вариант фильтра комментарий</value>
+    </synonym>
+    <comment>Вариант отбора комментариев при расчете производительности</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Вариант сравнения строки комментария</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a4d3b738-9ae3-46a9-ac21-7ac3d081c727">
+    <name>ВыполнятьЗамерыПроизводительности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выполнять замеры производительности</value>
+    </synonym>
+    <comment>Включение подсистемы &quot;Оценка производительности&quot;</comment>
+    <type>
+      <types>ConstantsSet</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Включает запись замеров производительности</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="7023a15a-8d79-40da-82dc-62dfacdde203">
+    <producedTypes>
+      <objectType typeId="07f9dad1-3dcf-46da-8a0d-d42047c3e850" valueTypeId="ce35ec54-513d-436f-871b-69d9cbc7f3e7"/>
+      <rowType typeId="bc6896b6-bbca-4038-ab77-c2c1b8d43093" valueTypeId="f8c1a514-a46e-4ed5-b642-39dccc34620c"/>
+    </producedTypes>
+    <name>Производительность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Производительность</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="69af038e-7882-4192-be1b-7a417b624a94">
+      <name>КлючеваяОперация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ключевая операция</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КлючевыеОперации</types>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Ключевая операция замера производительности</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="83b32ed7-c0fd-4833-a085-c4712fd915cd">
+      <name>ЦелевоеВремя</name>
+      <synonym>
+        <key>ru</key>
+        <value>Целевое время</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Целевое время ключевой операции</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="7175cfa0-885c-4807-98ec-af255dcd55d9">
+      <name>Приоритет</name>
+      <synonym>
+        <key>ru</key>
+        <value>Приоритет</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Приоритет ключевой операции</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="1773ff66-ebe4-46e1-b505-d07d87c7fe3e">
+    <name>ИсторияВыполнения</name>
+    <synonym>
+      <key>ru</key>
+      <value>История выполнения</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f5b66759-8102-4cba-a3fd-ee96db5bc809">
+    <name>АвтоматическийЭкспортЗамеровПроизводительности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автоматический экспорт замеров производительности</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cbebd003-0575-42f7-82f0-959266f2d1fe">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4cc4aa90-49fb-4602-9f9c-d4d47d223988">
+    <name>ФормаОтбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="e0227e4b-be22-4614-8980-5d573fae705d">
+    <name>НастройкиОценкиПроизводительности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки оценки производительности</value>
+    </synonym>
+    <group>ActionsPanelTools</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:DataProcessor>

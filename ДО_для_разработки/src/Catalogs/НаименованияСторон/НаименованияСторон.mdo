@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b37f1744-90b3-4fc4-b5a0-79176842ed38">
+  <producedTypes>
+    <objectType typeId="b1a99bf4-ed8a-4181-ad92-d0264a2c32b5" valueTypeId="d706bb7d-d6ac-42d9-9362-fd2bd0384c4d"/>
+    <refType typeId="790dd3b5-f83e-4fb9-a336-9013df13adba" valueTypeId="9457a0f6-e065-4234-8441-15fc5a0e6356"/>
+    <selectionType typeId="d3e5f6ac-75bf-4d19-9a7b-a89ca2cae48b" valueTypeId="d5ba9e9b-ef5a-4bff-8f73-f5fa8c075b13"/>
+    <listType typeId="48d38a9e-56c0-472f-bf39-0cb5dff8cfc9" valueTypeId="b88eabda-8180-4195-9cba-9c52555bcf36"/>
+    <managerType typeId="26c2e2fe-a353-49ee-8a05-bba9be04f0a6" valueTypeId="57cdf2d6-60c2-4b36-a097-0976484ebe4b"/>
+  </producedTypes>
+  <name>НаименованияСторон</name>
+  <synonym>
+    <key>ru</key>
+    <value>Наименования сторон</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.НаименованияСторон.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.НаименованияСторон.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Наименование стороны</value>
+  </objectPresentation>
+  <explanation>
+    <key>ru</key>
+    <value>Наименования сторон в документах</value>
+  </explanation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="677bd953-af75-496a-af09-c35ee7c4b4b5">
+      <name>Заказчик</name>
+      <description>Заказчик</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+    </items>
+    <items id="51aa883f-2f74-402a-a49d-be2b80ef88f3">
+      <name>Исполнитель</name>
+      <description>Исполнитель</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+    <items id="cba4b863-9dbb-416e-bf7f-04ced5fcf763">
+      <name>Покупатель</name>
+      <description>Покупатель</description>
+      <code xsi:type="core:StringValue">
+        <value>000000003</value>
+      </code>
+    </items>
+    <items id="1d630465-a78a-4a40-83a2-9b981f5fdd80">
+      <name>Продавец</name>
+      <description>Продавец</description>
+      <code xsi:type="core:StringValue">
+        <value>000000004</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.НаименованияСторон.Form.ФормаЭлемента</defaultObjectForm>
+  <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+  <forms uuid="27030d6e-76a5-44c0-b9a2-147b8bddbb8f">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f6f1656c-d4a5-47fd-8e65-73ed651e87a9">
+  <producedTypes>
+    <selectionType typeId="9380cda0-2fff-438a-97e4-985e588a6d24" valueTypeId="aecb98e2-18d1-445e-ba81-ad7b81950f19"/>
+    <listType typeId="851fb7eb-06b4-4806-b050-172698bf2627" valueTypeId="b854bd96-ee1f-4785-80bd-9bd8d7647d64"/>
+    <managerType typeId="f437b3ac-aa94-437f-a215-1459b6a1e206" valueTypeId="1d52e532-9c87-4e94-b23a-64955452e9ee"/>
+    <recordSetType typeId="22cd12ed-e871-49fa-9c12-567e8703354d" valueTypeId="83d11afd-d323-4b23-996a-03266ccc1df0"/>
+    <recordKeyType typeId="2ab2dcaa-a766-4e15-b425-a3e8e8177fc2" valueTypeId="251e2941-7243-427a-a925-f1f7932d8f0f"/>
+    <recordType typeId="635bb1cd-c638-411b-885b-1f798bb28d28" valueTypeId="ba1343db-db4c-40d9-a0ff-60a1ccb949af"/>
+    <recordManagerType typeId="708858c5-5d82-48a1-b223-d07e0829af7c" valueTypeId="15e9fd54-c11c-4f83-97c8-c61c632cdb0a"/>
+  </producedTypes>
+  <name>СостоянияДелХраненияДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояния дел хранения документов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>RecorderPosition</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="6ae77865-0639-4fbc-aad1-664a7ab5c9a7">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияДелХраненияДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ddb6808e-9d13-4374-935e-7bb9288eb03a">
+    <name>ДелоХраненияДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дело хранения документов</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДелаХраненияДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

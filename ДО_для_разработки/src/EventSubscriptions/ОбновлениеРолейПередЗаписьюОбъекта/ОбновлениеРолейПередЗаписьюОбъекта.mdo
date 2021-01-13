@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a2d4347f-2701-4ec8-9341-943658053676">
+  <name>ОбновлениеРолейПередЗаписьюОбъекта</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновление ролей перед записью объекта</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.Пользователи</types>
+    <types>CatalogObject.ПрофилиГруппДоступа</types>
+    <types>CatalogObject.ПолныеРоли</types>
+    <types>CatalogObject.СтруктураПредприятия</types>
+    <types>CatalogObject.РабочиеГруппы</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ДокументооборотПраваДоступа.ОбновлениеРолейПередЗаписьюОбъекта</handler>
+</mdclass:EventSubscription>

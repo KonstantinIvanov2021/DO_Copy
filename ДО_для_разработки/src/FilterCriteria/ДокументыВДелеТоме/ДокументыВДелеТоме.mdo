@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FilterCriterion xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8ab4172f-f20f-4740-8927-43fbe815f8f4">
+  <producedTypes>
+    <listType typeId="b2ab2071-dc50-48b3-be76-23b0216ed847" valueTypeId="a2a9c8c3-03df-4bd8-8f94-4dbb0b1ef2c7"/>
+    <managerType typeId="da60f6bf-862d-41d2-9ced-c85cd218d42e" valueTypeId="cc256458-9018-4ea1-81ce-64dd7b50bc81"/>
+  </producedTypes>
+  <name>ДокументыВДелеТоме</name>
+  <synonym>
+    <key>ru</key>
+    <value>Документы</value>
+  </synonym>
+  <type>
+    <types>CatalogRef.ДелаХраненияДокументов</types>
+  </type>
+  <content>Catalog.ВходящиеДокументы.Attribute.Дело</content>
+  <content>Catalog.ИсходящиеДокументы.Attribute.Дело</content>
+  <content>Catalog.ВнутренниеДокументы.Attribute.Дело</content>
+  <defaultForm>FilterCriterion.ДокументыВДелеТоме.Form.ФормаСписка</defaultForm>
+  <forms uuid="391af71e-b642-43e8-a4dd-bede166dc210">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="bd022d58-f2f0-45d5-82aa-512be67fd60f">
+    <name>ДокументыВДелеТоме</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы в деле</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ДелаХраненияДокументов</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:FilterCriterion>

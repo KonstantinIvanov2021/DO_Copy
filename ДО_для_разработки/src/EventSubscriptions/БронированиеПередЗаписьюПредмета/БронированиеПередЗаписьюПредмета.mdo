@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="011e50bd-221d-4d8b-a676-08f4789d0aca">
+  <name>БронированиеПередЗаписьюПредмета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Бронирование перед записью предмета</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.Мероприятия</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.БронированиеПомещений.БронированиеПередЗаписьюПредмета</handler>
+</mdclass:EventSubscription>

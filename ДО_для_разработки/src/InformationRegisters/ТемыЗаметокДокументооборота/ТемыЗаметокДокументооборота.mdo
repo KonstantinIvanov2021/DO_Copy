@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2ca4001d-ca00-4624-ba7c-d95040092f33">
+  <producedTypes>
+    <selectionType typeId="b847e7e0-b104-42e5-9c79-b48993e4c50c" valueTypeId="00042012-c54d-4c23-be30-3540b3cdaaf7"/>
+    <listType typeId="2ff36bfa-6e95-4429-a383-74e5e9047b7c" valueTypeId="3cc3e813-5840-4fc5-9ae3-86529fa6b50f"/>
+    <managerType typeId="9dfdec63-cd47-4b80-9fe0-ae25a5b9ffbc" valueTypeId="218ce000-9a22-4d9e-b8bd-f56c902d72be"/>
+    <recordSetType typeId="4e11e163-eb7f-4d5f-acea-7a36a7436881" valueTypeId="38197e9b-5cf2-4010-a6f0-772c49c25dd0"/>
+    <recordKeyType typeId="d0da94fd-0bbc-41f7-92a5-4ad0473fd5c4" valueTypeId="0e554a92-ddcb-4842-bd72-059bf25a4a3b"/>
+    <recordType typeId="f7b0b7ad-34da-48a5-afb5-9c7cccbd7422" valueTypeId="22afe2ac-baae-47cc-a897-cc730a60c481"/>
+    <recordManagerType typeId="cd915efa-5d72-42e1-87c6-b7b0ccc3c8f1" valueTypeId="9f262a87-1794-4db5-a9a6-6270071850cc"/>
+  </producedTypes>
+  <name>ТемыЗаметокДокументооборота</name>
+  <synonym>
+    <key>ru</key>
+    <value>Темы заметок документооборота</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="b3384c55-2ab0-4722-84ec-e89527342752">
+    <name>Тема</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тема</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТемыЗаметок</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e9986710-b7cc-44d5-85eb-adc9e0e738db">
+    <name>Заметка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заметка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЗаметкиДокументооборота</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

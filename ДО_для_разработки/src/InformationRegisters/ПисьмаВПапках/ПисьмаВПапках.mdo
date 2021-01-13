@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f0b95cc3-a34f-4f11-a100-521148d956c0">
+  <producedTypes>
+    <selectionType typeId="6e5c7011-db74-4be3-b510-4257477db9fb" valueTypeId="4cbf6d99-abb7-4c2f-89b0-277e51b0bf21"/>
+    <listType typeId="020a8b21-827b-4523-9e37-4f2dbc71b006" valueTypeId="7b3e3d10-5342-44ce-862c-4315eca21906"/>
+    <managerType typeId="e96d95c1-cc9a-463f-9744-9c0ae1d7dce4" valueTypeId="7a5fe13c-c19b-4e88-9e8f-0da3c99b78ef"/>
+    <recordSetType typeId="7bbc88cd-438f-4e77-b9a5-c89837f82ab3" valueTypeId="4d14269f-af35-4ed9-b109-e8f9158728d9"/>
+    <recordKeyType typeId="37cdd405-0fe7-4a02-a5bf-c86a6b6963ad" valueTypeId="d159d1ce-2750-42c5-88ce-cc735ec97020"/>
+    <recordType typeId="8e745d28-a011-4157-a980-d8f1e4fe98b2" valueTypeId="3eb99c90-ac9f-47bf-afd2-55c63d275619"/>
+    <recordManagerType typeId="afae9cef-63b9-4d51-9dff-8d2319ff85bd" valueTypeId="35b51cd7-a278-4b42-aacb-7d9d02993d9a"/>
+  </producedTypes>
+  <name>ПисьмаВПапках</name>
+  <synonym>
+    <key>ru</key>
+    <value>Письма в папках</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e323ab36-e4c7-464e-9de3-9d119c364411">
+    <name>Папка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Папка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПапкиПисем</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="19d9a482-44dd-4314-abe7-8306915c3085">
+    <name>Письмо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Письмо</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ВходящееПисьмо</types>
+      <types>DocumentRef.ИсходящееПисьмо</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

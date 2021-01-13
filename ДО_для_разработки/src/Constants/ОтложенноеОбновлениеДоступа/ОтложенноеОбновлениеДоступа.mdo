@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8d9e7a50-a880-4f44-ad76-1cdd1fcdcfc6">
+  <producedTypes>
+    <managerType typeId="a6c0ee38-fca9-4104-b7c9-ed692d1d0772" valueTypeId="eafd282b-db43-4571-aa2d-3d6893cda85e"/>
+    <valueManagerType typeId="98905214-0dbf-4f64-96fc-765ff2132aaa" valueTypeId="e0eac4ee-d128-4e85-aae7-b5abae76f970"/>
+    <valueKeyType typeId="f081c4ce-65d5-56a9-8f88-f3992afe4490" valueTypeId="fbba88e7-3082-5e26-b961-00dded188d93"/>
+  </producedTypes>
+  <name>ОтложенноеОбновлениеДоступа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отложенное обновление доступа</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <toolTip>
+    <key>ru</key>
+    <value>Обновление вспомогательных данных вне транзакции записи объектов и настроек прав. 
+Рекомендуется для ускорения записи и устранения блокировок. 
+Изменение прав наступает после завершения обновления 
+регламентным заданием или формой &quot;Обновление доступа&quot;.</value>
+  </toolTip>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

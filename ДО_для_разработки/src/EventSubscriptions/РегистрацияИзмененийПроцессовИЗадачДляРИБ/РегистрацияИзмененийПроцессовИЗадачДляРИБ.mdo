@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bfff481b-737b-4941-a458-41648ade8b73">
+  <name>РегистрацияИзмененийПроцессовИЗадачДляРИБ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Регистрация изменений процессов и задач для РИБ</value>
+  </synonym>
+  <source>
+    <types>BusinessProcessObject</types>
+    <types>TaskObject</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.РаботаСБизнесПроцессами.РегистрацияИзмененийПроцессовИЗадачДляРИБ</handler>
+</mdclass:EventSubscription>

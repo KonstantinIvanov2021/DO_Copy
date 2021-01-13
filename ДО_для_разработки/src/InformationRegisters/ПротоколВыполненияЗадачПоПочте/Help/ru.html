@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 9.00.8112.16476"></meta></head><body>
+<p>
+<style>A:link {
+	COLOR: #006699; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #006699; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #006699; TEXT-DECORATION: underline
+}
+H2 {
+	BORDER-BOTTOM: sienna 1px solid; PADDING-BOTTOM: 2px; FONT-FAMILY: Verdana; COLOR: #a3611f; FONT-SIZE: 130%; FONT-WEIGHT: bold
+}
+H3 {
+	PADDING-BOTTOM: 2px; MARGIN-TOP: 5px; FONT-FAMILY: Verdana; COLOR: #a3611f; MARGIN-LEFT: 20px; FONT-SIZE: 110%; FONT-WEIGHT: bold
+}
+P.Usual {
+	MARGIN-TOP: 10px
+}
+P.unusual {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 20px
+}
+P.last {
+	MARGIN-TOP: 40px; MARGIN-LEFT: 20px
+}
+UL {
+	MARGIN-LEFT: 20pt
+}
+UL.unusual {
+	MARGIN-LEFT: 40pt
+}
+OL.unusual {
+	MARGIN-LEFT: 40pt
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+</style></p>
+<p class="usual">В протоколе можно просмотреть результаты выполнения задач по почте, чтобы восстановить историю выполнения или принять меры по исправлению ошибок в том случае, если они произошли.</p>
+<p class="Usual"><strong>В этом разделе:</strong></p>
+<p class="Usual"><img align="left" src="CommonPicture.СправкаПереходВниз" width="16" height="16"></img><a href="#protocol"><font color="#0066cc">Как организован протокол</font></a></p>
+<p class="Usual"><font color="#0066cc"><img align="left" src="CommonPicture.СправкаПереходВниз" width="16" height="16"></img>Как исправлять ошибки</font></p>
+<h2><a name="protocol">Как организован протокол</a></h2>
+<p class="usual">Протокол состоит из записей о выполнении задач и / или ошибках, которые произошли при их выполнении.</p>
+<p class="usual">Запись об успешном выполнении задачи  составляют:</p>
+<ul><li>Представление имени и email сотрудника, выполнившего задачу, 
+</li><li>Тема письма (например: "Не согласовано: Согласовать  00-000016005 от 22.07.2013 13:40:45") 
+</li><li>Результат выполнения (<font color="green">"Выполнена"</font>) 
+</li><li>Описание (например, <font color="green">"Положительно"</font> или <font color="green">"Отрицательно"</font> и комментарий)</li></ul><p><br>Запись об ошибке составляют:</p>
+<ul><li>Представление имени и email системной учетной записи, 
+</li><li>Название ошибки (например, "В сообщении не указан идентификатор задачи")</li></ul><p class="Usual">Срок хранения записей в протоколе по умолчанию составляет 7 дней. Его можно изменить в <a href="DataProcessor.НастройкаПрограммы.Form.ПроцессыИЗадачи/Help">настройках программы</a> на закладке <strong>Процессы и задачи</strong>.</p>
+<p></p>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="middle">
+<p class="Usual"><a href="#Top"><img border="0" src="CommonPicture.СправкаВНачало"></img></a></p></td>
+<td valign="middle">
+<p class="Usual"><a href="#Top"><font color="#0066cc">В начало </font></a></p></td></tr></tbody></table><p><a name="print"><font color="#0066cc"></font></a></p>
+<h2>Как исправлять ошибки</h2>
+<p class="Usual">Ошибки при выполнении задач по почте, как правило, возникают по следующим причинам:</p>
+<ul><li>Удаление или повреждение служебной информации при формировании пользователем ответного письма, 
+</li><li>Изменения в процессе (например, задача уже выполнена на момент обработки уведомления). </li></ul><p class="Usual">В большинстве ситуаций для исправления ошибки пользователю достаточно заново ответить на уведомление.</p>
+<p class="Usual">Если пользователь не получил уведомление о задаче, то его можно выслать повторно при помощи команды команду <strong>Сформировать уведомление для выполнения задачи по почте</strong> в карточке задачи.</p>
+<p></p>
+<table border="1" cellspacing="0" cellpadding="6" width="95%" align="center" color="gray"><thead style="COLOR: #666666; FONT-WEIGHT: bold" bgcolor="lightgray" cellspacing="0"><tr><td>Ошибка</td>
+<td>Что означает</td>
+<td>Как исправить</td></tr></thead><tbody style="FONT-SIZE: 13px"><tr><td>В сообщении не указан идентификатор задачи</td>
+<td>В письме пользователя удален номер задачи </td>
+<td>Пользователю автоматически приходит уведомление с предложением выполнить задачу повторно</td></tr><tr><td>В сообщении не указан идентификатор ответа</td>
+<td>В письме пользователя удален код ответа</td>
+<td>Пользователю автоматически приходит уведомление с предложением выполнить задачу повторно</td></tr><tr><td>Задача не активна</td>
+<td>Задача на момент обработки сообщения уже выполнена</td>
+<td>Сообщить пользователю о том, что задача уже выполнена</td></tr><tr><td>Задача не найдена</td>
+<td>Задачи с указанным номером нет в базе данных, например, она удалена</td>
+<td>Сообщить пользователю о том, что задачу выполнять не нужно </td></tr><tr><td>Задаче не соответствует значение ответа</td>
+<td>В письме пользователя  указан ответ, неприменимый к этой задаче</td>
+<td>Пользователю автоматически приходит уведомление с предложением выполнить задачу повторно</td></tr><tr><td>Ответ не найден</td>
+<td>В письме пользователя указан несуществующий ответ</td>
+<td>Пользователю автоматически приходит уведомление с предложением выполнить задачу повторно</td></tr><tr><td>Ошибка</td>
+<td>Другие ошибки программы</td>
+<td>Направить пользователю повторное уведомление о задаче (см. команду <strong>Сформировать уведомление для выполнения задачи по почте</strong> в карточке задачи).</td></tr></tbody></table><p class="Usual"></p>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="middle">
+<p class="Usual"><a href="#Top"><img border="0" src="CommonPicture.СправкаВНачало"></img></a></p></td>
+<td valign="middle">
+<p class="Usual"><a href="#Top"><font color="#0066cc">В начало </font></a></p></td></tr></tbody></table></body></html>

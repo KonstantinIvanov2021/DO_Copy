@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8688dc77-9837-4f31-9ac3-36f9d5131da9">
+  <producedTypes>
+    <selectionType typeId="f5de7006-cf56-4eaa-9ae0-ac86dc266fe1" valueTypeId="6a906023-7e91-4ff8-9ea1-fb3ca836e9ee"/>
+    <listType typeId="fc65a680-1a3e-41e7-a075-e5e4e832ce50" valueTypeId="529d23d1-3a6d-4444-91f2-4555211a76e4"/>
+    <managerType typeId="25c7691a-5cd4-4f1d-9464-9d14c9c1ec47" valueTypeId="d9c3eb5b-0e84-4fb2-ac06-08fc2a560479"/>
+    <recordSetType typeId="7636a674-f98c-4e45-92c1-cd5af1590806" valueTypeId="b534e14b-136c-45ab-8a11-7d245fb5bd16"/>
+    <recordKeyType typeId="78a1ec09-7fc8-4848-94e9-b831bf5f9e04" valueTypeId="2ebb9d57-4a29-4d21-b541-60afe9c6bb26"/>
+    <recordType typeId="54a3c59a-1a87-4d92-a1c6-acfdf73c40b9" valueTypeId="3489f3c0-94fe-467d-bc2f-41085d6113bb"/>
+    <recordManagerType typeId="1f21ab00-f323-43b9-acb2-7d79f2e5c37f" valueTypeId="2cafbf33-4534-41ca-8fd2-3ddf50d618fd"/>
+  </producedTypes>
+  <name>УчастникиМероприятия</name>
+  <synonym>
+    <key>ru</key>
+    <value>Участники мероприятия</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8644588c-580a-469c-821a-141a1067a9bc">
+    <name>ЯвкаОбязательна</name>
+    <synonym>
+      <key>ru</key>
+      <value>Явка обязательна</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3e9bc807-9426-470d-ba0b-42a5eaec956e">
+    <name>Отсутствовал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отсутствовал</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="279d197e-e400-42d6-b4b3-7bacc80038fe">
+    <name>СостояниеПриглашения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние приглашения</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияПриглашения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0aaccdbc-7a0f-49d1-a97e-1e1e4d7f107a">
+    <name>Порядок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порядок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="b352d38a-6fe7-4662-82ee-0c443eec0982">
+    <name>Мероприятие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мероприятие</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Мероприятия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="dce13b7e-44b1-4777-a0a7-32d8dd8040c5">
+    <name>Исполнитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Участник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.ЛичныеАдресаты</types>
+      <types>CatalogRef.ПолныеРоли</types>
+      <types>CatalogRef.Пользователи</types>
+      <types>CatalogRef.КонтактныеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a38b8d33-d681-4a50-ad9f-6825e2730e71">
+    <name>УдалитьИсполнитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Участник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.ЛичныеАдресаты</types>
+      <types>CatalogRef.РолиИсполнителей</types>
+      <types>CatalogRef.Пользователи</types>
+      <types>CatalogRef.КонтактныеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b43ab394-3b40-4d98-a3b2-e1928c866107">
+    <name>УдалитьОсновнойОбъектАдресации</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Основной объект адресации</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ОбъектыАдресацииЗадач</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="339ddabf-08d5-4f31-bd18-d336127f942a">
+    <name>УдалитьДополнительныйОбъектАдресации</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Дополнительный объект адресации</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ОбъектыАдресацииЗадач</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

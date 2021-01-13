@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b1cc82a7-fb42-400e-ad14-b5eded282bf4">
+  <name>ДобавлениеВМоиДокументыПередЗаписью</name>
+  <synonym>
+    <key>ru</key>
+    <value>Добавление в мои документы перед записью</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ВходящиеДокументы</types>
+    <types>CatalogObject.ВнутренниеДокументы</types>
+    <types>CatalogObject.ИсходящиеДокументы</types>
+    <types>TaskObject.ЗадачаИсполнителя</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.МоиДокументыСобытия.ДобавлениеВМоиДокументыпередЗаписьюПередЗаписью</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6f2acfb3-719e-48a4-8a1f-0f9a0541bdd9">
+  <producedTypes>
+    <objectType typeId="4a62729b-430a-4fe5-9752-39b19a69de1b" valueTypeId="8e4e3a0f-26b3-42c4-9928-b8ebd1ad501c"/>
+    <refType typeId="dd634316-a196-4ac5-975a-4d1376ffe7a5" valueTypeId="3522a825-d3ce-4fe9-aff3-915318aead01"/>
+    <selectionType typeId="ed844132-528d-44dc-a607-9452fef505b5" valueTypeId="f9adcef6-eb01-4e28-a0a7-0aa5c9bc8bf8"/>
+    <listType typeId="77ba91fa-5a10-4ca7-9f47-b658b4819574" valueTypeId="a36f7a4f-c7dd-4ecc-a85b-6e2e5fe9ec05"/>
+    <managerType typeId="07cbd5ea-316c-469f-a5dc-a76de23c88a5" valueTypeId="10adb72b-310c-4a41-9a1d-54a32f8168c9"/>
+  </producedTypes>
+  <name>ПередачаДелВАрхив</name>
+  <synonym>
+    <key>ru</key>
+    <value>Передача дел в архив</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ПередачаДелВАрхив.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Передача дел в архив</value>
+  </objectPresentation>
+  <numberType>String</numberType>
+  <numberLength>11</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ПередачаДелВАрхив.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.ПередачаДелВАрхив.Form.ФормаСписка</defaultListForm>
+  <posting>Deny</posting>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecords>InformationRegister.СостоянияДелХраненияДокументов</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="c3fe85ed-d237-479d-bfe8-74abf2141f91">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="42bd3302-629e-47f9-9fe5-a28b76c597f4">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="59830c55-0ee1-43ef-98a9-6fa0e6b0bcc7">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="8986f488-4d32-44c5-bfa3-07944a720e3e">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1f898e19-e0db-4aff-892a-0ed5118872af">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="24ff39b4-3546-49e8-b40f-9c8a8c84df63">
+    <producedTypes>
+      <objectType typeId="86a4e07c-b738-4571-868b-b351e6b7fb6a" valueTypeId="be64649d-dcff-46a5-9675-16eb66395672"/>
+      <rowType typeId="09616ac0-11b2-4c73-afe4-163f7f468a83" valueTypeId="2ea965b7-a373-4b26-8dbc-e66e7572007c"/>
+    </producedTypes>
+    <name>ДелаХраненияДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дела хранения документов</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <attributes uuid="668ec598-6c56-4e41-9984-bfe78df8e9ad">
+      <name>ДелоХраненияДокументов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дело хранения документов</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ДелаХраненияДокументов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <templates uuid="23efa8b0-0aa8-4c4c-a595-4e8c6e15df37">
+    <name>ПФ_MXL_Опись</name>
+    <synonym>
+      <key>ru</key>
+      <value>Опись</value>
+    </synonym>
+  </templates>
+  <commands uuid="7728df1f-039f-4694-b0d5-1fd20502648b">
+    <name>СоздатьНаОснованииДела</name>
+    <synonym>
+      <key>ru</key>
+      <value>Передача дел в архив</value>
+    </synonym>
+    <group>FormCommandBarCreateBasedOn</group>
+    <commandParameterType>
+      <types>CatalogRef.ДелаХраненияДокументов</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:Document>

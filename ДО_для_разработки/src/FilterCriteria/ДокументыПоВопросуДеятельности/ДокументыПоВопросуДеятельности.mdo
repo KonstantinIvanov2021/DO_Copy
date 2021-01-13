@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:FilterCriterion xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d0c08826-0f96-4e8d-857d-c513fc5d89b4">
+  <producedTypes>
+    <listType typeId="4a3ca323-0e79-4ad0-8971-d6eaa13762d9" valueTypeId="1ae6246a-9275-43d6-b8c7-d5112aaebd7d"/>
+    <managerType typeId="23f95d7a-fa42-46b4-92d1-b10e954b6c67" valueTypeId="f60c2d45-1ed8-4ad9-9b08-fccc601d62a1"/>
+  </producedTypes>
+  <name>ДокументыПоВопросуДеятельности</name>
+  <synonym>
+    <key>ru</key>
+    <value>Документы по вопросу деятельности</value>
+  </synonym>
+  <type>
+    <types>CatalogRef.ВопросыДеятельности</types>
+  </type>
+  <content>Catalog.ВнутренниеДокументы.Attribute.ВопросДеятельности</content>
+  <content>Catalog.ВходящиеДокументы.Attribute.ВопросДеятельности</content>
+  <content>Catalog.ИсходящиеДокументы.Attribute.ВопросДеятельности</content>
+  <defaultForm>FilterCriterion.ДокументыПоВопросуДеятельности.Form.ФормаСписка</defaultForm>
+  <forms uuid="37731877-2bdf-4fa5-9d26-cbf6a94d424c">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="b11e2545-c1e0-4127-b807-3042b67d852e">
+    <name>ДокументыПоВопросуДеятельности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы по вопросу</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.ВопросыДеятельности</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:FilterCriterion>

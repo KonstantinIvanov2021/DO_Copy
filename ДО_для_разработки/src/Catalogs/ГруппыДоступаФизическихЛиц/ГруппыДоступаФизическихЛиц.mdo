@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="28773014-76e2-4e78-9381-1f921144d647">
+  <producedTypes>
+    <objectType typeId="eda4caf1-5996-4091-aac7-2f694f584115" valueTypeId="dc8ea75a-72c3-406c-a825-f789867867e8"/>
+    <refType typeId="453f40f2-289f-4e03-9de2-288e8a6d9082" valueTypeId="e1249c8b-cfdf-4f2d-996a-69d110eb9763"/>
+    <selectionType typeId="f4624f50-990a-42d7-a5f5-dced8a57925a" valueTypeId="f18ba3be-49ad-463c-a280-3d11ce4faedf"/>
+    <listType typeId="4fd2412d-3a5d-43ab-a305-46b447ceb741" valueTypeId="75391707-af77-43f1-92b3-0f6d15458888"/>
+    <managerType typeId="76e654ee-b795-4839-9455-a34bb1f20143" valueTypeId="292667e7-8144-4c97-aea4-2b493a332bb6"/>
+  </producedTypes>
+  <name>ГруппыДоступаФизическихЛиц</name>
+  <synonym>
+    <key>ru</key>
+    <value>Группы доступа физических лиц</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ГруппыДоступаФизическихЛиц.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ГруппыДоступаФизическихЛиц.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ГруппыДоступаФизическихЛиц.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="aed34640-7d7e-45eb-911b-2fa9138c5c69">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7741ec6c-26e5-441d-b986-cde9302187a7">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="9dc2fa99-c1e9-46e6-b554-f1ed8fe0f511">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

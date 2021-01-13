@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="10baa25e-e7aa-493b-9331-312b56d4ca75">
+  <producedTypes>
+    <selectionType typeId="c301aeb5-cbaa-4ea3-8aef-753d00d8e964" valueTypeId="108dfbf0-06f1-4bca-be8f-40a81f7b48a6"/>
+    <listType typeId="d6e15560-e299-43ba-85f3-abc8caebb404" valueTypeId="3d35a46c-9879-487e-97f9-605b0d239110"/>
+    <managerType typeId="1d9f11e4-e6e6-4b85-973e-87c65c17c3d1" valueTypeId="8f25f5e4-5aab-476d-a6c2-cd38caad4fdf"/>
+    <recordSetType typeId="935b4b8a-8619-457b-9a7a-4f8f3eb39b72" valueTypeId="47bb0c69-6abe-4353-b48f-77259fbd1286"/>
+    <recordKeyType typeId="8df3d510-5727-45ee-9482-954333bd1c98" valueTypeId="a5bf6470-8dfb-42a0-938e-eec2a265efe5"/>
+    <recordType typeId="14865774-8ae0-4aff-8c0c-86ca1674e3bb" valueTypeId="868a48c1-6382-459e-8d34-6a40f4d3568a"/>
+    <recordManagerType typeId="3c652e1b-45fe-41fc-9361-c473cfd4b5f7" valueTypeId="3d8ec225-f6b3-4404-8f29-0d6ba538dcd0"/>
+  </producedTypes>
+  <name>пби_ПоказателиДляРасчетов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели для расчетов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceFirst>true</enableTotalsSliceFirst>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="5918c6ac-5ed2-4334-9e52-0bc556bb1601">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="e79b238a-8beb-4133-b027-65a5f85d702c">
+    <name>Показатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.пби_Показатели</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

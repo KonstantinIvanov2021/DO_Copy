@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3329625c-62ec-4dd3-94a2-5552873ff329">
+  <producedTypes>
+    <selectionType typeId="e2b50774-cb2b-4222-a26d-9415df391b52" valueTypeId="a55afb59-ce73-4981-9b0f-a8e7d5167d03"/>
+    <listType typeId="f3321750-0672-48f9-b6e5-b42f11ae1d3d" valueTypeId="7c3331eb-1c2e-4d00-9f5b-27992601f741"/>
+    <managerType typeId="c6348cbd-4c82-4d00-b9c9-163186dcfbaf" valueTypeId="7bb615e2-d9fb-48bb-8e85-881e83418dc4"/>
+    <recordSetType typeId="cb0a640a-886c-4929-adce-03c1afec8e71" valueTypeId="deea861b-c1c1-452a-8fc1-1d7f1ba0f861"/>
+    <recordKeyType typeId="c11840b5-a93e-4979-897d-764571803170" valueTypeId="d6baea30-7501-4ef0-88e9-23d923c82f34"/>
+    <recordType typeId="d9209294-cca8-4d5a-9b17-1839a3232764" valueTypeId="192528f3-eaa0-4001-b047-c91b61aa0fef"/>
+    <recordManagerType typeId="4443d35a-2741-4c25-a6a6-3996c212abd2" valueTypeId="9962dd25-5069-4c5f-b2ac-8a10978f79a4"/>
+  </producedTypes>
+  <name>ИсторияСостоянийДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>История состояний документов</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.ИсторияСостоянийДокументов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ИсторияСостоянийДокументов.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Состояние документа</value>
+  </recordPresentation>
+  <resources uuid="43027812-b1a3-4b66-8d28-c480f69141a8">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="4b418824-07eb-4957-be37-691286e6b4c7">
+    <name>Установил</name>
+    <synonym>
+      <key>ru</key>
+      <value>Установил</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+      <types>BusinessProcessRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="139cac1d-75ef-4b45-8262-829affedc8bc">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВходящиеДокументы</types>
+      <types>CatalogRef.ВнутренниеДокументы</types>
+      <types>CatalogRef.ИсходящиеДокументы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="9d838411-ad60-4585-b7da-0b0921de1b21">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="dc26342c-fd05-4134-b5bb-744eda4dbca3">
+    <name>ФормаСпискаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fcdb362f-0f0f-4687-9f98-7c885a587044">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="f47d32e8-ee99-4a6b-a46c-aa7ecae23d01">
+    <name>ОткрытьФормуСпискаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменение состояния</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

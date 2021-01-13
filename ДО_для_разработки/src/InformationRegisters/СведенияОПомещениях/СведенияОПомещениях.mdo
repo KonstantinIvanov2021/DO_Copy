@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a77e1181-2da2-49ac-9aa0-4d7ad6b8269a">
+  <producedTypes>
+    <selectionType typeId="061911c6-22b3-48f4-8ad8-14b35748c091" valueTypeId="7f73cb4e-9f1b-4dd1-bb3a-e87ba03bf619"/>
+    <listType typeId="13d818ae-3ca8-4d3d-ba48-4a1f78111c04" valueTypeId="1bf45117-320c-40d1-adeb-147fda84531e"/>
+    <managerType typeId="9d85abd8-6b58-434d-931c-229938550112" valueTypeId="07fc7ce6-ee17-4553-9892-2d92dc624c81"/>
+    <recordSetType typeId="9df0ac32-cf55-47fe-82b8-62cef35c4352" valueTypeId="838ed23b-4177-4d1f-8541-3cb2bbaf80fb"/>
+    <recordKeyType typeId="fa6e6d5b-7e6b-4001-a79a-e8e5ac766a46" valueTypeId="4ff1057e-1017-43da-aa4c-1edbb80160da"/>
+    <recordType typeId="7b445f4e-328a-4677-8507-bbfb142c0599" valueTypeId="2f373d37-36bc-4922-b028-49b7b5115841"/>
+    <recordManagerType typeId="96d45d78-901a-4e0b-8ec4-9b7c546a6f30" valueTypeId="a99c4cd5-c188-45ce-9f5d-8a9f4f85816b"/>
+  </producedTypes>
+  <name>СведенияОПомещениях</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения о помещениях</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="04e7f291-5896-4ef0-97bc-a520f0a38baa">
+    <name>СодержитМестаХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Содержит места хранения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="a65ee4ff-0e86-45ec-8367-66b10c0dc4da">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТерриторииИПомещения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

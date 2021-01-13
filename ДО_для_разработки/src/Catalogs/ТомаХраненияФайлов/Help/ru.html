@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 8.00.7600.16853"></meta></head><body>
+<p>
+<style>A:link {
+	COLOR: #006699; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #006699; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #006699; TEXT-DECORATION: underline
+}
+H2 {
+	BORDER-BOTTOM: sienna 1px solid; PADDING-BOTTOM: 2px; FONT-FAMILY: Verdana; COLOR: #a3611f; FONT-SIZE: 130%; FONT-WEIGHT: normal
+}
+H3 {
+	MARGIN-TOP: 5px; FONT-SIZE: 120%
+}
+P.Usual {
+	MARGIN-TOP: 10px
+}
+UL {
+	MARGIN-LEFT: 20pt
+}
+</style></p>
+<p><a name="Top"></a></p>
+<p class="Usual">Том хранения файлов - это каталог на сетевом носителе, работающем по принципу клиент-сервер. Размещение в томах можно настроить согласно правилам.</p>
+<p class="Usual"><strong>В этом разделе:</strong></p>
+<p class="Usual"><img align="left" src="CommonPicture.СправкаПереходВниз" width="16" height="16"></img><a href="#Create">Как создать том хранения файлов</a><a></a> </p>
+<p class="Usual"><img align="left" src="CommonPicture.СправкаПереходВниз" width="16" height="16"></img><a href="#Linux">Как ввести полный путь для сервера под управлением Linux</a><a></a> </p>
+<p><a name="Create"></a></p>
+<h2><strong>Как создать том хранения файлов</strong></h2>
+<p class="Usual">Чтобы создать том хранения файлов:</p>
+<ol><li>Введите название тома, заполнив поле <strong>Наименование</strong> 
+</li><li>Выберите группу из списка иди введите с клавиатуры вручную 
+</li><li>Введите полный путь для сервера 1С: Предприятия 
+</li><li>Выберите порядок заполнения, используя кнопки <strong>Вверх</strong> и <strong>Вниз</strong> 
+</li><li>Введите максимальный размер файлов на томе используя кнопки <strong>Вверх</strong> и <strong>Вниз</strong> 
+</li><li>При необходимости впишите комментарий 
+</li><li>Нажмите на кнопку <strong>Записать и закрыть</strong>, чтобы сохранить настройку</li></ol><p class="Usual"><strong>Примечание</strong></p>
+<p class="Usual">Для использования томов, расположенных на сетевых дисках, сервер 1С:Предприятия 8 нужно запускать от лица доменного пользователя вида domain1\user1, имеющего права доступа к тому, указанному в виде UNC пути. Этот пользователь должен входить в группу Users локального компьютера, иметь права <strong>Run as service</strong> и <strong>Run as batch job</strong> и права на каталоги, в которых сервер 1С:Предприятия 8 хранит служебные файлы - журнал регистрации, каталог временных файлов и другие.</p>
+<p class="Usual">Ошибки доступа к томам помещаются в <a href="DataProcessor.ЖурналРегистрации/Help">журнал регистрации</a> и могут быть просмотрены администратором системы.</p>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="center">
+<p class="Usual"><img src="CommonPicture.СправкаВНачало"></img><a href="#Top"></a></p></td>
+<td valign="center">
+<p class="Usual"><a href="#Top">В начало </a></p></td></tr></tbody></table><p><a name="Linux"></a></p>
+<h2><strong>Как ввести полный путь для сервера под управлением Linux</strong></h2>
+<p class="Usual">Полный путь для сервера под управлением Linux можно ввести только с правами администратора.</p>
+<p class="Usual">Чтобы ввести полный путь, выполните следующие действия:</p>
+<p class="Usual"><strong>mkdir folder</strong></p>
+<p class="Usual">Вместо folder напишите имя каталога. Например: в каталоге /home выполните <strong>mkdir shared</strong>. Создастся каталог <strong>shared</strong> с полным путем<strong> /home/shared.</strong></p>
+<p class="Usual">mount -t cifs //server/share folder -o //domain/user, password=pwd</p>
+<p class="Usual">Где //server/share - UNC путь к другому компьютеру</p>
+<p class="Usual"><strong>folder</strong> - путь каталога на компьютере под Linux. Например: \home\shared, <strong>//domain/user</strong> - имя домена/пользователя (если нужно)</p>
+<p class="Usual"><strong>pwd</strong> - пароль пользователя (если нужно) </p>
+<p class="Usual">Если имя и пароль не нужны, команда выглядит так: mount -t cifs //server/share folder</p>
+<p class="Usual">После этого в пути к тому укажите folder. Например: /home/shared</p>
+<table cellspacing="0" cellpadding="0"><tbody><tr><td valign="center">
+<p class="Usual"><img src="CommonPicture.СправкаВНачало"></img><a href="#Top"></a></p></td>
+<td valign="center">
+<p class="Usual"><a href="#Top">В начало </a></p></td></tr></tbody></table></body></html>

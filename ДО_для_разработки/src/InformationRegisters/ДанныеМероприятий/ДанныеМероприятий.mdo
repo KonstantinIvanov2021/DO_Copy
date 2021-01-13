@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="87942489-9990-43a5-930e-e53359e54893">
+  <producedTypes>
+    <selectionType typeId="279a938a-13f7-4def-9998-1d9b699ae922" valueTypeId="79c66ae3-96af-43af-8ca2-6fd1189c70cf"/>
+    <listType typeId="490dfdac-f36a-4b4d-940a-0d042ef21033" valueTypeId="1ce05df6-c969-4f8e-9a72-1c4d1d073c69"/>
+    <managerType typeId="791e491c-9bee-4694-a26d-8c3852ab2b30" valueTypeId="a892ae99-d280-484f-a9e4-078905b27872"/>
+    <recordSetType typeId="823e5d2a-0e1c-42fe-ab2f-0f2b307b11f2" valueTypeId="f701af30-f9cf-4d36-a0ae-6f2c62ab79ed"/>
+    <recordKeyType typeId="1192a445-5041-42a2-8e90-38b334342514" valueTypeId="40ca653e-cfc1-4d92-a83f-9fc4c785ef0f"/>
+    <recordType typeId="549d88d9-a466-458c-bae8-22de7d353496" valueTypeId="56e0af0d-cde3-41d5-a203-bf98fc7cdade"/>
+    <recordManagerType typeId="9b1cb740-c8a2-498c-83e2-90b183f21d4a" valueTypeId="31b90680-3d36-4ed7-8072-e2369d7c81e6"/>
+  </producedTypes>
+  <name>ДанныеМероприятий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Данные мероприятий</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="3c75d287-e389-4a56-b596-aef67f31b5b7">
+    <name>Участники</name>
+    <synonym>
+      <key>ru</key>
+      <value>Участники</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1024</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="00168322-675f-4319-af9d-1166568da921">
+    <name>Мероприятие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мероприятие</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Мероприятия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

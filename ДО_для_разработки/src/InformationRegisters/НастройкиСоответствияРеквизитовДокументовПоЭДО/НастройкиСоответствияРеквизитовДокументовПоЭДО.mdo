@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b2848b01-8eb9-4848-9027-d0ee8a86b568">
+  <producedTypes>
+    <selectionType typeId="90c8f857-dae1-4535-b8f7-e7aaeb158304" valueTypeId="b44544d9-a005-495c-9819-c44dc4a6249d"/>
+    <listType typeId="e4257909-763d-41b6-97d4-b2fcf9dc2988" valueTypeId="1ea7a4ca-941d-446b-b88e-4d7411d3b040"/>
+    <managerType typeId="d39e0876-8d95-46e1-9fcd-35e84c15baf4" valueTypeId="c740efa7-19ac-4dc2-ba1c-2d7575a72c73"/>
+    <recordSetType typeId="bca960cb-8469-4c37-bd5c-084c791ba395" valueTypeId="9ae9d2e5-1d2e-433b-9e6b-40b157ddea4b"/>
+    <recordKeyType typeId="4adc4c18-3197-4553-82f3-3406b6884117" valueTypeId="a751a308-a498-4084-8661-318c8b10bceb"/>
+    <recordType typeId="248fc40c-dac7-483c-8148-613f0c7abb96" valueTypeId="03980248-814a-4e0b-a422-985ad4e0fc49"/>
+    <recordManagerType typeId="b298dd32-78b8-4437-b738-ada6055b8f14" valueTypeId="402d807f-d326-493b-bd45-10ce1f701c3d"/>
+  </producedTypes>
+  <name>НастройкиСоответствияРеквизитовДокументовПоЭДО</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройка соответствия реквизитов документов видам документов, пришедшим по ЭДО</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.НастройкиСоответствияРеквизитовДокументовПоЭДО.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="c38916b2-62b1-4ea7-89c6-f46f146411c7">
+    <name>ВидДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид документа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыВнутреннихДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ea42e7b5-846b-411a-ba03-075470c2106d">
+    <name>Папка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Папка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПапкиВнутреннихДокументов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="bd149d77-7bb9-4d0f-8319-ad6ca229de26">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="8848450c-05dc-4743-a147-7a160def48b3">
+    <name>ВидЭД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид ЭД</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыЭД</types>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="3a8cfcf0-1636-4aa1-87df-05c0d571ede5">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="b25e0b61-4797-467a-b341-d50e927f5a00">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

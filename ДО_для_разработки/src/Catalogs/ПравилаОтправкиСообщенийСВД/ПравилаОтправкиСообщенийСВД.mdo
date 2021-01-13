@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="55b86f0e-945f-420f-8b36-59b65379e974">
+  <producedTypes>
+    <objectType typeId="392cb43c-beab-4bff-86b2-8b396b75fec9" valueTypeId="6f9b3e5a-ca99-4911-adf8-8079edd63889"/>
+    <refType typeId="acc452c5-fcc0-45b2-8da9-6d5137be646d" valueTypeId="5c5f19cf-5bec-4fbb-aa1e-cd43a57b6dce"/>
+    <selectionType typeId="5d3f6c17-a59e-47b4-bd86-38c695b61f8b" valueTypeId="65040042-7f88-4b36-be3c-080536a6504f"/>
+    <listType typeId="c4c6fabc-d613-4f41-8aa4-d53ec7424b7b" valueTypeId="d84a8b63-cd7f-42c4-b9c3-2212e5256186"/>
+    <managerType typeId="3e3c8760-3a52-4809-9d87-7d266bd76740" valueTypeId="99373820-a300-4ae3-a1ca-2e3af4511118"/>
+  </producedTypes>
+  <name>ПравилаОтправкиСообщенийСВД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Правила отправки сообщений СВД</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ПравилаОтправкиСообщенийСВД.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ПравилаОтправкиСообщенийСВД.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Правило отправки сообщений СВД</value>
+  </objectPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Правила отправки сообщений СВД</value>
+  </listPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ПравилаОтправкиСообщенийСВД.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ПравилаОтправкиСообщенийСВД.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="998283e6-bddf-42d3-a439-899eefa90a43">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="db8ba7df-66f2-4eea-a8e9-68aeecdff6bd">
+    <name>МаксимальныйРазмерВсехПередаваемыхФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Максимальный размер всех передаваемых файлов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8748cd0a-4d11-4761-b375-46adcc098d44">
+    <name>МаксимальныйРазмерПередаваемогоФайла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Максимальный размер передаваемого файла</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8a362e93-98af-4509-9ca1-4dd29e319fcb">
+    <name>ТипыПередаваемыхФайлов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Типы передаваемых файлов</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="afac4618-f1f8-43a3-a911-4527ee47439e">
+    <name>Транспорт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Транспорт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТранспортыСВД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="edc3af49-e469-435f-8042-7cd8e375b2b8">
+    <producedTypes>
+      <objectType typeId="5fc5790c-8861-474e-b5b4-d297c64edb61" valueTypeId="d276ae6d-8868-44b9-9853-4f585b70f82e"/>
+      <rowType typeId="6c826ac8-e9c7-42c0-98fb-a722ee04f25b" valueTypeId="0240631a-f257-4d2f-8ff6-4cdd413283ed"/>
+    </producedTypes>
+    <name>Организации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организации</value>
+    </synonym>
+    <attributes uuid="5f64bb5b-18ad-4e0c-b4b0-603a01f82d59">
+      <name>Организация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Организация</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Организации</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="fbcf5a3d-72ae-4b5a-b784-89abfaee7018">
+    <producedTypes>
+      <objectType typeId="c52eff50-49de-4052-9f8e-77d48ae29bc0" valueTypeId="93f21f39-465d-4c0a-bc18-91de045ad7fc"/>
+      <rowType typeId="6c1bb89b-efc6-49de-8a93-06be9bbdc3fe" valueTypeId="65cf99a4-fa5a-452f-9b7b-14c5193cfc60"/>
+    </producedTypes>
+    <name>Контрагенты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагенты</value>
+    </synonym>
+    <attributes uuid="444b231e-1559-4f20-ab7a-34d171096612">
+      <name>Контрагент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="df6a57d5-78dc-4074-92e2-e5fcbb87ab14">
+    <producedTypes>
+      <objectType typeId="44664332-9e14-490f-8311-78450526baba" valueTypeId="45d24a4e-925e-4b36-99c6-52a47d3c5a15"/>
+      <rowType typeId="d83474d9-681b-42ba-940c-7287423ddb5e" valueTypeId="a003aab8-041d-4860-b4b9-f2054a80cba4"/>
+    </producedTypes>
+    <name>ВидыДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Виды документов</value>
+    </synonym>
+    <attributes uuid="870dfe44-6008-4b16-8c1e-a0dedc6c6565">
+      <name>ВидДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид документа</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыИсходящихДокументов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="94625365-a911-43e8-bcae-e9844cd65028">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e8c91cdb-20c4-4ddd-9d1c-c9a99a4d4e19">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

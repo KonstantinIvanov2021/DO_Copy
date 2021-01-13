@@ -1,0 +1,4483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetUnion">
+		<name>Документы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДокумента</dataPath>
+			<field>ВидДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ВидыВнутреннихДокументов</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ВидыВходящихДокументов</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ВидыИсходящихДокументов</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипПроцессаСсылка</dataPath>
+			<field>ТипПроцессаСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип процесса ссылка</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+			<presentationExpression>ТипПроцессаПредставление</presentationExpression>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:BusinessProcessRef.Исполнение</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:BusinessProcessRef.Поручение</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:BusinessProcessRef.Утверждение</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:BusinessProcessRef.Рассмотрение</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:BusinessProcessRef.Согласование</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:BusinessProcessRef.Регистрация</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Длительность</dataPath>
+			<field>Длительность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя длительность процесса (значение)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=1</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоДокументов</dataPath>
+			<field>КоличествоДокументов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество документов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Автор</dataPath>
+			<field>Автор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Процесс</dataPath>
+			<field>Процесс</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процесс</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Шаблон</dataPath>
+			<field>Шаблон</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ШаблоныУтверждения</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ШаблоныРассмотрения</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ШаблоныСогласования</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ШаблоныПоручения</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ШаблоныИсполнения</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ШаблоныРегистрации</v8:Type>
+			</valueType>
+			<availableValue>
+				<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныИсполнения.ПустаяСсылка</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Исполнение (Произвольное)</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныПоручения.ПустаяСсылка</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Поручение (Произвольное)</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныРассмотрения.ПустаяСсылка</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Рассмотрение (Произвольное)</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныРегистрации.ПустаяСсылка</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистрация (Произвольная)</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныСогласования.ПустаяСсылка</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Согласование (Произвольное)</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныУтверждения.ПустаяСсылка</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Утверждение (Произвольное)</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьРаботОбщая</dataPath>
+			<field>ДлительностьРаботОбщая</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя длительность работ по документу  (значение)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=1</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьРабот</dataPath>
+			<field>ДлительностьРабот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительность работ  (значение)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=1</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьРаботСуммарная</dataPath>
+			<field>ДлительностьРаботСуммарная</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительность работ суммарная</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипПроцесса</dataPath>
+			<field>ТипПроцесса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип процесса</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+			<availableValue>
+				<value xsi:type="xs:string">Исполнение</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Исполнение</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Поручение</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Поручение</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Рассмотрение</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Рассмотрение</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Регистрация</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Регистрация</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Согласование</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Согласование</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+			<availableValue>
+				<value xsi:type="xs:string">Утверждение</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Утверждение</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПроцессов</dataPath>
+			<field>КоличествоПроцессов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество процессов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Пользователи</v8:Type>
+			</valueType>
+			<availableValue>
+				<value xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</value>
+				<presentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;Не указан&gt;</v8:content>
+					</v8:item>
+				</presentation>
+			</availableValue>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьРаботПоДокументу</dataPath>
+			<field>ДлительностьРаботПоДокументу</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя длительность работ по документу  (значение)</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=1</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВопросДеятельности</dataPath>
+			<field>ВопросДеятельности</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьРаботОбщаяПредставление</dataPath>
+			<field>ДлительностьРаботОбщаяПредставление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя длительность работ по документу</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьРаботПоДокументуПредставление</dataPath>
+			<field>ДлительностьРаботПоДокументуПредставление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя длительность работ по документу</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьРаботПредставление</dataPath>
+			<field>ДлительностьРаботПредставление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительность работ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьПредставление</dataPath>
+			<field>ДлительностьПредставление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя длительность процесса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<item xsi:type="DataSetQuery">
+			<name>ВнутренниеДокументы</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидДокумента</dataPath>
+				<field>ВидДокумента</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид документа</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыВнутреннихДокументов</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыВходящихДокументов</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыИсходящихДокументов</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТипПроцессаСсылка</dataPath>
+				<field>ТипПроцесса</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип процесса ссылка</v8:content>
+					</v8:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<presentationExpression>ТипПроцессаПредставление</presentationExpression>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Исполнение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Поручение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Утверждение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Рассмотрение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Согласование</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Регистрация</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Длительность</dataPath>
+				<field>Длительность</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя длительность процесса</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Документ</dataPath>
+				<field>Документ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Документ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоДокументов</dataPath>
+				<field>КоличествоДокументов</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество документов</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Автор</dataPath>
+				<field>Автор</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Процесс</dataPath>
+				<field>Процесс</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Процесс</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Шаблон</dataPath>
+				<field>Шаблон</field>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныУтверждения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныРассмотрения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныСогласования</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныПоручения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныИсполнения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныРегистрации</v8:Type>
+				</valueType>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныИсполнения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныПоручения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поручение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныРассмотрения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рассмотрение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныРегистрации.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация (Произвольная)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныСогласования.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Согласование (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныУтверждения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Утверждение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботОбщая</dataPath>
+				<field>ДлительностьРаботОбщая</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя длительность работ по документу</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРабот</dataPath>
+				<field>ДлительностьРабот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботСуммарная</dataPath>
+				<field>ДлительностьРаботСуммарная</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ суммарная</v8:content>
+					</v8:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТипПроцесса</dataPath>
+				<field>ТипПроцессаПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип процесса</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>0</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</valueType>
+				<availableValue>
+					<value xsi:type="xs:string">Исполнение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Поручение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поручение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Рассмотрение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рассмотрение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Регистрация</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Согласование</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Согласование</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Утверждение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Утверждение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоПроцессов</dataPath>
+				<field>КоличествоПроцессов</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество процессов</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Пользователи</v8:Type>
+				</valueType>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;Не указан&gt;</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботПоДокументу</dataPath>
+				<field>ДлительностьРаботПоДокументу</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя длительность работ по документу</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВопросДеятельности</dataPath>
+				<field>ВопросДеятельности</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботОбщаяПредставление</dataPath>
+				<field>ДлительностьРаботОбщаяПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ общая представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботПоДокументуПредставление</dataPath>
+				<field>ДлительностьРаботПоДокументуПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ по документу представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботПредставление</dataPath>
+				<field>ДлительностьРаботПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьПредставление</dataPath>
+				<field>ДлительностьПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПредметыПроцесса.Предмет КАК Документ,
+	Документы.ВидДокумента КАК ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ КАК Ответственный,
+	Процессы.Ссылка КАК Процесс,
+	Процессы.Автор КАК Автор,
+	Процессы.Шаблон КАК Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400 КАК Длительность,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Исполнение.ПустаяСсылка) КАК ТипПроцесса,
+	"Исполнение" КАК ТипПроцессаПредставление,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ПОМЕСТИТЬ ПроцессыПоДокументам
+ИЗ
+	Справочник.ВнутренниеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Исполнение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Исполнение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВнутренниеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Исполнение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Внутренние документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Поручение.ПустаяСсылка),
+	"Поручение",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ВнутренниеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Поручение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Поручение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВнутренниеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Поручение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Внутренние документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Рассмотрение.ПустаяСсылка),
+	"Рассмотрение",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ВнутренниеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Рассмотрение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Рассмотрение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВнутренниеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Рассмотрение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Внутренние документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Регистрация.ПустаяСсылка),
+	"Регистрация",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ВнутренниеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Регистрация.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Регистрация КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВнутренниеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Регистрация" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Внутренние документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Согласование.ПустаяСсылка),
+	"Согласование",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ВнутренниеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Согласование.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Согласование КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВнутренниеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Согласование" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Внутренние документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Утверждение.ПустаяСсылка),
+	"Утверждение",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ВнутренниеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Утверждение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Утверждение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВнутренниеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Утверждение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Внутренние документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ПроцессыПоДокументам.Документ КАК Документ,
+	СУММА(ПроцессыПоДокументам.Длительность) КАК Длительность,
+	ПроцессыПоДокументам.ТипПроцесса КАК ТипПроцесса,
+	ПроцессыПоДокументам.ВидДокумента
+ПОМЕСТИТЬ ДлительностьРаботДокументов
+ИЗ
+	ПроцессыПоДокументам КАК ПроцессыПоДокументам
+
+СГРУППИРОВАТЬ ПО
+	ПроцессыПоДокументам.Документ,
+	ПроцессыПоДокументам.ТипПроцесса,
+	ПроцессыПоДокументам.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ДлительностьРаботДокументов.Документ КАК Документ,
+	СУММА(ДлительностьРаботДокументов.Длительность) КАК Длительность,
+	ДлительностьРаботДокументов.ВидДокумента
+ПОМЕСТИТЬ ДлительностьРаботДокументовОбщая
+ИЗ
+	ДлительностьРаботДокументов КАК ДлительностьРаботДокументов
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботДокументов.Документ,
+	ДлительностьРаботДокументов.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ДлительностьРаботДокументов.ВидДокумента,
+	ДлительностьРаботДокументов.ТипПроцесса,
+	СРЕДНЕЕ(ДлительностьРаботДокументов.Длительность) КАК Длительность
+ПОМЕСТИТЬ ДлительностьРаботВидов
+ИЗ
+	ДлительностьРаботДокументов КАК ДлительностьРаботДокументов
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботДокументов.ВидДокумента,
+	ДлительностьРаботДокументов.ТипПроцесса
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДлительностьРаботДокументовОбщая.ВидДокумента,
+	СРЕДНЕЕ(ДлительностьРаботДокументовОбщая.Длительность) КАК Длительность
+ПОМЕСТИТЬ ДлительностьРаботВидовОбщая
+ИЗ
+	ДлительностьРаботДокументовОбщая КАК ДлительностьРаботДокументовОбщая
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботДокументовОбщая.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДлительностьРаботВидов.ВидДокумента,
+	СУММА(ДлительностьРаботВидов.Длительность) КАК Длительность
+ПОМЕСТИТЬ ДлительностьРаботВидовСуммарная
+ИЗ
+	ДлительностьРаботВидов КАК ДлительностьРаботВидов
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботВидов.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ПроцессыПоДокументам.Документ КАК Документ,
+	ПроцессыПоДокументам.Ответственный,
+	ПроцессыПоДокументам.ВидДокумента КАК ВидДокумента,
+	ПроцессыПоДокументам.Процесс КАК Процесс,
+	ПроцессыПоДокументам.ТипПроцесса КАК ТипПроцесса,
+	ПроцессыПоДокументам.ТипПроцессаПредставление КАК ТипПроцессаПредставление,
+	ПроцессыПоДокументам.Автор КАК Автор,
+	ПроцессыПоДокументам.Шаблон КАК Шаблон,
+	ПроцессыПоДокументам.Документ КАК КоличествоДокументов,
+	ПроцессыПоДокументам.Процесс КАК КоличествоПроцессов,
+	ПроцессыПоДокументам.Длительность КАК Длительность,
+	ПроцессыПоДокументам.Длительность КАК ДлительностьПредставление,
+	ДлительностьРаботВидов.Длительность КАК ДлительностьРабот,
+	ДлительностьРаботВидов.Длительность КАК ДлительностьРаботПредставление,
+	ДлительностьРаботВидовОбщая.Длительность КАК ДлительностьРаботОбщая,
+	ДлительностьРаботВидовОбщая.Длительность КАК ДлительностьРаботОбщаяПредставление,
+	ДлительностьРаботВидовСуммарная.Длительность КАК ДлительностьРаботСуммарная,
+	ДлительностьРаботДокументовОбщая.Длительность КАК ДлительностьРаботПоДокументу,
+	ДлительностьРаботДокументовОбщая.Длительность КАК ДлительностьРаботПоДокументуПредставление,
+	ПроцессыПоДокументам.Подразделение,
+	ПроцессыПоДокументам.ВопросДеятельности,
+	ПроцессыПоДокументам.Организация,
+	ПроцессыПоДокументам.Проект
+ИЗ
+	ПроцессыПоДокументам КАК ПроцессыПоДокументам
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботВидов КАК ДлительностьРаботВидов
+		ПО ПроцессыПоДокументам.ВидДокумента = ДлительностьРаботВидов.ВидДокумента
+			И ПроцессыПоДокументам.ТипПроцесса = ДлительностьРаботВидов.ТипПроцесса
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботВидовОбщая КАК ДлительностьРаботВидовОбщая
+		ПО ПроцессыПоДокументам.ВидДокумента = ДлительностьРаботВидовОбщая.ВидДокумента
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботДокументов КАК ДлительностьРаботДокументов
+		ПО ПроцессыПоДокументам.Документ = ДлительностьРаботДокументов.Документ
+			И ПроцессыПоДокументам.ТипПроцесса = ДлительностьРаботДокументов.ТипПроцесса
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботДокументовОбщая КАК ДлительностьРаботДокументовОбщая
+		ПО ПроцессыПоДокументам.Документ = ДлительностьРаботДокументовОбщая.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботВидовСуммарная КАК ДлительностьРаботВидовСуммарная
+		ПО ПроцессыПоДокументам.ВидДокумента = ДлительностьРаботВидовСуммарная.ВидДокумента</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ВходящиеДокументы</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидДокумента</dataPath>
+				<field>ВидДокумента</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид документа</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыВнутреннихДокументов</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыВходящихДокументов</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыИсходящихДокументов</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТипПроцессаСсылка</dataPath>
+				<field>ТипПроцесса</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип процесса ссылка</v8:content>
+					</v8:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<presentationExpression>ТипПроцессаПредставление</presentationExpression>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Исполнение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Поручение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Утверждение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Рассмотрение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Согласование</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Регистрация</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Длительность</dataPath>
+				<field>Длительность</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя длительность процесса</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Документ</dataPath>
+				<field>Документ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Документ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоДокументов</dataPath>
+				<field>КоличествоДокументов</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество документов</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Автор</dataPath>
+				<field>Автор</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Процесс</dataPath>
+				<field>Процесс</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Процесс</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Шаблон</dataPath>
+				<field>Шаблон</field>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныУтверждения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныРассмотрения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныСогласования</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныПоручения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныИсполнения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныРегистрации</v8:Type>
+				</valueType>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныИсполнения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныПоручения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поручение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныРассмотрения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рассмотрение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныРегистрации.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация (Произвольная)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныСогласования.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Согласование (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныУтверждения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Утверждение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботОбщая</dataPath>
+				<field>ДлительностьРаботОбщая</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя длительность работ по документу</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРабот</dataPath>
+				<field>ДлительностьРабот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботСуммарная</dataPath>
+				<field>ДлительностьРаботСуммарная</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ суммарная</v8:content>
+					</v8:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТипПроцесса</dataPath>
+				<field>ТипПроцессаПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип процесса</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>0</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</valueType>
+				<availableValue>
+					<value xsi:type="xs:string">Исполнение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Поручение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поручение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Рассмотрение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рассмотрение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Регистрация</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Согласование</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Согласование</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Утверждение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Утверждение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоПроцессов</dataPath>
+				<field>КоличествоПроцессов</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество процессов</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Пользователи</v8:Type>
+				</valueType>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;Не указан&gt;</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботПоДокументу</dataPath>
+				<field>ДлительностьРаботПоДокументу</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя длительность работ по документу</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВопросДеятельности</dataPath>
+				<field>ВопросДеятельности</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботПоДокументуПредставление</dataPath>
+				<field>ДлительностьРаботПоДокументуПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ по документу представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботПредставление</dataPath>
+				<field>ДлительностьРаботПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботОбщаяПредставление</dataPath>
+				<field>ДлительностьРаботОбщаяПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ общая представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьПредставление</dataPath>
+				<field>ДлительностьПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПредметыПроцесса.Предмет КАК Документ,
+	Документы.ВидДокумента КАК ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ КАК Ответственный,
+	Процессы.Ссылка КАК Процесс,
+	Процессы.Автор КАК Автор,
+	Процессы.Шаблон КАК Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400 КАК Длительность,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Исполнение.ПустаяСсылка) КАК ТипПроцесса,
+	"Исполнение" КАК ТипПроцессаПредставление,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ПОМЕСТИТЬ ПроцессыПоДокументам
+ИЗ
+	Справочник.ВходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Исполнение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Исполнение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Исполнение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Зарегистрировал
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Входящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Поручение.ПустаяСсылка),
+	"Поручение",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ВходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Поручение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Поручение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Поручение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Зарегистрировал
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Входящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Рассмотрение.ПустаяСсылка),
+	"Рассмотрение",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ВходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Рассмотрение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Рассмотрение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Рассмотрение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Зарегистрировал
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Входящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Регистрация.ПустаяСсылка),
+	"Регистрация",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ВходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Регистрация.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Регистрация КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Регистрация" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Зарегистрировал
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Входящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Согласование.ПустаяСсылка),
+	"Согласование",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ВходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Согласование.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Согласование КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Согласование" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Зарегистрировал
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Входящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Утверждение.ПустаяСсылка),
+	"Утверждение",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ВходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Утверждение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Утверждение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ВходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Утверждение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Зарегистрировал
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Входящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Зарегистрировал
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ПроцессыПоДокументам.Документ КАК Документ,
+	СУММА(ПроцессыПоДокументам.Длительность) КАК Длительность,
+	ПроцессыПоДокументам.ТипПроцесса КАК ТипПроцесса,
+	ПроцессыПоДокументам.ВидДокумента
+ПОМЕСТИТЬ ДлительностьРаботДокументов
+ИЗ
+	ПроцессыПоДокументам КАК ПроцессыПоДокументам
+
+СГРУППИРОВАТЬ ПО
+	ПроцессыПоДокументам.Документ,
+	ПроцессыПоДокументам.ТипПроцесса,
+	ПроцессыПоДокументам.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ДлительностьРаботДокументов.Документ КАК Документ,
+	СУММА(ДлительностьРаботДокументов.Длительность) КАК Длительность,
+	ДлительностьРаботДокументов.ВидДокумента
+ПОМЕСТИТЬ ДлительностьРаботДокументовОбщая
+ИЗ
+	ДлительностьРаботДокументов КАК ДлительностьРаботДокументов
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботДокументов.Документ,
+	ДлительностьРаботДокументов.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ДлительностьРаботДокументов.ВидДокумента,
+	ДлительностьРаботДокументов.ТипПроцесса,
+	СРЕДНЕЕ(ДлительностьРаботДокументов.Длительность) КАК Длительность
+ПОМЕСТИТЬ ДлительностьРаботВидов
+ИЗ
+	ДлительностьРаботДокументов КАК ДлительностьРаботДокументов
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботДокументов.ВидДокумента,
+	ДлительностьРаботДокументов.ТипПроцесса
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДлительностьРаботДокументовОбщая.ВидДокумента,
+	СРЕДНЕЕ(ДлительностьРаботДокументовОбщая.Длительность) КАК Длительность
+ПОМЕСТИТЬ ДлительностьРаботВидовОбщая
+ИЗ
+	ДлительностьРаботДокументовОбщая КАК ДлительностьРаботДокументовОбщая
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботДокументовОбщая.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДлительностьРаботВидов.ВидДокумента,
+	СУММА(ДлительностьРаботВидов.Длительность) КАК Длительность
+ПОМЕСТИТЬ ДлительностьРаботВидовСуммарная
+ИЗ
+	ДлительностьРаботВидов КАК ДлительностьРаботВидов
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботВидов.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ПроцессыПоДокументам.Документ КАК Документ,
+	ПроцессыПоДокументам.Ответственный,
+	ПроцессыПоДокументам.ВидДокумента КАК ВидДокумента,
+	ПроцессыПоДокументам.Процесс КАК Процесс,
+	ПроцессыПоДокументам.ТипПроцесса КАК ТипПроцесса,
+	ПроцессыПоДокументам.ТипПроцессаПредставление КАК ТипПроцессаПредставление,
+	ПроцессыПоДокументам.Автор КАК Автор,
+	ПроцессыПоДокументам.Шаблон КАК Шаблон,
+	ПроцессыПоДокументам.Документ КАК КоличествоДокументов,
+	ПроцессыПоДокументам.Процесс КАК КоличествоПроцессов,
+	ПроцессыПоДокументам.Длительность КАК Длительность,
+	ПроцессыПоДокументам.Длительность КАК ДлительностьПредставление,
+	ДлительностьРаботВидов.Длительность КАК ДлительностьРабот,
+	ДлительностьРаботВидов.Длительность КАК ДлительностьРаботПредставление,
+	ДлительностьРаботВидовОбщая.Длительность КАК ДлительностьРаботОбщая,
+	ДлительностьРаботВидовОбщая.Длительность КАК ДлительностьРаботОбщаяПредставление,
+	ДлительностьРаботВидовСуммарная.Длительность КАК ДлительностьРаботСуммарная,
+	ДлительностьРаботДокументовОбщая.Длительность КАК ДлительностьРаботПоДокументу,
+	ДлительностьРаботДокументовОбщая.Длительность КАК ДлительностьРаботПоДокументуПредставление,
+	ПроцессыПоДокументам.Подразделение,
+	ПроцессыПоДокументам.ВопросДеятельности,
+	ПроцессыПоДокументам.Организация,
+	ПроцессыПоДокументам.Проект
+ИЗ
+	ПроцессыПоДокументам КАК ПроцессыПоДокументам
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботВидов КАК ДлительностьРаботВидов
+		ПО ПроцессыПоДокументам.ВидДокумента = ДлительностьРаботВидов.ВидДокумента
+			И ПроцессыПоДокументам.ТипПроцесса = ДлительностьРаботВидов.ТипПроцесса
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботВидовОбщая КАК ДлительностьРаботВидовОбщая
+		ПО ПроцессыПоДокументам.ВидДокумента = ДлительностьРаботВидовОбщая.ВидДокумента
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботДокументов КАК ДлительностьРаботДокументов
+		ПО ПроцессыПоДокументам.Документ = ДлительностьРаботДокументов.Документ
+			И ПроцессыПоДокументам.ТипПроцесса = ДлительностьРаботДокументов.ТипПроцесса
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботДокументовОбщая КАК ДлительностьРаботДокументовОбщая
+		ПО ПроцессыПоДокументам.Документ = ДлительностьРаботДокументовОбщая.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботВидовСуммарная КАК ДлительностьРаботВидовСуммарная
+		ПО ПроцессыПоДокументам.ВидДокумента = ДлительностьРаботВидовСуммарная.ВидДокумента</query>
+		</item>
+		<item xsi:type="DataSetQuery">
+			<name>ИсходящиеДокументы</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидДокумента</dataPath>
+				<field>ВидДокумента</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Вид документа</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыВнутреннихДокументов</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыВходящихДокументов</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ВидыИсходящихДокументов</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТипПроцессаСсылка</dataPath>
+				<field>ТипПроцесса</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип процесса ссылка</v8:content>
+					</v8:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<attributeUseRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</attributeUseRestriction>
+				<presentationExpression>ТипПроцессаПредставление</presentationExpression>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Исполнение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Поручение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Утверждение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Рассмотрение</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Согласование</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:BusinessProcessRef.Регистрация</v8:Type>
+				</valueType>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Длительность</dataPath>
+				<field>Длительность</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя длительность процесса</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Документ</dataPath>
+				<field>Документ</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Документ</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоДокументов</dataPath>
+				<field>КоличествоДокументов</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество документов</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Автор</dataPath>
+				<field>Автор</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Процесс</dataPath>
+				<field>Процесс</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Процесс</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Шаблон</dataPath>
+				<field>Шаблон</field>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныУтверждения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныРассмотрения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныСогласования</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныПоручения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныИсполнения</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ШаблоныРегистрации</v8:Type>
+				</valueType>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныИсполнения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныПоручения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поручение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныРассмотрения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рассмотрение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныРегистрации.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация (Произвольная)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныСогласования.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Согласование (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныУтверждения.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Утверждение (Произвольное)</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботОбщая</dataPath>
+				<field>ДлительностьРаботОбщая</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя длительность работ по документу</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРабот</dataPath>
+				<field>ДлительностьРабот</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботСуммарная</dataPath>
+				<field>ДлительностьРаботСуммарная</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ суммарная</v8:content>
+					</v8:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТипПроцесса</dataPath>
+				<field>ТипПроцессаПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Тип процесса</v8:content>
+					</v8:item>
+				</title>
+				<valueType>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>0</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</valueType>
+				<availableValue>
+					<value xsi:type="xs:string">Исполнение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Поручение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поручение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Рассмотрение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рассмотрение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Регистрация</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Согласование</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Согласование</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+				<availableValue>
+					<value xsi:type="xs:string">Утверждение</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Утверждение</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоПроцессов</dataPath>
+				<field>КоличествоПроцессов</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Количество процессов</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Ответственный</dataPath>
+				<field>Ответственный</field>
+				<valueType>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Пользователи</v8:Type>
+				</valueType>
+				<availableValue>
+					<value xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</value>
+					<presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;Не указан&gt;</v8:content>
+						</v8:item>
+					</presentation>
+				</availableValue>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботПоДокументу</dataPath>
+				<field>ДлительностьРаботПоДокументу</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Средняя длительность работ по документу</v8:content>
+					</v8:item>
+				</title>
+				<appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+					</dcscor:item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВопросДеятельности</dataPath>
+				<field>ВопросДеятельности</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботПоДокументуПредставление</dataPath>
+				<field>ДлительностьРаботПоДокументуПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ по документу представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботПредставление</dataPath>
+				<field>ДлительностьРаботПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьРаботОбщаяПредставление</dataPath>
+				<field>ДлительностьРаботОбщаяПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность работ общая представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДлительностьПредставление</dataPath>
+				<field>ДлительностьПредставление</field>
+				<title xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Длительность представление</v8:content>
+					</v8:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Проект</dataPath>
+				<field>Проект</field>
+			</field>
+			<dataSource>ИсточникДанных1</dataSource>
+			<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПредметыПроцесса.Предмет КАК Документ,
+	Документы.ВидДокумента КАК ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ КАК Ответственный,
+	Процессы.Ссылка КАК Процесс,
+	Процессы.Автор КАК Автор,
+	Процессы.Шаблон КАК Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400 КАК Длительность,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Исполнение.ПустаяСсылка) КАК ТипПроцесса,
+	"Исполнение" КАК ТипПроцессаПредставление,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ПОМЕСТИТЬ ПроцессыПоДокументам
+ИЗ
+	Справочник.ИсходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Исполнение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Исполнение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ИсходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Исполнение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Исходящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Поручение.ПустаяСсылка),
+	"Поручение",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ИсходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Поручение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Поручение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ИсходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Поручение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Исходящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Рассмотрение.ПустаяСсылка),
+	"Рассмотрение",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ИсходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Рассмотрение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Рассмотрение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ИсходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Рассмотрение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Исходящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Регистрация.ПустаяСсылка),
+	"Регистрация",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ИсходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Регистрация.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Регистрация КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ИсходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Регистрация" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Исходящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Согласование.ПустаяСсылка),
+	"Согласование",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ИсходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Согласование.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Согласование КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ИсходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Согласование" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Исходящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПредметыПроцесса.Предмет,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Процессы.Ссылка,
+	Процессы.Автор,
+	Процессы.Шаблон,
+	СУММА(РАЗНОСТЬДАТ(Процессы.ДатаНачала, Процессы.ДатаЗавершения, СЕКУНДА)) / 86400,
+	ЗНАЧЕНИЕ(БизнесПроцесс.Утверждение.ПустаяСсылка),
+	"Утверждение",
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+ИЗ
+	Справочник.ИсходящиеДокументы КАК Документы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БизнесПроцесс.Утверждение.Предметы КАК ПредметыПроцесса
+			ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.Утверждение КАК Процессы
+			ПО ПредметыПроцесса.Ссылка = Процессы.Ссылка
+		ПО (ПредметыПроцесса.Предмет = Документы.Ссылка)
+ГДЕ
+	ПредметыПроцесса.Предмет ССЫЛКА Справочник.ИсходящиеДокументы
+	И ПредметыПроцесса.РольПредмета = ЗНАЧЕНИЕ(Перечисление.РолиПредметов.Основной)
+	И Процессы.Завершен = ИСТИНА
+	И Процессы.ПометкаУдаления = ЛОЖЬ
+	И Документы.ПометкаУдаления = ЛОЖЬ
+{ГДЕ
+	(Процессы.ДатаНачала МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание
+			ИЛИ Процессы.ДатаЗавершения МЕЖДУ &amp;ПериодНачало И &amp;ПериодОкончание),
+	("Утверждение" В (&amp;ТипПроцесса)),
+	(Документы.ВидДокумента = &amp;ВидДокумента),
+	(Документы.Подразделение = &amp;Подразделение),
+	(Документы.ВопросДеятельности = &amp;ВопросДеятельности),
+	(Документы.Организация = &amp;Организация),
+	(Документы.Проект = &amp;Проект),
+	(ВЫБОР
+			КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+				ТОГДА Документы.Подготовил
+			ИНАЧЕ Документы.Ответственный
+		КОНЕЦ = &amp;Ответственный),
+	(Процессы.Шаблон = &amp;Шаблон),
+	(Процессы.Автор = &amp;Автор),
+	(ПредметыПроцесса.Предмет = &amp;Документ),
+	("Исходящие документы" В (&amp;ТипДокумента))}
+
+СГРУППИРОВАТЬ ПО
+	ПредметыПроцесса.Предмет,
+	ТИПЗНАЧЕНИЯ(ПредметыПроцесса.Ссылка),
+	Процессы.Ссылка,
+	Процессы.Шаблон,
+	Процессы.Автор,
+	Документы.ВидДокумента,
+	ВЫБОР
+		КОГДА Документы.Ответственный = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+			ТОГДА Документы.Подготовил
+		ИНАЧЕ Документы.Ответственный
+	КОНЕЦ,
+	Документы.Подразделение,
+	Документы.ВопросДеятельности,
+	Документы.Организация,
+	Документы.Проект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ПроцессыПоДокументам.Документ КАК Документ,
+	СУММА(ПроцессыПоДокументам.Длительность) КАК Длительность,
+	ПроцессыПоДокументам.ТипПроцесса КАК ТипПроцесса,
+	ПроцессыПоДокументам.ВидДокумента
+ПОМЕСТИТЬ ДлительностьРаботДокументов
+ИЗ
+	ПроцессыПоДокументам КАК ПроцессыПоДокументам
+
+СГРУППИРОВАТЬ ПО
+	ПроцессыПоДокументам.Документ,
+	ПроцессыПоДокументам.ТипПроцесса,
+	ПроцессыПоДокументам.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ДлительностьРаботДокументов.Документ КАК Документ,
+	СУММА(ДлительностьРаботДокументов.Длительность) КАК Длительность,
+	ДлительностьРаботДокументов.ВидДокумента
+ПОМЕСТИТЬ ДлительностьРаботДокументовОбщая
+ИЗ
+	ДлительностьРаботДокументов КАК ДлительностьРаботДокументов
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботДокументов.Документ,
+	ДлительностьРаботДокументов.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ДлительностьРаботДокументов.ВидДокумента,
+	ДлительностьРаботДокументов.ТипПроцесса,
+	СРЕДНЕЕ(ДлительностьРаботДокументов.Длительность) КАК Длительность
+ПОМЕСТИТЬ ДлительностьРаботВидов
+ИЗ
+	ДлительностьРаботДокументов КАК ДлительностьРаботДокументов
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботДокументов.ВидДокумента,
+	ДлительностьРаботДокументов.ТипПроцесса
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДлительностьРаботДокументовОбщая.ВидДокумента,
+	СРЕДНЕЕ(ДлительностьРаботДокументовОбщая.Длительность) КАК Длительность
+ПОМЕСТИТЬ ДлительностьРаботВидовОбщая
+ИЗ
+	ДлительностьРаботДокументовОбщая КАК ДлительностьРаботДокументовОбщая
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботДокументовОбщая.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДлительностьРаботВидов.ВидДокумента,
+	СУММА(ДлительностьРаботВидов.Длительность) КАК Длительность
+ПОМЕСТИТЬ ДлительностьРаботВидовСуммарная
+ИЗ
+	ДлительностьРаботВидов КАК ДлительностьРаботВидов
+
+СГРУППИРОВАТЬ ПО
+	ДлительностьРаботВидов.ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ПроцессыПоДокументам.Документ КАК Документ,
+	ПроцессыПоДокументам.Ответственный,
+	ПроцессыПоДокументам.ВидДокумента КАК ВидДокумента,
+	ПроцессыПоДокументам.Процесс КАК Процесс,
+	ПроцессыПоДокументам.ТипПроцесса КАК ТипПроцесса,
+	ПроцессыПоДокументам.ТипПроцессаПредставление КАК ТипПроцессаПредставление,
+	ПроцессыПоДокументам.Автор КАК Автор,
+	ПроцессыПоДокументам.Шаблон КАК Шаблон,
+	ПроцессыПоДокументам.Документ КАК КоличествоДокументов,
+	ПроцессыПоДокументам.Процесс КАК КоличествоПроцессов,
+	ПроцессыПоДокументам.Длительность КАК Длительность,
+	ПроцессыПоДокументам.Длительность КАК ДлительностьПредставление,
+	ДлительностьРаботВидов.Длительность КАК ДлительностьРабот,
+	ДлительностьРаботВидов.Длительность КАК ДлительностьРаботПредставление,
+	ДлительностьРаботВидовОбщая.Длительность КАК ДлительностьРаботОбщая,
+	ДлительностьРаботВидовОбщая.Длительность КАК ДлительностьРаботОбщаяПредставление,
+	ДлительностьРаботВидовСуммарная.Длительность КАК ДлительностьРаботСуммарная,
+	ДлительностьРаботДокументовОбщая.Длительность КАК ДлительностьРаботПоДокументу,
+	ДлительностьРаботДокументовОбщая.Длительность КАК ДлительностьРаботПоДокументуПредставление,
+	ПроцессыПоДокументам.Подразделение,
+	ПроцессыПоДокументам.ВопросДеятельности,
+	ПроцессыПоДокументам.Организация,
+	ПроцессыПоДокументам.Проект
+ИЗ
+	ПроцессыПоДокументам КАК ПроцессыПоДокументам
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботВидов КАК ДлительностьРаботВидов
+		ПО ПроцессыПоДокументам.ВидДокумента = ДлительностьРаботВидов.ВидДокумента
+			И ПроцессыПоДокументам.ТипПроцесса = ДлительностьРаботВидов.ТипПроцесса
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботВидовОбщая КАК ДлительностьРаботВидовОбщая
+		ПО ПроцессыПоДокументам.ВидДокумента = ДлительностьРаботВидовОбщая.ВидДокумента
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботДокументов КАК ДлительностьРаботДокументов
+		ПО ПроцессыПоДокументам.Документ = ДлительностьРаботДокументов.Документ
+			И ПроцессыПоДокументам.ТипПроцесса = ДлительностьРаботДокументов.ТипПроцесса
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботДокументовОбщая КАК ДлительностьРаботДокументовОбщая
+		ПО ПроцессыПоДокументам.Документ = ДлительностьРаботДокументовОбщая.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ ДлительностьРаботВидовСуммарная КАК ДлительностьРаботВидовСуммарная
+		ПО ПроцессыПоДокументам.ВидДокумента = ДлительностьРаботВидовСуммарная.ВидДокумента</query>
+		</item>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ДлительностьРаботПроцент</dataPath>
+		<expression>ДлительностьРабот / ДлительностьРаботСуммарная</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Длительность работ процент</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=4; ЧДЦ=1; ЧС=-2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<totalField>
+		<dataPath>КоличествоДокументов</dataPath>
+		<expression>Количество(Различные КоличествоДокументов)</expression>
+		<group>Автор</group>
+		<group>ВидДокумента</group>
+		<group>Документ</group>
+		<group>Ответственный</group>
+		<group>Процесс</group>
+		<group>Шаблон</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДлительностьРабот</dataPath>
+		<expression>ДлительностьРабот</expression>
+		<group>ВидДокумента</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДлительностьРаботОбщая</dataPath>
+		<expression>ДлительностьРаботОбщая</expression>
+		<group>ВидДокумента</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДлительностьРаботПроцент</dataPath>
+		<expression>ДлительностьРаботПроцент</expression>
+		<group>ВидДокумента</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПроцессов</dataPath>
+		<expression>Количество(Различные КоличествоПроцессов)</expression>
+		<group>Шаблон</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>Длительность</dataPath>
+		<expression>Среднее(Длительность)</expression>
+		<group>Автор</group>
+		<group>Процесс</group>
+		<group>Шаблон</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДлительностьРаботПоДокументу</dataPath>
+		<expression>ДлительностьРаботПоДокументу</expression>
+		<group>Документ</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДлительностьРаботПоДокументу</dataPath>
+		<expression>Среднее(ДлительностьРаботПоДокументу)</expression>
+		<group>Ответственный</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДлительностьРаботПредставление</dataPath>
+		<expression>ДлительностьСтрокой(ДлительностьРабот)</expression>
+		<group>ВидДокумента</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДлительностьРаботОбщаяПредставление</dataPath>
+		<expression>ДлительностьСтрокой(ДлительностьРаботОбщая)</expression>
+		<group>ВидДокумента</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДлительностьПредставление</dataPath>
+		<expression>ДлительностьСтрокой(Среднее(Длительность))</expression>
+		<group>Автор</group>
+		<group>Процесс</group>
+		<group>Шаблон</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДлительностьРаботПоДокументуПредставление</dataPath>
+		<expression>ДлительностьСтрокой(ДлительностьРаботПоДокументу)</expression>
+		<group>Документ</group>
+	</totalField>
+	<totalField>
+		<dataPath>ДлительностьРаботПоДокументуПредставление</dataPath>
+		<expression>ДлительностьСтрокой(Среднее(ДлительностьРаботПоДокументу))</expression>
+		<group>Ответственный</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПериодНачало</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период начало</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодОкончание</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период окончание</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ТипДокумента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип документа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>20</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:string">Входящие документы</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входящие документы</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">Внутренние документы</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внутренние документы</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">Исходящие документы</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходящие документы</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ТипПроцесса</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип процесса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>12</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="xs:string">Исполнение</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнение</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">Поручение</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поручение</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">Рассмотрение</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассмотрение</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">Регистрация</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">Согласование</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласование</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="xs:string">Утверждение</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Утверждение</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>ВидДокумента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид документа</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыВнутреннихДокументов</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыВходящихДокументов</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыИсходящихДокументов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Ответственный</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ответственный</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Документ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Документ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Файлы</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВходящиеДокументы</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВнутренниеДокументы</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ИсходящиеДокументы</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Шаблон</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Шаблон</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныУтверждения</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныРассмотрения</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныСогласования</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныПоручения</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныИсполнения</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныРегистрации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныИсполнения.ПустаяСсылка</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнение (Произвольное)</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныПоручения.ПустаяСсылка</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поручение (Произвольное)</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныРассмотрения.ПустаяСсылка</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассмотрение (Произвольное)</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныРегистрации.ПустаяСсылка</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация (Произвольная)</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныСогласования.ПустаяСсылка</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласование (Произвольное)</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+		<availableValue>
+			<value xsi:type="dcscor:DesignTimeValue">Справочник.ШаблоныУтверждения.ПустаяСсылка</value>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Утверждение (Произвольное)</v8:content>
+				</v8:item>
+			</presentation>
+		</availableValue>
+	</parameter>
+	<parameter>
+		<name>Автор</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Автор</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВопросДеятельности</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вопрос деятельности</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВопросыДеятельности</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Подразделение</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Подразделение</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СтруктураПредприятия</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Проект</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Проект</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Проекты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статистика работ над документами</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипПроцесса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДокументов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДлительностьРабот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДлительностьРаботПредставление</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДлительностьРаботПроцент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДлительностьРаботОбщая</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДлительностьРаботОбщаяПредставление</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisQuarter</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>f8cca273-3265-41a7-be78-be141b28da66</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Внутренние документы</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>e3d72d1a-cf98-44ac-adb8-3f34ac4a170d</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипПроцесса</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Согласование</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Исполнение</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Поручение</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>80c24f55-2b49-41ae-886a-12012702f2dc</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВидДокумента</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Ответственный</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>7ff766e7-e03a-4b19-a553-14a295c0dbd5</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Шаблон</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Автор</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВопросДеятельности</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>a4192b71-87fe-4b7f-a426-a00276af6d34</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>211d9d66-6d8c-4f2a-b113-4ec5f7444525</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Подразделение</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>3c679695-3f17-4ffd-a760-ff3b2ea336ec</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Проект</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>e8c9b695-359d-49d4-bb5a-bc60095ca110</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДлительностьРаботОбщая</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Begin</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">Bar</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статистика работ над документами</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоДокументов</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДлительностьРаботОбщаяПредставление</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТипПроцесса</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ТипПроцесса</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДлительностьРаботПредставление</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>(дн,ч)</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДлительностьРаботПроцент</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>(%)</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидДокумента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:row>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидДокумента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>КоличествоЗаписей</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:point>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДлительностьРаботОбщая</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Средняя длительность работ по видам документов</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>СредняяДлительностьПроцессовПоДокументам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Средняя длительность процессов по документам</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Шаблон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДокументов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПроцессов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Длительность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДлительностьПредставление</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisQuarter</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>ec38aedb-ce8b-4851-b48e-bfbc5d0eab9b</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Внутренние документы</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>e043d7bb-2757-4952-a575-9ab07c51fef8</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипПроцесса</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Согласование</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Исполнение</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Поручение</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>6f510527-9366-4db7-ac7b-7bf0736aacd0</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Ответственный</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>efc898f9-d513-47a9-9827-52cb0e538649</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Автор</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВопросДеятельности</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>18a20dae-d5ce-4102-84e4-ca2c68abf2a2</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>6ef92a2e-7976-4a62-9499-0ee670ae9357</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Подразделение</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>7e51147e-7013-47a4-aa8c-69c41155b0cc</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Проект</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>ef8c8bac-d28c-4483-8f68-ae08f01a8b93</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Длительность</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">Pie</dcscor:value>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.ВидПодписей</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartLabelType">SeriesPercent</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.РасположениеЛегенды</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionChartLegendPlacement">None</dcscor:value>
+					</dcscor:item>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Средняя длительность процессов по документам</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Шаблон</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Begin</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Шаблон</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоДокументов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Количество документов по шаблонам</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ДокументыПоОтветственным</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статистика работ над документами по ответственным</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ответственный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Документ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Подразделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВопросДеятельности</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Проект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДокументов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ДлительностьРаботПоДокументу</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДлительностьРаботПоДокументуПредставление</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisQuarter</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>a1ebc1dc-aa54-4f0e-b1d5-44b5aa41106f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Внутренние документы</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>cab10913-0ff7-49b3-b13a-ac06562e242c</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипПроцесса</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Согласование</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Исполнение</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Поручение</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>56f53ee2-2141-4097-accc-e63e547840b5</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Ответственный</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>c484fcaf-c3c3-44c4-8122-ee23ae18bcb8</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Автор</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВопросДеятельности</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>e55a5460-7382-45ba-8df9-52fc3ecabbcd</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>7ee03454-242e-42c6-bf83-45e5fa1c7f5e</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Подразделение</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>ec5c64f9-a2d2-4aef-82c6-d234f5c897ea</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Проект</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>d8ea30bf-9679-46f5-b5db-115853601748</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДлительностьРаботПоДокументу</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы по ответственным</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Ответственный</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Документ</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Организация</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подразделение</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВопросДеятельности</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Проект</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПроцессыПоШаблонам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статистика процессвов по шаблонам при работе над документами</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Шаблон</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Процесс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Автор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДокументов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Длительность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДлительностьПредставление</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisQuarter</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>20f955a4-5693-4caa-9782-f52facdc7054</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Внутренние документы</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>3c97c385-53bd-419d-b380-147f624a091d</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипПроцесса</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Согласование</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Исполнение</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Поручение</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>c875f610-7367-415a-986e-872d73a9334f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Ответственный</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>eba239d5-2ab9-44f9-ae44-9f64fd967229</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Автор</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВопросДеятельности</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>27c9bb83-f49c-4bbc-8d11-3f365b521787</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>efb77026-4492-497d-aee8-e4301b2380ec</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Подразделение</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>3e29a5de-55d0-4b2c-9392-c9829f3e0017</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Проект</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>79fdbad7-368d-43d7-92e8-7ab43358f30b</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Длительность</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процессы по шаблонам</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Шаблон</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Процесс</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Автор</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПроцессыПоАвторам</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статистика процессвов по авторам при работе над документами</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Автор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Процесс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоДокументов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Длительность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДлительностьПредставление</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisQuarter</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>5a8a22fc-5947-4a98-ab00-61861b40f891</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипДокумента</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Внутренние документы</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>57f8f6ae-492e-4598-be44-fb16ead824e0</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипПроцесса</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Согласование</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Исполнение</dcscor:value>
+					<dcscor:value xsi:type="xs:string">Поручение</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>0cd3437b-a46e-4beb-a55e-b8a09a5c76af</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Ответственный</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>c45042e9-1ff9-4cb2-9540-4a4885ca5dac</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Автор</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВопросДеятельности</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>4cda40bd-5330-47bf-92dd-7f61ed9201ed</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>ecc1edc9-3853-4f88-b0c8-4490cf397d19</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Подразделение</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>e60f4f89-7c31-43d0-a661-af84d51783c4</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Проект</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>6257e92c-5acf-4109-912b-af91ad1fa8dd</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Длительность</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процессы по авторам</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Автор</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Процесс</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

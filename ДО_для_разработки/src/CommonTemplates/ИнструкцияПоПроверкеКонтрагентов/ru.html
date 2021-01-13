@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><meta name="GENERATOR" content="MSHTML 11.00.9600.18125"></meta></head><body>
+<p align="left"><font size="4" face="Verdana">О сервисе проверки контрагентов ФНС</font></p>
+<p><font size="2" face="Verdana">В программе реализована проверка контрагентов через Интернет посредством специализированного веб-сервиса ФНС. <br>Сервис "Проверка реквизитов контрагентов" ФНС позволяет в <span class="SpellE">онлайн-режиме</span> проверять существование контрагента по его ключевым реквизитам - ИНН и КПП.</font></p><span lang="X-NONE" style="mso-ansi-language: X-NONE"><o:p><!--сообщение про тестовый режим--><p></p>
+<div><font size="2"><font face="Verdana">Проверка контрагентов осуществляется по ЕГРН (Единому государственному реестру налогоплательщиков), р</font></font><font size="2"><font face="Verdana">езультатом проверки может являться один из следующих статусов:</font></font></div><span style="COLOR: black"><font face="Verdana"><font size="2">
+<p></p>
+<table width="100%" border="0"><tbody><tr><td valign="top" width="20%"><font color="#64b010" size="2">Есть в базе ФНС</font></td>
+<td valign="top" width="2%">-</td>
+<td valign="top"><font size="2">означает, что налогоплательщик зарегистрирован в ЕГРН и имеет статус действующего в интервале ± 6 дней от даты запроса</font></td></tr><tr><td valign="top"><font color="#807a59" size="2">Не действует или изменен КПП</font></td>
+<td valign="top">-</td>
+<td valign="top"><font size="2">означает, что налогоплательщик зарегистрирован в ЕГРН, но не имеет статус действующего в интервале ± 6 дней от даты запроса. <br>Такой ответ можно интерпретировать следующим образом: либо контрагент с указанной комбинацией ИНН и КПП прекратил деятельность, либо указанный КПП был изменен, то есть, ранее комбинация ИНН и КПП была действительной, но теперь она недействительна</font></td></tr><tr><td valign="top"><font color="#e12828" size="2">КПП не соответствует данным базы ФНС</font></td>
+<td valign="top">-</td>
+<td valign="top"><font size="2">означает, что КПП налогоплательщика не соотвествует тому ИНН, который был указан в запросе. <br>Такое сообщение означает, что такой комбинации ИНН и КПП в ЕГРН нет и никогда не было</font></td></tr><tr><td valign="top"><font color="#e12828" size="2">Отсутствует в базе ФНС<br></font></td>
+<td valign="top">-</td>
+<td valign="top"><font size="2">означает, что налогоплательщик с указанным ИНН не зарегистрирован в ЕГРН</font></td></tr><tr><td valign="top">
+<p><font color="#e12828" size="2">Неверный ИНН<br>Неверная длина ИНН<br></font><font color="#e12828" size="2">Неверная длина КПП<br>ИП не может иметь КПП<br>Недопустимые символы в ИНН<br>Недопустимые символы в КПП<br>Некорректный формат даты<br>Неверная дата (ранее 01.01.1991 или позднее текущей даты)</font></p></td>
+<td valign="top">-</td>
+<td valign="top"><font size="2">означает, что в проверяемых данных (ИНН, КПП или дате) найдены ошибки</font></td></tr></tbody></table><p></p>
+<p></p></font></font></span><span style="COLOR: black"><font face="Verdana"><font size="2">Проверка производится при вводе нового контрагента и изменении реквизитов существующего. Статус проверки отображается в карточке контрагента, формах списка и выбора справочника контрагентов.</font></font></span> 
+<p><span style="COLOR: black"><font face="Verdana"><font size="2"><img src="_files/Контрагент.png"></img><br></font></font></span></p></o:p></span>
+<p><span style="COLOR: black"><font size="2" face="Verdana"></font></span></p>
+<p><span style="COLOR: black"><font face="Verdana"><font size="2">При отрицательном результате проверки в формах списка и выбора справочника ИНН и КПП контрагента окрашивается в красный цвет.</font></font></span></p>
+<p><span style="COLOR: black"><font face="Verdana"><font size="2"><img src="_files/СписокКонтрагентов.png"></img><o:p></o:p></font></font></span></p>
+<p><span style="COLOR: black"><font size="2" face="Verdana"></font></span></p>
+<p><span style="COLOR: black"><font face="Verdana"><font size="2">Если от ФНС получен ответ, что контрагент прекратил деятельность, то в форме списка контрагент будут выделен серым цветом.</font></font></span></p>
+<p><span style="COLOR: black"><font face="Verdana"><font size="2">Если контрагент уже был проверен ранее, то при открытии карточки повторная проверка не выполняется, а актуализация результата проверки выполняется регламентным заданием </font></font></span><span style="COLOR: black"><font face="Verdana"><font size="2">с периодичностью раз в неделю в фоновом режиме.</font></font></span></p>
+<p><span style="COLOR: black"><span style="COLOR: black"><font size="2" face="Verdana">Во входящих, исходящих, внутренних документах при отрицательном результате проверки контрагент выделяется красным фоном. <br><span style="COLOR: black">Проверка производится при открытии документа, а так же при изменении контрагента. </span></font></span></span></p>
+<p><span style="COLOR: black"><span style="COLOR: black"><font size="2" face="Verdana"><span style="COLOR: black"><img src="_files/Документ1.png"></img></span></font></span></span></p>
+<p><span style="COLOR: black"><span style="COLOR: black"><font size="2" face="Verdana"><span style="COLOR: black"></span></font></span></span></p></body></html>

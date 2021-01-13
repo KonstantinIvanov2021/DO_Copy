@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0adab8d3-af56-47d1-841d-12dd9fc18c33">
+  <producedTypes>
+    <objectType typeId="a4b24be4-f5a0-4f35-af89-db33b9685a09" valueTypeId="ab4069a2-6f88-4d4d-9694-7700dec5f38f"/>
+    <refType typeId="39a174a4-6bf3-47ec-a810-baf51315b892" valueTypeId="ee8e3788-8158-41d8-9dd4-44b82a8a17d6"/>
+    <selectionType typeId="cf1c8648-f8e8-46b4-b47a-d6101a07531f" valueTypeId="3b8d5d5b-41c3-42c8-869f-fa5ea2afc25e"/>
+    <listType typeId="2a142a12-141d-4858-b802-db46b48a3495" valueTypeId="97f9f5ee-a9bc-4b63-a91d-1583f74a6ebe"/>
+    <managerType typeId="462a4a3a-da87-4c1b-b765-163ea906a2e6" valueTypeId="d02c2b24-8cc2-4250-99b5-4ce8c657b379"/>
+  </producedTypes>
+  <name>СпискиРассылкиПоКонтрагентам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Списки рассылки по контрагентам</value>
+  </synonym>
+  <inputByString>Catalog.СпискиРассылкиПоКонтрагентам.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Список рассылки по контрагентам</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.СпискиРассылкиПоКонтрагентам.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.СпискиРассылкиПоКонтрагентам.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="95930723-65fc-486f-9872-a7972e2bfcab">
+    <name>ГруппаДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыДоступаКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="95dfbf44-9cd7-432b-b3d5-65744b55f635">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <comment>Любая дополнительная информация</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="d87e9a8a-8027-4c43-bc0b-1225b4810ca5">
+    <producedTypes>
+      <objectType typeId="ecfe6279-5aeb-4f3a-aa2a-d2a41c045b65" valueTypeId="07358e4c-27ac-4b45-828c-326401f35fff"/>
+      <rowType typeId="a98cf01a-720e-4387-8310-1bc87a0a2b10" valueTypeId="ba8c99f7-3616-4a84-ae20-1e9d27e2d948"/>
+    </producedTypes>
+    <name>Получатели</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получатели</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <attributes uuid="87c876dc-9393-4c58-9b6d-c7138d4ccb5a">
+      <name>Получатель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получатель</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="619b52f0-ca91-424c-a68f-05595be39525">
+      <name>Адресат</name>
+      <synonym>
+        <key>ru</key>
+        <value>Адресат</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.КонтактныеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="cb6bd200-c6be-4d06-9a6b-a2155e8ca254">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1c0ff96f-b3db-4027-aaca-6afb0669512a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="4f9452f1-1312-4b19-904e-053134645978">
+    <name>КомандаОткрытьСпискиРассылки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Списки рассылки по контрагентам</value>
+    </synonym>
+    <group>ActionsPanelTools</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:Catalog>

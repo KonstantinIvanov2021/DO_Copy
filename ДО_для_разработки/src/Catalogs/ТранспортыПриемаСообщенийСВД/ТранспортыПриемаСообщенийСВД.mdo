@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2fba9f16-8d76-4e8e-afd8-d82ec4cb3c92">
+  <producedTypes>
+    <objectType typeId="cae90554-d742-433c-9669-6663eaa2c5ec" valueTypeId="1cd95abb-df16-4c63-b1e1-d77b4322e3ff"/>
+    <refType typeId="ab3f9f6b-f9b2-46f5-adb1-4a62ebc19a83" valueTypeId="68208f1e-d822-4622-b5c8-143469711955"/>
+    <selectionType typeId="f3d0442f-f207-4066-8c8b-3a218742a9e3" valueTypeId="d74b1257-d6f3-4213-8cf1-99da521f50ee"/>
+    <listType typeId="812af2c6-93a3-49ad-8e70-ecbe1f5f3ee9" valueTypeId="bd0d7063-065b-461d-9d57-194be5bf1837"/>
+    <managerType typeId="1a91d3c4-4b15-4aee-88bd-986c7efee514" valueTypeId="22d5009e-0f22-44bd-b487-1cb256fde877"/>
+  </producedTypes>
+  <name>ТранспортыПриемаСообщенийСВД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Транспорты приема сообщений</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ТранспортыПриемаСообщенийСВД.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ТранспортыПриемаСообщенийСВД.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Транспорт приема</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ТранспортыПриемаСообщенийСВД.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ТранспортыПриемаСообщенийСВД.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="daee3457-d25b-4361-8f2b-c1fc26251eab">
+    <name>Активен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Активен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:BooleanValue">
+      <value>true</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e7099d6f-ae60-4615-bfea-78491373333d">
+    <name>Настройка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НастройкиПочтыСВД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="145c8ca5-0fe7-4f56-ad47-93dbf2985157">
+    <name>ФорматСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формат сообщения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФорматыСообщенийСВД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="d2c68b78-deeb-439a-bc8d-e011ec30d2c8">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="469c823c-7677-4634-81b3-0b6a5caed953">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

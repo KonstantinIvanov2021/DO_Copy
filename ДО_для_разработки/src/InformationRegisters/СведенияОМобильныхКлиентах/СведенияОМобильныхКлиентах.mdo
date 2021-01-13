@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="909c7bff-2087-45ec-a7f0-a4b7f5d31c8e">
+  <producedTypes>
+    <selectionType typeId="f2ac1135-995b-4420-9bd2-723d9546d095" valueTypeId="e2403fc8-1c5a-4f9f-bd7d-c153c7784ee1"/>
+    <listType typeId="2551f47b-e55c-40cd-97ef-abd105bbd69f" valueTypeId="50caf77f-af5a-45f4-a917-3acc16c19249"/>
+    <managerType typeId="460fae2a-1fd5-4cdf-9a9a-adc017b61920" valueTypeId="2641fe97-b15a-4887-98be-cc7f8aa16bc9"/>
+    <recordSetType typeId="a1601741-842b-4b58-9649-19f9520a879a" valueTypeId="669a0372-fae8-4eef-ad03-ca6a4f482349"/>
+    <recordKeyType typeId="016fbe24-d88f-465a-96ad-69fa58e292cd" valueTypeId="954b8f1f-6d21-4732-87cf-013035a5c730"/>
+    <recordType typeId="72c6243e-2060-4baf-beba-830f7e972db1" valueTypeId="dbdf7896-92e2-4c52-8b95-1dd74a4d192f"/>
+    <recordManagerType typeId="1ca3268b-4cc9-4cfe-bcce-1667a36ba8a6" valueTypeId="c26ee0c1-aedc-465e-bb1e-35e7e3b6b630"/>
+  </producedTypes>
+  <name>СведенияОМобильныхКлиентах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения о мобильных клиентах</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2118f89d-4af9-4d5c-a709-702408fc924f">
+    <name>ДатаПоследнейАктивности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата последней активности</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="fce1a1cd-c664-4e9f-9014-49c69573f191">
+    <name>Описание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="e52beede-55f5-4bd9-a7a7-2cd1131ff98e">
+    <name>ВерсияКлиента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия клиента</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="19b3c6b3-80cc-4e25-ae68-8370f3bd5cda">
+    <name>МобильныйКлиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мобильный клиент</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef.Мобильный</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5b164b0a-5ca1-4fd3-a86d-4a008a7286b1">
+  <producedTypes>
+    <selectionType typeId="46ce7dc5-5a8f-4899-b81b-4f715ebba741" valueTypeId="3330c5eb-c438-40b5-a90c-0a57a3fe0d6f"/>
+    <listType typeId="f6e2f3be-884e-4667-9b33-4db9401a0c79" valueTypeId="119e0ade-f6fd-43ea-905e-6a74f12db981"/>
+    <managerType typeId="5d2d5b4f-59c3-48a3-b44d-f66c5d8d3c84" valueTypeId="15118b3d-0f13-450a-8f29-e8fe225cb0b8"/>
+    <recordSetType typeId="deca1778-61fa-41de-8d86-7ff5d68372a8" valueTypeId="0e3d9d4c-d3a3-4b87-9022-f01d154017c7"/>
+    <recordKeyType typeId="fbf54484-0298-4ae6-b118-01dae9e767d2" valueTypeId="44b1f8ae-1d62-426e-a6d2-0028ab848126"/>
+    <recordType typeId="dbe882f7-1b56-45fc-88a3-b3c4f175976d" valueTypeId="367c9fd6-0a96-401c-a6b6-78481d754aef"/>
+    <recordManagerType typeId="83ef18f3-493c-410d-bb04-2fc0b72c6afe" valueTypeId="a2c5c8bb-1622-4aea-be9e-52ac53570bf7"/>
+  </producedTypes>
+  <name>ЭлектронныеПодписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Электронные подписи</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ЭлектронныеПодписи.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ЭлектронныеПодписи.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Электронная подпись</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Электронные подписи</value>
+  </listPresentation>
+  <resources uuid="1b5579f8-e6ae-42e4-9988-d6bc4c35b31e">
+    <name>Версия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия</value>
+    </synonym>
+    <comment>Версия набора ключевых реквизитов для подписания</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9a52e413-6871-4324-a8cb-f969eac8f160">
+    <name>ДатаПроверкиПодписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата проверки подписи</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="da0a4687-8030-440e-bc82-51eeca27e6db">
+    <name>ИмяФайлаПодписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла подписи</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="7a7b7654-4389-4edb-8c56-a8df6c4827c1">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="3def063c-ea2f-4afe-8d46-9009887fbc4b">
+    <name>КомуВыданСертификат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кому выдан сертификат</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="9c95a7e7-a15c-4788-ad9b-a52aae7d6f25">
+    <name>Отпечаток</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отпечаток</value>
+    </synonym>
+    <comment>Отпечаток сертификата</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="2f742bd1-d81d-4e04-b447-06a633be3d3d">
+    <name>Подпись</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подпись</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d7ff4924-dd50-43fb-9e49-2c1f3f1bafbe">
+    <name>ПодписьВерна</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подпись верна</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="21ae8dc1-513e-4d53-920f-97fd2aca51b2">
+    <name>Сертификат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сертификат</value>
+    </synonym>
+    <comment>Двоичные данные сертификата</comment>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f748ed01-4bc2-450e-b321-c4b906239013">
+    <name>СертификатДействителен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сертификат действителен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d65f86fb-3982-4eaa-aa4e-9f0820d30418">
+    <name>ТекстОшибкиПроверкиПодписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст ошибки проверки подписи</value>
+    </synonym>
+    <comment>Заполнено только в том случае, если подпись неверна</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="a97959f3-a058-4e31-9fbc-af0ba79ee403">
+    <name>ТекстОшибкиПроверкиСертификата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст ошибки проверки сертификата</value>
+    </synonym>
+    <comment>Заполнено только в том случае, если сертификат недействителен</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="00187e6e-bbc9-4377-9204-2118bd63a918">
+    <name>УникальныйИдентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уникальный идентификатор</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </dimensions>
+  <dimensions uuid="e5d665e7-57b9-44fc-9289-f918c12cacd7">
+    <name>ДатаПодписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата подписи</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="5779b4c2-e540-4686-9db9-a41f269212ad">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <comment>Подписанный объект</comment>
+    <type>
+      <types>CatalogRef.ВходящиеДокументы</types>
+      <types>CatalogRef.ВнутренниеДокументы</types>
+      <types>CatalogRef.Резолюции</types>
+      <types>CatalogRef.ВизыСогласования</types>
+      <types>CatalogRef.ИсходящиеДокументы</types>
+      <types>CatalogRef.ВерсииФайлов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="31ee1433-10d2-4477-8a81-a74b62319d8e">
+    <name>УстановившийПодпись</name>
+    <synonym>
+      <key>ru</key>
+      <value>Установивший подпись</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="e89dddac-4485-4de0-90b7-d2bf9b2a35fe">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Электронная подпись</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="dca3492f-c8d5-4317-882c-d392e326d5e5">
+    <name>ФормаЗаписиСТекстомПричины</name>
+    <synonym>
+      <key>ru</key>
+      <value>Электронная подпись</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ed87216c-c751-42ef-b731-4c3a57213fa3">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

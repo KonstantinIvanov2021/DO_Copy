@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="61db2367-4019-4b2c-9609-f52fb26a4024">
+  <name>ПредметКонтроляПриЗаписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Предмет контроля при записи</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ИсходящееПисьмо</types>
+    <types>BusinessProcessObject</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.КонтрольСобытия.ПредметКонтроляПриЗаписи</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6a614753-94b7-44da-9b1e-55f41ffe3596">
+  <producedTypes>
+    <selectionType typeId="62c2a795-e3c8-460c-8213-6d4b70db02da" valueTypeId="92eebfa3-5da0-43b6-92e5-9fc9f684e8b6"/>
+    <listType typeId="9222ab59-7326-4558-9444-cbe3432521b1" valueTypeId="3a4ae7a7-0a27-47a9-afbb-a9c76c87b99d"/>
+    <managerType typeId="b640f794-b15f-4bfc-a60a-e8be649c6c3b" valueTypeId="91772ddd-576f-4e65-a9e4-9c08efb711c2"/>
+    <recordSetType typeId="e5531350-f2f3-4c8e-90a2-73c0fe377417" valueTypeId="0083bf20-7c59-452e-ac6e-f81b5ce2e2b6"/>
+    <recordKeyType typeId="ae636ee0-11d4-4760-9fb0-4b3779754056" valueTypeId="8e15c129-1f06-4f16-84c6-f5c5ca6d843e"/>
+    <recordType typeId="5054d42a-a128-4b53-af8b-1979d5174c96" valueTypeId="1fecd944-0c84-4250-b6fc-75b91f981751"/>
+    <recordManagerType typeId="5df5985b-f7ac-4620-9635-e658cf6820a0" valueTypeId="639367a4-8c53-45d0-bc80-05898ff2e51e"/>
+  </producedTypes>
+  <name>СвязиОбъектовИнтегрированныхСистем</name>
+  <synonym>
+    <key>ru</key>
+    <value>Связи объектов интегрированных систем</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="863d30b4-1518-4212-93c0-eed74752cc57">
+    <name>УзелИнтегрированнойСистемы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Узел интегрированной системы</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef.ИнтегрированныеСистемы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a173c2f6-a47f-47f2-9e91-df3cf45972d8">
+    <name>СсылкаНаОбъектДО</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка на объект Документооборота</value>
+    </synonym>
+    <type>
+      <types>AnyRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="49897ecd-b3f0-4335-b32b-983b872e66ba">
+    <name>ИДВнешнегоОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор внешнего объекта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b6084d26-a5e2-46bf-aaa5-c40e97d37a2b">
+    <name>ТипВнешнегоОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип внешнего объекта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

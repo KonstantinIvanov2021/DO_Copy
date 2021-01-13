@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="981203f0-a8cb-41da-87a7-d2db1a6409b0">
+  <producedTypes>
+    <selectionType typeId="d1ca2944-c6a5-4f13-a91a-8a2f06b231b6" valueTypeId="79bc6055-8f21-496a-a5d4-fd2e7f46e885"/>
+    <listType typeId="98f3cf2c-fef2-48c8-a8fb-205da758c81e" valueTypeId="dbac3e07-f6aa-4bd4-a291-b52abc37f098"/>
+    <managerType typeId="82804717-7b8b-49f8-a02c-6a7ed5b1aef0" valueTypeId="49d7b11f-bccd-4495-8516-23a2f96d08e8"/>
+    <recordSetType typeId="743947bc-9f5e-4af0-8f7f-d731804cf51b" valueTypeId="8533f120-39e5-4f97-ad5e-e976f3ed3a1b"/>
+    <recordKeyType typeId="8ad3ebe4-e965-496f-80e3-7d3cffda1176" valueTypeId="3cf4b3bc-d2c4-49a3-9f0b-5764f7bd501a"/>
+    <recordType typeId="31222f99-068d-46a9-916c-3ea30df49097" valueTypeId="6d59eb4c-6386-41ce-b665-d289cc7a6266"/>
+    <recordManagerType typeId="cfbae6b5-35d6-406a-8de7-dc1237256e48" valueTypeId="be942b36-9a29-4116-9815-9bf175926c57"/>
+  </producedTypes>
+  <name>ПодчиненностьПодразделений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подчиненность подразделений</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Подчиненность подразделения</value>
+  </recordPresentation>
+  <dimensions uuid="c3bfdf96-3e6c-4380-9fd9-72c529944740">
+    <name>Вышестоящее</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вышестоящее</value>
+    </synonym>
+    <comment>Вышестоящее подразделение</comment>
+    <type>
+      <types>CatalogRef.СтруктураПредприятия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9c2a47b7-7c16-4ca5-a6cf-62cfe5c5ccbf">
+    <name>Подчиненное</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подчиненное</value>
+    </synonym>
+    <comment>Подчиненное подразделение</comment>
+    <type>
+      <types>CatalogRef.СтруктураПредприятия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="496f4ebc-23cb-48cc-b333-14165adee5f9">
+  <name>ОбновлениеПредметовИУчастниковДействийКомплексногоПроцесса</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновление предметов и участников действий комплексного процесса</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.ШаблоныУтверждения</types>
+    <types>CatalogObject.ШаблоныСогласования</types>
+    <types>CatalogObject.ШаблоныРассмотрения</types>
+    <types>CatalogObject.ШаблоныОзнакомления</types>
+    <types>CatalogObject.ШаблоныПоручения</types>
+    <types>CatalogObject.ШаблоныИсполнения</types>
+    <types>CatalogObject.ШаблоныРегистрации</types>
+    <types>CatalogObject.ШаблоныПриглашения</types>
+    <types>CatalogObject.ШаблоныСоставныхБизнесПроцессов</types>
+    <types>CatalogObject.ШаблоныКомплексныхБизнесПроцессов</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.МультипредметностьКОРП.ОбновлениеПредметовИУчастниковДействийКомплексногоПроцессаПриЗаписи</handler>
+</mdclass:EventSubscription>

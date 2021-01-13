@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f1916acc-f49e-4ee2-87bf-ab5da8d08e49">
+  <producedTypes>
+    <selectionType typeId="e0590b09-9adc-4a6d-8603-d07cd1ea2ffa" valueTypeId="8c09051d-c888-46fb-b441-94274333b566"/>
+    <listType typeId="33c3c3f2-549b-460f-bb2a-a344011243ec" valueTypeId="f12e6f8f-5c00-41d2-b77a-57071326bfb0"/>
+    <managerType typeId="cbcb2ef7-006c-4700-b3e2-5c2c2fbed540" valueTypeId="78e19424-3fcc-4c4f-a204-0bca7614f1c7"/>
+    <recordSetType typeId="b099f737-cb63-4b56-9629-6bd44e54e82d" valueTypeId="46f158f5-7b12-403f-a9d5-e11c55e525e7"/>
+    <recordKeyType typeId="4437ecbf-cebf-4faf-9f8f-d9bb83172734" valueTypeId="5a4a43cd-306e-4215-89b6-70342ae7480c"/>
+    <recordType typeId="1bafe86e-9ffa-475e-ae2b-d040fdce382e" valueTypeId="8953a399-0d12-49c8-b8ef-d78ff3e4962a"/>
+    <recordManagerType typeId="7a27f139-ec76-46c1-8eab-17710a2871b8" valueTypeId="8c6a2a9e-9f4f-4303-b2ad-418998205497"/>
+  </producedTypes>
+  <name>ПраваГруппДоступаНаТаблицы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Права групп доступа на таблицы</value>
+  </synonym>
+  <defaultRecordForm>InformationRegister.ПраваГруппДоступаНаТаблицы.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ПраваГруппДоступаНаТаблицы.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="f2236f64-de2e-45d4-8a4a-284015cf081f">
+    <name>Добавление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Добавление</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Добавление.
+Флажок установлен, если в профиле группы доступа есть роль,
+которая предоставляет право Добавление таблицы</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="ba2155e8-ffeb-483f-a371-46e5f3ad2197">
+    <name>Изменение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменение</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Изменение.
+Флажок установлен, если в профиле группы доступа есть роль,
+которая предоставляет право Изменение таблицы</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="4103c39a-2e6e-46d8-9fcd-eabb33daa088">
+    <name>Удаление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удаление</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Удаление.
+Флажок установлен, если в профиле группы доступа есть роль,
+которая предоставляет право Удаление таблицы</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <attributes uuid="26984511-06b1-41e7-826a-cbeb35b577ad">
+    <name>ЧтениеБезОграничения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Чтение без ограничения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Чтение без ограничения.
+Флажок установлен, если в профиле группы доступа есть роль,
+которая предоставляет право Чтение таблицы без ограничения</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2d5f3a2a-d9aa-4659-8251-208f6d5cea7c">
+    <name>ДобавлениеБезОграничения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Добавление без ограничения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Добавление без ограничения.
+Флажок установлен, если в профиле группы доступа есть роль,
+которая предоставляет право Добавление таблицы без ограничения</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="73c3e5ab-5243-48ff-b814-e7e80eb9b85d">
+    <name>ИзменениеБезОграничения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменение без ограничения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Изменение без ограничения.
+Флажок установлен, если в профиле группы доступа есть роль,
+которая предоставляет право Изменение таблицы без ограничения</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="81c00f8d-598a-477b-9879-df4ef7744323">
+    <name>УдалениеБезОграничения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удаление без ограничения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Удаление без ограничения.
+Флажок установлен, если в профиле группы доступа есть роль,
+которая предоставляет право Удаление таблицы без ограничения</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b76569d9-10bf-4ef2-8fb7-f578aba9793c">
+    <name>ПраваБезОграничения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Права без ограничения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Права без ограничения.
+Флажок установлен, если в профиле группы доступа есть роли,
+которые в сумме предоставляют доступ к таблице без ограничения
+по каждому из установленных прав доступа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="74126f6c-4f01-4ed4-94d8-79166c68d394">
+    <name>Таблица</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИдентификаторыОбъектовМетаданных</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Полное имя объекта метаданных - таблицы, для которой в одной из ролей профиля заданы права доступа</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6f51c62d-efaa-438b-ab75-7b406bd39893">
+    <name>ГруппаДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа доступа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыДоступа</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа доступа, которой разрешен доступ к таблице по правам</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.ГруппыДоступа.EmptyRef</value>
+    </fillValue>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="7f160cbd-adaf-4316-8acd-31007e2a11f1">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="81f5c66d-1891-4dfa-8cf6-32e1457b73ba">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

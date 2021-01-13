@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="99925dfd-7393-4644-a3ac-281568923aea">
+  <name>DMService</name>
+  <synonym>
+    <key>ru</key>
+    <value>http://www.1c.ru/dm</value>
+  </synonym>
+  <namespace>http://www.1c.ru/dm</namespace>
+  <xdtoPackages xsi:type="core:ReferenceValue">
+    <value>XDTOPackage.DM</value>
+  </xdtoPackages>
+  <descriptorFileName>dm.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="ceb74917-6095-47af-aaf3-e07e170d1fb7">
+    <name>execute</name>
+    <synonym>
+      <key>ru</key>
+      <value>execute</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>DMResponse</name>
+      <nsUri>http://www.1c.ru/dm</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ОбработатьЗапрос</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="96fef7cb-9173-47a5-9da5-5ab7ae905b34">
+      <name>request</name>
+      <synonym>
+        <key>ru</key>
+        <value>request</value>
+      </synonym>
+      <xdtoValueType>
+        <name>DMRequest</name>
+        <nsUri>http://www.1c.ru/dm</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

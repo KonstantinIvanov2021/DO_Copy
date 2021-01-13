@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7afd4049-d3b0-4720-9200-b80c35b2d8bf">
+  <producedTypes>
+    <selectionType typeId="eb71b9f1-56ce-46d4-aefc-7771fc5f76b0" valueTypeId="8260fe31-93ed-4866-bc74-aeab57da0a12"/>
+    <listType typeId="f8f7cf35-b1d6-405e-9649-b9a7e3f6784c" valueTypeId="2a1334c6-9301-4d2b-a137-891fa92b06ec"/>
+    <managerType typeId="1d5646fa-2724-4701-88f2-dbf70a3b4bb7" valueTypeId="92c06c0f-fe88-4fc7-8dc3-542471e99cbe"/>
+    <recordSetType typeId="cb4b2c45-fe44-470c-8ffa-9fe40ad18747" valueTypeId="defb69f4-76d4-4c97-bacc-ce0573187ae0"/>
+    <recordKeyType typeId="eb11582c-ee3c-46cd-adc9-fd204b762382" valueTypeId="12bbdde6-7b4a-4c48-93c0-a0519338eab4"/>
+    <recordType typeId="c0595a7d-2f75-4b96-a528-1eabe7915646" valueTypeId="33f88d2d-6250-4ea7-82aa-9b68a262021b"/>
+    <recordManagerType typeId="a8a98214-9ea7-496c-9e81-8c5cb96da78f" valueTypeId="092bc856-da33-4def-a532-b46074447c9b"/>
+  </producedTypes>
+  <name>ОчередьПересчетаПоказателейПроцессов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очередь пересчета показателей процессов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="01bb06a9-556e-4438-b22d-53edb68df3fd">
+    <name>ДатаПересчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата пересчета</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="06d861a3-eff2-405c-b015-ec94140e0244">
+    <name>ПоказательПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатель процесса</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПоказателиПроцессов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4a55328d-57d7-47ec-a7a3-9cd07fa42407">
+  <name>ДокументооборотПраваДоступаПередЗаписьюДокумента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Документооборот права доступа перед записью документа</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ВходящееСообщениеСВД</types>
+    <types>DocumentObject.ИсходящееСообщениеСВД</types>
+    <types>DocumentObject.ВходящееПисьмо</types>
+    <types>DocumentObject.ЕжедневныйОтчет</types>
+    <types>DocumentObject.ИсходящееПисьмо</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ДокументооборотПраваДоступа.ДокументооборотПраваДоступаПередЗаписьюДокумента</handler>
+</mdclass:EventSubscription>

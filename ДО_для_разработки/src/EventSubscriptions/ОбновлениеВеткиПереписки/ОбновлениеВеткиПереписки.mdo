@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f3ccb955-6e7d-4a7a-97d6-f006f74e6fd4">
+  <name>ОбновлениеВеткиПереписки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновление ветки переписки</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.СвязиДокументов</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ВстроеннаяПочтаСервер.ОбновлениеВеткиПерепискиПриЗаписи</handler>
+</mdclass:EventSubscription>

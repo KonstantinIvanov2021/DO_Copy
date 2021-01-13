@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="68e3a858-d85e-4bed-a02d-0f6e94884a0a">
+  <name>ОбменСИнтегрированнымиСистемамиПередЗаписьюРегистра</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен с интегрированными системами перед записью регистра</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.ТекущиеСостоянияДокументов</types>
+    <types>InformationRegisterRecordSet.СведенияОФайлах</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбработкаЗапросовXDTOОбмен.ОбменСИнтегрированнымиСистемамиПередЗаписьюРегистра</handler>
+</mdclass:EventSubscription>

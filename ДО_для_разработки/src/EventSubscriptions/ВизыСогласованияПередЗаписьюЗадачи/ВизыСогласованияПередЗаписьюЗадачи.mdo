@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="283211ca-a72a-49ab-b6b2-cd0a2a66cae8">
+  <name>ВизыСогласованияПередЗаписьюЗадачи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Визы согласования перед записью задачи</value>
+  </synonym>
+  <source>
+    <types>TaskObject.ЗадачаИсполнителя</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.РаботаСВизамиСогласованияСобытия.ВизыСогласованияПередЗаписьюЗадачиПередЗаписью</handler>
+</mdclass:EventSubscription>

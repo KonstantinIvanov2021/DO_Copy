@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6ac6890e-3cd2-40ce-bb12-b124d8c4ce74">
+  <producedTypes>
+    <selectionType typeId="4075e1e7-4369-469e-bea0-f6dfe6be4221" valueTypeId="47bf3808-5e75-45c0-b2ea-df831d7eedb5"/>
+    <listType typeId="0e644986-b339-4167-bd93-d5fa3ea2120b" valueTypeId="f81501ed-a2ad-41c6-b07f-3d0914fe94f2"/>
+    <managerType typeId="5fad8338-43ad-4d38-a6f1-f1a9ef13a586" valueTypeId="cf124fa5-0e4f-4915-bb8b-073b76c9a82d"/>
+    <recordSetType typeId="ee417042-ca0f-4feb-8a95-a0204329cab3" valueTypeId="6d206f1b-4778-4ed2-bd52-21af8e84ee50"/>
+    <recordKeyType typeId="41492ada-f1ac-4d3d-bb24-b82c20c9dc84" valueTypeId="98a4f501-fae9-4a55-abcf-b5f9349e3f7e"/>
+    <recordType typeId="fe9b12d5-eaa5-4476-97e5-acf3c8125f38" valueTypeId="f185dc07-8e97-4d2e-8b36-4ce1d64cb593"/>
+    <recordManagerType typeId="d1aa316f-9a5f-4b6b-9f9d-fe0c16750eb8" valueTypeId="4fef5e48-176a-4015-8e9d-aea14db3f599"/>
+  </producedTypes>
+  <name>СрокиПроектныхЗадач</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сроки проектных задач</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="abc8dedb-5602-4ef0-a5f0-903f3edc3409">
+    <name>ТекущийПланНачало</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало (план)</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="01a620a4-e4c4-4e6d-b839-47359cd715f0">
+    <name>ТекущийПланОкончание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Окончание (план)</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1272dce6-67bc-4227-abba-e82c9b50b3c6">
+    <name>ТекущийПланДлительность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Длительность (план)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="78478ff0-14b6-4265-9947-2facb4fc6664">
+    <name>ТекущийПланЕдиницаДлительности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица длительности (план)</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ЕдиницыДлительности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2cc3d217-868c-4090-a01f-1d2d13499090">
+    <name>НачалоФакт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало (факт)</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="fc01b47c-f519-457a-b3e0-15715da6f06c">
+    <name>ОкончаниеФакт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Окончание (факт)</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2d4e3b59-1c3e-4e10-9047-8388cc3339d7">
+    <name>ДлительностьФакт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Длительность (факт)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="27545691-7b98-41c4-b917-160d5b056fd9">
+    <name>ЕдиницаДлительностиФакт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица длительности (факт)</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ЕдиницыДлительности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="7e0e9bc9-cf29-4d2b-8545-0d3ec72980fe">
+    <name>ПроектнаяЗадача</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проектная задача</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПроектныеЗадачи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

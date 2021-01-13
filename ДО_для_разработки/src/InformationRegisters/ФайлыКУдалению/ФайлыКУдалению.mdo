@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e90fdfbc-86c2-4515-a42b-b1660749a2d3">
+  <producedTypes>
+    <selectionType typeId="c4056294-bdb5-4996-92e9-01e6b7389d9a" valueTypeId="05e79525-7531-49b7-af05-bf92ebc72889"/>
+    <listType typeId="ab9e6803-300c-4086-8aa5-ed010ebacf1a" valueTypeId="1ca88804-8f2c-4d9f-977f-8ba22b47169c"/>
+    <managerType typeId="6b0118ea-4b4a-4eb9-9efd-2fad5caaa55e" valueTypeId="f3a8544f-276f-466f-8bfc-2341b1062c4c"/>
+    <recordSetType typeId="bbba95aa-5af8-45be-81f0-5edbb1b175da" valueTypeId="f03e4fff-bfa4-49dd-a728-f72d76092c88"/>
+    <recordKeyType typeId="f73dda17-6d47-4056-80f9-1c1683475426" valueTypeId="b7769fc2-27d4-4ee3-8015-3547258e6609"/>
+    <recordType typeId="64d2ad66-b979-48e9-ba70-05b72ae206ab" valueTypeId="47cd3bfa-ddfc-471f-a02a-8b4e7520952a"/>
+    <recordManagerType typeId="a15fb974-5de2-46a7-9f11-2c3f474d266e" valueTypeId="de571e71-42c5-4ad3-aaae-007b34d3c588"/>
+  </producedTypes>
+  <name>ФайлыКУдалению</name>
+  <synonym>
+    <key>ru</key>
+    <value>Файлы к удалению</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e4428cf9-0b85-497e-933c-a3f44af8f251">
+    <name>Версия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВерсииФайлов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="59b3ffac-2a51-4d9e-aa95-d31acb63add7">
+    <name>ДатаУдаления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата удаления</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="b2a8ccb5-7ce2-4274-adb7-d54d5072321c">
+    <name>Том</name>
+    <synonym>
+      <key>ru</key>
+      <value>Том</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТомаХраненияФайлов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="21c47ab2-ae00-4cfe-8904-43b91763d014">
+    <name>ПутьКФайлу</name>
+    <synonym>
+      <key>ru</key>
+      <value>Путь к файлу</value>
+    </synonym>
+    <comment>Относительный  путь</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>256</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>
